@@ -25,6 +25,14 @@ jobs:
           python-version: "3.x"
       - name: Install dependencies
         run: pip install -r docs-requirements.txt
+      - name: Auto-translate pages missing a curated Danish version
+        # English is the source of truth. This fills in Danish for any page
+        # without a hand-written .da.md, using DeepL. It never overwrites
+        # curated Danish, and it no-ops (falling back to English) if the
+        # DEEPL_API_KEY secret is not set, so the build never fails over it.
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: python scripts/translate_da.py
       - name: Build site
         run: mkdocs build
       - uses: actions/upload-pages-artifact@v3

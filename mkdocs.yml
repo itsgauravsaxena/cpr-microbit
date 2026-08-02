@@ -1,8 +1,8 @@
-site_name: Micro:bit Volunteer Program
-site_description: A 10-week micro:bit coding program — English & Danish documentation
-site_url: https://itsgauravsaxena.github.io/cpr-microbit-autumn/
-repo_url: https://github.com/itsgauravsaxena/cpr-microbit-autumn
-repo_name: itsgauravsaxena/cpr-microbit-autumn
+site_name: CPR micro:bit
+site_description: All micro:bit teaching material for the CPR coding club — English & Danish, organized by term
+site_url: https://itsgauravsaxena.github.io/cpr-microbit/
+repo_url: https://github.com/itsgauravsaxena/cpr-microbit
+repo_name: itsgauravsaxena/cpr-microbit
 edit_uri: edit/main/microbit-program/
 
 # Keep the existing repo layout: the week folders ARE the docs.
@@ -28,6 +28,8 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.tracking
     - navigation.top
     - navigation.sections
@@ -72,27 +74,32 @@ markdown_extensions:
 
 nav:
   - Home: README.md
-  - "Group A — Startup":
-      - Overview: group-a-startup/README.md
-      - "Week 1 · Flashing Heart": group-a-startup/week-01-flashing-heart/README.md
-      - "Week 2 · Name Tag + Smiley Buttons": group-a-startup/week-02-name-tag-smiley-buttons/README.md
-      - "Week 3 · Dice + Love Meter": group-a-startup/week-03-dice-love-meter/README.md
-      - "Week 4 · Guess! + Reaction Time": group-a-startup/week-04-guess-reaction-time/README.md
-      - "Week 5 · Ticklebot build & wire": group-a-startup/week-05-ticklebot-build-wire/README.md
-      - "Week 6 · Ticklebot finish & personalize": group-a-startup/week-06-ticklebot-finish-personalize/README.md
-      - "Week 7 · Micro Chat": group-a-startup/week-07-micro-chat/README.md
-      - "Week 8 · Heartbeat Beacon": group-a-startup/week-08-heartbeat-beacon/README.md
-      - "Week 9 · Step Counter + Coin Toss": group-a-startup/week-09-step-counter-coin-toss/README.md
-      - "Week 10 · Showcase": group-a-startup/week-10-showcase/README.md
-  - "Group B — Advanced Pinball":
-      - Overview: group-b-advanced-pinball/README.md
-      - "Week 1 · Kickoff & recap": group-b-advanced-pinball/week-01-kickoff/README.md
-      - "Week 2 · Tinkercad playfield": group-b-advanced-pinball/week-02-tinkercad-playfield/README.md
-      - "Week 3 · Scoring basics": group-b-advanced-pinball/week-03-scoring-basics/README.md
-      - "Week 4 · Sensor mount": group-b-advanced-pinball/week-04-sensor-mount/README.md
-      - "Week 5 · Launcher/flipper trigger": group-b-advanced-pinball/week-05-launcher-trigger/README.md
-      - "Week 6 · Multi-sensor scoring": group-b-advanced-pinball/week-06-multi-sensor-scoring/README.md
-      - "Week 7 · Radio scoreboard": group-b-advanced-pinball/week-07-radio-scoreboard/README.md
-      - "Week 8 · Assembly": group-b-advanced-pinball/week-08-assembly/README.md
-      - "Week 9 · Playtesting & polish": group-b-advanced-pinball/week-09-playtesting-polish/README.md
-      - "Week 10 · Showcase / tournament": group-b-advanced-pinball/week-10-showcase-tournament/README.md
+  - Autumn 2025: autumn-2025/README.md
+  - Spring 2026: spring-2026/README.md
+  - Autumn 2026:
+      - Overview: autumn-2026/README.md
+      - "Group A — Startup":
+          - Overview: autumn-2026/group-a-startup/README.md
+          - "Week 1 · Flashing Heart": autumn-2026/group-a-startup/week-01-flashing-heart/README.md
+          - "Week 2 · Name Tag + Smiley Buttons": autumn-2026/group-a-startup/week-02-name-tag-smiley-buttons/README.md
+          - "Week 3 · Dice + Love Meter": autumn-2026/group-a-startup/week-03-dice-love-meter/README.md
+          - "Week 4 · Guess! + Reaction Time": autumn-2026/group-a-startup/week-04-guess-reaction-time/README.md
+          - "Week 5 · Ticklebot build & wire": autumn-2026/group-a-startup/week-05-ticklebot-build-wire/README.md
+          - "Week 6 · Ticklebot finish & personalize": autumn-2026/group-a-startup/week-06-ticklebot-finish-personalize/README.md
+          - "Week 7 · Micro Chat": autumn-2026/group-a-startup/week-07-micro-chat/README.md
+          - "Week 8 · Heartbeat Beacon": autumn-2026/group-a-startup/week-08-heartbeat-beacon/README.md
+          - "Week 9 · Step Counter + Coin Toss": autumn-2026/group-a-startup/week-09-step-counter-coin-toss/README.md
+          - "Week 10 · Showcase": autumn-2026/group-a-startup/week-10-showcase/README.md
+      - "Group B — Advanced Pinball":
+          - Overview: autumn-2026/group-b-advanced-pinball/README.md
+          - "Week 1 · Kickoff & recap": autumn-2026/group-b-advanced-pinball/week-01-kickoff/README.md
+          - "Week 2 · Tinkercad playfield": autumn-2026/group-b-advanced-pinball/week-02-tinkercad-playfield/README.md
+          - "Week 3 · Scoring basics": autumn-2026/group-b-advanced-pinball/week-03-scoring-basics/README.md
+          - "Week 4 · Sensor mount": autumn-2026/group-b-advanced-pinball/week-04-sensor-mount/README.md
+          - "Week 5 · Launcher/flipper trigger": autumn-2026/group-b-advanced-pinball/week-05-launcher-trigger/README.md
+          - "Week 6 · Multi-sensor scoring": autumn-2026/group-b-advanced-pinball/week-06-multi-sensor-scoring/README.md
+          - "Week 7 · Radio scoreboard": autumn-2026/group-b-advanced-pinball/week-07-radio-scoreboard/README.md
+          - "Week 8 · Assembly": autumn-2026/group-b-advanced-pinball/week-08-assembly/README.md
+          - "Week 9 · Playtesting & polish": autumn-2026/group-b-advanced-pinball/week-09-playtesting-polish/README.md
+          - "Week 10 · Showcase / tournament": autumn-2026/group-b-advanced-pinball/week-10-showcase-tournament/README.md
+  - Spring 2027: spring-2027/README.md

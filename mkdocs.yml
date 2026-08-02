@@ -1,0 +1,98 @@
+site_name: Micro:bit Volunteer Program
+site_description: A 10-week micro:bit coding program — English & Danish documentation
+site_url: https://itsgauravsaxena.github.io/cpr-microbit-autumn/
+repo_url: https://github.com/itsgauravsaxena/cpr-microbit-autumn
+repo_name: itsgauravsaxena/cpr-microbit-autumn
+edit_uri: edit/main/microbit-program/
+
+# Keep the existing repo layout: the week folders ARE the docs.
+docs_dir: microbit-program
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tracking
+    - navigation.top
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+
+# Don't publish the code/ drop-zone placeholder pages as site pages;
+# the exported .hex / link files in those folders are still copied through.
+exclude_docs: |
+  **/code/README.md
+
+plugins:
+  - search:
+      lang:
+        - en
+        - da
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: da
+          name: Dansk
+          build: true
+
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Home: README.md
+  - "Group A — Startup":
+      - Overview: group-a-startup/README.md
+      - "Week 1 · Flashing Heart": group-a-startup/week-01-flashing-heart/README.md
+      - "Week 2 · Name Tag + Smiley Buttons": group-a-startup/week-02-name-tag-smiley-buttons/README.md
+      - "Week 3 · Dice + Love Meter": group-a-startup/week-03-dice-love-meter/README.md
+      - "Week 4 · Guess! + Reaction Time": group-a-startup/week-04-guess-reaction-time/README.md
+      - "Week 5 · Ticklebot build & wire": group-a-startup/week-05-ticklebot-build-wire/README.md
+      - "Week 6 · Ticklebot finish & personalize": group-a-startup/week-06-ticklebot-finish-personalize/README.md
+      - "Week 7 · Micro Chat": group-a-startup/week-07-micro-chat/README.md
+      - "Week 8 · Heartbeat Beacon": group-a-startup/week-08-heartbeat-beacon/README.md
+      - "Week 9 · Step Counter + Coin Toss": group-a-startup/week-09-step-counter-coin-toss/README.md
+      - "Week 10 · Showcase": group-a-startup/week-10-showcase/README.md
+  - "Group B — Advanced Pinball":
+      - Overview: group-b-advanced-pinball/README.md
+      - "Week 1 · Kickoff & recap": group-b-advanced-pinball/week-01-kickoff/README.md
+      - "Week 2 · Tinkercad playfield": group-b-advanced-pinball/week-02-tinkercad-playfield/README.md
+      - "Week 3 · Scoring basics": group-b-advanced-pinball/week-03-scoring-basics/README.md
+      - "Week 4 · Sensor mount": group-b-advanced-pinball/week-04-sensor-mount/README.md
+      - "Week 5 · Launcher/flipper trigger": group-b-advanced-pinball/week-05-launcher-trigger/README.md
+      - "Week 6 · Multi-sensor scoring": group-b-advanced-pinball/week-06-multi-sensor-scoring/README.md
+      - "Week 7 · Radio scoreboard": group-b-advanced-pinball/week-07-radio-scoreboard/README.md
+      - "Week 8 · Assembly": group-b-advanced-pinball/week-08-assembly/README.md
+      - "Week 9 · Playtesting & polish": group-b-advanced-pinball/week-09-playtesting-polish/README.md
+      - "Week 10 · Showcase / tournament": group-b-advanced-pinball/week-10-showcase-tournament/README.md

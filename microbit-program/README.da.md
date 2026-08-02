@@ -1,29 +1,20 @@
-# Micro:bit Frivilligprogram — 10 uger
+# CPR micro:bit — Programoversigt
 
-Et 10-ugers kodningsprogram for to grupper af 8-10-årige, opdelt efter erfaring. Sessioner på 1 time, fysiske micro:bits til alle. Bygget næsten udelukkende på officielle tutorials fra micro:bit Foundation / MakeCode.
+Ét sted til alt micro:bit-undervisningsmateriale for CPR-kodeklubben, organiseret efter sæson.
 
-## Grupper
+Vælg en sæson i fanerne øverst eller på listen nedenfor. Hver side findes på **engelsk** og **dansk** — brug sprogvælgeren (🌐) i topbjælken.
 
-- **[Gruppe A — Startup](./group-a-startup/README.md)** — helt nye til kodning. Uge 1-4 opbygger grundlæggende færdigheder gennem officielle MakeCode-tutorials, uge 5-6 bygger en servodrevet "Ticklebot"-robot, uge 7-8 bygger et radiosender/-modtager-projekt, uge 9 samler trådene, og uge 10 er en fremvisning.
-- **[Gruppe B — Avanceret (Mini-flippermaskine)](./group-b-advanced-pinball/README.md)** — allerede fortrolige med MakeCode. Et 10-ugers afgangsprojekt, hvor der bygges en lille flippermaskine til bordet: børnene 3D-designer og printer de simple indvendige dele (bumpere, sensorholdere), mens det udvendige kabinet/de præcisionskrævende dele leveres på forhånd. Programmeringen dækker pointtælling, sensorer og en radioforbundet resultattavle.
+## Sæsoner
 
-## Repo-struktur
+| Sæson | Status | |
+|---|---|---|
+| [Efterår 2025](./autumn-2025/README.md) | Ikke tilgængelig | — |
+| [Forår 2026](./spring-2026/README.md) | Ikke tilgængelig | — |
+| [**Efterår 2026**](./autumn-2026/README.md) | ✅ Tilgængelig | Fuldt 10-ugers program (to grupper) |
+| [Forår 2027](./spring-2027/README.md) | 🕓 Kommer snart | Under planlægning |
 
-Hver uge har sin egen mappe med:
-- `README.md` — mål, link(s) til officiel tutorial, materialer, trinnoter og referencelinks
-- `code/` — hvor det eksporterede MakeCode-projekt for ugen lægges (`.hex`-fil eller det delbare `makecode.microbit.org/_xxxxx`-link indsat i en tekstfil). MakeCode-projekter lever som udgangspunkt i browseren, så eksport hertil er det, der rent faktisk bevarer hver uges arbejde.
+## Sådan er dette repo organiseret
 
-## Sådan gemmer du et MakeCode-projekt i `code/`
-
-1. I MakeCode-editoren klikkes på tandhjulsikonet → **Share** for at få et delbart link, eller **Download** for at få en `.hex`-fil
-2. Læg `.hex`-filen i den pågældende uges `code/`-mappe, eller indsæt delelinket i en `link.md`-fil dér
-3. Commit og push
-
-## Undervisningstilgang: billed-/animationsforklaringer
-
-MakeCodes indbyggede **Tutorials**-tilstand (fanen Tutorials på MakeCodes startskærm) gennemgår hvert projekt trin for trin med billeder, fremhæver den præcise blok, der skal trækkes som den næste, og kører live i simulatoren på skærmen. Vis den på en skærm hver uge, og lad tutorialen stå for forklaringen — dette er det primære visuelle hjælpemiddel for hele programmet, og der henvises til det i ugernes README-filer nedenfor i stedet for at bygge det op fra bunden.
-
-## Referencebyg (Gruppe B)
-
-- ["3D Printed Pinball" af ctrl design](https://pinshape.com/items/24228-3d-printed-pinball) — micro:bit/Arduino-baseret, skalerbar sværhedsgrad, gratis STL-filer
-- micro:bit + PinBox 3000 pap-flippermaskine (TechnoChic) — reference til at styre lys, lyd og en resultattavle fra en micro:bit på et enkelt stel
+- Hver **sæson** har sin egen mappe (f.eks. `autumn-2026/`).
+- Inde i en sæson har hver **gruppe** en mappe, og hver **uge** har en mappe med sin `README.md` (mål, tutoriallinks, sessionsforløb) og en `code/`-mappe til det eksporterede MakeCode-projekt (`.hex`-fil eller en `link.md` med det delbare link).
+- Engelsk er kilden til sandheden; danske oversættelser ligger ved siden af hver side som `README.da.md`.

@@ -69,7 +69,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - toc:
-      permalink: true
+      permalink: false
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.magiclink

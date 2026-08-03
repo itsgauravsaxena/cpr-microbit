@@ -14,6 +14,15 @@ A round bumper: a short **cylinder** on a small base, with a **peg** underneath 
 - Give a target size so parts fit the pre-supplied cabinet
 - Bigger and chunkier prints more reliably than thin and tiny
 
+## Step-by-step in Tinkercad
+Build a bumper:
+
+1. Drag a **Cylinder** onto the workplane — this is the bumper. Set it to about **16 mm** wide and **20 mm** tall.
+2. Drag a thin **Cylinder** for the base (a bit wider, ~24 mm, 3 mm tall) and put the bumper on top.
+3. Add a small **Cylinder peg** (~5 mm) underneath the base so it can plug into the playfield.
+4. Drag a box around it all and click **Group**.
+5. Add a **Text** name if you like, then **Export → STL**.
+
 ## ✅ Done when
 - Each kid has a finished bumper design (cylinder + base + peg underneath).
 - It is roughly the target size and **exported/queued** for printing.

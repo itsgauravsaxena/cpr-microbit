@@ -13,6 +13,15 @@
 - 40 min — finish, name, and export parts; teacher queues prints
 - 10 min — bonus decorations / help a neighbour
 
+## Step-by-step in Tinkercad
+Get everything ready to print:
+
+1. Open each of your designs (bumper, sensor mount).
+2. Check nothing is floating — everything should sit flat on the workplane.
+3. Add a small **Text** name to each part so prints don't get mixed up.
+4. Click **Export → .STL** for each part and hand it to the teacher's print queue.
+5. Finished early? Design a **bonus decoration** (a star, a topper) and export that too.
+
 ## ✅ Done when
 - Every part has a **name** on it and is **exported as STL**.
 - All parts are in the print queue, on track to be ready for assembly in week 9.

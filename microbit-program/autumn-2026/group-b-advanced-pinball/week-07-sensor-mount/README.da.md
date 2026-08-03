@@ -14,6 +14,14 @@ En lille **L-formet holder** eller en **klips**, der holder jeres sensor på pla
 - Mål jeres sensor først (cirka), så åbningen er stor nok
 - Et hul, der er lidt for stort, er nemt at fóre op; for lille passer ikke
 
+## Trin for trin i Tinkercad
+Lav en sensorholder:
+
+1. Træk en **Box** — holderens bagside (~20 × 20 × 3 mm).
+2. Træk en anden **Box** til hylden, sensoren hviler på, og **Group** de to til en **L-form**.
+3. Lav en åbning: træk en **Box**, klik **Hole** for at gøre den til et hul, tilpas størrelsen til din sensor, placér den, og **Group** for at skære åbningen ud.
+4. Tilføj et navn, og **Export → STL**.
+
 ## ✅ Færdig når
 - Hvert barn har en holder/klips, der holder sensoren og retter den ind mod bolden.
 - Den er **eksporteret/sat i kø** til print.

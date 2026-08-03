@@ -13,6 +13,15 @@
 - 40 min — færdiggør, navngiv og eksportér dele; læreren sætter prints i kø
 - 10 min — bonus-dekorationer / hjælp en sidemand
 
+## Trin for trin i Tinkercad
+Gør alt klar til print:
+
+1. Åbn hvert af dine designs (bumper, sensorholder).
+2. Tjek at intet svæver — alt skal hvile fladt på arbejdsplanen.
+3. Tilføj et lille **Text**-navn til hver del, så prints ikke blandes sammen.
+4. Klik **Export → .STL** for hver del og aflever den til lærerens printkø.
+5. Færdig tidligt? Design en **bonus-dekoration** (en stjerne, en top) og eksportér den også.
+
 ## ✅ Færdig når
 - Hver del har et **navn** på og er **eksporteret som STL**.
 - Alle dele er i printkøen og på vej til at være klar til samling i uge 9.

@@ -23,5 +23,11 @@ on button A pressed:          // a bumper / switch is hit
 - 40 min — build the program: a `score` variable, +10 on press, a `music` beep, show the score
 - 10 min — test in the simulator, then on a real micro:bit with a crocodile-clip switch
 
+## ✅ Done when
+- Pressing the button/switch adds **10** to the score.
+- A sound plays on every hit.
+- The current score shows on the LEDs.
+- The score starts at **0** each time the program restarts.
+
 ## Notes
 _(space for session notes)_

@@ -14,5 +14,9 @@ En rund bumper: en lav **cylinder** på en lille bund, med en **tap** nedenunder
 - Angiv en målstørrelse, så delene passer til det leverede kabinet
 - Større og kraftigere printer mere pålideligt end tyndt og bittesmåt
 
+## ✅ Færdig når
+- Hvert barn har et færdigt bumper-design (cylinder + bund + tap nedenunder).
+- Det er cirka målstørrelsen og **eksporteret/sat i kø** til print.
+
 ## Noter
 _(hold styr på printtider / hvem har eksporteret her)_

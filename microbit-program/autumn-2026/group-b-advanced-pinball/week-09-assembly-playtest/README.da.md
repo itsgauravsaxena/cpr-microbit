@@ -13,5 +13,10 @@
 - 35 min — saml og forbind; tænd
 - 15 min — første playtest; notér fejl og ru kanter
 
+## ✅ Færdig når
+- Maskinen er samlet: printede dele sat på, sensorer forbundet til pins.
+- Den tænder, og **pointtallet stiger**, når en bumper rammes.
+- Gruppen har en skriftlig **fejlliste** til at rette næste uge.
+
 ## Noter
 Samling trækker altid ud med børn — det er fint, hvis noget færdiggørelse løber ind i uge 10. Hold styr på almindelige fejl her.

@@ -18,5 +18,10 @@ Everyone makes a little 3D **name tag** to take home as their first print — a 
 - 35 min — Tinkercad playground: add a box and a cylinder, resize and rotate them, raise one up, make a **hole** and cut it out, then **group**. Now add a **Text** shape with your name on a flat base
 - 15 min — save your name tag and share screens
 
+## ✅ Done when
+- Every kid has used **move, rotate, resize, the Hole tool, and group** at least once.
+- Everyone has made and **saved** a 3D name tag (a flat base + their name).
+- Nobody is scared of Tinkercad any more!
+
 ## Notes
 _(first time for many kids — note who needs extra help so week 6 goes smoothly)_

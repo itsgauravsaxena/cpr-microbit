@@ -13,5 +13,10 @@
 - 40 min — færdiggør, navngiv og eksportér dele; læreren sætter prints i kø
 - 10 min — bonus-dekorationer / hjælp en sidemand
 
+## ✅ Færdig når
+- Hver del har et **navn** på og er **eksporteret som STL**.
+- Alle dele er i printkøen og på vej til at være klar til samling i uge 9.
+- Intet barn mangler en printbar del.
+
 ## Noter
 Dette er buffer-ugen — brug den, så hvert barn har printbare dele inden uge 9. Hold styr på, hvad der er i kø.

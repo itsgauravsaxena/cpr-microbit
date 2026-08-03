@@ -33,5 +33,10 @@ on button B pressed:
 - 40 min — programmér udløserhændelsen; er der servoer, så forbind en til pin P0 og få en flipper til at bevæge sig (søg "servo" under makecode.microbit.org/projects for referenceblokke)
 - 10 min — test
 
+## ✅ Færdig når
+- Et tryk på **B** blinker en flipper-figur og spiller en lyd.
+- Skærmen ryddes bagefter, klar til næste flip.
+- *(Med en servo)* svinger flipperen fysisk ud og tilbage igen.
+
 ## Noter
 Er der ingen servo, kan flippere være simple manuelle/fjedermekanismer — micro:bitten giver blot lyd-/lysfeedback ved udløsning.

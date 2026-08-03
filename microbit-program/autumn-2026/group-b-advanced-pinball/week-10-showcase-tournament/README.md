@@ -13,5 +13,10 @@
 - 30 min — demos + high-score tournament
 - 10 min — group photos, certificates, celebrate
 
+## ✅ Done when
+- The bugs from the playtest are fixed and the machine is decorated/themed.
+- Every machine has been demoed and the tournament has a winner.
+- Everyone leaves proud of what they built!
+
 ## Notes
 _(capture what worked for planning next term)_

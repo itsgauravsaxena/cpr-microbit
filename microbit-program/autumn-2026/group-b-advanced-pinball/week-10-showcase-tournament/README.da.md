@@ -13,5 +13,10 @@
 - 30 min — demoer + high score-turnering
 - 10 min — gruppebilleder, diplomer, fejring
 
+## ✅ Færdig når
+- Fejlene fra playtesten er rettet, og maskinen er pyntet/temasat.
+- Hver maskine er blevet demonstreret, og turneringen har en vinder.
+- Alle går stolte hjem over det, de har bygget!
+
 ## Noter
 _(notér hvad der virkede, til planlægning af næste sæson)_

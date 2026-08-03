@@ -33,5 +33,10 @@ on button B pressed:
 - 40 min — program the trigger event; if servos are available, wire one to pin P0 and make a flipper move (search "servo" under makecode.microbit.org/projects for reference blocks)
 - 10 min — test
 
+## ✅ Done when
+- Pressing **B** flashes a flipper shape and plays a sound.
+- The screen clears again afterwards, ready for the next flip.
+- *(With a servo)* the flipper physically swings out and returns.
+
 ## Notes
 If there's no servo, flippers can be simple manual/spring mechanisms — the micro:bit just gives sound/light feedback on the trigger.

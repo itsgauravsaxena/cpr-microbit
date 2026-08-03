@@ -1,4 +1,4 @@
-# Uge 6 — Pointtælling med flere sensorer
+# Uge 4 — Pointtælling med flere sensorer
 
 **Mål:** forbind 2-3 kontakter/sensorer rundt om på spillepladen, hver med forskellig pointværdi, plus liv/bold-tæller og en game over-skærm.
 

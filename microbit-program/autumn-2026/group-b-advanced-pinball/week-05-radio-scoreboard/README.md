@@ -1,4 +1,4 @@
-# Week 7 — Radio scoreboard
+# Week 5 — Radio scoreboard
 
 **Goal:** a second micro:bit as a remote scoreboard display, using radio blocks.
 

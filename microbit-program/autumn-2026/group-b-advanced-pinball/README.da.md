@@ -75,6 +75,69 @@ Et 10-ugers afgangsprojekt, hvor der bygges en lille flippermaskine til bordet. 
 
 *Jeres færdige mini-flippermaskine — bumpere, flippere, en bold og en micro:bit, der holder styr på pointene.*
 
+## Maskinens dele (navne)
+
+Brug disse navne, så alle mener det samme:
+
+<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
+<svg viewBox="0 0 730 500" width="100%" style="max-width:660px;height:auto;" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif" role="img" aria-label="Labeled diagram of the pinball machine parts">
+  <!-- ===== machine (static), shifted right to leave room for labels ===== -->
+  <g transform="translate(160,20)">
+    <rect x="16" y="16" width="288" height="438" rx="24" fill="#33406b" stroke="#c8a24a" stroke-width="3"/>
+    <rect x="38" y="28" width="244" height="56" rx="10" fill="#0f1419"/>
+    <text x="58" y="64" font-size="24" fill="#ffd24a" font-weight="800">PINBALL</text>
+    <!-- micro:bit scoreboard, static heart -->
+    <g transform="translate(232,36)">
+      <rect x="0" y="0" width="42" height="40" rx="6" fill="#12191f" stroke="#c8a24a" stroke-width="1.5"/>
+      <g fill="#ff4d4d">
+        <rect x="13" y="6" width="5" height="5" rx="1"/><rect x="27" y="6" width="5" height="5" rx="1"/>
+        <rect x="6" y="13" width="5" height="5" rx="1"/><rect x="13" y="13" width="5" height="5" rx="1"/><rect x="20" y="13" width="5" height="5" rx="1"/><rect x="27" y="13" width="5" height="5" rx="1"/><rect x="34" y="13" width="5" height="5" rx="1"/>
+        <rect x="13" y="20" width="5" height="5" rx="1"/><rect x="20" y="20" width="5" height="5" rx="1"/><rect x="27" y="20" width="5" height="5" rx="1"/>
+        <rect x="20" y="27" width="5" height="5" rx="1"/>
+      </g>
+    </g>
+    <rect x="38" y="92" width="244" height="346" rx="14" fill="#123a24"/>
+    <rect x="38" y="92" width="244" height="346" rx="14" fill="none" stroke="#1d5637" stroke-width="2"/>
+    <rect x="258" y="150" width="6" height="260" rx="3" fill="#0e2b1b"/>
+    <!-- bumpers -->
+    <circle cx="96" cy="168" r="22" fill="#e5484d"/><circle cx="96" cy="168" r="13" fill="#ff8a8d"/>
+    <circle cx="205" cy="152" r="22" fill="#3a7bd5"/><circle cx="205" cy="152" r="13" fill="#7fb2ff"/>
+    <circle cx="150" cy="230" r="22" fill="#f2a03d"/><circle cx="150" cy="230" r="13" fill="#ffc987"/>
+    <!-- flippers (static V) -->
+    <g transform="translate(92,406) rotate(-25)"><rect x="0" y="-8" width="62" height="16" rx="8" fill="#ffd24a"/></g>
+    <g transform="translate(228,406) rotate(25)"><rect x="-62" y="-8" width="62" height="16" rx="8" fill="#ffd24a"/></g>
+    <!-- ball (static) -->
+    <circle cx="232" cy="120" r="8" fill="#eef3f7" stroke="#9fb0bd" stroke-width="1.5"/>
+  </g>
+
+  <!-- ===== labels + leader lines (absolute coords) ===== -->
+  <g stroke="#8a94a6" stroke-width="1.5" fill="none">
+    <polyline points="150,58 176,52"/>            <!-- Cabinet -->
+    <polyline points="150,278 224,278"/>          <!-- Playfield -->
+    <polyline points="150,196 250,196"/>          <!-- Bumpers -->
+    <polyline points="150,432 252,428"/>          <!-- Flippers -->
+    <polyline points="470,72 428,72"/>            <!-- Scoreboard -->
+    <polyline points="470,140 402,140"/>          <!-- Ball -->
+    <polyline points="470,300 426,320"/>          <!-- Launch lane -->
+    <polyline points="470,432 312,442"/>          <!-- Drain -->
+  </g>
+  <g fill="#8a94a6">
+    <circle cx="176" cy="52" r="3"/><circle cx="224" cy="278" r="3"/><circle cx="250" cy="196" r="3"/><circle cx="252" cy="428" r="3"/>
+    <circle cx="428" cy="72" r="3"/><circle cx="402" cy="140" r="3"/><circle cx="426" cy="320" r="3"/><circle cx="312" cy="442" r="3"/>
+  </g>
+  <g font-size="16" font-weight="600" fill="currentColor">
+    <text x="142" y="62" text-anchor="end">Cabinet</text>
+    <text x="142" y="283" text-anchor="end">Playfield</text>
+    <text x="142" y="201" text-anchor="end">Bumpers</text>
+    <text x="142" y="437" text-anchor="end">Flippers</text>
+    <text x="478" y="77">Scoreboard (micro:bit)</text>
+    <text x="478" y="145">Ball</text>
+    <text x="478" y="305">Launch lane (plunger)</text>
+    <text x="478" y="437">Drain</text>
+  </g>
+</svg>
+</div>
+
 ## Referencebyg
 - ["3D Printed Pinball" af ctrl design](https://pinshape.com/items/24228-3d-printed-pinball) — micro:bit/Arduino-baseret, skalerbar sværhedsgrad, gratis STL-filer
 - micro:bit + PinBox 3000 pap-flippermaskine (TechnoChic) — reference til at styre lys, lyd og en resultattavle fra en micro:bit på et enkelt stel

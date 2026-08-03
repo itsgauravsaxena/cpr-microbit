@@ -14,5 +14,9 @@ En lille **L-formet holder** eller en **klips**, der holder jeres sensor på pla
 - Mål jeres sensor først (cirka), så åbningen er stor nok
 - Et hul, der er lidt for stort, er nemt at fóre op; for lille passer ikke
 
+## ✅ Færdig når
+- Hvert barn har en holder/klips, der holder sensoren og retter den ind mod bolden.
+- Den er **eksporteret/sat i kø** til print.
+
 ## Noter
 _(3D-printerkøen er travl denne uge — hold styr på printtider her)_

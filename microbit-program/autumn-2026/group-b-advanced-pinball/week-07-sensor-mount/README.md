@@ -14,5 +14,9 @@ A little **L-shaped bracket** or a **clip** that holds your sensor in place and 
 - Measure your sensor first (roughly) so the slot is big enough
 - A hole that's slightly too big is easy to shim; too small won't fit
 
+## ✅ Done when
+- Each kid has a bracket/clip that holds their sensor and lines it up with the ball.
+- It is **exported/queued** for printing.
+
 ## Notes
 _(3D printer queue is busy this week — track print times here)_

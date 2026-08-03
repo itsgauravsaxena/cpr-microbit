@@ -14,5 +14,9 @@ A round bumper: a short **cylinder** on a small base, with a **peg** underneath 
 - Give a target size so parts fit the pre-supplied cabinet
 - Bigger and chunkier prints more reliably than thin and tiny
 
+## ✅ Done when
+- Each kid has a finished bumper design (cylinder + base + peg underneath).
+- It is roughly the target size and **exported/queued** for printing.
+
 ## Notes
 _(track print times / who has exported here)_

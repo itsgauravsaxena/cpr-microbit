@@ -19,5 +19,10 @@ on start:
 - 30 min — Combination Lock-tutorial som opvarmning, skriv derefter velkomstprogrammet ovenfor og flash det
 - 15 min — planlæg maskinen som gruppe: tema, grov layoutskitse på papir
 
+## ✅ Færdig når
+- Hvert board viser velkomstbeskeden og et hjerte, når det flashes.
+- Gruppen er blevet enige om et **tema** og har lavet en grov papirskitse.
+- Alle husker arbejdsgangen med at downloade til boardet fra Gruppe A.
+
 ## Noter
 _(notér gruppens valgte tema her)_

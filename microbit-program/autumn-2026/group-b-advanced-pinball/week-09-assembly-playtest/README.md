@@ -13,5 +13,10 @@
 - 35 min — assemble and wire; power on
 - 15 min — first playtest; list the bugs and rough spots
 
+## ✅ Done when
+- The machine is assembled: printed parts fitted, sensors wired to the pins.
+- It powers on and the **score goes up** when a bumper is hit.
+- The group has a written **bug list** to fix next week.
+
 ## Notes
 Assembly always runs long with kids — it's fine if some finishing spills into week 10. Track common bugs here.

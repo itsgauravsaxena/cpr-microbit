@@ -19,5 +19,10 @@ on start:
 - 30 min — Combination Lock tutorial as a warm-up/refresher, then type the welcome program above and flash it
 - 15 min — plan the machine as a group: theme, rough layout sketch on paper
 
+## ✅ Done when
+- Every board, when flashed, shows the welcome message and a heart.
+- The group has agreed on a **theme** and sketched a rough paper layout.
+- Everyone remembers the download-to-board flow from Group A.
+
 ## Notes
 _(capture the group's chosen theme here)_

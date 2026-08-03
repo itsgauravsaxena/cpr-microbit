@@ -46,5 +46,11 @@ on radio received (receivedNumber):
 - 40 min — wire and program the scoring zones, add a lives/ball counter and the GAME OVER screen
 - 10 min — test the full scoring loop (and the radio scoreboard if you tried it)
 
+## ✅ Done when
+- The two bumpers (**P1**, **P2**) add **different** amounts of points.
+- The ball count goes **down from 3**.
+- When balls reach **0**, the board scrolls **GAME OVER** and shows the final score.
+- *(Optional stretch)* a second micro:bit shows the score over radio.
+
 ## Notes
 _(space for session notes)_

@@ -23,5 +23,11 @@ on button A pressed:          // a bumper / switch is hit
 - 40 min — byg programmet: en `score`-variabel, +10 ved tryk, et `music`-bip, vis pointtallet
 - 10 min — test i simulatoren, derefter på en rigtig micro:bit med en krokodillenæb-kontakt
 
+## ✅ Færdig når
+- Et tryk på knappen/kontakten lægger **10** til pointtallet.
+- Der spiller en lyd ved hvert tryk.
+- Det aktuelle pointtal vises på LED'erne.
+- Pointtallet starter på **0**, hver gang programmet genstarter.
+
 ## Noter
 _(plads til sessionsnoter)_

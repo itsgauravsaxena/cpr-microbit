@@ -46,5 +46,11 @@ on radio received (receivedNumber):
 - 40 min — forbind og programmér pointzonerne, tilføj en liv/bold-tæller og GAME OVER-skærmen
 - 10 min — test hele pointløkken (og radioresultattavlen, hvis I prøvede den)
 
+## ✅ Færdig når
+- De to bumpere (**P1**, **P2**) lægger **forskellige** antal point til.
+- Boldtælleren tæller **ned fra 3**.
+- Når bolde når **0**, ruller boardet **GAME OVER** og viser slutresultatet.
+- *(Valgfri udvidelse)* en anden micro:bit viser pointtallet over radio.
+
 ## Noter
 _(plads til sessionsnoter)_

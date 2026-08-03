@@ -13,5 +13,10 @@
 - 40 min — finish, name, and export parts; teacher queues prints
 - 10 min — bonus decorations / help a neighbour
 
+## ✅ Done when
+- Every part has a **name** on it and is **exported as STL**.
+- All parts are in the print queue, on track to be ready for assembly in week 9.
+- No kid is missing a printable part.
+
 ## Notes
 This is the buffer week — use it so every kid has printable parts before week 9. Track what's queued.

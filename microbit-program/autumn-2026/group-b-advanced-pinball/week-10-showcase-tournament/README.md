@@ -1,12 +1,17 @@
-# Week 10 — Showcase / mini pinball tournament
+# Week 10 — Polish & showcase / tournament
 
-**Goal:** demo every machine; consider a friendly high-score tournament. Invite the startup group to come play.
+**Goal:** fix the bugs from last week, decorate/theme the machine, then demo every machine and run a friendly high-score tournament.
+
+## What you'll do
+- Fix scoring/sensor bugs from the week-9 playtest
+- Decorate: add sound effects, a light show, paint, and your bonus 3D decorations
+- Demo each machine, then a **mini tournament** — highest score wins!
+- Invite the startup group (Group A) to come and play
 
 ## Session outline (60 min)
-- 40 min — demo each machine, run the tournament
-- 15 min — group photos, celebrate
-- 5 min — certificates / wrap-up
+- 20 min — polish: fix bugs, decorate/theme
+- 30 min — demos + high-score tournament
+- 10 min — group photos, certificates, celebrate
 
 ## Notes
-_(space for session notes — capture what worked for planning next term)_
-
+_(capture what worked for planning next term)_

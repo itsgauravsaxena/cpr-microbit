@@ -1,11 +1,17 @@
-# Uge 10 — Fremvisning / mini-flipperturnering
+# Uge 10 — Finpudsning & fremvisning / turnering
 
-**Mål:** demonstrér hver maskine; overvej en venskabelig high score-turnering. Inviter startup-gruppen til at komme og spille.
+**Mål:** ret fejlene fra sidste uge, pynt/temasæt maskinen, demonstrér så hver maskine og afhold en venskabelig high score-turnering.
+
+## Hvad I laver
+- Ret point-/sensorfejl fra playtesten i uge 9
+- Pynt: tilføj lydeffekter, et lysshow, maling og jeres bonus-3D-dekorationer
+- Demonstrér hver maskine, derefter en **mini-turnering** — højeste score vinder!
+- Inviter startup-gruppen (Gruppe A) til at komme og spille
 
 ## Sessionsforløb (60 min)
-- 40 min — demonstrér hver maskine, afhold turneringen
-- 15 min — gruppebilleder, fejring
-- 5 min — diplomer / afrunding
+- 20 min — finpudsning: ret fejl, pynt/temasæt
+- 30 min — demoer + high score-turnering
+- 10 min — gruppebilleder, diplomer, fejring
 
 ## Noter
-_(plads til sessionsnoter — notér hvad der virkede, til planlægning af næste sæson)_
+_(notér hvad der virkede, til planlægning af næste sæson)_

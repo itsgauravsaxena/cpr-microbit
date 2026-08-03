@@ -8,6 +8,73 @@ A 10-week capstone building a small tabletop pinball machine. Everything stays a
 2. **Weeks 5–8 · 3D-design the parts** — start with a whole week *just playing* in Tinkercad (great for first-timers), then design a bumper and a sensor mount, and finish/print everything.
 3. **Weeks 9–10 · Build & finish** — assemble, playtest, polish, decorate, and end with a mini tournament.
 
+## What you’ll build
+
+<div style="text-align:center;margin:1rem 0;" markdown="0">
+<svg viewBox="0 0 320 470" width="100%" style="max-width:300px;height:auto;" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif" role="img" aria-label="An animated mini pinball machine">
+  <!-- cabinet -->
+  <rect x="16" y="16" width="288" height="438" rx="24" fill="#33406b" stroke="#c8a24a" stroke-width="3"/>
+  <!-- backbox / title -->
+  <rect x="38" y="28" width="244" height="56" rx="10" fill="#0f1419"/>
+  <text x="58" y="64" font-size="24" fill="#ffd24a" font-weight="800">PINBALL</text>
+  <!-- micro:bit scoreboard with a pulsing heart -->
+  <g transform="translate(232,36)">
+    <rect x="0" y="0" width="42" height="40" rx="6" fill="#12191f" stroke="#c8a24a" stroke-width="1.5"/>
+    <g fill="#3a2323">
+      <rect x="6" y="6" width="5" height="5" rx="1"/><rect x="13" y="6" width="5" height="5" rx="1"/><rect x="20" y="6" width="5" height="5" rx="1"/><rect x="27" y="6" width="5" height="5" rx="1"/><rect x="34" y="6" width="5" height="5" rx="1"/>
+      <rect x="6" y="13" width="5" height="5" rx="1"/><rect x="13" y="13" width="5" height="5" rx="1"/><rect x="20" y="13" width="5" height="5" rx="1"/><rect x="27" y="13" width="5" height="5" rx="1"/><rect x="34" y="13" width="5" height="5" rx="1"/>
+      <rect x="6" y="20" width="5" height="5" rx="1"/><rect x="13" y="20" width="5" height="5" rx="1"/><rect x="20" y="20" width="5" height="5" rx="1"/><rect x="27" y="20" width="5" height="5" rx="1"/><rect x="34" y="20" width="5" height="5" rx="1"/>
+      <rect x="6" y="27" width="5" height="5" rx="1"/><rect x="13" y="27" width="5" height="5" rx="1"/><rect x="20" y="27" width="5" height="5" rx="1"/><rect x="27" y="27" width="5" height="5" rx="1"/><rect x="34" y="27" width="5" height="5" rx="1"/>
+    </g>
+    <g fill="#ff4d4d">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.1s" repeatCount="indefinite"/>
+      <rect x="13" y="6" width="5" height="5" rx="1"/><rect x="27" y="6" width="5" height="5" rx="1"/>
+      <rect x="6" y="13" width="5" height="5" rx="1"/><rect x="13" y="13" width="5" height="5" rx="1"/><rect x="20" y="13" width="5" height="5" rx="1"/><rect x="27" y="13" width="5" height="5" rx="1"/><rect x="34" y="13" width="5" height="5" rx="1"/>
+      <rect x="13" y="20" width="5" height="5" rx="1"/><rect x="20" y="20" width="5" height="5" rx="1"/><rect x="27" y="20" width="5" height="5" rx="1"/>
+      <rect x="20" y="27" width="5" height="5" rx="1"/>
+    </g>
+  </g>
+
+  <!-- playfield -->
+  <rect x="38" y="92" width="244" height="346" rx="14" fill="#123a24"/>
+  <rect x="38" y="92" width="244" height="346" rx="14" fill="none" stroke="#1d5637" stroke-width="2"/>
+  <!-- plunger lane -->
+  <rect x="258" y="150" width="6" height="260" rx="3" fill="#0e2b1b"/>
+
+  <!-- bumpers (pulsing) -->
+  <g>
+    <circle cx="96" cy="168" r="22" fill="#e5484d"/><circle cx="96" cy="168" r="12" fill="#ff8a8d">
+      <animate attributeName="r" values="12;15;12" dur="1.3s" repeatCount="indefinite"/></circle>
+  </g>
+  <g>
+    <circle cx="205" cy="152" r="22" fill="#3a7bd5"/><circle cx="205" cy="152" r="12" fill="#7fb2ff">
+      <animate attributeName="r" values="12;15;12" dur="1.6s" repeatCount="indefinite"/></circle>
+  </g>
+  <g>
+    <circle cx="150" cy="230" r="22" fill="#f2a03d"/><circle cx="150" cy="230" r="12" fill="#ffc987">
+      <animate attributeName="r" values="12;15;12" dur="1.9s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- flippers (V-shape, flicking) -->
+  <g transform="translate(92,406)">
+    <rect x="0" y="-8" width="62" height="16" rx="8" fill="#ffd24a"/>
+    <animateTransform attributeName="transform" type="rotate" values="-25;-48;-25" dur="1.1s" repeatCount="indefinite" additive="sum"/>
+  </g>
+  <g transform="translate(228,406)">
+    <rect x="-62" y="-8" width="62" height="16" rx="8" fill="#ffd24a"/>
+    <animateTransform attributeName="transform" type="rotate" values="25;48;25" dur="1.1s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- the ball -->
+  <circle r="8" fill="#eef3f7" stroke="#9fb0bd" stroke-width="1.5">
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="0"
+      path="M261,405 L261,120 C232,104 175,120 160,150 C130,180 108,150 96,168 C118,205 185,178 205,152 C232,192 168,214 150,230 C150,300 150,360 158,398 L261,405 Z"/>
+  </circle>
+</svg>
+</div>
+
+*Your finished mini pinball machine — bumpers, flippers, a ball, and a micro:bit keeping score.*
+
 ## Reference builds
 - ["3D Printed Pinball" by ctrl design](https://pinshape.com/items/24228-3d-printed-pinball) — micro:bit/Arduino-based, scalable difficulty, free STL files
 - micro:bit + PinBox 3000 cardboard pinball (TechnoChic) — reference for driving lights, sound, and a scoreboard from a micro:bit on a simple frame

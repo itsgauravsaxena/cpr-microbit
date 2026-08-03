@@ -22,6 +22,49 @@
 - 25 min — Coin Toss tutorial
 - 5 min — share/test
 
+## Example code
+
+<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
+<svg viewBox="0 0 580 148" width="100%" style="max-width:580px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
+<rect x="30" y="20" width="250" height="32" rx="14" fill="#5c8aa8"/>
+<rect x="40" y="15" width="34" height="12" rx="6" fill="#5c8aa8"/>
+<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on start</text>
+<rect x="30" y="55" width="250" height="32" rx="7" fill="#ff8f1a"/>
+<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">set steps to 0</text>
+<rect x="310" y="20" width="250" height="32" rx="14" fill="#9857c9"/>
+<rect x="320" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
+<text x="324" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on shake</text>
+<rect x="310" y="55" width="250" height="32" rx="7" fill="#ff8f1a"/>
+<text x="324" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">change steps by 1</text>
+<rect x="310" y="90" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="324" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show number steps</text>
+</svg>
+</div>
+
+```javascript
+let steps = 0
+input.onGesture(Gesture.Shake, function () {
+    steps += 1
+    basic.showNumber(steps)
+})
+```
+
+**Coin Toss** (heads ✓ or tails ✗):
+
+```javascript
+input.onGesture(Gesture.Shake, function () {
+    if (Math.randomRange(0, 1) == 0) {
+        basic.showIcon(IconNames.Yes)
+    } else {
+        basic.showIcon(IconNames.No)
+    }
+})
+```
+
+## ✅ Done when
+- **Step Counter**: each shake adds 1 and shows the count.
+- **Coin Toss**: a shake shows heads (✓) or tails (✗).
+
 ## Notes
 _(space for session notes)_
 

@@ -22,6 +22,36 @@
 - 25 min — Love Meter tutorial (touch pins)
 - 5 min — share/test
 
+## Example code
+
+<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
+<svg viewBox="0 0 300 98" width="100%" style="max-width:300px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
+<rect x="30" y="20" width="250" height="32" rx="14" fill="#9857c9"/>
+<rect x="40" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
+<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on shake</text>
+<rect x="30" y="55" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show number (pick random 1 to 6)</text>
+</svg>
+</div>
+
+```javascript
+input.onGesture(Gesture.Shake, function () {
+    basic.showNumber(Math.randomRange(1, 6))
+})
+```
+
+**Love Meter** (touch pin 0):
+
+```javascript
+input.onPinPressed(TouchPin.P0, function () {
+    basic.showNumber(Math.randomRange(0, 100))
+})
+```
+
+## ✅ Done when
+- A shake shows a random number **1–6** (the dice).
+- Touching pin **0** shows a random 'love' score 0–100.
+
 ## Notes
 _(space for session notes)_
 

@@ -17,5 +17,9 @@
 - 10 min — fælles spørgetime / "hvilken uge var din yndlings og hvorfor"
 - 5 min — diplomer / afrunding
 
+## ✅ Færdig når
+- Hvert barn har vist et yndlingsprojekt frem fra sæsonen.
+- Alle går stolte hjem over det, de har lavet!
+
 ## Noter
 _(plads til sessionsnoter — notér hvad børnene valgte at demonstrere, til planlægning af næste sæson)_

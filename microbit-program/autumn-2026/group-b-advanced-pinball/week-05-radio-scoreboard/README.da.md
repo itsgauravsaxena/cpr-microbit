@@ -1,4 +1,4 @@
-# Uge 7 — Radioresultattavle
+# Uge 5 — Radioresultattavle
 
 **Mål:** en anden micro:bit som ekstern resultattavle-visning ved hjælp af radioblokke.
 

@@ -1,4 +1,4 @@
-# Uge 3 — Programmér grundlæggende pointtælling
+# Uge 2 — Programmér grundlæggende pointtælling
 
 **Mål:** et tryk på en knap eller kontakt = +10 point, afspil en lyd, vis pointtallet.
 

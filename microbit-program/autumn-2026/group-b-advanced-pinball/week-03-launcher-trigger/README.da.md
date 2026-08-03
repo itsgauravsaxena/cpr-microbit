@@ -1,4 +1,4 @@
-# Uge 5 — Programmér udløseren til affyring/flipper
+# Uge 3 — Programmér udløseren til affyring/flipper
 
 **Mål:** tryk på knap eller tap på accelerometer = "flip"/"affyring"-hændelse, med lyd + LED-feedback.
 

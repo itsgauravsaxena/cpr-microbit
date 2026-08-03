@@ -1,4 +1,4 @@
-# Week 5 — Program the launcher/flipper trigger
+# Week 3 — Program the launcher/flipper trigger
 
 **Goal:** button press or accelerometer tap = "flip"/"launch" event, with sound + LED feedback.
 

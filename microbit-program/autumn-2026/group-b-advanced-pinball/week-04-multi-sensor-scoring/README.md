@@ -1,4 +1,4 @@
-# Week 6 — Multi-sensor scoring
+# Week 4 — Multi-sensor scoring
 
 **Goal:** wire up 2-3 switches/sensors around the playfield, each worth different points, plus lives/ball count and a game-over screen.
 

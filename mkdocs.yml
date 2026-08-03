@@ -98,12 +98,12 @@ nav:
       - "Group B — Advanced Pinball":
           - Overview: autumn-2026/group-b-advanced-pinball/README.md
           - "Week 1 · Kickoff & recap": autumn-2026/group-b-advanced-pinball/week-01-kickoff/README.md
-          - "Week 2 · Tinkercad playfield": autumn-2026/group-b-advanced-pinball/week-02-tinkercad-playfield/README.md
-          - "Week 3 · Scoring basics": autumn-2026/group-b-advanced-pinball/week-03-scoring-basics/README.md
-          - "Week 4 · Sensor mount": autumn-2026/group-b-advanced-pinball/week-04-sensor-mount/README.md
-          - "Week 5 · Launcher/flipper trigger": autumn-2026/group-b-advanced-pinball/week-05-launcher-trigger/README.md
-          - "Week 6 · Multi-sensor scoring": autumn-2026/group-b-advanced-pinball/week-06-multi-sensor-scoring/README.md
-          - "Week 7 · Radio scoreboard": autumn-2026/group-b-advanced-pinball/week-07-radio-scoreboard/README.md
+          - "Week 2 · Scoring basics": autumn-2026/group-b-advanced-pinball/week-02-scoring-basics/README.md
+          - "Week 3 · Launcher/flipper trigger": autumn-2026/group-b-advanced-pinball/week-03-launcher-trigger/README.md
+          - "Week 4 · Multi-sensor scoring": autumn-2026/group-b-advanced-pinball/week-04-multi-sensor-scoring/README.md
+          - "Week 5 · Radio scoreboard": autumn-2026/group-b-advanced-pinball/week-05-radio-scoreboard/README.md
+          - "Week 6 · Tinkercad playfield": autumn-2026/group-b-advanced-pinball/week-06-tinkercad-playfield/README.md
+          - "Week 7 · Sensor mount": autumn-2026/group-b-advanced-pinball/week-07-sensor-mount/README.md
           - "Week 8 · Assembly": autumn-2026/group-b-advanced-pinball/week-08-assembly/README.md
           - "Week 9 · Playtesting & polish": autumn-2026/group-b-advanced-pinball/week-09-playtesting-polish/README.md
           - "Week 10 · Showcase / tournament": autumn-2026/group-b-advanced-pinball/week-10-showcase-tournament/README.md

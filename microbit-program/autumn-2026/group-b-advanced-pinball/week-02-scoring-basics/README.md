@@ -1,4 +1,4 @@
-# Week 3 — Program scoring basics
+# Week 2 — Program scoring basics
 
 **Goal:** a button or switch press = +10 points, play a sound, show the score.
 

@@ -1,4 +1,4 @@
-# Uge 2 — Tinkercad-genopfriskning + design en forhindring til spillepladen
+# Uge 6 — Tinkercad-genopfriskning + design en forhindring til spillepladen
 
 **Mål:** hvert barn designer én simpel del til spillepladen.
 

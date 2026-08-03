@@ -1,4 +1,4 @@
-# Week 2 — Tinkercad refresher + design a playfield obstacle
+# Week 6 — Tinkercad refresher + design a playfield obstacle
 
 **Goal:** each kid designs one simple playfield piece.
 

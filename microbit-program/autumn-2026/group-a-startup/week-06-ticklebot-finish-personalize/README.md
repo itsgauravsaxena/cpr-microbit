@@ -22,6 +22,46 @@
 - 15 min — decorate/personalize (googly eyes, paint, etc.) and free play
 - 5 min — share with the group
 
+## Example code
+
+<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
+<svg viewBox="0 0 300 308" width="100%" style="max-width:300px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
+<rect x="30" y="20" width="250" height="32" rx="14" fill="#9857c9"/>
+<rect x="40" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
+<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on pin P0 pressed</text>
+<rect x="30" y="55" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show icon (surprised)</text>
+<rect x="30" y="90" width="250" height="32" rx="7" fill="#7c5e3c"/>
+<text x="44" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">servo write P1 to 180</text>
+<rect x="30" y="125" width="250" height="32" rx="7" fill="#7c5e3c"/>
+<text x="44" y="145.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">servo write P2 to 0</text>
+<rect x="30" y="160" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="44" y="180.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">pause 300 ms</text>
+<rect x="30" y="195" width="250" height="32" rx="7" fill="#7c5e3c"/>
+<text x="44" y="215.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">servo write P1 to 90</text>
+<rect x="30" y="230" width="250" height="32" rx="7" fill="#7c5e3c"/>
+<text x="44" y="250.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">servo write P2 to 90</text>
+<rect x="30" y="265" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="44" y="285.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show icon (happy)</text>
+</svg>
+</div>
+
+```javascript
+input.onPinPressed(TouchPin.P0, function () {
+    basic.showIcon(IconNames.Surprised)
+    pins.servoWritePin(AnalogPin.P1, 180)
+    pins.servoWritePin(AnalogPin.P2, 0)
+    basic.pause(300)
+    pins.servoWritePin(AnalogPin.P1, 90)
+    pins.servoWritePin(AnalogPin.P2, 90)
+    basic.showIcon(IconNames.Happy)
+})
+```
+
+## ✅ Done when
+- Tickling the foot makes the Ticklebot react with a face (surprised → happy) **and** wiggle.
+- The finished robot is decorated and runs on USB/battery.
+
 ## Notes
 _(space for session notes)_
 

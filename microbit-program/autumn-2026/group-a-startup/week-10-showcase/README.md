@@ -17,6 +17,10 @@
 - 10 min — group Q&A / "what was your favorite week and why"
 - 5 min — certificates / wrap-up
 
+## ✅ Done when
+- Every kid has demoed a favourite project from the term.
+- Everyone leaves proud of what they made!
+
 ## Notes
 _(space for session notes — capture what kids picked to demo, for planning next term)_
 

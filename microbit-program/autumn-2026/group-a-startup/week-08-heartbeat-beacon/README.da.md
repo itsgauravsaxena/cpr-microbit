@@ -22,6 +22,50 @@
 - 15 min — lav det om til et spil: gem sender-micro:bitten et sted i lokalet, børnene bruger modtageren til at "jage" den (det bliver varmere, når signalet bliver stærkere)
 - 5 min — afrunding
 
+## Eksempelkode
+
+<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
+<svg viewBox="0 0 580 183" width="100%" style="max-width:580px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
+<rect x="30" y="20" width="250" height="32" rx="14" fill="#5c8aa8"/>
+<rect x="40" y="15" width="34" height="12" rx="6" fill="#5c8aa8"/>
+<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on start</text>
+<rect x="30" y="55" width="250" height="32" rx="7" fill="#c2185b"/>
+<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">radio set group 1</text>
+<rect x="310" y="20" width="250" height="32" rx="14" fill="#c2185b"/>
+<rect x="320" y="15" width="34" height="12" rx="6" fill="#c2185b"/>
+<text x="324" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on radio received</text>
+<rect x="310" y="55" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="324" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show icon (heart)</text>
+<rect x="310" y="90" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="324" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">pause 200 ms</text>
+<rect x="310" y="125" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="324" y="145.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">clear screen</text>
+</svg>
+</div>
+
+```javascript
+radio.setGroup(1)
+radio.onReceivedNumber(function (receivedNumber) {
+    basic.showIcon(IconNames.Heart)
+    basic.pause(200)
+    basic.clearScreen()
+})
+```
+
+**Sender** (det skjulte beacon):
+
+```javascript
+radio.setGroup(1)
+basic.forever(function () {
+    radio.sendNumber(1)
+    basic.pause(1000)
+})
+```
+
+## ✅ Færdig når
+- Senderen bliver ved med at sende et signal på radiogruppen.
+- Modtageren viser et hjerte, hver gang den hører beaconet — tættere på = oftere.
+
 ## Noter
 _(plads til sessionsnoter)_
 

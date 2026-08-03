@@ -19,6 +19,42 @@
 - 45 min — Micro Chat-tutorial: to boards sender beskeder til hinanden, introduktion til radiogrupper/-kanaler
 - 10 min — dan par og test at sende beskeder på tværs af lokalet
 
+## Eksempelkode
+
+<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
+<svg viewBox="0 0 580 198" width="100%" style="max-width:580px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
+<rect x="30" y="20" width="250" height="32" rx="14" fill="#5c8aa8"/>
+<rect x="40" y="15" width="34" height="12" rx="6" fill="#5c8aa8"/>
+<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on start</text>
+<rect x="30" y="55" width="250" height="32" rx="7" fill="#c2185b"/>
+<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">radio set group 1</text>
+<rect x="30" y="105" width="250" height="32" rx="14" fill="#9857c9"/>
+<rect x="40" y="100" width="34" height="12" rx="6" fill="#9857c9"/>
+<text x="44" y="125.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button A pressed</text>
+<rect x="30" y="140" width="250" height="32" rx="7" fill="#c2185b"/>
+<text x="44" y="160.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">radio send string &quot;HI&quot;</text>
+<rect x="310" y="20" width="250" height="32" rx="14" fill="#c2185b"/>
+<rect x="320" y="15" width="34" height="12" rx="6" fill="#c2185b"/>
+<text x="324" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on radio received</text>
+<rect x="310" y="55" width="250" height="32" rx="7" fill="#2a7fff"/>
+<text x="324" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show string (receivedString)</text>
+</svg>
+</div>
+
+```javascript
+radio.setGroup(1)
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("HI")
+})
+radio.onReceivedString(function (receivedString) {
+    basic.showString(receivedString)
+})
+```
+
+## ✅ Færdig når
+- To micro:bits på samme **radiogruppe** kan sende beskeder.
+- Et tryk på **A** på den ene får beskeden til at dukke op på den anden.
+
 ## Noter
 _(plads til sessionsnoter)_
 

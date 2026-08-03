@@ -1,0 +1,17 @@
+# Week 8 — Finish & print prep
+
+**Goal:** a calm catch-up week — finish any unfinished designs, add your name to your parts, export everything, and make sure it's all queued to print in time for assembly. Nobody gets left behind.
+
+## What you'll do
+- Finish the bumper and sensor mount if they aren't done
+- Add a small **Text** name to each of your parts so prints don't get mixed up
+- **Export** each part (Tinkercad → Export → STL) and hand it to the teacher's print queue
+- Done early? Design a **bonus decoration** (a little topper, a themed shape) for your machine
+
+## Session outline (60 min)
+- 10 min — checklist: what still needs finishing or exporting?
+- 40 min — finish, name, and export parts; teacher queues prints
+- 10 min — bonus decorations / help a neighbour
+
+## Notes
+This is the buffer week — use it so every kid has printable parts before week 9. Track what's queued.

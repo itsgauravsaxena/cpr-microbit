@@ -1,12 +1,18 @@
-# Week 6 — Tinkercad refresher + design a playfield obstacle
+# Week 6 — Design a playfield bumper
 
-**Goal:** each kid designs one simple playfield piece.
+**Goal:** design **one simple bumper** the ball can bounce off. Your first real pinball part.
+
+## What you'll design
+A round bumper: a short **cylinder** on a small base, with a **peg** underneath so it slots into the playfield. Aim for about **20 mm tall** — low-precision, snap/glue-fit is totally fine.
 
 ## Session outline (60 min)
-- 15 min — Tinkercad warm-up (shapes, grouping/subtracting)
-- 40 min — each kid designs one simple piece: a bumper, a wall segment, or a scoring pocket insert (low-precision, kid-designed)
-- 5 min — share designs
+- 10 min — recap last week's Tinkercad skills (move, rotate, hole, group)
+- 40 min — build the bumper: a cylinder + base, add a small peg underneath, group it together
+- 10 min — export/queue for printing (the printer starts this week if you have access)
+
+## Tips
+- Give a target size so parts fit the pre-supplied cabinet
+- Bigger and chunkier prints more reliably than thin and tiny
 
 ## Notes
-Cabinet, ramps, and the flipper mechanism (precision parts) are provided separately — not part of this week's kid design work.
-
+_(track print times / who has exported here)_

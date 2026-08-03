@@ -1,11 +1,18 @@
-# Uge 6 — Tinkercad-genopfriskning + design en forhindring til spillepladen
+# Uge 6 — Design en bumper til spillepladen
 
-**Mål:** hvert barn designer én simpel del til spillepladen.
+**Mål:** design **én simpel bumper**, som bolden kan hoppe af. Jeres første rigtige flipper-del.
+
+## Hvad I designer
+En rund bumper: en lav **cylinder** på en lille bund, med en **tap** nedenunder, så den passer ned i spillepladen. Sigt efter cirka **20 mm høj** — lav præcision, klik-/limpasform er helt fint.
 
 ## Sessionsforløb (60 min)
-- 15 min — Tinkercad-opvarmning (former, gruppering/subtraktion)
-- 40 min — hvert barn designer én simpel del: en bumper, et vægstykke eller en indsats til en pointlomme (lav præcision, designet af børnene)
-- 5 min — del designs
+- 10 min — opsummér sidste uges Tinkercad-færdigheder (flyt, rotér, hul, gruppér)
+- 40 min — byg bumperen: en cylinder + bund, tilføj en lille tap nedenunder, gruppér det hele
+- 10 min — eksportér/sæt i kø til print (printeren starter denne uge, hvis I har adgang)
+
+## Tips
+- Angiv en målstørrelse, så delene passer til det leverede kabinet
+- Større og kraftigere printer mere pålideligt end tyndt og bittesmåt
 
 ## Noter
-Kabinet, ramper og flippermekanismen (præcisionsdele) leveres separat — ikke en del af denne uges designarbejde for børnene.
+_(hold styr på printtider / hvem har eksporteret her)_

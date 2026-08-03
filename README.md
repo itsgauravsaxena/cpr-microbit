@@ -1,6 +1,6 @@
 # cpr-microbit
 
-All micro:bit teaching material for the CPR coding club, organized by term, published as a searchable bilingual (English + Danish) website.
+All micro:bit teaching material for the Coding Pirates Rødovre (CPR) micro:bit hold, organized by term, published as a searchable bilingual (English + Danish) website.
 
 **Live site:** https://itsgauravsaxena.github.io/cpr-microbit/
 

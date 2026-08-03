@@ -1,6 +1,6 @@
-# CPR micro:bit — Programoversigt
+# Coding Pirates Rødovre — micro:bit-hold
 
-Ét sted til alt micro:bit-undervisningsmateriale for CPR-kodeklubben, organiseret efter sæson.
+Ét sted til alt micro:bit-undervisningsmateriale for Coding Pirates Rødovres micro:bit-hold, organiseret efter sæson.
 
 Vælg en sæson i fanerne øverst eller på listen nedenfor. Hver side findes på **engelsk** og **dansk** — brug sprogvælgeren (🌐) i topbjælken.
 

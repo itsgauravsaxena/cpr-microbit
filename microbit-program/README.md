@@ -1,6 +1,6 @@
-# CPR micro:bit — Program Hub
+# Coding Pirates Rødovre — micro:bit hold
 
-One place for all micro:bit teaching material for the CPR coding club, organized by term.
+One place for all micro:bit teaching material for the Coding Pirates Rødovre micro:bit hold, organized by term.
 
 Pick a term from the tabs at the top, or from the list below. Every page is available in **English** and **Danish** — use the language switcher (🌐) in the top bar.
 

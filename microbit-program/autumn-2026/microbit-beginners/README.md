@@ -1,4 +1,4 @@
-# Group A — Startup
+# micro:bit Beginners
 
 Ages 8-10, brand new to coding. 1-hour sessions, physical micro:bits for everyone.
 

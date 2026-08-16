@@ -1,4 +1,4 @@
-# Gruppe A — Startup
+# micro:bit Beginners
 
 Alder 8-10, helt nye til kodning. Sessioner på 1 time, fysiske micro:bits til alle.
 

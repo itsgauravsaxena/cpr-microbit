@@ -83,28 +83,40 @@ nav:
   - Spring 2026: spring-2026/README.md
   - Autumn 2026:
       - Overview: autumn-2026/README.md
-      - "Group A — Startup":
-          - Overview: autumn-2026/group-a-startup/README.md
-          - "Week 1 · Flashing Heart": autumn-2026/group-a-startup/week-01-flashing-heart/README.md
-          - "Week 2 · Name Tag + Smiley Buttons": autumn-2026/group-a-startup/week-02-name-tag-smiley-buttons/README.md
-          - "Week 3 · Dice + Love Meter": autumn-2026/group-a-startup/week-03-dice-love-meter/README.md
-          - "Week 4 · Guess! + Reaction Time": autumn-2026/group-a-startup/week-04-guess-reaction-time/README.md
-          - "Week 5 · Ticklebot build & wire": autumn-2026/group-a-startup/week-05-ticklebot-build-wire/README.md
-          - "Week 6 · Ticklebot finish & personalize": autumn-2026/group-a-startup/week-06-ticklebot-finish-personalize/README.md
-          - "Week 7 · Micro Chat": autumn-2026/group-a-startup/week-07-micro-chat/README.md
-          - "Week 8 · Heartbeat Beacon": autumn-2026/group-a-startup/week-08-heartbeat-beacon/README.md
-          - "Week 9 · Step Counter + Coin Toss": autumn-2026/group-a-startup/week-09-step-counter-coin-toss/README.md
-          - "Week 10 · Showcase": autumn-2026/group-a-startup/week-10-showcase/README.md
-      - "Group B — Advanced Pinball":
-          - Overview: autumn-2026/group-b-advanced-pinball/README.md
-          - "Week 1 · Kickoff & recap": autumn-2026/group-b-advanced-pinball/week-01-kickoff/README.md
-          - "Week 2 · Scoring basics": autumn-2026/group-b-advanced-pinball/week-02-scoring-basics/README.md
-          - "Week 3 · Launcher/flipper trigger": autumn-2026/group-b-advanced-pinball/week-03-launcher-trigger/README.md
-          - "Week 4 · Multi-sensor + game over": autumn-2026/group-b-advanced-pinball/week-04-multi-sensor-scoring/README.md
-          - "Week 5 · Tinkercad first steps": autumn-2026/group-b-advanced-pinball/week-05-tinkercad-basics/README.md
-          - "Week 6 · Design a bumper": autumn-2026/group-b-advanced-pinball/week-06-tinkercad-playfield/README.md
-          - "Week 7 · Sensor mount": autumn-2026/group-b-advanced-pinball/week-07-sensor-mount/README.md
-          - "Week 8 · Finish & print prep": autumn-2026/group-b-advanced-pinball/week-08-design-finish/README.md
-          - "Week 9 · Assembly + playtest": autumn-2026/group-b-advanced-pinball/week-09-assembly-playtest/README.md
-          - "Week 10 · Polish & showcase": autumn-2026/group-b-advanced-pinball/week-10-showcase-tournament/README.md
+      - "micro:bit Beginners":
+          - Overview: autumn-2026/microbit-beginners/README.md
+          - "Week 1 · Flashing Heart": autumn-2026/microbit-beginners/week-01-flashing-heart/README.md
+          - "Week 2 · Name Tag + Smiley Buttons": autumn-2026/microbit-beginners/week-02-name-tag-smiley-buttons/README.md
+          - "Week 3 · Dice + Love Meter": autumn-2026/microbit-beginners/week-03-dice-love-meter/README.md
+          - "Week 4 · Guess! + Reaction Time": autumn-2026/microbit-beginners/week-04-guess-reaction-time/README.md
+          - "Week 5 · Ticklebot build & wire": autumn-2026/microbit-beginners/week-05-ticklebot-build-wire/README.md
+          - "Week 6 · Ticklebot finish & personalize": autumn-2026/microbit-beginners/week-06-ticklebot-finish-personalize/README.md
+          - "Week 7 · Micro Chat": autumn-2026/microbit-beginners/week-07-micro-chat/README.md
+          - "Week 8 · Heartbeat Beacon": autumn-2026/microbit-beginners/week-08-heartbeat-beacon/README.md
+          - "Week 9 · Step Counter + Coin Toss": autumn-2026/microbit-beginners/week-09-step-counter-coin-toss/README.md
+          - "Week 10 · Showcase": autumn-2026/microbit-beginners/week-10-showcase/README.md
+      - "micro:bit Pro":
+          - Overview: autumn-2026/microbit-pro/README.md
+          - "Week 1 · Kickoff & challenge": autumn-2026/microbit-pro/week-01-kickoff-challenge/README.md
+          - "Week 2 · Data & sensors": autumn-2026/microbit-pro/week-02-data-sensors/README.md
+          - "Week 3 · Tilt maze": autumn-2026/microbit-pro/week-03-tilt-maze/README.md
+          - "Week 4 · Sound lab": autumn-2026/microbit-pro/week-04-sound-lab/README.md
+          - "Week 5 · Radio duel": autumn-2026/microbit-pro/week-05-radio-duel/README.md
+          - "Week 6 · Radio multiplayer": autumn-2026/microbit-pro/week-06-radio-multiplayer/README.md
+          - "Week 7 · Digital pet": autumn-2026/microbit-pro/week-07-digital-pet/README.md
+          - "Week 8 · Motion instrument": autumn-2026/microbit-pro/week-08-motion-instrument/README.md
+          - "Week 9 · Capstone design": autumn-2026/microbit-pro/week-09-capstone-design/README.md
+          - "Week 10 · Finish & showcase": autumn-2026/microbit-pro/week-10-showcase/README.md
+      - "Archive · Pinball (retired)":
+          - "Overview": autumn-2026/archive/pinball-hybrid-retired/README.md
+          - "Week 1 · Kickoff": autumn-2026/archive/pinball-hybrid-retired/week-01-kickoff/README.md
+          - "Week 2 · Scoring basics": autumn-2026/archive/pinball-hybrid-retired/week-02-scoring-basics/README.md
+          - "Week 3 · Launcher trigger": autumn-2026/archive/pinball-hybrid-retired/week-03-launcher-trigger/README.md
+          - "Week 4 · Multi-sensor": autumn-2026/archive/pinball-hybrid-retired/week-04-multi-sensor-scoring/README.md
+          - "Week 5 · Tinkercad first steps": autumn-2026/archive/pinball-hybrid-retired/week-05-tinkercad-basics/README.md
+          - "Week 6 · Bumper": autumn-2026/archive/pinball-hybrid-retired/week-06-tinkercad-playfield/README.md
+          - "Week 7 · Sensor mount": autumn-2026/archive/pinball-hybrid-retired/week-07-sensor-mount/README.md
+          - "Week 8 · Print prep": autumn-2026/archive/pinball-hybrid-retired/week-08-design-finish/README.md
+          - "Week 9 · Assembly": autumn-2026/archive/pinball-hybrid-retired/week-09-assembly-playtest/README.md
+          - "Week 10 · Showcase": autumn-2026/archive/pinball-hybrid-retired/week-10-showcase-tournament/README.md
   - Spring 2027: spring-2027/README.md

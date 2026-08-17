@@ -10,6 +10,17 @@ A short, fun quiz to finish every session — **both groups play together**. Eac
     3. Project it, hand out devices (or play in teams), and run it in the last 5 minutes.
     4. Mixed group? Teams of 2 with one Beginner + one Pro works nicely.
 
+!!! success "Bulk-import instead of typing (no API needed)"
+    Kahoot has **no public API for creating quizzes**, but it does support **spreadsheet import**, so you don't have to type these in one by one.
+
+    Ready-made files are in [`kahoot-import/`](https://github.com/itsgauravsaxena/cpr-microbit/tree/main/microbit-program/autumn-2026/quiz/kahoot-import) — one per week plus the bonus bank.
+
+    1. In Kahoot, create a new kahoot → **Add question** → **Import questions**
+    2. **Download Kahoot's own template first** and compare the columns with our file — if their layout has changed, copy our cells into their template
+    3. Upload, check the questions look right, then save
+
+    Our sheets use: `Question · Answer 1–4 · Time limit (20s) · Correct answer(s)`. All questions are inside Kahoot's limits (120 characters for questions, 75 for answers).
+
 ## Week 1 — Getting started {#week-1}
 
 **1. How many LEDs are on the front of a micro:bit?**

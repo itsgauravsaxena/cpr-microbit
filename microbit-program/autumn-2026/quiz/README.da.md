@@ -10,6 +10,17 @@ En kort, sjov quiz til at afslutte hver session — **begge hold spiller sammen*
     3. Vis den på skærmen, del enheder ud (eller spil i hold), og kør den de sidste 5 minutter.
     4. Blandet gruppe? Hold på 2 med én Beginner + én Pro fungerer fint.
 
+!!! success "Masse-import i stedet for at taste (ingen API nødvendig)"
+    Kahoot har **ingen offentlig API til at oprette quizzer**, men understøtter **import fra regneark**, så du slipper for at taste dem ind én ad gangen.
+
+    Færdige filer ligger i [`kahoot-import/`](https://github.com/itsgauravsaxena/cpr-microbit/tree/main/microbit-program/autumn-2026/quiz/kahoot-import) — én pr. uge plus bonusbanken.
+
+    1. I Kahoot: opret en ny kahoot → **Add question** → **Import questions**
+    2. **Hent først Kahoots egen skabelon** og sammenlign kolonnerne med vores fil — er deres layout ændret, så kopiér vores celler ind i deres skabelon
+    3. Upload, tjek at spørgsmålene ser rigtige ud, og gem
+
+    Vores ark bruger: `Question · Answer 1–4 · Time limit (20s) · Correct answer(s)`. Alle spørgsmål holder sig inden for Kahoots grænser (120 tegn til spørgsmål, 75 til svar).
+
 ## Uge 1 — Kom godt i gang {#uge-1}
 
 **1. Hvor mange LED'er er der på forsiden af en micro:bit?**

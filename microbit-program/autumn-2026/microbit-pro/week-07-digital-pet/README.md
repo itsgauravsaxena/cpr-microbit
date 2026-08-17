@@ -69,11 +69,21 @@ loops.everyInterval(5000, function () {
 })
 ```
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 10 min — what is 'state'? your pet remembers how it feels
 - 25 min — build happiness, feeding and the face function
 - 15 min — add the slow decay with `every 5 seconds`
 - 10 min — personalise: your own icons, sounds, a name
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Raise your pet
+- 15 min — add a **second need** (hunger with its own timer) or make it sleep when the room goes dark
+- 10 min — give it a personality: a name that scrolls, custom faces, a sound when you feed it
+- 5 min — pet swap: look after a partner's pet for two minutes without letting it fall asleep
 
 ## ✅ Done when
 - The pet's face changes as happiness goes up and down.

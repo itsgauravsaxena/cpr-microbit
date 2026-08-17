@@ -44,11 +44,21 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min — opsummering: hvilke sensorer har en micro:bit?
 - 20 min — byg lys-søjlediagrammet, hold hånden over boardet og se det falde
 - 20 min — tilføj temperatur-knappen; prøv at varme boardet med fingrene
 - 15 min — eksperiment: hvis søjlediagram reagerer hurtigst? hvorfor?
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Byg en mørke-alarm
+- 20 min — lav grafen om til en **alarm**: lyd + blink, når lyset falder under en grænse
+- 5 min — test den som en rigtig enhed — læg den i et skab eller en taske og åbn døren
+- 5 min — sammenlign grænseværdier: hvis alarm er mest pålidelig? hvorfor?
 
 ## ✅ Færdig når
 - Søjlediagrammet går op og ned, når lyset ændrer sig.

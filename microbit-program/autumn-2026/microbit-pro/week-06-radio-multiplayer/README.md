@@ -62,11 +62,21 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 ```
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 10 min — recap sending numbers over radio
 - 25 min — build shake-to-choose and send
 - 20 min — the winner logic: work out the `(mine + 1) % 3` trick together
 - 5 min — class tournament
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Choose your move
+- 15 min — swap random for **real choices**: A = rock, B = paper, A+B = scissors
+- 10 min — class tournament, best of five, keep score on the board
+- 5 min — stretch: what would you change to add a fourth move?
 
 ## ✅ Done when
 - A shake picks a symbol and sends it.

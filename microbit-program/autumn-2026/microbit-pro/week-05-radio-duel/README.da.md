@@ -70,11 +70,21 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 10 min — opsummér radiogrupper; alle på gruppe 7
 - 25 min — byg duel-programmet sammen
 - 15 min — find en makker og spil bedst af fem
 - 10 min — hvorfor bruger vi `armed`? (forhindrer at tidlige tryk vinder)
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Turnering
+- 20 min — tilføj **pointtælling** (først til 5 vinder) og afhold en cup-turnering i gruppen
+- 5 min — vis vinderens reaktionstid i millisekunder
+- 5 min — snak om det: hvorfor gør `armed`-tjekket spillet fair?
 
 ## ✅ Færdig når
 - Begge boards viser målet på samme tid.

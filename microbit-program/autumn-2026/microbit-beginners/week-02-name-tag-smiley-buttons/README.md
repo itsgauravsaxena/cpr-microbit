@@ -16,11 +16,21 @@ Press a button, change the mood! 😀 Button **A** shows a happy face, button **
 - https://makecode.microbit.org/projects/name-tag
 - https://makecode.microbit.org/projects/smiley-buttons
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min recap of week 1
 - 25 min — Name Tag tutorial
 - 25 min — Smiley Buttons tutorial
 - 5 min — share/test
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Mash the two together
+- 15 min — put both programs on one board: your name scrolls, **A** = happy, **B** = sad
+- 10 min — add a third face on **A+B** (both buttons at once) — pick a silly one
+- 5 min — swap boards with a partner and try each other's faces
 
 ## Example code
 

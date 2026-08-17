@@ -34,11 +34,22 @@
 - 1 micro:bit + USB cable per kid
 - Laptop/Chromebook with makecode.microbit.org open
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 10 min — what's a micro:bit, tour of the LED grid, buttons A/B
 - 35 min — follow the Flashing Heart tutorial live on the projector; kids follow along on their own machines
 - 10 min — download the `.hex` file, drag it onto the MICROBIT USB drive, watch it flash
 - 5 min — take-home moment: everyone's board blinking a heart
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Make it yours
+- 10 min — swap the heart for another icon (`show icon`): duck, ghost, umbrella… try a few
+- 10 min — change the `pause` to make it beat faster or slower; find the speed you like best
+- 5 min — add `show string` with your name so the board says hello first
+- 5 min — walk around and look at everyone's board
 
 ## Example code
 

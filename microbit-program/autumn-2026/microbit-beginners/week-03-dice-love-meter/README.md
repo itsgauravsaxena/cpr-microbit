@@ -16,11 +16,21 @@
 - https://makecode.microbit.org/projects/dice
 - https://makecode.microbit.org/projects/love-meter
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min recap
 - 25 min — Dice tutorial (accelerometer + `pick random`)
 - 25 min — Love Meter tutorial (touch pins)
 - 5 min — share/test
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Dice duel
+- 15 min — **dice duel**: shake at the same time as a partner, highest number wins. Best of five
+- 10 min — stretch: show **dots** instead of a number (draw them with `show leds`)
+- 5 min — try the love meter on the whole table — who has the 'warmest' fingers?
 
 ## Example code
 

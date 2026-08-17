@@ -22,11 +22,21 @@ Whatever you choose! Pick **one sensor** (light, temperature, sound, motion) and
     - A **pet that needs steps** — walk to keep it happy
     - A **thermometer badge** that changes face with the temperature
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 10 min — idea storm on the whiteboard; every idea goes up
 - 10 min — pick one, sketch it: what input? what output? what happens?
 - 35 min — start building; volunteers help unblock
 - 5 min — say out loud what you'll finish next week
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Build & check in
+- 20 min — keep building your own gadget; volunteers circulate to unblock people
+- 5 min — **check-in round**: everyone says in one sentence what works and what's next
+- 5 min — save what you have into `code/` — even unfinished work gets saved
 
 ## ✅ Done when
 - Everyone has a written plan (input → what happens → output).

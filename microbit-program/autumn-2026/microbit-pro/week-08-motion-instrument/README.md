@@ -44,11 +44,21 @@ basic.forever(function () {
 })
 ```
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 10 min — what does `map` do? (turn one range into another)
 - 25 min — build the tilt theremin
 - 15 min — experiment: change the 200–1000 range, try roll instead of pitch
 - 10 min — mini concert
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Concert
+- 15 min — upgrade your instrument: light level for volume, or snap the pitch to a real scale
+- 10 min — practise a short tune with a partner (one plays rhythm, one plays melody)
+- 5 min — mini concert — every pair performs 20 seconds
 
 ## ✅ Done when
 - Holding A and tilting slides the pitch smoothly.

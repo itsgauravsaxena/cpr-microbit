@@ -44,11 +44,21 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min — recap: what sensors does a micro:bit have?
 - 20 min — build the light bar graph, cover the board with your hand and watch it drop
 - 20 min — add the temperature button; try warming the board with your fingers
 - 15 min — experiment: whose bar graph reacts fastest? why?
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Build a darkness alarm
+- 20 min — turn the graph into an **alarm**: sound + flashing when the light drops below a threshold
+- 5 min — test it as a real device — put it in a cupboard or a bag and open the door
+- 5 min — compare thresholds: whose alarm is the most reliable? why?
 
 ## ✅ Done when
 - The bar graph goes up and down as the light changes.

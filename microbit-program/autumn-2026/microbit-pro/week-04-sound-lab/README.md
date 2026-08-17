@@ -49,11 +49,21 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min — V1 vs V2: who has which board?
 - 20 min — clap detector: react to loud sound
 - 20 min — add melodies; try `sound level` on a bar graph too
 - 15 min — sound-off: whose clap detector is most reliable?
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Noise meter & clap counter
+- 15 min — build a **clap counter** (how many claps in 10 seconds?) or a live **noise meter** bar graph
+- 10 min — calibrate: find the threshold that ignores talking but catches a clap
+- 5 min — loudest-room test — everyone shouts at once, watch the graphs max out
 
 ## ✅ Done when
 - Clapping makes the board react.

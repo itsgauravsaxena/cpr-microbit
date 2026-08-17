@@ -12,10 +12,20 @@
 
 **Goal:** every kid demos their favorite project from the 10 weeks. Ticklebot and the beacon hunt are likely crowd favorites.
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 45 min — demo time, one kid at a time (or small stations if the group is large)
 - 10 min — group Q&A / "what was your favorite week and why"
 - 5 min — certificates / wrap-up
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Free play & goodbyes
+- 15 min — free play: try every project in the room, ask each other how it works
+- 10 min — 'what do you want to build next?' — write ideas on the board for next term
+- 5 min — certificates and a group photo
 
 ## ✅ Done when
 - Every kid has demoed a favourite project from the term.

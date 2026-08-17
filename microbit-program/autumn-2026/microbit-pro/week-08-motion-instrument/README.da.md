@@ -44,11 +44,21 @@ basic.forever(function () {
 })
 ```
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 10 min — hvad gør `map`? (omsætter ét interval til et andet)
 - 25 min — byg vippe-thereminen
 - 15 min — eksperimentér: ændr intervallet 200–1000, prøv roll i stedet for pitch
 - 10 min — minikoncert
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Koncert
+- 15 min — opgradér dit instrument: lysniveau som lydstyrke, eller lås tonen til en rigtig skala
+- 10 min — øv en kort melodi med en makker (én spiller rytme, én spiller melodi)
+- 5 min — minikoncert — hvert par optræder i 20 sekunder
 
 ## ✅ Færdig når
 - At holde A og vippe glider tonehøjden jævnt.

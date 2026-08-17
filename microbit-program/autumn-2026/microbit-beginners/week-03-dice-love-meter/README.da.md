@@ -16,11 +16,21 @@
 - https://makecode.microbit.org/projects/dice
 - https://makecode.microbit.org/projects/love-meter
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min opsummering
 - 25 min — Dice-tutorial (accelerometer + `pick random`)
 - 25 min — Love Meter-tutorial (berøringspins)
 - 5 min — del/test
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Terningeduel
+- 15 min — **terningeduel**: ryst samtidig med en makker, højeste tal vinder. Bedst af fem
+- 10 min — udvidelse: vis **prikker** i stedet for et tal (tegn dem med `show leds`)
+- 5 min — prøv kærlighedsmåleren rundt om bordet — hvem har de 'varmeste' fingre?
 
 ## Eksempelkode
 

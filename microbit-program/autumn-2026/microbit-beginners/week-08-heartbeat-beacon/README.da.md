@@ -16,11 +16,21 @@
 
 **Fortsætter fra:** [Uge 7 — Micro Chat](../week-07-micro-chat/README.md).
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min opsummering af radiogrundlaget fra uge 7
 - 35 min — Heartbeat Beacon-tutorial: én micro:bit udsender et lavenergi-"hej" på en radiokanal, den anden registrerer det og viser et hjerte, når den er tæt på
 - 15 min — lav det om til et spil: gem sender-micro:bitten et sted i lokalet, børnene bruger modtageren til at "jage" den (det bliver varmere, når signalet bliver stærkere)
 - 5 min — afrunding
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Den store beacon-jagt
+- 20 min — den rigtige jagt: en frivillig gemmer senderen, alle jager med modtagere. Spil tre runder, gem den bedre hver gang
+- 5 min — jægertips: hvad gjorde det nemmere at finde? (drej langsomt, hold øje med mønsteret)
+- 5 min — byt roller, så alle får lov at gemme den én gang
 
 ## Eksempelkode
 

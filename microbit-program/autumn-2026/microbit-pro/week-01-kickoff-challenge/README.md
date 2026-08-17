@@ -70,11 +70,21 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min — welcome, what Pro is about, look at the 10-week map
 - 15 min — challenge: can you make the guessing game on your own?
 - 30 min — build it together, compare solutions
 - 10 min — export your .hex and save it in `code/`
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Take the challenge further
+- 15 min — pick one **extra challenge** and build it (warmer/colder, or count the guesses)
+- 10 min — pair up: play someone else's version and try to break it
+- 5 min — export your `.hex` into `code/` and note what you'd add next
 
 ## ✅ Done when
 - A and B change the guess, and A+B shows ✓ or ✗ correctly.

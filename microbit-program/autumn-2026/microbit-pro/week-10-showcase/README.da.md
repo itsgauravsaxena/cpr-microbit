@@ -15,11 +15,21 @@
 
 Jeres eget projekt, færdigt — med et navn, en demo og koden gemt i `code/`.
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 25 min — gør projektet færdigt og fejlret
 - 10 min — gem din `.hex` / delelink i `code/` og giv det et navn
 - 20 min — demoer: 2 minutter hver, inviter begynder-gruppen
 - 5 min — diplomer og fejring
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Demoer & fejring
+- 20 min — demoer: 2 minutter hver — hvad den gør, vis den virke, det sværeste
+- 5 min — inviter Beginners-gruppen ind for at lege med gadgets
+- 5 min — diplomer, gruppebillede og idéer til næste sæson
 
 ## ✅ Færdig når
 - Hvert projekt kører på en rigtig micro:bit og er blevet vist frem.

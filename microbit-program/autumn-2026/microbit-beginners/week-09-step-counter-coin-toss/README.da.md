@@ -16,11 +16,21 @@
 - https://makecode.microbit.org/projects/step-counter
 - https://makecode.microbit.org/projects/coin-toss
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min opsummering af hele programmet indtil nu
 - 25 min — Step Counter-tutorial
 - 25 min — Coin Toss-tutorial
 - 5 min — del/test
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Skridtudfordring
+- 15 min — **skridtudfordring**: spænd boardet fast og gå en runde — passer tællingen med dine rigtige skridt?
+- 10 min — snydetest: kan du ryste den til at tælle falske skridt? hvordan ville du stoppe det?
+- 5 min — slå plat eller krone om noget fjollet for gruppen (hvem viser frem først næste gang)
 
 ## Eksempelkode
 

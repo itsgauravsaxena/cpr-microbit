@@ -62,11 +62,21 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 ```
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 10 min — opsummér at sende tal over radio
 - 25 min — byg ryst-for-at-vælge og send
 - 20 min — vinder-logikken: regn `(mine + 1) % 3`-tricket ud sammen
 - 5 min — klasseturnering
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Vælg dit træk
+- 15 min — byt tilfældigt ud med **rigtige valg**: A = sten, B = papir, A+B = saks
+- 10 min — klasseturnering, bedst af fem, hold point på tavlen
+- 5 min — udvidelse: hvad ville du ændre for at tilføje et fjerde træk?
 
 ## ✅ Færdig når
 - Et ryst vælger et symbol og sender det.

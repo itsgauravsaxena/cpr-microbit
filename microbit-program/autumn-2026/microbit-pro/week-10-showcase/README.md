@@ -15,11 +15,21 @@
 
 Your own project, finished — with a name, a demo, and the code saved in `code/`.
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 25 min — finish and debug your project
 - 10 min — save your `.hex` / share link into `code/` and give it a name
 - 20 min — demos: 2 minutes each, invite the beginners group
 - 5 min — certificates and celebrate
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Demos & celebrate
+- 20 min — demos: 2 minutes each — what it does, show it working, the hardest part
+- 5 min — invite the Beginners group in to play with the gadgets
+- 5 min — certificates, group photo, and ideas for next term
 
 ## ✅ Done when
 - Every project runs on a real micro:bit and has been demoed.

@@ -34,11 +34,22 @@
 - 1 micro:bit + USB-kabel pr. barn
 - Bærbar/Chromebook med makecode.microbit.org åben
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 10 min — hvad er en micro:bit, rundvisning i LED-gitteret, knapperne A/B
 - 35 min — følg Flashing Heart-tutorialen live på projektoren; børnene følger med på deres egne maskiner
 - 10 min — download `.hex`-filen, træk den over på MICROBIT-USB-drevet, se den blinke
 - 5 min — take-home-øjeblik: alles board blinker et hjerte
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Gør den til din egen
+- 10 min — byt hjertet ud med et andet ikon (`show icon`): and, spøgelse, paraply … prøv nogle stykker
+- 10 min — ændr `pause` så det banker hurtigere eller langsommere; find den fart, du bedst kan lide
+- 5 min — tilføj `show string` med dit navn, så boardet siger hej først
+- 5 min — gå rundt og se på alles boards
 
 ## Eksempelkode
 

@@ -25,9 +25,10 @@
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Hemmelige koder
-- 15 min — aftal en **hemmelig kode** med din makker (1 = hej, 2 = mød mig, 3 = kig bag dig)
+- 10 min — aftal en **hemmelig kode** med din makker (1 = hej, 2 = mød mig, 3 = kig bag dig)
 - 10 min — **beskedstafet**: stil jer på række og send en besked fra den ene ende til den anden via radio
 - 5 min — hvad sker der, hvis to par bruger samme gruppenummer? prøv det og se
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-7))
 
 ## Eksempelkode
 

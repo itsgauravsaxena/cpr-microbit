@@ -28,9 +28,10 @@
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Robot playtime
-- 15 min — **tickle party**: try every robot in the room, find the funniest reaction
+- 10 min — **tickle party**: try every robot in the room, find the funniest reaction
 - 10 min — add one more trick: a sound, or a face on the LEDs when it's tickled
 - 5 min — robot parade — everyone shows their bot in one sentence
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-6))
 
 ## Example code
 

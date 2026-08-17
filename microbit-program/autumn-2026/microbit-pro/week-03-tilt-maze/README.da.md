@@ -67,9 +67,10 @@ basic.forever(function () {
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Gør det til et rigtigt spil
-- 20 min — tilføj **vægge** (blink og start forfra ved kanten) eller en **30-sekunders nedtælling** — dit valg
+- 15 min — tilføj **vægge** (blink og start forfra ved kanten) eller en **30-sekunders nedtælling** — dit valg
 - 5 min — justér sværhedsgraden: ændr divisoren, indtil det er svært men fair
 - 5 min — byt boards og sæt en highscore i en andens spil
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-3))
 
 ## ✅ Færdig når
 - Når man vipper boardet, bevæger prikken sig jævnt i alle retninger.

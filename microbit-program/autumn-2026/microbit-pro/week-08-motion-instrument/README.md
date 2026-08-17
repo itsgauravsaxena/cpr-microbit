@@ -56,9 +56,10 @@ basic.forever(function () {
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Concert
-- 15 min — upgrade your instrument: light level for volume, or snap the pitch to a real scale
+- 10 min — upgrade your instrument: light level for volume, or snap the pitch to a real scale
 - 10 min — practise a short tune with a partner (one plays rhythm, one plays melody)
 - 5 min — mini concert — every pair performs 20 seconds
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-8))
 
 ## ✅ Done when
 - Holding A and tilting slides the pitch smoothly.

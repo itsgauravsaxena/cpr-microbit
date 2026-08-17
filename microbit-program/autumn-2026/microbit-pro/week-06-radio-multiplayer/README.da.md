@@ -74,9 +74,10 @@ radio.onReceivedNumber(function (receivedNumber) {
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Vælg dit træk
-- 15 min — byt tilfældigt ud med **rigtige valg**: A = sten, B = papir, A+B = saks
+- 10 min — byt tilfældigt ud med **rigtige valg**: A = sten, B = papir, A+B = saks
 - 10 min — klasseturnering, bedst af fem, hold point på tavlen
 - 5 min — udvidelse: hvad ville du ændre for at tilføje et fjerde træk?
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-6))
 
 ## ✅ Færdig når
 - Et ryst vælger et symbol og sender det.

@@ -56,9 +56,10 @@ input.onButtonPressed(Button.A, function () {
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Build a darkness alarm
-- 20 min — turn the graph into an **alarm**: sound + flashing when the light drops below a threshold
+- 15 min — turn the graph into an **alarm**: sound + flashing when the light drops below a threshold
 - 5 min — test it as a real device — put it in a cupboard or a bag and open the door
 - 5 min — compare thresholds: whose alarm is the most reliable? why?
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-2))
 
 ## ✅ Done when
 - The bar graph goes up and down as the light changes.

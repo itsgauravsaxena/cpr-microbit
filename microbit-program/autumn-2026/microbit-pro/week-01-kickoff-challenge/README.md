@@ -82,9 +82,10 @@ input.onButtonPressed(Button.AB, function () {
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Take the challenge further
-- 15 min — pick one **extra challenge** and build it (warmer/colder, or count the guesses)
+- 10 min — pick one **extra challenge** and build it (warmer/colder, or count the guesses)
 - 10 min — pair up: play someone else's version and try to break it
 - 5 min — export your `.hex` into `code/` and note what you'd add next
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-1))
 
 ## ✅ Done when
 - A and B change the guess, and A+B shows ✓ or ✗ correctly.

@@ -28,9 +28,10 @@
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Dice duel
-- 15 min — **dice duel**: shake at the same time as a partner, highest number wins. Best of five
+- 10 min — **dice duel**: shake at the same time as a partner, highest number wins. Best of five
 - 10 min — stretch: show **dots** instead of a number (draw them with `show leds`)
 - 5 min — try the love meter on the whole table — who has the 'warmest' fingers?
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-3))
 
 ## Example code
 

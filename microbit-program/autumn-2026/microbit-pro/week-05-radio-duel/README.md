@@ -82,9 +82,10 @@ input.onButtonPressed(Button.A, function () {
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Tournament
-- 20 min — add **scoring** (first to 5 wins) and run a knockout tournament across the group
+- 15 min — add **scoring** (first to 5 wins) and run a knockout tournament across the group
 - 5 min — show the winner's reaction time in milliseconds
 - 5 min — talk it through: why does the `armed` check make the game fair?
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-5))
 
 ## ✅ Done when
 - Both boards flash the target at the same moment.

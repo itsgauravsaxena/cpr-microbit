@@ -61,9 +61,10 @@ input.onButtonPressed(Button.A, function () {
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Noise meter & clap counter
-- 15 min — build a **clap counter** (how many claps in 10 seconds?) or a live **noise meter** bar graph
+- 10 min — build a **clap counter** (how many claps in 10 seconds?) or a live **noise meter** bar graph
 - 10 min — calibrate: find the threshold that ignores talking but catches a clap
 - 5 min — loudest-room test — everyone shouts at once, watch the graphs max out
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-4))
 
 ## ✅ Done when
 - Clapping makes the board react.

@@ -28,9 +28,10 @@ Tryk på en knap, skift humør! 😀 Knap **A** viser et glad ansigt, knap **B**
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Bland de to sammen
-- 15 min — læg begge programmer på ét board: dit navn ruller, **A** = glad, **B** = sur
+- 10 min — læg begge programmer på ét board: dit navn ruller, **A** = glad, **B** = sur
 - 10 min — tilføj et tredje ansigt på **A+B** (begge knapper på én gang) — vælg et fjollet et
 - 5 min — byt board med en makker og prøv hinandens ansigter
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-2))
 
 ## Eksempelkode
 

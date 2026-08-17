@@ -74,9 +74,10 @@ radio.onReceivedNumber(function (receivedNumber) {
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Choose your move
-- 15 min — swap random for **real choices**: A = rock, B = paper, A+B = scissors
+- 10 min — swap random for **real choices**: A = rock, B = paper, A+B = scissors
 - 10 min — class tournament, best of five, keep score on the board
 - 5 min — stretch: what would you change to add a fourth move?
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-6))
 
 ## ✅ Done when
 - A shake picks a symbol and sends it.

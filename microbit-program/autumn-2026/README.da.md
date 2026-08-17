@@ -11,6 +11,10 @@ To micro:bit-hold, opdelt efter erfaring. Sessioner på 1 time, fysiske micro:bi
 
 Begge hold er **kun micro:bit** — intet 3D-design denne sæson.
 
+## Hver session slutter med en quiz
+
+Begge hold samles til en kort [🎉 ugentlig quiz](./quiz/README.md) de sidste 5 minutter — fire micro:bit-spørgsmål og to bare for sjov.
+
 ## Repo-struktur
 
 Hver uge har sin egen mappe med:

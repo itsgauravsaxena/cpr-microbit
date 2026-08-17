@@ -449,3 +449,168 @@ A short, fun quiz to finish every session — **both groups play together**. Eac
 - Bill Gates
 - Steve Jobs
 - Elon Musk
+
+## 🎁 Bonus question bank {#bonus}
+
+Extra questions to mix in, swap for a repeat, or run as a longer end-of-term quiz.
+The **✅ answer is listed first** — shuffle them in Kahoot.
+
+### micro:bit knowledge
+
+**Which of these can a micro:bit measure?**
+
+- ✅ All of these
+- Temperature
+- Light
+- Movement
+
+**What does the USB cable do?**
+
+- ✅ Sends code to the board and powers it
+- Only powers it
+- Only sends code
+- Nothing
+
+**Where do you drag the .hex file?**
+
+- ✅ Onto the MICROBIT drive
+- Into the bin
+- Into MakeCode
+- Onto the desktop
+
+**What happens to your code when you turn the micro:bit off?**
+
+- ✅ It stays on the board
+- It is deleted
+- It moves to the laptop
+- It gets slower
+
+**Which block repeats forever?**
+
+- ✅ forever
+- on start
+- if
+- pause
+
+**How do you make a program wait?**
+
+- ✅ pause
+- stop
+- wait block
+- sleep button
+
+**A 'loop' means…**
+
+- ✅ Something that repeats
+- Something that breaks
+- A kind of wire
+- A sound
+
+**What is a 'sprite' in MakeCode?**
+
+- ✅ A dot you can move around the screen
+- A drink
+- A sound
+- A cable
+
+**Which is NOT a micro:bit block colour category?**
+
+- ✅ Sports
+- Basic
+- Input
+- Music
+
+**What does `clear screen` do?**
+
+- ✅ Turns all LEDs off
+- Deletes your code
+- Restarts the board
+- Turns the board off
+
+### Thinking like a coder
+
+**Your program has a bug. The best first step is…**
+
+- ✅ Read the code and test one small part
+- Delete everything
+- Start over
+- Ask to go home
+
+**Two kids write different code that does the same thing. Who is right?**
+
+- ✅ Both — there are many correct solutions
+- The faster one
+- The longer one
+- Neither
+
+**Why do we save (export) our projects?**
+
+- ✅ So we don't lose our work
+- To make it run faster
+- To charge the board
+- We don't need to
+
+**What is an 'algorithm'?**
+
+- ✅ A set of steps to do something
+- A kind of robot
+- A type of LED
+- A programming language
+
+### 🎉 Just for fun
+
+**Which animal has three hearts?**
+
+- ✅ Octopus
+- Dog
+- Snake
+- Frog
+
+**How many bones are in the human body (adult)?**
+
+- ✅ 206
+- 150
+- 300
+- 500
+
+**What is the largest planet in our solar system?**
+
+- ✅ Jupiter
+- Saturn
+- Earth
+- Mars
+
+**Which came first?**
+
+- ✅ The first computer
+- The first mobile phone
+- The internet
+- Social media
+
+**How many colours are in a rainbow?**
+
+- ✅ 7
+- 5
+- 6
+- 10
+
+**What do you call a group of crows?**
+
+- ✅ A murder
+- A flock
+- A pack
+- A herd
+
+**Which is the only mammal that can truly fly?**
+
+- ✅ Bat
+- Squirrel
+- Penguin
+- Owl
+
+**How long does it take light from the Sun to reach Earth?**
+
+- ✅ About 8 minutes
+- 1 second
+- 1 hour
+- 1 day

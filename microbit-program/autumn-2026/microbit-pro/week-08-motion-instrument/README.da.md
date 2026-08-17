@@ -4,6 +4,13 @@
 
 **Mål:** omsæt en sensorværdi til et andet interval (`map`) — idéen bag næsten alle fede gadgets.
 
+<div style="text-align:center;margin:1.25rem 0;" markdown="0">
+<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="en node der hopper" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="162" height="162" rx="20" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
+<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="0.9s" repeatCount="indefinite" keyTimes="0.0000;0.5000" values="1;0"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="98" y="14" width="22" height="22" rx="5"/><rect x="126" y="14" width="22" height="22" rx="5"/><rect x="70" y="42" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="0.9s" repeatCount="indefinite" keyTimes="0.0000;0.5000" values="0;1"/><rect x="42" y="14" width="22" height="22" rx="5"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="98" y="14" width="22" height="22" rx="5"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="42" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/></g></g>
+</svg>
+</div>
+
 ## Hvad I bygger
 
 Hold A nede og vip: tonen glider op og ned med vinklen. Tilføj lysniveau som lydstyrke, hvis I vil.
@@ -46,6 +53,28 @@ basic.forever(function () {
 ## ✅ Færdig når
 - At holde A og vippe glider tonehøjden jævnt.
 - Slipper man A, stopper lyden.
+
+## Sådan virker det
+
+`map` omregner ét interval til et andet: hældning er −90…90 grader, og vi strækker det ud over 200…1000 Hz. Alle 'smarte' gadgets gør det — tag en sensors interval og omsæt det til noget nyttigt.
+
+## Ekstra udfordringer
+- Brug lysniveau som lydstyrke, mens hældning styrer tonehøjden.
+- Ram rigtige toner i stedet for en glidende tone (en skala).
+- Optag en kort melodi ved at gemme tonerne i en liste.
+
+## Hvis det ikke virker
+- Ingen lyd på et V1-board? Sæt en buzzer eller hovedtelefoner på **pin 0** og **GND**.
+- Lyden stopper aldrig? Sørg for at `stop all sounds` ligger i `else`-grenen.
+
+## Links & referencer
+- Officielle MakeCode-projekter: <https://makecode.microbit.org/projects>
+- micro:bit Foundations lektioner & videoer: <https://microbit.org/projects/make-it-code-it/>
+- Blok-reference (slå enhver blok op): <https://makecode.microbit.org/reference>
+
+!!! note "Tilføj dit eget link"
+    Fundet en god video eller et MakeCode-projekt til denne uge? Indsæt linket her
+    (og læg `.hex`-filen eller delelinket i ugens `code/`-mappe).
 
 ## Noter
 _(plads til sessionsnoter)_

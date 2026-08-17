@@ -62,6 +62,16 @@ radio.onReceivedString(function (receivedString) {
 })
 ```
 
+!!! tip "▶️ Try it in MakeCode (30 seconds)"
+    1. Open <https://makecode.microbit.org> → **New Project**
+    2. Click the **`{ } JavaScript`** button at the top
+    3. Select everything in the editor and **delete it**, then **paste the code above**
+    4. Click **Blocks** to switch back — the real blocks appear, ready to explore
+    5. **Download** to put it on a board, or press ▶️ to run it in the simulator
+
+    Kids can do exactly the same to get started, then change things and make it theirs.
+
+
 ## ✅ Done when
 - Two micro:bits on the same **radio group** can send messages.
 - Pressing **A** on one makes the message appear on the other.

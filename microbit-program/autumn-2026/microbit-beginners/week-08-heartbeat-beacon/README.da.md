@@ -73,6 +73,16 @@ basic.forever(function () {
 })
 ```
 
+!!! tip "▶️ Prøv den i MakeCode (30 sekunder)"
+    1. Åbn <https://makecode.microbit.org> → **New Project**
+    2. Klik på **`{ } JavaScript`**-knappen øverst
+    3. Markér alt i editoren og **slet det**, indsæt derefter **koden ovenfor**
+    4. Klik på **Blocks** for at skifte tilbage — de rigtige blokke dukker op, klar til at udforske
+    5. **Download** for at lægge den på et board, eller tryk ▶️ for at køre den i simulatoren
+
+    Børnene kan gøre præcis det samme for at komme i gang og derefter ændre tingene, så det bliver deres eget.
+
+
 ## ✅ Færdig når
 - Senderen bliver ved med at sende et signal på radiogruppen.
 - Modtageren viser et hjerte, hver gang den hører beaconet — tættere på = oftere.

@@ -449,3 +449,168 @@ En kort, sjov quiz til at afslutte hver session — **begge hold spiller sammen*
 - Bill Gates
 - Steve Jobs
 - Elon Musk
+
+## 🎁 Bonus-spørgsmålsbank {#bonus}
+
+Ekstra spørgsmål til at blande ind, bytte et gentaget ud med, eller køre som en længere sæsonafslutning.
+Det **✅ rigtige svar står først** — bland dem i Kahoot.
+
+### micro:bit-viden
+
+**Hvad kan en micro:bit måle?**
+
+- ✅ Alle disse
+- Temperatur
+- Lys
+- Bevægelse
+
+**Hvad gør USB-kablet?**
+
+- ✅ Sender kode til boardet og giver det strøm
+- Giver kun strøm
+- Sender kun kode
+- Ingenting
+
+**Hvor trækker du .hex-filen hen?**
+
+- ✅ Over på MICROBIT-drevet
+- I skraldespanden
+- Ind i MakeCode
+- Ud på skrivebordet
+
+**Hvad sker der med din kode, når du slukker micro:bitten?**
+
+- ✅ Den bliver på boardet
+- Den slettes
+- Den flytter til den bærbare
+- Den bliver langsommere
+
+**Hvilken blok gentager for evigt?**
+
+- ✅ forever
+- on start
+- if
+- pause
+
+**Hvordan får du et program til at vente?**
+
+- ✅ pause
+- stop
+- vent-blok
+- sleep-knap
+
+**En 'løkke' betyder …**
+
+- ✅ Noget der gentager sig
+- Noget der går i stykker
+- En slags ledning
+- En lyd
+
+**Hvad er en 'sprite' i MakeCode?**
+
+- ✅ En prik du kan flytte rundt på skærmen
+- En sodavand
+- En lyd
+- Et kabel
+
+**Hvad er IKKE en blok-kategori i micro:bit?**
+
+- ✅ Sport
+- Basic
+- Input
+- Music
+
+**Hvad gør `clear screen`?**
+
+- ✅ Slukker alle LED'er
+- Sletter din kode
+- Genstarter boardet
+- Slukker boardet
+
+### Tænk som en programmør
+
+**Dit program har en fejl. Første skridt er …**
+
+- ✅ Læs koden og test en lille del
+- Slet det hele
+- Start forfra
+- Bede om at gå hjem
+
+**To børn skriver forskellig kode, der gør det samme. Hvem har ret?**
+
+- ✅ Begge — der er mange rigtige løsninger
+- Den hurtigste
+- Den længste
+- Ingen af dem
+
+**Hvorfor gemmer (eksporterer) vi vores projekter?**
+
+- ✅ Så vi ikke mister vores arbejde
+- For at det kører hurtigere
+- For at oplade boardet
+- Det behøver vi ikke
+
+**Hvad er en 'algoritme'?**
+
+- ✅ En række trin til at gøre noget
+- En slags robot
+- En type LED
+- Et programmeringssprog
+
+### 🎉 Bare for sjov
+
+**Hvilket dyr har tre hjerter?**
+
+- ✅ Blæksprutte
+- Hund
+- Slange
+- Frø
+
+**Hvor mange knogler har et voksent menneske?**
+
+- ✅ 206
+- 150
+- 300
+- 500
+
+**Hvad er den største planet i vores solsystem?**
+
+- ✅ Jupiter
+- Saturn
+- Jorden
+- Mars
+
+**Hvad kom først?**
+
+- ✅ Den første computer
+- Den første mobiltelefon
+- Internettet
+- Sociale medier
+
+**Hvor mange farver er der i en regnbue?**
+
+- ✅ 7
+- 5
+- 6
+- 10
+
+**Hvad hedder en flok krager på engelsk?**
+
+- ✅ A murder
+- A flock
+- A pack
+- A herd
+
+**Hvilket er det eneste pattedyr, der virkelig kan flyve?**
+
+- ✅ Flagermus
+- Egern
+- Pingvin
+- Ugle
+
+**Hvor lang tid tager lyset fra Solen om at nå Jorden?**
+
+- ✅ Cirka 8 minutter
+- 1 sekund
+- 1 time
+- 1 dag

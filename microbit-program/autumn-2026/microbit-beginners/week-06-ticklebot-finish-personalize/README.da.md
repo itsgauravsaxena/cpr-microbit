@@ -16,11 +16,21 @@
 
 **Fortsætter fra:** [Uge 5 — Ticklebot: Byg & ledningsføring](../week-05-ticklebot-build-wire/README.md). Samme materialer som i uge 5 (de igangværende robotter, servoer, berøringssensor, batteripakker); tilføj hobby-/pyntematerialer (rulleøjne, maling osv.).
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min opsummering
 - 35 min — færdiggør tutorial-koden, download og test på den rigtige robot
 - 15 min — pynt/personliggør (rulleøjne, maling osv.) og fri leg
 - 5 min — del med gruppen
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Robot-legetid
+- 15 min — **kildefest**: prøv alle robotter i lokalet, find den sjoveste reaktion
+- 10 min — tilføj ét trick mere: en lyd eller et ansigt på LED'erne, når den bliver kildet
+- 5 min — robotparade — alle viser deres robot med én sætning
 
 ## Eksempelkode
 

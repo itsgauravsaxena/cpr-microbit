@@ -12,10 +12,20 @@
 
 **Mål:** hvert barn demonstrerer sit yndlingsprojekt fra de 10 uger. Ticklebot og beacon-jagten er sandsynligvis publikumsfavoritter.
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 45 min — demotid, ét barn ad gangen (eller små stationer, hvis gruppen er stor)
 - 10 min — fælles spørgetime / "hvilken uge var din yndlings og hvorfor"
 - 5 min — diplomer / afrunding
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Fri leg & farvel
+- 15 min — fri leg: prøv alle projekter i lokalet, spørg hinanden hvordan de virker
+- 10 min — 'hvad vil du bygge næste gang?' — skriv idéer på tavlen til næste sæson
+- 5 min — diplomer og et gruppebillede
 
 ## ✅ Færdig når
 - Hvert barn har vist et yndlingsprojekt frem fra sæsonen.

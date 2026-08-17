@@ -16,11 +16,21 @@
 
 **Picking up from:** [Week 7 — Micro Chat](../week-07-micro-chat/README.md).
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min recap of radio basics from week 7
 - 35 min — Heartbeat Beacon tutorial: one micro:bit broadcasts a low-power "hello" on a radio channel, the other detects it and shows a heart when nearby
 - 15 min — turn it into a game: hide the transmitter micro:bit somewhere in the room, kids use the receiver to "hunt" for it (getting warmer as the signal strengthens)
 - 5 min — wrap up
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · The big beacon hunt
+- 20 min — the real hunt: a volunteer hides the transmitter, everyone hunts with receivers. Play three rounds, hide it better each time
+- 5 min — hunters' tips: what made it easier to find? (turn slowly, watch the pattern)
+- 5 min — swap roles so everyone gets to hide it once
 
 ## Example code
 

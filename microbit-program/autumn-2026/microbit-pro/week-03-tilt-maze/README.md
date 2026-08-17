@@ -55,11 +55,21 @@ basic.forever(function () {
 })
 ```
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min — recap the accelerometer
 - 25 min — build the tilt-controlled dot
 - 20 min — add the target and scoring; tune the `/ 300` until it feels right
 - 10 min — swap boards and play each other's version
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Make it a real game
+- 20 min — add **walls** (flash and reset on the edge) or a **30-second countdown** — your choice
+- 5 min — tune the difficulty: change the divisor until it's hard but fair
+- 5 min — swap boards and set a high score on someone else's game
 
 ## ✅ Done when
 - Tilting the board moves the dot smoothly in all directions.

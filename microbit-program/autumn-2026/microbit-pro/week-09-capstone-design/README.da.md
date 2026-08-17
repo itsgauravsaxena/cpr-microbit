@@ -22,11 +22,21 @@ Hvad I end vælger! Vælg **én sensor** (lys, temperatur, lyd, bevægelse) og *
     - Et **kæledyr, der kræver skridt** — gå for at holde det glad
     - Et **termometer-skilt**, der skifter ansigt med temperaturen
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 10 min — idéstorm på tavlen; alle idéer op
 - 10 min — vælg én, skitsér den: hvilket input? hvilket output? hvad sker der?
 - 35 min — begynd at bygge; frivillige hjælper med at komme videre
 - 5 min — sig højt, hvad I vil gøre færdigt næste uge
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Byg & tjek ind
+- 20 min — byg videre på din egen gadget; frivillige går rundt og hjælper folk videre
+- 5 min — **tjek-ind-runde**: alle siger med én sætning, hvad der virker, og hvad der mangler
+- 5 min — gem det, du har, i `code/` — også ufærdigt arbejde gemmes
 
 ## ✅ Færdig når
 - Alle har en skreven plan (input → hvad sker der → output).

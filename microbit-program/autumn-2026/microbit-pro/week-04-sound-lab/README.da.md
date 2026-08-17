@@ -49,11 +49,21 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min — V1 vs V2: hvem har hvilket board?
 - 20 min — klap-detektor: reagér på høj lyd
 - 20 min — tilføj melodier; prøv også `sound level` på et søjlediagram
 - 15 min — lyd-dyst: hvis klap-detektor er mest pålidelig?
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Støjmåler & klap-tæller
+- 15 min — byg en **klap-tæller** (hvor mange klap på 10 sekunder?) eller en live **støjmåler** som søjlediagram
+- 10 min — kalibrér: find den grænse, der ignorerer snak, men fanger et klap
+- 5 min — højeste-lyd-test — alle råber på én gang, se graferne gå i top
 
 ## ✅ Færdig når
 - Et klap får boardet til at reagere.

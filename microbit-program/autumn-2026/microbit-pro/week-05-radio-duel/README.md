@@ -70,11 +70,21 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 10 min — recap radio groups; everyone on group 7
 - 25 min — build the duel program together
 - 15 min — pair up and play best-of-five
 - 10 min — why do we need `armed`? (stops early presses winning)
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Tournament
+- 20 min — add **scoring** (first to 5 wins) and run a knockout tournament across the group
+- 5 min — show the winner's reaction time in milliseconds
+- 5 min — talk it through: why does the `armed` check make the game fair?
 
 ## ✅ Done when
 - Both boards flash the target at the same moment.

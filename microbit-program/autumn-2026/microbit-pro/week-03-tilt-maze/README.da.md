@@ -55,11 +55,21 @@ basic.forever(function () {
 })
 ```
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min — opsummér accelerometeret
 - 25 min — byg den vippestyrede prik
 - 20 min — tilføj målet og pointtælling; justér `/ 300`, indtil det føles rigtigt
 - 10 min — byt boards og spil hinandens version
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Gør det til et rigtigt spil
+- 20 min — tilføj **vægge** (blink og start forfra ved kanten) eller en **30-sekunders nedtælling** — dit valg
+- 5 min — justér sværhedsgraden: ændr divisoren, indtil det er svært men fair
+- 5 min — byt boards og sæt en highscore i en andens spil
 
 ## ✅ Færdig når
 - Når man vipper boardet, bevæger prikken sig jævnt i alle retninger.

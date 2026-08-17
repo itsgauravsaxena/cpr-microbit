@@ -14,10 +14,20 @@
 
 **Official tutorial:** https://makecode.microbit.org/projects/micro-chat
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min recap
 - 45 min — Micro Chat tutorial: two boards sending messages to each other, intro to radio groups/channels
 - 10 min — pair up and test sending messages across the room
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Secret codes
+- 15 min — agree on a **secret code** with your partner (1 = hello, 2 = meet me, 3 = look behind you)
+- 10 min — **message relay**: stand in a line and pass a message from one end to the other by radio
+- 5 min — what happens if two pairs use the same group number? try it and see
 
 ## Example code
 

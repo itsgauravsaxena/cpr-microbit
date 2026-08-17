@@ -70,11 +70,21 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min — velkommen, hvad Pro handler om, se på 10-ugers-kortet
 - 15 min — udfordring: kan I lave gættespillet selv?
 - 30 min — byg det sammen, sammenlign løsninger
 - 10 min — eksportér din .hex og gem den i `code/`
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Tag udfordringen videre
+- 15 min — vælg én **ekstra udfordring** og byg den (varmere/koldere, eller tæl gættene)
+- 10 min — find en makker: spil deres version og prøv at få den til at gå i stykker
+- 5 min — eksportér din `.hex` til `code/` og notér, hvad du ville tilføje næste gang
 
 ## ✅ Færdig når
 - A og B ændrer gættet, og A+B viser ✓ eller ✗ korrekt.

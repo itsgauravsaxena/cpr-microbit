@@ -16,11 +16,21 @@
 - https://makecode.microbit.org/projects/step-counter
 - https://makecode.microbit.org/projects/coin-toss
 
-## Session outline (60 min)
+## Session plan (60 min + 20 min break + 30 min)
+
+### Block 1 — 60 min
 - 5 min recap of the whole program so far
 - 25 min — Step Counter tutorial
 - 25 min — Coin Toss tutorial
 - 5 min — share/test
+
+### ☕ Break — 20 min
+Snacks and running around. Boards stay on the table.
+
+### Block 2 — 30 min · Step challenge
+- 15 min — **step challenge**: strap on the board and walk a lap — does the count match your real steps?
+- 10 min — cheat test: can you shake it to add fake steps? how would you stop that?
+- 5 min — coin toss to decide something silly for the group (who demos first next week)
 
 ## Example code
 

@@ -16,11 +16,21 @@
 - https://makecode.microbit.org/projects/guess
 - https://makecode.microbit.org/projects/reaction-time-game
 
-## Sessionsforløb (60 min)
+## Sessionsplan (60 min + 20 min pause + 30 min)
+
+### Blok 1 — 60 min
 - 5 min opsummering
 - 25 min — Guess!-tutorial
 - 25 min — Reaction Time Game-tutorial
 - 5 min — del/test
+
+### ☕ Pause — 20 min
+Snacks og løbe rundt. Boards bliver på bordet.
+
+### Blok 2 — 30 min · Reaktionsmesterskab
+- 15 min — afhold et **reaktionsmesterskab**: tre forsøg hver, skriv den bedste tid på tavlen
+- 10 min — gør det sværere: en tilfældig ventetid før lyset, så ingen kan snyde ved at trykke for tidligt
+- 5 min — finale: de to hurtigste dyster mod hinanden
 
 ## Eksempelkode
 

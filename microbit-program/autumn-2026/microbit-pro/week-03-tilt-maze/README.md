@@ -4,6 +4,13 @@
 
 **Goal:** use the accelerometer to move a sprite — your first game with real physics feel.
 
+<div style="text-align:center;margin:1.25rem 0;" markdown="0">
+<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="a dot rolling across the screen" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="162" height="162" rx="20" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
+<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="1;0;0;0;0;0;0;0"/><rect x="70" y="70" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;1;0;0;0;0;0;0"/><rect x="98" y="42" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;1;0;0;0;0;0"/><rect x="126" y="14" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;1;0;0;0;0"/><rect x="98" y="42" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;0;1;0;0;0"/><rect x="70" y="70" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;0;0;1;0;0"/><rect x="42" y="98" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;0;0;0;1;0"/><rect x="14" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;0;0;0;0;1"/><rect x="42" y="98" width="22" height="22" rx="5"/></g></g>
+</svg>
+</div>
+
 ## What you’ll build
 
 A dot you steer by tilting, plus a target to catch. Catch it and the score goes up.
@@ -57,6 +64,28 @@ basic.forever(function () {
 ## ✅ Done when
 - Tilting the board moves the dot smoothly in all directions.
 - Catching the target adds a point and the target jumps somewhere new.
+
+## How it works
+
+`acceleration (X)` is roughly −1023…1023. Dividing by 300 turns that into a small step like −3…3 — that division is your **speed control**. Smaller number = faster and twitchier.
+
+## Extra challenges
+- Add walls: if the player hits an edge, flash and reset to the middle.
+- Add a countdown — how many targets in 30 seconds?
+- Two targets at once: one worth 1 point, one worth 5.
+
+## If it doesn’t work
+- Dot flies off instantly? Increase the divisor (try 500).
+- Dot won't move? Check you used `change x by`, not `set x to`.
+
+## Links & references
+- Official MakeCode projects: <https://makecode.microbit.org/projects>
+- micro:bit Foundation lessons & videos: <https://microbit.org/projects/make-it-code-it/>
+- Block reference (look up any block): <https://makecode.microbit.org/reference>
+
+!!! note "Add your own link"
+    Found a good video or a MakeCode project for this week? Paste the link here
+    (and drop the `.hex` or share link into this week's `code/` folder).
 
 ## Notes
 _(space for session notes)_

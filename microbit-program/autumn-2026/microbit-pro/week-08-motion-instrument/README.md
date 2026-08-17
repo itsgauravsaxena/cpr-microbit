@@ -4,6 +4,13 @@
 
 **Goal:** map a sensor value onto another range (`map`) — the idea behind almost every cool gadget.
 
+<div style="text-align:center;margin:1.25rem 0;" markdown="0">
+<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="a music note bouncing" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="162" height="162" rx="20" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
+<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="0.9s" repeatCount="indefinite" keyTimes="0.0000;0.5000" values="1;0"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="98" y="14" width="22" height="22" rx="5"/><rect x="126" y="14" width="22" height="22" rx="5"/><rect x="70" y="42" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="0.9s" repeatCount="indefinite" keyTimes="0.0000;0.5000" values="0;1"/><rect x="42" y="14" width="22" height="22" rx="5"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="98" y="14" width="22" height="22" rx="5"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="42" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/></g></g>
+</svg>
+</div>
+
 ## What you’ll build
 
 Hold A and tilt: the tone slides up and down with the angle. Add light level for volume if you want.
@@ -46,6 +53,28 @@ basic.forever(function () {
 ## ✅ Done when
 - Holding A and tilting slides the pitch smoothly.
 - Letting go of A stops the sound.
+
+## How it works
+
+`map` converts one range into another: tilt is −90…90 degrees, and we stretch that onto 200…1000 Hz. Every 'smart' gadget does this — take a sensor's range, map it onto something useful.
+
+## Extra challenges
+- Use light level for volume while tilt controls pitch.
+- Snap to real notes instead of a smooth slide (a scale).
+- Record a short tune by saving the notes into a list.
+
+## If it doesn’t work
+- No sound on a V1 board? Clip a buzzer or headphones to **pin 0** and **GND**.
+- Sound never stops? Make sure `stop all sounds` is in the `else` branch.
+
+## Links & references
+- Official MakeCode projects: <https://makecode.microbit.org/projects>
+- micro:bit Foundation lessons & videos: <https://microbit.org/projects/make-it-code-it/>
+- Block reference (look up any block): <https://makecode.microbit.org/reference>
+
+!!! note "Add your own link"
+    Found a good video or a MakeCode project for this week? Paste the link here
+    (and drop the `.hex` or share link into this week's `code/` folder).
 
 ## Notes
 _(space for session notes)_

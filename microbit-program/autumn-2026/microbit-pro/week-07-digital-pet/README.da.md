@@ -4,6 +4,13 @@
 
 **Mål:** hold styr på tilstand over tid (en variabel, der ændrer sig af sig selv) og brug funktioner til at rydde op i koden.
 
+<div style="text-align:center;margin:1.25rem 0;" markdown="0">
+<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="et kæledyrsansigt der skifter glad, ked af det og sovende" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="162" height="162" rx="20" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
+<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="1;0;0"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="98" y="42" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="0;1;0"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="98" y="42" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="0;0;1"/><rect x="14" y="42" width="22" height="22" rx="5"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="98" y="42" width="22" height="22" rx="5"/><rect x="126" y="42" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/></g></g>
+</svg>
+</div>
+
 ## Hvad I bygger
 
 Et kæledyr med et humørniveau, der falder langsomt. Tryk A for at fodre, B for at lege. Falder det til nul, falder det i søvn.
@@ -71,6 +78,28 @@ loops.everyInterval(5000, function () {
 ## ✅ Færdig når
 - Kæledyrets ansigt ændrer sig, når humøret går op og ned.
 - Ignorerer man det et stykke tid, falder det i søvn; fodring vækker det.
+
+## Sådan virker det
+
+**Tilstand** betyder bare en variabel, programmet husker mellem hændelser. `happy` overlever knaptryk og timeren, så kæledyret har en hukommelse. **Funktionen** `showFace` sparer dig for at kopiere de samme tre `if`-blokke overalt.
+
+## Ekstra udfordringer
+- Tilføj sult som en anden variabel med sin egen timer.
+- Få det til at sove om 'natten' — når lysniveauet er lavt.
+- Giv det et navn, der ruller, når du trykker A+B.
+
+## Hvis det ikke virker
+- Humøret løber op til 99? Sæt et loft: er det over 5, sæt det tilbage til 5.
+- Ansigtet opdateres aldrig? Kald `showFace()` sidst i *hver* blok, der ændrer `happy`.
+
+## Links & referencer
+- Officielle MakeCode-projekter: <https://makecode.microbit.org/projects>
+- micro:bit Foundations lektioner & videoer: <https://microbit.org/projects/make-it-code-it/>
+- Blok-reference (slå enhver blok op): <https://makecode.microbit.org/reference>
+
+!!! note "Tilføj dit eget link"
+    Fundet en god video eller et MakeCode-projekt til denne uge? Indsæt linket her
+    (og læg `.hex`-filen eller delelinket i ugens `code/`-mappe).
 
 ## Noter
 _(plads til sessionsnoter)_

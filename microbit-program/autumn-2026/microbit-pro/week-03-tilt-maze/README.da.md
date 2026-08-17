@@ -4,6 +4,13 @@
 
 **Mål:** brug accelerometeret til at flytte en sprite — jeres første spil med rigtig fysik-fornemmelse.
 
+<div style="text-align:center;margin:1.25rem 0;" markdown="0">
+<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="en prik der triller over skærmen" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="162" height="162" rx="20" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
+<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="1;0;0;0;0;0;0;0"/><rect x="70" y="70" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;1;0;0;0;0;0;0"/><rect x="98" y="42" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;1;0;0;0;0;0"/><rect x="126" y="14" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;1;0;0;0;0"/><rect x="98" y="42" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;0;1;0;0;0"/><rect x="70" y="70" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;0;0;1;0;0"/><rect x="42" y="98" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;0;0;0;1;0"/><rect x="14" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.2500;0.3750;0.5000;0.6250;0.7500;0.8750" values="0;0;0;0;0;0;0;1"/><rect x="42" y="98" width="22" height="22" rx="5"/></g></g>
+</svg>
+</div>
+
 ## Hvad I bygger
 
 En prik, du styrer ved at vippe, plus et mål, du skal fange. Fang det, og pointtallet stiger.
@@ -57,6 +64,28 @@ basic.forever(function () {
 ## ✅ Færdig når
 - Når man vipper boardet, bevæger prikken sig jævnt i alle retninger.
 - At fange målet giver et point, og målet hopper et nyt sted hen.
+
+## Sådan virker det
+
+`acceleration (X)` er cirka −1023…1023. At dividere med 300 gør det til et lille skridt som −3…3 — den division er din **fartkontrol**. Mindre tal = hurtigere og mere nervøst.
+
+## Ekstra udfordringer
+- Tilføj vægge: rammer spilleren kanten, så blink og start i midten.
+- Tilføj nedtælling — hvor mange mål på 30 sekunder?
+- To mål ad gangen: ét giver 1 point, ét giver 5.
+
+## Hvis det ikke virker
+- Prikken flyver af sted med det samme? Øg divisoren (prøv 500).
+- Prikken bevæger sig ikke? Tjek at du brugte `change x by`, ikke `set x to`.
+
+## Links & referencer
+- Officielle MakeCode-projekter: <https://makecode.microbit.org/projects>
+- micro:bit Foundations lektioner & videoer: <https://microbit.org/projects/make-it-code-it/>
+- Blok-reference (slå enhver blok op): <https://makecode.microbit.org/reference>
+
+!!! note "Tilføj dit eget link"
+    Fundet en god video eller et MakeCode-projekt til denne uge? Indsæt linket her
+    (og læg `.hex`-filen eller delelinket i ugens `code/`-mappe).
 
 ## Noter
 _(plads til sessionsnoter)_

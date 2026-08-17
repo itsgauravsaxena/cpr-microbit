@@ -81,9 +81,10 @@ loops.everyInterval(5000, function () {
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Pas dit kæledyr
-- 15 min — tilføj et **andet behov** (sult med sin egen timer), eller få det til at sove, når rummet bliver mørkt
+- 10 min — tilføj et **andet behov** (sult med sin egen timer), eller få det til at sove, når rummet bliver mørkt
 - 10 min — giv det personlighed: et navn der ruller, egne ansigter, en lyd når du fodrer det
 - 5 min — kæledyrsbyt: pas en makkers kæledyr i to minutter uden at lade det falde i søvn
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-7))
 
 ## ✅ Færdig når
 - Kæledyrets ansigt ændrer sig, når humøret går op og ned.

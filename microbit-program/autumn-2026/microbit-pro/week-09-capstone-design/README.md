@@ -34,9 +34,10 @@ Whatever you choose! Pick **one sensor** (light, temperature, sound, motion) and
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Build & check in
-- 20 min — keep building your own gadget; volunteers circulate to unblock people
+- 15 min — keep building your own gadget; volunteers circulate to unblock people
 - 5 min — **check-in round**: everyone says in one sentence what works and what's next
 - 5 min — save what you have into `code/` — even unfinished work gets saved
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-9))
 
 ## ✅ Done when
 - Everyone has a written plan (input → what happens → output).

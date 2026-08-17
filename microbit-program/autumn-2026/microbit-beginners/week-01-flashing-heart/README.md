@@ -46,10 +46,11 @@
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Make it yours
-- 10 min — swap the heart for another icon (`show icon`): duck, ghost, umbrella… try a few
+- 5 min — swap the heart for another icon (`show icon`): duck, ghost, umbrella… try a few
 - 10 min — change the `pause` to make it beat faster or slower; find the speed you like best
 - 5 min — add `show string` with your name so the board says hello first
 - 5 min — walk around and look at everyone's board
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-1))
 
 ## Example code
 

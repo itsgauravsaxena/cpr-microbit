@@ -28,9 +28,10 @@
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Step challenge
-- 15 min — **step challenge**: strap on the board and walk a lap — does the count match your real steps?
+- 10 min — **step challenge**: strap on the board and walk a lap — does the count match your real steps?
 - 10 min — cheat test: can you shake it to add fake steps? how would you stop that?
 - 5 min — coin toss to decide something silly for the group (who demos first next week)
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-9))
 
 ## Example code
 

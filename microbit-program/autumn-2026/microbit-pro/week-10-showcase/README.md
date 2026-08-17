@@ -27,9 +27,10 @@ Your own project, finished — with a name, a demo, and the code saved in `code/
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Demos & celebrate
-- 20 min — demos: 2 minutes each — what it does, show it working, the hardest part
+- 15 min — demos: 2 minutes each — what it does, show it working, the hardest part
 - 5 min — invite the Beginners group in to play with the gadgets
 - 5 min — certificates, group photo, and ideas for next term
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-10))
 
 ## ✅ Done when
 - Every project runs on a real micro:bit and has been demoed.

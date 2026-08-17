@@ -27,9 +27,10 @@ Jeres eget projekt, færdigt — med et navn, en demo og koden gemt i `code/`.
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Demoer & fejring
-- 20 min — demoer: 2 minutter hver — hvad den gør, vis den virke, det sværeste
+- 15 min — demoer: 2 minutter hver — hvad den gør, vis den virke, det sværeste
 - 5 min — inviter Beginners-gruppen ind for at lege med gadgets
 - 5 min — diplomer, gruppebillede og idéer til næste sæson
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-10))
 
 ## ✅ Færdig når
 - Hvert projekt kører på en rigtig micro:bit og er blevet vist frem.

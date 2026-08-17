@@ -82,9 +82,10 @@ input.onButtonPressed(Button.AB, function () {
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Tag udfordringen videre
-- 15 min — vælg én **ekstra udfordring** og byg den (varmere/koldere, eller tæl gættene)
+- 10 min — vælg én **ekstra udfordring** og byg den (varmere/koldere, eller tæl gættene)
 - 10 min — find en makker: spil deres version og prøv at få den til at gå i stykker
 - 5 min — eksportér din `.hex` til `code/` og notér, hvad du ville tilføje næste gang
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-1))
 
 ## ✅ Færdig når
 - A og B ændrer gættet, og A+B viser ✓ eller ✗ korrekt.

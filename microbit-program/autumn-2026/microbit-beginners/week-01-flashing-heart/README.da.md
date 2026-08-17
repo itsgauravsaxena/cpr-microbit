@@ -46,10 +46,11 @@
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Gør den til din egen
-- 10 min — byt hjertet ud med et andet ikon (`show icon`): and, spøgelse, paraply … prøv nogle stykker
+- 5 min — byt hjertet ud med et andet ikon (`show icon`): and, spøgelse, paraply … prøv nogle stykker
 - 10 min — ændr `pause` så det banker hurtigere eller langsommere; find den fart, du bedst kan lide
 - 5 min — tilføj `show string` med dit navn, så boardet siger hej først
 - 5 min — gå rundt og se på alles boards
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-1))
 
 ## Eksempelkode
 

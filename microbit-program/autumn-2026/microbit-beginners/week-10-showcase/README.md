@@ -23,9 +23,10 @@
 Snacks and running around. Boards stay on the table.
 
 ### Block 2 — 30 min · Free play & goodbyes
-- 15 min — free play: try every project in the room, ask each other how it works
+- 10 min — free play: try every project in the room, ask each other how it works
 - 10 min — 'what do you want to build next?' — write ideas on the board for next term
 - 5 min — certificates and a group photo
+- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-10))
 
 ## ✅ Done when
 - Every kid has demoed a favourite project from the term.

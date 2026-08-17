@@ -23,9 +23,10 @@
 Snacks og løbe rundt. Boards bliver på bordet.
 
 ### Blok 2 — 30 min · Fri leg & farvel
-- 15 min — fri leg: prøv alle projekter i lokalet, spørg hinanden hvordan de virker
+- 10 min — fri leg: prøv alle projekter i lokalet, spørg hinanden hvordan de virker
 - 10 min — 'hvad vil du bygge næste gang?' — skriv idéer på tavlen til næste sæson
 - 5 min — diplomer og et gruppebillede
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-10))
 
 ## ✅ Færdig når
 - Hvert barn har vist et yndlingsprojekt frem fra sæsonen.

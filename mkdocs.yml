@@ -83,6 +83,7 @@ nav:
   - Spring 2026: spring-2026/README.md
   - Autumn 2026:
       - Overview: autumn-2026/README.md
+      - "🎉 Weekly quiz (both groups)": autumn-2026/quiz/README.md
       - "micro:bit Beginners":
           - Overview: autumn-2026/microbit-beginners/README.md
           - "Week 1 · Flashing Heart": autumn-2026/microbit-beginners/week-01-flashing-heart/README.md

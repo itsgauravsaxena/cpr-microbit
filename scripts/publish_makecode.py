@@ -1,0 +1,261 @@
+#!/usr/bin/env python3
+"""Publish each week's MakeCode program to an anonymous share, and cache the id.
+
+How it fits together
+--------------------
+* **Source of truth** per week: ``<week>/code/main.ts`` — the program in
+  MakeCode "JavaScript" (TypeScript). MakeCode regenerates the *blocks* view
+  from this automatically, so we never hand-write block XML.
+* **Optional deps**: ``<week>/code/deps.txt`` — one extension name per line,
+  added to the default ``core`` / ``radio`` / ``microphone``. Only needed for
+  projects that use extra extensions (e.g. ``neopixel``).
+* **Output**: ``<week>/code/share.txt`` — line 1 is the share id (read by the
+  ``makecode`` mkdocs hook to fill in each page's embed), line 2 is a
+  ``# sha256:`` fingerprint of the inputs used for change detection.
+
+Re-publishing only happens when ``main.ts`` (or its deps, or the target
+version) changed since the last run, so a normal run creates **no** new
+anonymous scripts. Anonymous shares can't be edited or deleted — each change
+mints a new id and the old one simply lingers.
+
+Usage
+-----
+    python scripts/publish_makecode.py                 # publish changed weeks
+    python scripts/publish_makecode.py --check         # report only, no writes
+    python scripts/publish_makecode.py --force         # republish everything
+    python scripts/publish_makecode.py <week-dir> ...  # limit to these weeks
+    python scripts/publish_makecode.py --adopt <id> <week-dir>
+        # record an already-published id (e.g. one you made by hand in the
+        # editor) into share.txt with the current fingerprint — no API call.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import pathlib
+import subprocess
+import sys
+
+# Discovered from a live share's metadata (GET https://www.makecode.com/api/<id>).
+# Bump these when the micro:bit target has a new stable release; changing the
+# tag re-fingerprints every project so the next run refreshes all embeds.
+TARGET = "microbit"
+TARGET_VERSIONS = {
+    "branch": "stable9.0",
+    "tag": "v9.0.12",
+    "target": "9.0.12",
+    "pxt": "13.0.9",
+}
+DEFAULT_DEPS = {"core": "*", "radio": "*", "microphone": "*"}
+API_URL = "https://www.makecode.com/api/scripts"
+# Bump to invalidate every cached fingerprint when the published payload shape
+# changes (e.g. v2 added an empty main.blocks so the editor shows a Blocks tab).
+PAYLOAD_VERSION = "2"
+REPO = pathlib.Path(__file__).resolve().parent.parent
+DOCS = REPO / "microbit-program"
+
+
+def _post(url: str, body: bytes) -> dict:
+    """POST JSON, tolerating the local TLS-inspecting proxy.
+
+    Tries urllib first (clean CA stores, e.g. CI); on any URL/SSL error falls
+    back to curl, which trusts the system keychain where python's bundle fails.
+    """
+    import urllib.error
+    import urllib.request
+
+    req = urllib.request.Request(
+        url, data=body, headers={"Content-Type": "application/json"}, method="POST"
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.load(r)
+    except urllib.error.URLError:
+        pass  # fall through to curl
+    p = subprocess.run(
+        ["curl", "-sS", "-X", "POST", url,
+         "-H", "Content-Type: application/json", "--data-binary", "@-"],
+        input=body, capture_output=True,
+    )
+    if p.returncode != 0:
+        raise RuntimeError(f"curl failed: {p.stderr.decode()[:500]}")
+    return json.loads(p.stdout)
+
+
+def _deps_for(code_dir: pathlib.Path) -> dict:
+    deps = dict(DEFAULT_DEPS)
+    extra = code_dir / "deps.txt"
+    if extra.is_file():
+        for line in extra.read_text(encoding="utf-8").splitlines():
+            name = line.strip()
+            if name and not name.startswith("#"):
+                deps[name] = "*"
+    return deps
+
+
+def _fingerprint(main_ts: str, deps: dict) -> str:
+    h = hashlib.sha256()
+    h.update(main_ts.encode("utf-8"))
+    h.update(json.dumps(deps, sort_keys=True).encode("utf-8"))
+    h.update(TARGET_VERSIONS["tag"].encode("utf-8"))
+    h.update(PAYLOAD_VERSION.encode("utf-8"))
+    return h.hexdigest()
+
+
+def _read_shares(shares_txt: pathlib.Path) -> dict:
+    """Return {name: (share_id, fingerprint)} from a code/shares.txt file."""
+    out = {}
+    if not shares_txt.is_file():
+        return out
+    for line in shares_txt.read_text(encoding="utf-8").splitlines():
+        s = line.strip()
+        if not s or s.startswith("#"):
+            continue
+        parts = s.split()
+        name = parts[0]
+        share_id = parts[1] if len(parts) >= 2 else None
+        fp = None
+        for p in parts[2:]:
+            if p.startswith("sha256:"):
+                fp = p[len("sha256:"):]
+        out[name] = (share_id, fp)
+    return out
+
+
+def _write_shares(shares_txt: pathlib.Path, mapping: dict) -> None:
+    """Write {name: (id, fp)} to shares.txt (main first, then sorted)."""
+    shares_txt.parent.mkdir(parents=True, exist_ok=True)
+    order = sorted(mapping, key=lambda n: (n != "main", n))
+    lines = ["# auto-generated by scripts/publish_makecode.py — do not edit",
+             "# <name> <share-id> sha256:<fingerprint>"]
+    for name in order:
+        share_id, fp = mapping[name]
+        lines.append(f"{name} {share_id} sha256:{fp}")
+    shares_txt.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def _project_name(week_dir: pathlib.Path, program: str) -> str:
+    # microbit-beginners/week-01-flashing-heart + "rung-1"
+    #   -> cpr-microbit-beginners-week-01-flashing-heart-rung-1  (main omits suffix)
+    rel = week_dir.relative_to(DOCS)
+    parts = [p for p in rel.parts if p != "code"]
+    base = "cpr-" + "-".join(parts)
+    return base if program == "main" else f"{base}-{program}"
+
+
+def _publish(week_dir: pathlib.Path, program: str, main_ts: str, deps: dict) -> str:
+    name = _project_name(week_dir, program)
+    pxt = {
+        "name": name,
+        "description": "",
+        "dependencies": deps,
+        # An empty main.blocks marks this a blocks project, so the editor shows
+        # a Blocks tab and decompiles main.ts into blocks on open.
+        "files": ["main.blocks", "main.ts", "README.md"],
+        "preferredEditor": "blocksprj",
+    }
+    payload = {
+        "name": name,
+        "target": TARGET,
+        "targetVersion": TARGET_VERSIONS["target"],
+        "description": "Coding Pirates Rødovre — micro:bit lesson program.",
+        "editor": "blocksprj",
+        "meta": {"versions": TARGET_VERSIONS},
+        "text": {
+            "pxt.json": json.dumps(pxt, indent=4),
+            "main.blocks": "",
+            "main.ts": main_ts,
+            "README.md": f"# {name}\n",
+        },
+    }
+    resp = _post(API_URL, json.dumps(payload).encode("utf-8"))
+    share_id = resp.get("shortid") or resp.get("id")
+    if not share_id:
+        raise RuntimeError(f"no share id in response: {resp}")
+    return share_id
+
+
+def _week_dirs(limits: list[str]):
+    if limits:
+        for p in limits:
+            wd = pathlib.Path(p).resolve()
+            yield wd.parent if wd.name == "code" else wd
+        return
+    seen = set()
+    for ts in sorted(DOCS.glob("**/code/*.ts")):
+        if "archive" in ts.parts:
+            continue
+        wd = ts.parent.parent
+        if wd not in seen:
+            seen.add(wd)
+            yield wd
+
+
+def _programs_in(week_dir: pathlib.Path):
+    """Yield (program_name, ts_path) for each code/*.ts, main first."""
+    code = week_dir / "code"
+    ts_files = sorted(code.glob("*.ts"), key=lambda p: (p.stem != "main", p.stem))
+    for ts in ts_files:
+        yield ts.stem, ts
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("weeks", nargs="*", help="limit to these week (or code/) dirs")
+    ap.add_argument("--check", action="store_true", help="report only, never publish")
+    ap.add_argument("--force", action="store_true", help="republish even if unchanged")
+    ap.add_argument("--adopt", metavar="ID",
+                    help="record an existing share id for one program (no API call)")
+    ap.add_argument("--name", default="main",
+                    help="program name for --adopt (default: main)")
+    args = ap.parse_args()
+
+    if args.adopt:
+        if len(args.weeks) != 1:
+            ap.error("--adopt needs exactly one week dir")
+        wd = next(_week_dirs(args.weeks))
+        code = wd / "code"
+        ts_path = code / f"{args.name}.ts"
+        if not ts_path.is_file():
+            ap.error(f"no {args.name}.ts at {ts_path}")
+        fp = _fingerprint(ts_path.read_text(encoding="utf-8"), _deps_for(code))
+        shares = _read_shares(code / "shares.txt")
+        shares[args.name] = (args.adopt, fp)
+        _write_shares(code / "shares.txt", shares)
+        print(f"adopted {args.name}={args.adopt} for {wd.relative_to(REPO)}")
+        return 0
+
+    published = skipped = failed = 0
+    for wd in _week_dirs(args.weeks):
+        code = wd / "code"
+        deps = _deps_for(code)
+        shares_txt = code / "shares.txt"
+        shares = _read_shares(shares_txt)
+        for program, ts_path in _programs_in(wd):
+            rel = f"{wd.relative_to(REPO)} [{program}]"
+            fp = _fingerprint(ts_path.read_text(encoding="utf-8"), deps)
+            cached_id, cached_fp = shares.get(program, (None, None))
+            if cached_id and cached_fp == fp and not args.force:
+                print(f"= up-to-date  {rel}  ({cached_id})")
+                skipped += 1
+                continue
+            if args.check:
+                print(f"~ would {'re' if cached_id else ''}publish  {rel}")
+                continue
+            try:
+                share_id = _publish(wd, program, ts_path.read_text(encoding="utf-8"), deps)
+                shares[program] = (share_id, fp)
+                _write_shares(shares_txt, shares)
+                print(f"+ published   {rel}  -> {share_id}")
+                published += 1
+            except Exception as e:  # noqa: BLE001
+                print(f"! FAILED      {rel}: {e}", file=sys.stderr)
+                failed += 1
+
+    print(f"\ndone: {published} published, {skipped} up-to-date, {failed} failed")
+    return 1 if failed else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

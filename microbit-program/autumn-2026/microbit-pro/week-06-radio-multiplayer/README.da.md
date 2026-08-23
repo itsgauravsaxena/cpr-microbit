@@ -17,6 +17,15 @@ Ryst for at vælge 0/1/2, send det over radio, sammenlign med modstanderens valg
 
 ## Eksempelkode
 
+Kør det her, og klik på **Open & edit in MakeCode** for at lave din egen version:
+
+<!-- Indsæt ugens MakeCode-del-id nedenfor (Share -> Publish giver et link
+     som https://makecode.microbit.org/_abc123 -- indsæt id'et eller hele
+     linket). Indtil et id er tilføjet, vises en "kommer snart"-note. -->
+```makecode
+auto
+```
+
 <div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
 <svg viewBox="0 0 604 183" width="100%" style="max-width:604px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
 <rect x="30" y="20" width="262" height="32" rx="14" fill="#9857c9"/>

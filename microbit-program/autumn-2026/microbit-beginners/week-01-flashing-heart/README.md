@@ -1,6 +1,6 @@
-# Week 1 — Flashing Heart (solo project)
+# Week 1 — Flashing Heart (and make it yours)
 
-> **Meet your micro:bit!** 💛 It's a tiny computer with **25 little lights**. Right now it's fast asleep… let's wake it up and teach it to show a **beating heart!**
+> **Meet your micro:bit!** 💛 It's a tiny computer with **25 little lights**. Right now it's fast asleep… let's wake it up, teach it to show a **beating heart** — and then push it as far as you can!
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
 <svg width="230" height="230" viewBox="0 0 196 196" role="img" aria-label="A micro:bit blinking a heart" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +26,7 @@
 !!! tip "▶️ See it come alive"
     Open the [Flashing Heart tutorial](https://makecode.microbit.org/projects/flashing-heart) and press **▶️ play** in the on-screen simulator — the heart beats on the screen before you even touch a real micro:bit. Then make **your** board do it! ✨
 
-**Goal:** get comfortable with the MakeCode editor and the download-to-board workflow. No rush — this is the only single-project week.
+**Goal:** get comfortable with the MakeCode editor and the download-to-board workflow — then keep going. The beating heart is the *warm-up*; the **stretch ladder** below is where the real fun (and the whole 90 minutes) lives, so no one runs out of things to do.
 
 **Official tutorial:** https://makecode.microbit.org/projects/flashing-heart
 
@@ -36,59 +36,296 @@
 
 ## Session plan (60 min + 20 min break + 30 min)
 
-### Block 1 — 60 min
+### Block 1 — 60 min · Core + first rungs
 - 10 min — what's a micro:bit, tour of the LED grid, buttons A/B
-- 35 min — follow the Flashing Heart tutorial live on the projector; kids follow along on their own machines
-- 10 min — download the `.hex` file, drag it onto the MICROBIT USB drive, watch it flash
-- 5 min — take-home moment: everyone's board blinking a heart
+- 25 min — build the beating heart together (follow along), press ▶️ in the simulator
+- 15 min — download the `.hex`, drag it onto the MICROBIT USB drive, watch it flash on the real board
+- 10 min — **Make it yours:** climb rungs ① and ② of the stretch ladder (change the speed, add more icons)
 
 ### ☕ Break — 20 min
 Snacks and running around. Boards stay on the table.
 
-### Block 2 — 30 min · Make it yours
-- 5 min — swap the heart for another icon (`show icon`): duck, ghost, umbrella… try a few
-- 10 min — change the `pause` to make it beat faster or slower; find the speed you like best
-- 5 min — add `show string` with your name so the board says hello first
-- 5 min — walk around and look at everyone's board
+### Block 2 — 30 min · Climb the stretch ladder
+- 20 min — everyone keeps climbing the **stretch ladder** below from wherever they are — pick your own level, no pressure to reach the top. Helpers roam.
+- 5 min — **gallery walk:** show the person next to you the coolest rung you reached
 - 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-1))
+
+!!! note "For helpers — how the ladder works"
+    Everyone finishes the same **core** (a beating heart on their board). After that, kids climb the ladder at their own pace: confident coders race to the boss level, while others take rungs ① and ② slowly — nobody is stuck waiting and nobody is bored. Rungs ⑤–⑥ quietly preview buttons, randomness and variables from the weeks ahead.
 
 ## Example code
 
-<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
-<svg viewBox="0 0 300 133" width="100%" style="max-width:300px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
-<rect x="30" y="20" width="250" height="32" rx="14" fill="#14a3a3"/>
-<rect x="40" y="15" width="34" height="12" rx="6" fill="#14a3a3"/>
-<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">forever</text>
-<rect x="30" y="55" width="250" height="32" rx="7" fill="#2a7fff"/>
-<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show icon (heart)</text>
-<rect x="30" y="90" width="250" height="32" rx="7" fill="#2a7fff"/>
-<text x="44" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show icon (small heart)</text>
-</svg>
-</div>
+The program we build together. Open the box to run it, read it as blocks / JavaScript / Python, and click **Open full-screen in MakeCode** to make your own version:
 
-```javascript
-basic.forever(function () {
-    basic.showIcon(IconNames.Heart)
-    basic.showIcon(IconNames.SmallHeart)
-})
-```
+??? example "👀 The program — run it, or read the code"
 
-!!! tip "▶️ Try it in MakeCode (30 seconds)"
-    1. Open <https://makecode.microbit.org> → **New Project**
-    2. Click the **`{ } JavaScript`** button at the top
-    3. Select everything in the editor and **delete it**, then **paste the code above**
-    4. Click **Blocks** to switch back — the real blocks appear, ready to explore
-    5. **Download** to put it on a board, or press ▶️ to run it in the simulator
+    === "Blocks & simulator"
 
-    Kids can do exactly the same to get started, then change things and make it theirs.
+        ```makecode
+        auto
+        ```
 
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            basic.showIcon(IconNames.Heart)
+            basic.showIcon(IconNames.SmallHeart)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            basic.show_icon(IconNames.HEART)
+            basic.show_icon(IconNames.SMALL_HEART)
+        basic.forever(on_forever)
+        ```
+
+## 🚀 Stretch ladder — finish early? Keep climbing!
+
+Start at the top and go as far as you can. Each rung tells you **what to try**, the **blocks to look for**, and a ✅ **buddy check** — show a friend when you get it working. Stuck? Open **👀 Peek** to run the finished rung right there and read it as blocks, JavaScript or Python.
+
+**① Faster / slower heartbeat** — add a `pause (ms)` block between the two `show icon` blocks. Try `100` then `1000`. *Look in:* **Basic → pause.** ✅ Show a buddy your fastest *and* slowest heartbeat.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-1
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            basic.showIcon(IconNames.Heart)
+            basic.pause(1000)
+            basic.showIcon(IconNames.SmallHeart)
+            basic.pause(100)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            basic.show_icon(IconNames.HEART)
+            basic.pause(1000)
+            basic.show_icon(IconNames.SMALL_HEART)
+            basic.pause(100)
+        basic.forever(on_forever)
+        ```
+
+**② Make a mini-movie** — put 3–4 *different* icons inside `forever` so the LEDs play a little animation loop (heart → duck → ghost → yes → …). *Look in:* **Basic → show icon.** ✅ Give your animation a name.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-2
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            basic.showIcon(IconNames.Heart)
+            basic.showIcon(IconNames.Duck)
+            basic.showIcon(IconNames.Ghost)
+            basic.showIcon(IconNames.Yes)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            basic.show_icon(IconNames.HEART)
+            basic.show_icon(IconNames.DUCK)
+            basic.show_icon(IconNames.GHOST)
+            basic.show_icon(IconNames.YES)
+        basic.forever(on_forever)
+        ```
+
+**③ Say hello first** — in `on start`, use `show string` with your name once, *then* let the animation run forever. *Look in:* **Basic → show string / on start.** ✅ Your board greets you by name.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-3
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.showString("Mia")
+        basic.forever(function () {
+            basic.showIcon(IconNames.Heart)
+            basic.showIcon(IconNames.SmallHeart)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        basic.show_string("Mia")
+        def on_forever():
+            basic.show_icon(IconNames.HEART)
+            basic.show_icon(IconNames.SMALL_HEART)
+        basic.forever(on_forever)
+        ```
+
+**④ Two moods, two buttons** — `on button A pressed` → happy face; `on button B pressed` → sad face. *Look in:* **Input → on button pressed.** ✅ A = 😀, B = 🙁.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-4
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            basic.showIcon(IconNames.Sad)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            basic.show_icon(IconNames.SAD)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+**⑤ Shake for a surprise** *(peek at Week 3!)* — `on shake` → show a **random** icon each time. *Look in:* **Input → on shake** and **Math → pick random.** ✅ Every shake is different.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-5
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onGesture(Gesture.Shake, function () {
+            let n = randint(0, 3)
+            if (n == 0) {
+                basic.showIcon(IconNames.Heart)
+            } else if (n == 1) {
+                basic.showIcon(IconNames.Ghost)
+            } else if (n == 2) {
+                basic.showIcon(IconNames.Duck)
+            } else {
+                basic.showIcon(IconNames.Yes)
+            }
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_gesture_shake():
+            n = randint(0, 3)
+            if n == 0:
+                basic.show_icon(IconNames.HEART)
+            elif n == 1:
+                basic.show_icon(IconNames.GHOST)
+            elif n == 2:
+                basic.show_icon(IconNames.DUCK)
+            else:
+                basic.show_icon(IconNames.YES)
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+**⑥ 🏆 Boss level — mood pet** — build a tiny pet: on start it's **asleep** (`Asleep` icon); press **A** to *feed* it (heart + happy face); press **B** to *play* (a quick giggle animation). *Look in:* everything above + a **variable** to remember its mood. ✅ Your pet reacts to both buttons.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-6
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let mood = ""
+        basic.showIcon(IconNames.Asleep)
+        mood = "sleep"
+        input.onButtonPressed(Button.A, function () {
+            mood = "fed"
+            basic.showIcon(IconNames.Heart)
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            mood = "play"
+            basic.showIcon(IconNames.Happy)
+            basic.showIcon(IconNames.SmallHeart)
+            basic.showIcon(IconNames.Happy)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        mood = ""
+        basic.show_icon(IconNames.ASLEEP)
+        mood = "sleep"
+
+        def on_button_pressed_a():
+            global mood
+            mood = "fed"
+            basic.show_icon(IconNames.HEART)
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global mood
+            mood = "play"
+            basic.show_icon(IconNames.HAPPY)
+            basic.show_icon(IconNames.SMALL_HEART)
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+**Made it to the top?** Invent rung ⑦ yourself — a brand-new thing your micro:bit does — and teach it to a friend.
 
 ## ✅ Done when
-- The heart on the LEDs keeps beating (big heart ↔ small heart), forever.
+- **Core (everyone):** the heart keeps beating (big ↔ small) on the real board, forever.
+- **Reached for more:** you climbed at least to rung ③, and you can explain one block you used.
+- **Legend:** you hit the boss level (⑥) or invented your own rung.
 
 ## Notes
-_(space for session notes, what worked, timing adjustments)_
+_(space for session notes, what worked, which rungs kids reached, timing adjustments)_
 
 ## Reference
 - MakeCode Tutorials mode (Tutorials tab on the MakeCode home page) gives step-by-step pictures + simulator animation — use it instead of a slide deck
 
+## 🎉 Kahoot quiz
+
+Finish the session with this week's quiz — **both groups play together**. Click below to open it, press **Host**, and share the game PIN with the kids. (Prefer to read them out, or need the import sheet? See the [weekly quiz](../../quiz/README.md#week-1).)
+
+```kahoot
+week-1
+```

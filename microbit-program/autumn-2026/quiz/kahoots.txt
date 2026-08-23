@@ -15,7 +15,7 @@
 # Format:  <week-key> <url>      (lines starting with # are ignored)
 # Until a line has a real https URL, that week's page shows "Kahoot coming soon".
 
-# week-1  https://create.kahoot.it/details/PASTE-ID-HERE
+week-1  https://create.kahoot.it/details/b39bd6ba-29c1-403f-9c03-8a8cf8fb2c53
 # week-2  https://create.kahoot.it/details/PASTE-ID-HERE
 # week-3  https://create.kahoot.it/details/PASTE-ID-HERE
 # week-4  https://create.kahoot.it/details/PASTE-ID-HERE

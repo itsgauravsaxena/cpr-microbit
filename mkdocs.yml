@@ -43,6 +43,10 @@ theme:
 # the exported .hex / link files in those folders are still copied through.
 exclude_docs: |
   **/code/README.md
+  # Quiz is teacher-only: keep the questions/answers and import sheets out of
+  # the public site. Source stays in the repo; the Kahoot hook reads
+  # quiz/kahoots.txt from source, not the built site.
+  autumn-2026/quiz/
 
 # Retired pinball course: hidden from the nav tree but still built and
 # reachable via the "Archive" link on the autumn-2026 overview page.
@@ -95,7 +99,6 @@ nav:
   - Spring 2026: spring-2026/README.md
   - Autumn 2026:
       - Overview: autumn-2026/README.md
-      - "🎉 Weekly quiz (both groups)": autumn-2026/quiz/README.md
       - "micro:bit Beginners":
           - Overview: autumn-2026/microbit-beginners/README.md
           - "Week 1 · Flashing Heart": autumn-2026/microbit-beginners/week-01-flashing-heart/README.md

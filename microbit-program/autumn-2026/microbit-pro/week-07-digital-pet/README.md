@@ -103,7 +103,7 @@ Snacks and running around. Boards stay on the table.
 - 10 min — add a **second need** (hunger with its own timer) or make it sleep when the room goes dark
 - 10 min — give it a personality: a name that scrolls, custom faces, a sound when you feed it
 - 5 min — pet swap: look after a partner's pet for two minutes without letting it fall asleep
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-7))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## ✅ Done when
 - The pet's face changes as happiness goes up and down.

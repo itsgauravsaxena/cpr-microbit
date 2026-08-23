@@ -31,7 +31,7 @@ Snacks and running around. Boards stay on the table.
 - 10 min — run a **reaction championship**: three tries each, write the best time on the board
 - 10 min — make it harder: a random wait before the light, so nobody can cheat by pressing early
 - 5 min — final: the two fastest kids head-to-head
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-4))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## Example code
 

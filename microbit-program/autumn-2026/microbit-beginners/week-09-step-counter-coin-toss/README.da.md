@@ -31,7 +31,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 10 min — **skridtudfordring**: spænd boardet fast og gå en runde — passer tællingen med dine rigtige skridt?
 - 10 min — snydetest: kan du ryste den til at tælle falske skridt? hvordan ville du stoppe det?
 - 5 min — slå plat eller krone om noget fjollet for gruppen (hvem viser frem først næste gang)
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-9))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## Eksempelkode
 

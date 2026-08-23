@@ -37,7 +37,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 15 min — byg videre på din egen gadget; frivillige går rundt og hjælper folk videre
 - 5 min — **tjek-ind-runde**: alle siger med én sætning, hvad der virker, og hvad der mangler
 - 5 min — gem det, du har, i `code/` — også ufærdigt arbejde gemmes
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-9))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## ✅ Færdig når
 - Alle har en skreven plan (input → hvad sker der → output).

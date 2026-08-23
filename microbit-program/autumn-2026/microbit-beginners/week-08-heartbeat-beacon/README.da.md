@@ -31,7 +31,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 15 min — den rigtige jagt: en frivillig gemmer senderen, alle jager med modtagere. Spil tre runder, gem den bedre hver gang
 - 5 min — jægertips: hvad gjorde det nemmere at finde? (drej langsomt, hold øje med mønsteret)
 - 5 min — byt roller, så alle får lov at gemme den én gang
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-8))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## Eksempelkode
 

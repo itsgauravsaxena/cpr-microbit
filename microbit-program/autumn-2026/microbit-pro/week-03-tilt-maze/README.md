@@ -89,7 +89,7 @@ Snacks and running around. Boards stay on the table.
 - 15 min — add **walls** (flash and reset on the edge) or a **30-second countdown** — your choice
 - 5 min — tune the difficulty: change the divisor until it's hard but fair
 - 5 min — swap boards and set a high score on someone else's game
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-3))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## ✅ Done when
 - Tilting the board moves the dot smoothly in all directions.

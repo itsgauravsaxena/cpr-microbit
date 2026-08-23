@@ -35,7 +35,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 10 min — pynt kroppen, mens limen tørrer: øjne, arme, hår, et navn
 - 10 min — test berøringssensoren igen og igen — udløses den hver gang? fiks løse ledninger
 - 5 min — stil alle de halvfærdige robotter op og tag et gruppebillede
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-5))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## Eksempelkode
 

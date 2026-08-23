@@ -78,7 +78,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 10 min — opgradér dit instrument: lysniveau som lydstyrke, eller lås tonen til en rigtig skala
 - 10 min — øv en kort melodi med en makker (én spiller rytme, én spiller melodi)
 - 5 min — minikoncert — hvert par optræder i 20 sekunder
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-8))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## ✅ Færdig når
 - At holde A og vippe glider tonehøjden jævnt.

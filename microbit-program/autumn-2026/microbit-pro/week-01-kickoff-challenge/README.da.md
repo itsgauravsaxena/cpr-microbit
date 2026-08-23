@@ -30,7 +30,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 ### Blok 2 — 30 min · Klatr op ad sensor-stigen
 - 20 min — klatr videre i dit eget tempo (hjælpere går rundt; find en makker til radio-trinnet)
 - 5 min — **fremvisning:** vis dit yndlings-sensortrick til gruppen
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-1))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## 🔥 Opvarmning — Sten, Saks, Papir-dyst
 
@@ -317,7 +317,7 @@ Hvert trin er en **ny superkraft på få blokke**. Start i toppen og kom så lan
 
 ## 🎉 Kahoot-quiz
 
-Afslut sessionen med denne uges quiz — **begge grupper spiller sammen**. Klik nedenfor for at åbne den, tryk på **Host**, og del spil-PIN'en med børnene. (Vil du hellere læse dem op, eller mangler du import-arket? Se [den ugentlige quiz](../../quiz/README.md#uge-1).)
+Afslut sessionen med denne uges quiz — **begge grupper spiller sammen**. Klik nedenfor for at åbne den, tryk på **Host**, og del spil-PIN'en med børnene. (Vil du hellere læse dem op, eller mangler du import-arket? Se den ugentlige quiz.)
 
 ```kahoot
 week-1

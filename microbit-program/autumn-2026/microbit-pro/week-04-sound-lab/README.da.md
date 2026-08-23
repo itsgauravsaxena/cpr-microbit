@@ -83,7 +83,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 10 min — byg en **klap-tæller** (hvor mange klap på 10 sekunder?) eller en live **støjmåler** som søjlediagram
 - 10 min — kalibrér: find den grænse, der ignorerer snak, men fanger et klap
 - 5 min — højeste-lyd-test — alle råber på én gang, se graferne gå i top
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-4))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## ✅ Færdig når
 - Et klap får boardet til at reagere.

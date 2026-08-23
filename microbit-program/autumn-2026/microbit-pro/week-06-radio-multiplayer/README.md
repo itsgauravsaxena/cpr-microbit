@@ -96,7 +96,7 @@ Snacks and running around. Boards stay on the table.
 - 10 min — swap random for **real choices**: A = rock, B = paper, A+B = scissors
 - 10 min — class tournament, best of five, keep score on the board
 - 5 min — stretch: what would you change to add a fourth move?
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-6))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## ✅ Done when
 - A shake picks a symbol and sends it.

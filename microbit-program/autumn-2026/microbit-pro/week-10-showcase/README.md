@@ -30,7 +30,7 @@ Snacks and running around. Boards stay on the table.
 - 15 min — demos: 2 minutes each — what it does, show it working, the hardest part
 - 5 min — invite the Beginners group in to play with the gadgets
 - 5 min — certificates, group photo, and ideas for next term
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-10))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## ✅ Done when
 - Every project runs on a real micro:bit and has been demoed.

@@ -13,7 +13,7 @@ Both groups are **micro:bit only** — no 3D design this term.
 
 ## Every session ends with a quiz
 
-Both groups come together for a short [🎉 weekly quiz](./quiz/README.md) in the last 5 minutes — four micro:bit questions and two just for fun.
+Both groups come together for a short 🎉 weekly quiz in the last 5 minutes — four micro:bit questions and two just for fun.
 
 ## Repo structure
 

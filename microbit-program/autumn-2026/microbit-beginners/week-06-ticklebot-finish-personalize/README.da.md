@@ -31,7 +31,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 10 min — **kildefest**: prøv alle robotter i lokalet, find den sjoveste reaktion
 - 10 min — tilføj ét trick mere: en lyd eller et ansigt på LED'erne, når den bliver kildet
 - 5 min — robotparade — alle viser deres robot med én sætning
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-6))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## Eksempelkode
 

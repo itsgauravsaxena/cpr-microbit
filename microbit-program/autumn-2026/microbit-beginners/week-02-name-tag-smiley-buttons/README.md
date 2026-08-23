@@ -31,7 +31,7 @@ Snacks and running around. Boards stay on the table.
 - 10 min — put both programs on one board: your name scrolls, **A** = happy, **B** = sad
 - 10 min — add a third face on **A+B** (both buttons at once) — pick a silly one
 - 5 min — swap boards with a partner and try each other's faces
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-2))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## Example code
 

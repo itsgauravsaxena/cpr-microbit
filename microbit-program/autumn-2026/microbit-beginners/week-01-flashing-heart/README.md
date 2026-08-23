@@ -48,7 +48,7 @@ Snacks and running around. Boards stay on the table.
 ### Block 2 — 30 min · Climb the stretch ladder
 - 20 min — everyone keeps climbing the **stretch ladder** below from wherever they are — pick your own level, no pressure to reach the top. Helpers roam.
 - 5 min — **gallery walk:** show the person next to you the coolest rung you reached
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-1))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 !!! note "For helpers — how the ladder works"
     Everyone finishes the same **core** (a beating heart on their board). After that, kids climb the ladder at their own pace: confident coders race to the boss level, while others take rungs ① and ② slowly — nobody is stuck waiting and nobody is bored. Rungs ⑤–⑥ quietly preview buttons, randomness and variables from the weeks ahead.
@@ -324,7 +324,7 @@ _(space for session notes, what worked, which rungs kids reached, timing adjustm
 
 ## 🎉 Kahoot quiz
 
-Finish the session with this week's quiz — **both groups play together**. Click below to open it, press **Host**, and share the game PIN with the kids. (Prefer to read them out, or need the import sheet? See the [weekly quiz](../../quiz/README.md#week-1).)
+Finish the session with this week's quiz — **both groups play together**. Click below to open it, press **Host**, and share the game PIN with the kids. (Prefer to read them out, or need the import sheet? See the weekly quiz.)
 
 ```kahoot
 week-1

@@ -30,7 +30,7 @@ Snacks and running around. Boards stay on the table.
 ### Block 2 — 30 min · Climb the sensor ladder
 - 20 min — keep climbing at your own level (helpers roam; grab a partner for the radio rung)
 - 5 min — **showcase:** demo your favourite sensor trick to the group
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-1))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## 🔥 Warm-up — Rock, Paper, Scissors duel
 
@@ -317,7 +317,7 @@ Each rung is a **new superpower in a few blocks**. Start at the top and go as fa
 
 ## 🎉 Kahoot quiz
 
-Finish the session with this week's quiz — **both groups play together**. Click below to open it, press **Host**, and share the game PIN with the kids. (Prefer to read them out, or need the import sheet? See the [weekly quiz](../../quiz/README.md#week-1).)
+Finish the session with this week's quiz — **both groups play together**. Click below to open it, press **Host**, and share the game PIN with the kids. (Prefer to read them out, or need the import sheet? See the weekly quiz.)
 
 ```kahoot
 week-1

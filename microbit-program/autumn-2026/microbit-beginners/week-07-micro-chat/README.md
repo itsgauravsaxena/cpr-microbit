@@ -28,7 +28,7 @@ Snacks and running around. Boards stay on the table.
 - 10 min — agree on a **secret code** with your partner (1 = hello, 2 = meet me, 3 = look behind you)
 - 10 min — **message relay**: stand in a line and pass a message from one end to the other by radio
 - 5 min — what happens if two pairs use the same group number? try it and see
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-7))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## Example code
 

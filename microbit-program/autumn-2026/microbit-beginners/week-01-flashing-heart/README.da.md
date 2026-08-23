@@ -48,7 +48,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 ### Blok 2 — 30 min · Klatr op ad udfordringsstigen
 - 20 min — alle klatrer videre på **udfordringsstigen** nedenfor derfra hvor de er — vælg dit eget niveau, ingen skal nå toppen. Hjælpere går rundt.
 - 5 min — **gallerivandring:** vis din sidemand det fedeste trin, du nåede
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-1))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 !!! note "Til hjælpere — sådan virker stigen"
     Alle laver den samme **kerne** færdig (et bankende hjerte på deres board). Derefter klatrer børnene op ad stigen i deres eget tempo: de sikre kodere kapløber mod boss-niveauet, mens andre tager trin ① og ② langsomt — ingen sidder og venter, og ingen keder sig. Trin ⑤–⑥ giver et lille smugkig på knapper, tilfældighed og variabler fra de kommende uger.
@@ -324,7 +324,7 @@ _(plads til sessionsnoter, hvad virkede, hvilke trin børnene nåede, justeringe
 
 ## 🎉 Kahoot-quiz
 
-Afslut sessionen med denne uges quiz — **begge grupper spiller sammen**. Klik nedenfor for at åbne den, tryk på **Host**, og del spil-PIN'en med børnene. (Vil du hellere læse dem op, eller mangler du import-arket? Se [den ugentlige quiz](../../quiz/README.md#uge-1).)
+Afslut sessionen med denne uges quiz — **begge grupper spiller sammen**. Klik nedenfor for at åbne den, tryk på **Host**, og del spil-PIN'en med børnene. (Vil du hellere læse dem op, eller mangler du import-arket? Se den ugentlige quiz.)
 
 ```kahoot
 week-1

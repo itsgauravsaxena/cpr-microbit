@@ -31,7 +31,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 10 min — **terningeduel**: ryst samtidig med en makker, højeste tal vinder. Bedst af fem
 - 10 min — udvidelse: vis **prikker** i stedet for et tal (tegn dem med `show leds`)
 - 5 min — prøv kærlighedsmåleren rundt om bordet — hvem har de 'varmeste' fingre?
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-3))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## Eksempelkode
 

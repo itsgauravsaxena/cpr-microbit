@@ -104,7 +104,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 15 min — tilføj **pointtælling** (først til 5 vinder) og afhold en cup-turnering i gruppen
 - 5 min — vis vinderens reaktionstid i millisekunder
 - 5 min — snak om det: hvorfor gør `armed`-tjekket spillet fair?
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-5))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## ✅ Færdig når
 - Begge boards viser målet på samme tid.

@@ -31,7 +31,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 10 min — afhold et **reaktionsmesterskab**: tre forsøg hver, skriv den bedste tid på tavlen
 - 10 min — gør det sværere: en tilfældig ventetid før lyset, så ingen kan snyde ved at trykke for tidligt
 - 5 min — finale: de to hurtigste dyster mod hinanden
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-4))
+- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 ## Eksempelkode
 

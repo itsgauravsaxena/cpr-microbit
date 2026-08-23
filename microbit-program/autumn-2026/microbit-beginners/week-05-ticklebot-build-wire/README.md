@@ -35,7 +35,7 @@ Snacks and running around. Boards stay on the table.
 - 10 min — decorate the body while the glue dries: eyes, arms, hair, a name
 - 10 min — test the touch sensor again and again — does it trigger every time? fix loose wires
 - 5 min — line up all the half-built robots and take a group photo
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-5))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## Example code
 

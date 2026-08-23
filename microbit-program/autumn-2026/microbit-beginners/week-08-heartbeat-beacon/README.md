@@ -31,7 +31,7 @@ Snacks and running around. Boards stay on the table.
 - 15 min — the real hunt: a volunteer hides the transmitter, everyone hunts with receivers. Play three rounds, hide it better each time
 - 5 min — hunters' tips: what made it easier to find? (turn slowly, watch the pattern)
 - 5 min — swap roles so everyone gets to hide it once
-- 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-8))
+- 5 min — 🎉 **Kahoot quiz** — whole group together
 
 ## Example code
 

@@ -1,8 +1,8 @@
-# Uge 1 — Kickoff & kodeudfordring
+# Uge 1 — Velkommen tilbage til Pro! 🚀
 
-> 🏴‍☠️ Velkommen til Pro! I kan allerede det grundlæggende — denne sæson handler om **større idéer**: sensorer, data, bevægelse, lyd, radio og jeres egne opfindelser. Først en opvarmningsudfordring.
+> 🏴‍☠️ Velkommen tilbage! Dette semester handler om **større idéer** — sensorer, data, bevægelse, lyd, radio og jeres egne opfindelser. I dag: en hurtig opvarmnings-dyst, og så får vi micro:bit'en til at gøre noget, der føles som **ren magi** — med kun en håndfuld blokke.
 
-**Mål:** varm op, bliv enige om, hvordan vi arbejder (del din kode hver uge), og løs en lille kodeudfordring.
+**Mål:** ryst sommerrusten af med et sjovt spil, lås micro:bit'ens skjulte superkraft op — dens **sensorer** — med en imponerende demo på få blokke, og bliv enige om, hvordan vi arbejder: **del din kode hver uge**.
 
 <div style="text-align:center;margin:1.25rem 0;" markdown="0">
 <svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="gættespillet der tæller" xmlns="http://www.w3.org/2000/svg">
@@ -11,126 +11,322 @@
 </svg>
 </div>
 
-## Hvad I bygger
-
-Et **gæt det hemmelige tal**-spil: micro:bitten vælger et tal, du trykker A for lavere / B for højere, og den siger til, når du rammer rigtigt.
-
-## Eksempelkode
-
-Kør det her, og klik på **Open & edit in MakeCode** for at lave din egen version:
-
-<!-- Indsæt ugens MakeCode-del-id nedenfor (Share -> Publish giver et link
-     som https://makecode.microbit.org/_abc123 -- indsæt id'et eller hele
-     linket). Indtil et id er tilføjet, vises en "kommer snart"-note. -->
-```makecode
-auto
-```
-
-<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
-<svg viewBox="0 0 604 268" width="100%" style="max-width:604px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
-<rect x="30" y="20" width="262" height="32" rx="14" fill="#5c8aa8"/>
-<rect x="40" y="15" width="34" height="12" rx="6" fill="#5c8aa8"/>
-<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on start</text>
-<rect x="30" y="55" width="262" height="32" rx="7" fill="#ff8f1a"/>
-<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">set secret to pick random 1 to 20</text>
-<rect x="30" y="90" width="262" height="32" rx="7" fill="#ff8f1a"/>
-<text x="44" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">set guess to 10</text>
-<rect x="30" y="140" width="262" height="32" rx="14" fill="#9857c9"/>
-<rect x="40" y="135" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="44" y="160.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button A pressed</text>
-<rect x="30" y="175" width="262" height="32" rx="7" fill="#ff8f1a"/>
-<text x="44" y="195.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">change guess by -1</text>
-<rect x="30" y="210" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="44" y="230.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show number guess</text>
-<rect x="322" y="20" width="262" height="32" rx="14" fill="#9857c9"/>
-<rect x="332" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="336" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button B pressed</text>
-<rect x="322" y="55" width="262" height="32" rx="7" fill="#ff8f1a"/>
-<text x="336" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">change guess by 1</text>
-<rect x="322" y="90" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="336" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show number guess</text>
-<rect x="322" y="140" width="262" height="32" rx="14" fill="#9857c9"/>
-<rect x="332" y="135" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="336" y="160.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button A+B pressed</text>
-<rect x="322" y="175" width="262" height="32" rx="7" fill="#59b04a"/>
-<text x="336" y="195.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">if guess = secret → show yes</text>
-<rect x="322" y="210" width="262" height="32" rx="7" fill="#59b04a"/>
-<text x="336" y="230.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">else → show no</text>
-</svg>
-</div>
-
-```javascript
-let secret = randint(1, 20)
-let guess = 10
-input.onButtonPressed(Button.A, function () {
-    guess += -1
-    basic.showNumber(guess)
-})
-input.onButtonPressed(Button.B, function () {
-    guess += 1
-    basic.showNumber(guess)
-})
-input.onButtonPressed(Button.AB, function () {
-    if (guess == secret) {
-        basic.showIcon(IconNames.Yes)
-    } else {
-        basic.showIcon(IconNames.No)
-    }
-})
-```
-
-!!! tip "▶️ Prøv den i MakeCode (30 sekunder)"
-    1. Åbn <https://makecode.microbit.org> → **New Project**
-    2. Klik på **`{ } JavaScript`**-knappen øverst
-    3. Markér alt i editoren og **slet det**, indsæt derefter **koden ovenfor**
-    4. Klik på **Blocks** for at skifte tilbage — de rigtige blokke dukker op, klar til at udforske
-    5. **Download** for at lægge den på et board, eller tryk ▶️ for at køre den i simulatoren
-
-    Børnene kan gøre præcis det samme for at komme i gang og derefter ændre tingene, så det bliver deres eget.
-
+## Materialer
+- 1 micro:bit **V2** + USB-kabel pr. barn (i dag bruger vi V2'ens **mikrofon** og **højtaler**)
+- Bærbar/Chromebook med makecode.microbit.org åben
+- En makker til radio-trinnet (trin ⑤)
 
 ## Sessionsplan (60 min + 20 min pause + 30 min)
 
-### Blok 1 — 60 min
-- 5 min — velkommen, hvad Pro handler om, se på 10-ugers-kortet
-- 15 min — udfordring: kan I lave gættespillet selv?
-- 30 min — byg det sammen, sammenlign løsninger
-- 10 min — eksportér din .hex og gem den i `code/`
+### Blok 1 — 60 min · Opvarmning + magien
+- 5 min — velkommen tilbage, kig på 10-ugers Pro-kortet, vores ene regel: **del din kode hver uge**
+- 15 min — **opvarmning:** byg og spil Sten-Saks-Papir-dyster
+- 20 min — **magien:** byg lyd-søjlediagrammet sammen, flash det til et rigtigt board, få rummet til at blive højt/stille
+- 20 min — begynd at klatre op ad **sensor-stigen** (trin ①–②)
 
 ### ☕ Pause — 20 min
 Snacks og løbe rundt. Boards bliver på bordet.
 
-### Blok 2 — 30 min · Tag udfordringen videre
-- 10 min — vælg én **ekstra udfordring** og byg den (varmere/koldere, eller tæl gættene)
-- 10 min — find en makker: spil deres version og prøv at få den til at gå i stykker
-- 5 min — eksportér din `.hex` til `code/` og notér, hvad du ville tilføje næste gang
+### Blok 2 — 30 min · Klatr op ad sensor-stigen
+- 20 min — klatr videre i dit eget tempo (hjælpere går rundt; find en makker til radio-trinnet)
+- 5 min — **fremvisning:** vis dit yndlings-sensortrick til gruppen
 - 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen ([ugens spørgsmål](../../quiz/README.md#uge-1))
 
+## 🔥 Opvarmning — Sten, Saks, Papir-dyst
+
+Ryst din micro:bit for at kaste **sten, saks eller papir**, og dyst så med din sidemand — bedst af fem! En to-minutters byggeøvelse, der ryster rusten af.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:warmup
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onGesture(Gesture.Shake, function () {
+            let choice = randint(0, 2)
+            if (choice == 0) {
+                basic.showIcon(IconNames.Square)
+            } else if (choice == 1) {
+                basic.showLeds(`
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    `)
+            } else {
+                basic.showIcon(IconNames.Scissors)
+            }
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_gesture_shake():
+            choice = randint(0, 2)
+            if choice == 0:
+                basic.show_icon(IconNames.SQUARE)
+            elif choice == 1:
+                basic.show_leds("""
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    """)
+            else:
+                basic.show_icon(IconNames.SCISSORS)
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+## 🤯 Magien — få micro:bit'en til at *se din stemme*
+
+Her er "wow"-øjeblikket. micro:bit **V2** har en lille **mikrofon**. Med kun et par blokke omdanner den, hvor højt der er i rummet, til et levende søjlediagram på LED'erne — **tal, klap eller råb** og se det danse. Det er en ægte sensor, der aflæses ~hundrede gange i sekundet.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            led.plotBarGraph(input.soundLevel(), 255)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            led.plot_bar_graph(input.sound_level(), 255)
+        basic.forever(on_forever)
+        ```
+
+## 🚀 Udfordringsstige — hvor langt kan du presse sensorerne?
+
+Hvert trin er en **ny superkraft på få blokke**. Start i toppen og kom så langt du kan. Åbn **👀 Kør det** for at prøve det færdige trin og se det som blokke, JavaScript eller Python.
+
+**① Klap-detektor** — få boardet til at reagere på en **høj** lyd (et klap eller råb) med et overrasket ansigt. *Find den under:* **Input → ved høj lyd.** ✅ Klap → 😲.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-1
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onSound(DetectedSound.Loud, function () {
+            basic.showIcon(IconNames.Surprised)
+            basic.pause(500)
+            basic.clearScreen()
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_loud():
+            basic.show_icon(IconNames.SURPRISED)
+            basic.pause(500)
+            basic.clear_screen()
+        input.on_sound(DetectedSound.LOUD, on_loud)
+        ```
+
+**② Lys-theremin** 🎵 — vift hånden over boardet; **tonehøjden ændrer sig med lyset**. *Find den under:* **Input → lysniveau, Music → ring tone, Math → map.** ✅ Din hånd spiller musik.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-2
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            let pitch = Math.map(input.lightLevel(), 0, 255, 200, 1200)
+            music.ringTone(pitch)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            pitch = Math.map(input.light_level(), 0, 255, 200, 1200)
+            music.ring_tone(pitch)
+        basic.forever(on_forever)
+        ```
+
+**③ Vater med hældning** — en enkelt prik triller mod den lave side, når du vipper boardet, som et vaterpas. *Find den under:* **Input → acceleration (x), LED → plot x y, Math → map.** ✅ Prikken følger tyngdekraften.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-3
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            let x = Math.map(input.acceleration(Dimension.X), -1000, 1000, 0, 4)
+            basic.clearScreen()
+            led.plot(Math.round(x), 2)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            x = Math.map(input.acceleration(Dimension.X), -1000, 1000, 0, 4)
+            basic.clear_screen()
+            led.plot(Math.round(x), 2)
+        basic.forever(on_forever)
+        ```
+
+**④ Ryste-spådom (Magic 8-ball)** — ryst for et tilfældigt svar fra en liste, du selv skriver. *Find den under:* **Input → ved rystelse, Arrays, Math → vælg tilfældig.** ✅ Stil et spørgsmål, ryst, få et svar.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-4
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onGesture(Gesture.Shake, function () {
+            let answers = ["YES", "NO", "MAYBE", "SOON", "NO WAY"]
+            basic.showString(answers[randint(0, answers.length - 1)])
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        answers = ["YES", "NO", "MAYBE", "SOON", "NO WAY"]
+        def on_gesture_shake():
+            basic.show_string(answers[randint(0, len(answers) - 1)])
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+**⑤ Radio-ping** 📡 *(find en makker — smugkig på uge 5–6)* — tryk **A** for at pinge; din makkers board blinker ✓. *Find den under:* **Radio → sæt gruppe / send streng / ved modtaget streng.** ✅ To boards taler trådløst.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-5
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        radio.setGroup(1)
+        input.onButtonPressed(Button.A, function () {
+            radio.sendString("ping")
+        })
+        radio.onReceivedString(function (receivedString) {
+            basic.showIcon(IconNames.Yes)
+            basic.pause(300)
+            basic.clearScreen()
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_received_string(receivedString):
+            basic.show_icon(IconNames.YES)
+            basic.pause(300)
+            basic.clear_screen()
+        radio.on_received_string(on_received_string)
+
+        def on_button_pressed_a():
+            radio.send_string("ping")
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        radio.set_group(1)
+        ```
+
+**⑥ 🏆 Boss — instrument med to sensorer** — spil micro:bit'en som et instrument: **lys sætter tonehøjden, hældning sætter lydstyrken.** *Find den under:* alt ovenfor + **Music → sæt lydstyrke.** ✅ To sensorer, ét instrument.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-6
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            let pitch = Math.map(input.lightLevel(), 0, 255, 200, 1200)
+            let vol = Math.map(Math.abs(input.acceleration(Dimension.X)), 0, 1000, 0, 255)
+            music.setVolume(vol)
+            music.ringTone(pitch)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            pitch = Math.map(input.light_level(), 0, 255, 200, 1200)
+            vol = Math.map(Math.abs(input.acceleration(Dimension.X)), 0, 1000, 0, 255)
+            music.set_volume(vol)
+            music.ring_tone(pitch)
+        basic.forever(on_forever)
+        ```
+
+**Nået til toppen?** Find selv på trin ⑦ — vælg en sensor vi ikke har brugt (temperatur, kompas, touch-logo) og få den til at gøre noget — og lær det til en ven.
+
+!!! note "Til hjælpere — sådan virker stigen"
+    Alle får først **lyd-søjlediagrammet** til at virke (den fælles sejr). Derefter klatrer børnene i deres eget tempo: de sikre kodere kapløber til theremin'en og boss-instrumentet, mens andre nyder klap-detektoren og ryste-spådommen. Trinnene giver et smugkig på semesteret — sensorer (uge 2), lyd (uge 4), radio (uge 5–6).
+
 ## ✅ Færdig når
-- A og B ændrer gættet, og A+B viser ✓ eller ✗ korrekt.
-- Alle har gemt deres projekt i `code/`.
+- **Kerne (alle):** lyd-søjlediagrammet reagerer på din stemme på det rigtige board.
+- **Strakte sig:** du nåede mindst til trin ③ og kan sige, hvilken sensor det bruger.
+- **Legende:** du ramte boss-instrumentet (⑥) eller fandt på dit eget trin.
 
-## Sådan virker det
+## 🎉 Kahoot-quiz
 
-Micro:bitten vælger et **secret**-tal én gang ved start. Dit `guess` er en separat variabel, du flytter op og ned — det er sammenligningen af de to, der gør det til et spil. Bemærk at `secret` ikke ændrer sig undervejs.
+Afslut sessionen med denne uges quiz — **begge grupper spiller sammen**. Klik nedenfor for at åbne den, tryk på **Host**, og del spil-PIN'en med børnene. (Vil du hellere læse dem op, eller mangler du import-arket? Se [den ugentlige quiz](../../quiz/README.md#uge-1).)
 
-## Ekstra udfordringer
-- Vis 🔥 *varmere* / ❄️ *koldere* i stedet for kun ✓ og ✗.
-- Tæl hvor mange gæt det tog, og vis tallet til sidst.
-- Tilføj et ryst for at starte en helt ny runde.
-
-## Hvis det ikke virker
-- Viser altid ✗? Tjek at `secret` sættes i **on start**, ikke inde i en knap-blok.
-- Tallet ændrer sig ikke? Sørg for at du brugte `change … by` og ikke `set … to`.
+```kahoot
+week-1
+```
 
 ## Links & referencer
 - Officielle MakeCode-projekter: <https://makecode.microbit.org/projects>
 - micro:bit Foundations lektioner & videoer: <https://microbit.org/projects/make-it-code-it/>
 - Blok-reference (slå enhver blok op): <https://makecode.microbit.org/reference>
 
-!!! note "Tilføj dit eget link"
-    Fundet en god video eller et MakeCode-projekt til denne uge? Indsæt linket her
-    (og læg `.hex`-filen eller delelinket i ugens `code/`-mappe).
-
 ## Noter
-_(plads til sessionsnoter)_
+_(plads til sessionsnoter, hvilke trin børnene nåede, justeringer af tidsforbrug)_

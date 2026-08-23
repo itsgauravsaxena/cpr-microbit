@@ -1,8 +1,8 @@
-# Week 1 — Kickoff & code challenge
+# Week 1 — Welcome back to Pro! 🚀
 
-> 🏴‍☠️ Welcome to Pro! You already know the basics — this term is about **bigger ideas**: sensors, data, motion, sound, radio and your own inventions. First, a warm-up challenge.
+> 🏴‍☠️ Welcome back! This term is about **bigger ideas** — sensors, data, motion, sound, radio and your own inventions. Today: a quick warm-up duel, then we make the micro:bit do something that feels like **actual magic** — with only a handful of blocks.
 
-**Goal:** warm up, agree on how we work (share your code every week), and beat a small code challenge.
+**Goal:** shake off the summer rust with a fun game, unlock the micro:bit's hidden superpower — its **sensors** — with a jaw-dropping few-block demo, and agree how we work: **share your code every week**.
 
 <div style="text-align:center;margin:1.25rem 0;" markdown="0">
 <svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="the guessing game counting" xmlns="http://www.w3.org/2000/svg">
@@ -11,131 +11,322 @@
 </svg>
 </div>
 
-## What you’ll build
-
-A **secret-number guessing game**: the micro:bit picks a number, you press A to guess lower / B higher, and it tells you when you're right.
-
-## Example code
-
-Run it right here, then click **Open & edit in MakeCode** to make your own version:
-
-<!-- Paste this week's MakeCode share id below (Share -> Publish gives you a
-     link like https://makecode.microbit.org/_abc123 -- paste the id or the
-     whole link). Until then, this shows a "coming soon" note. -->
-```makecode
-auto
-```
-
-<details markdown="1">
-<summary>See the blocks &amp; code (reference)</summary>
-
-<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
-<svg viewBox="0 0 604 268" width="100%" style="max-width:604px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
-<rect x="30" y="20" width="262" height="32" rx="14" fill="#5c8aa8"/>
-<rect x="40" y="15" width="34" height="12" rx="6" fill="#5c8aa8"/>
-<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on start</text>
-<rect x="30" y="55" width="262" height="32" rx="7" fill="#ff8f1a"/>
-<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">set secret to pick random 1 to 20</text>
-<rect x="30" y="90" width="262" height="32" rx="7" fill="#ff8f1a"/>
-<text x="44" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">set guess to 10</text>
-<rect x="30" y="140" width="262" height="32" rx="14" fill="#9857c9"/>
-<rect x="40" y="135" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="44" y="160.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button A pressed</text>
-<rect x="30" y="175" width="262" height="32" rx="7" fill="#ff8f1a"/>
-<text x="44" y="195.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">change guess by -1</text>
-<rect x="30" y="210" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="44" y="230.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show number guess</text>
-<rect x="322" y="20" width="262" height="32" rx="14" fill="#9857c9"/>
-<rect x="332" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="336" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button B pressed</text>
-<rect x="322" y="55" width="262" height="32" rx="7" fill="#ff8f1a"/>
-<text x="336" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">change guess by 1</text>
-<rect x="322" y="90" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="336" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show number guess</text>
-<rect x="322" y="140" width="262" height="32" rx="14" fill="#9857c9"/>
-<rect x="332" y="135" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="336" y="160.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button A+B pressed</text>
-<rect x="322" y="175" width="262" height="32" rx="7" fill="#59b04a"/>
-<text x="336" y="195.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">if guess = secret → show yes</text>
-<rect x="322" y="210" width="262" height="32" rx="7" fill="#59b04a"/>
-<text x="336" y="230.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">else → show no</text>
-</svg>
-</div>
-
-```javascript
-let secret = randint(1, 20)
-let guess = 10
-input.onButtonPressed(Button.A, function () {
-    guess += -1
-    basic.showNumber(guess)
-})
-input.onButtonPressed(Button.B, function () {
-    guess += 1
-    basic.showNumber(guess)
-})
-input.onButtonPressed(Button.AB, function () {
-    if (guess == secret) {
-        basic.showIcon(IconNames.Yes)
-    } else {
-        basic.showIcon(IconNames.No)
-    }
-})
-```
-
-</details>
-
-!!! tip "▶️ Try it in MakeCode (30 seconds)"
-    1. Open <https://makecode.microbit.org> → **New Project**
-    2. Click the **`{ } JavaScript`** button at the top
-    3. Select everything in the editor and **delete it**, then **paste the code above**
-    4. Click **Blocks** to switch back — the real blocks appear, ready to explore
-    5. **Download** to put it on a board, or press ▶️ to run it in the simulator
-
-    Kids can do exactly the same to get started, then change things and make it theirs.
-
+## Materials
+- 1 micro:bit **V2** + USB cable per kid (today uses the V2 **microphone** and **speaker**)
+- Laptop/Chromebook with makecode.microbit.org open
+- A partner for the radio rung (rung ⑤)
 
 ## Session plan (60 min + 20 min break + 30 min)
 
-### Block 1 — 60 min
-- 5 min — welcome, what Pro is about, look at the 10-week map
-- 15 min — challenge: can you make the guessing game on your own?
-- 30 min — build it together, compare solutions
-- 10 min — export your .hex and save it in `code/`
+### Block 1 — 60 min · Warm up + the magic
+- 5 min — welcome back, a look at the 10-week Pro map, our one rule: **share your code every week**
+- 15 min — **warm-up:** build & play Rock-Paper-Scissors duels
+- 20 min — **the magic:** build the sound bar graph together, flash it to a real board, make the room go loud/quiet
+- 20 min — start climbing the **sensor ladder** (rungs ①–②)
 
 ### ☕ Break — 20 min
 Snacks and running around. Boards stay on the table.
 
-### Block 2 — 30 min · Take the challenge further
-- 10 min — pick one **extra challenge** and build it (warmer/colder, or count the guesses)
-- 10 min — pair up: play someone else's version and try to break it
-- 5 min — export your `.hex` into `code/` and note what you'd add next
+### Block 2 — 30 min · Climb the sensor ladder
+- 20 min — keep climbing at your own level (helpers roam; grab a partner for the radio rung)
+- 5 min — **showcase:** demo your favourite sensor trick to the group
 - 5 min — 🎉 **Kahoot quiz** — whole group together ([this week's questions](../../quiz/README.md#week-1))
 
+## 🔥 Warm-up — Rock, Paper, Scissors duel
+
+Shake your micro:bit to throw **rock, paper or scissors**, then duel the person next to you — best of five! A two-minute build to knock the rust off.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:warmup
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onGesture(Gesture.Shake, function () {
+            let choice = randint(0, 2)
+            if (choice == 0) {
+                basic.showIcon(IconNames.Square)
+            } else if (choice == 1) {
+                basic.showLeds(`
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    `)
+            } else {
+                basic.showIcon(IconNames.Scissors)
+            }
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_gesture_shake():
+            choice = randint(0, 2)
+            if choice == 0:
+                basic.show_icon(IconNames.SQUARE)
+            elif choice == 1:
+                basic.show_leds("""
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    """)
+            else:
+                basic.show_icon(IconNames.SCISSORS)
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+## 🤯 The magic — make the micro:bit *see your voice*
+
+Here's the "whoa". The micro:bit **V2** has a tiny **microphone**. With just a couple of blocks it turns how loud the room is into a live bar chart on the LEDs — **talk, clap or shout** and watch it dance. That's a real sensor being read ~a hundred times a second.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            led.plotBarGraph(input.soundLevel(), 255)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            led.plot_bar_graph(input.sound_level(), 255)
+        basic.forever(on_forever)
+        ```
+
+## 🚀 Stretch ladder — how far can you push the sensors?
+
+Each rung is a **new superpower in a few blocks**. Start at the top and go as far as you can. Open **👀 Run it** to try the finished rung and read it as blocks, JavaScript or Python.
+
+**① Clap detector** — make the board react to a **loud** sound (a clap or shout) with a surprised face. *Look in:* **Input → on loud sound.** ✅ Clap → 😲.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-1
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onSound(DetectedSound.Loud, function () {
+            basic.showIcon(IconNames.Surprised)
+            basic.pause(500)
+            basic.clearScreen()
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_loud():
+            basic.show_icon(IconNames.SURPRISED)
+            basic.pause(500)
+            basic.clear_screen()
+        input.on_sound(DetectedSound.LOUD, on_loud)
+        ```
+
+**② Light theremin** 🎵 — wave your hand over the board; the **pitch changes with the light**. *Look in:* **Input → light level, Music → ring tone, Math → map.** ✅ Your hand plays music.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-2
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            let pitch = Math.map(input.lightLevel(), 0, 255, 200, 1200)
+            music.ringTone(pitch)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            pitch = Math.map(input.light_level(), 0, 255, 200, 1200)
+            music.ring_tone(pitch)
+        basic.forever(on_forever)
+        ```
+
+**③ Tilt bubble-level** — a single dot rolls to the low side as you tilt the board, like a spirit level. *Look in:* **Input → acceleration (x), LED → plot x y, Math → map.** ✅ The dot follows gravity.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-3
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            let x = Math.map(input.acceleration(Dimension.X), -1000, 1000, 0, 4)
+            basic.clearScreen()
+            led.plot(Math.round(x), 2)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            x = Math.map(input.acceleration(Dimension.X), -1000, 1000, 0, 4)
+            basic.clear_screen()
+            led.plot(Math.round(x), 2)
+        basic.forever(on_forever)
+        ```
+
+**④ Shake fortune (Magic 8-ball)** — shake for a random answer from a list you write. *Look in:* **Input → on shake, Arrays, Math → pick random.** ✅ Ask a question, shake, get an answer.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-4
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onGesture(Gesture.Shake, function () {
+            let answers = ["YES", "NO", "MAYBE", "SOON", "NO WAY"]
+            basic.showString(answers[randint(0, answers.length - 1)])
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        answers = ["YES", "NO", "MAYBE", "SOON", "NO WAY"]
+        def on_gesture_shake():
+            basic.show_string(answers[randint(0, len(answers) - 1)])
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+**⑤ Radio ping** 📡 *(grab a partner — previews weeks 5–6)* — press **A** to ping; your partner's board flashes ✓. *Look in:* **Radio → set group / send string / on received string.** ✅ Two boards talk wirelessly.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-5
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        radio.setGroup(1)
+        input.onButtonPressed(Button.A, function () {
+            radio.sendString("ping")
+        })
+        radio.onReceivedString(function (receivedString) {
+            basic.showIcon(IconNames.Yes)
+            basic.pause(300)
+            basic.clearScreen()
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_received_string(receivedString):
+            basic.show_icon(IconNames.YES)
+            basic.pause(300)
+            basic.clear_screen()
+        radio.on_received_string(on_received_string)
+
+        def on_button_pressed_a():
+            radio.send_string("ping")
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        radio.set_group(1)
+        ```
+
+**⑥ 🏆 Boss — two-sensor instrument** — play the micro:bit like an instrument: **light sets the pitch, tilt sets the volume.** *Look in:* everything above + **Music → set volume.** ✅ Two sensors, one instrument.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-6
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.forever(function () {
+            let pitch = Math.map(input.lightLevel(), 0, 255, 200, 1200)
+            let vol = Math.map(Math.abs(input.acceleration(Dimension.X)), 0, 1000, 0, 255)
+            music.setVolume(vol)
+            music.ringTone(pitch)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_forever():
+            pitch = Math.map(input.light_level(), 0, 255, 200, 1200)
+            vol = Math.map(Math.abs(input.acceleration(Dimension.X)), 0, 1000, 0, 255)
+            music.set_volume(vol)
+            music.ring_tone(pitch)
+        basic.forever(on_forever)
+        ```
+
+**Topped out?** Invent rung ⑦ yourself — pick a sensor we haven't used (temperature, compass, touch logo) and make it do something — then teach it to a friend.
+
+!!! note "For helpers — how the ladder works"
+    Everyone gets the **sound bar graph** working first (that's the shared win). Then kids climb at their own pace: confident coders race to the theremin and the boss instrument, while others enjoy the clap detector and shake-fortune. The rungs quietly preview the term — sensors (wk 2), sound (wk 4), radio (wk 5–6).
+
 ## ✅ Done when
-- A and B change the guess, and A+B shows ✓ or ✗ correctly.
-- Everyone has saved their project to `code/`.
+- **Core (everyone):** the sound bar graph reacts to your voice on the real board.
+- **Reached for more:** you climbed at least to rung ③ and can say which sensor it uses.
+- **Legend:** you hit the boss instrument (⑥) or invented your own rung.
 
-## How it works
+## 🎉 Kahoot quiz
 
-The micro:bit picks a **secret** number once, at start. Your `guess` is a separate variable you move up and down — comparing the two is what makes it a game. Notice that `secret` never changes while you play.
+Finish the session with this week's quiz — **both groups play together**. Click below to open it, press **Host**, and share the game PIN with the kids. (Prefer to read them out, or need the import sheet? See the [weekly quiz](../../quiz/README.md#week-1).)
 
-## Extra challenges
-- Show 🔥 *warmer* / ❄️ *colder* instead of just ✓ and ✗.
-- Count how many guesses it took and show the number at the end.
-- Add a shake gesture to start a brand-new round.
-
-## If it doesn’t work
-- Always shows ✗? Check `secret` is set in **on start**, not inside a button block.
-- Number doesn't change? Make sure you used `change … by` and not `set … to`.
+```kahoot
+week-1
+```
 
 ## Links & references
 - Official MakeCode projects: <https://makecode.microbit.org/projects>
 - micro:bit Foundation lessons & videos: <https://microbit.org/projects/make-it-code-it/>
 - Block reference (look up any block): <https://makecode.microbit.org/reference>
 
-!!! note "Add your own link"
-    Found a good video or a MakeCode project for this week? Paste the link here
-    (and drop the `.hex` or share link into this week's `code/` folder).
-
 ## Notes
-_(space for session notes)_
+_(space for session notes, which rungs kids reached, timing adjustments)_

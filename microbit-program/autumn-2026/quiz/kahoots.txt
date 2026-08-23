@@ -7,21 +7,23 @@
 #   1. In Kahoot: Create → Add question → Import questions → upload that week's
 #      sheet from kahoot-import/  (see this folder's README / the quiz page).
 #   2. Save the kahoot in your library.
-#   3. Open it and copy its link (looks like
-#      https://create.kahoot.it/details/<id>) — opening that link lands you on
-#      the kahoot ready to press Host/Play.
+#   3. Open the kahoot and copy the link from your browser's address bar — the
+#      one that works is the library link:
+#      https://create.kahoot.it/my-library/kahoots/<id>
+#      (the /details/<id> form only works for published/public kahoots).
+#      Opening it lands you on the kahoot ready to press Host/Play.
 #   4. Paste it below next to the week key, then commit this file.
 #
 # Format:  <week-key> <url>      (lines starting with # are ignored)
 # Until a line has a real https URL, that week's page shows "Kahoot coming soon".
 
-week-1  https://create.kahoot.it/details/b39bd6ba-29c1-403f-9c03-8a8cf8fb2c53
-# week-2  https://create.kahoot.it/details/PASTE-ID-HERE
-# week-3  https://create.kahoot.it/details/PASTE-ID-HERE
-# week-4  https://create.kahoot.it/details/PASTE-ID-HERE
-# week-5  https://create.kahoot.it/details/PASTE-ID-HERE
-# week-6  https://create.kahoot.it/details/PASTE-ID-HERE
-# week-7  https://create.kahoot.it/details/PASTE-ID-HERE
-# week-8  https://create.kahoot.it/details/PASTE-ID-HERE
-# week-9  https://create.kahoot.it/details/PASTE-ID-HERE
-# week-10 https://create.kahoot.it/details/PASTE-ID-HERE
+week-1  https://create.kahoot.it/my-library/kahoots/b39bd6ba-29c1-403f-9c03-8a8cf8fb2c53
+# week-2  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+# week-3  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+# week-4  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+# week-5  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+# week-6  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+# week-7  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+# week-8  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+# week-9  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+# week-10 https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE

@@ -1,0 +1,59 @@
+/* Responsive, theme-aware MakeCode embeds (see scripts/makecode_hooks.py). */
+
+.makecode-embed {
+  margin: 1.25rem 0;
+}
+
+.makecode-embed__frame {
+  display: block;
+  width: 100%;
+  /* The full editor needs room for toolbox + canvas + simulator. */
+  aspect-ratio: 4 / 3;
+  min-height: 560px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  background: var(--md-code-bg-color);
+}
+
+@media screen and (min-width: 76.25em) {
+  /* More vertical room on wide screens where the frame is also wider. */
+  .makecode-embed__frame {
+    min-height: 640px;
+  }
+}
+
+.makecode-embed__edit {
+  margin-top: 0.6rem;
+}
+
+/* Per-week "Start Kahoot" call-to-action button. */
+.kahoot-cta {
+  margin: 1.5rem 0;
+}
+
+.kahoot-cta__btn {
+  font-size: 1.05rem;
+}
+
+.kahoot-cta--pending {
+  padding: 0.9rem 1rem;
+  border: 1px dashed var(--md-default-fg-color--lighter);
+  border-radius: 0.3rem;
+  background: var(--md-code-bg-color);
+}
+
+.kahoot-cta--pending p {
+  margin: 0;
+}
+
+/* Placeholder shown when a project hasn't been published yet. */
+.makecode-embed--pending {
+  padding: 0.9rem 1rem;
+  border: 1px dashed var(--md-default-fg-color--lighter);
+  border-radius: 0.3rem;
+  background: var(--md-code-bg-color);
+}
+
+.makecode-embed--pending p {
+  margin: 0;
+}

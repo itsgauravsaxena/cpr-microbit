@@ -44,6 +44,15 @@ theme:
 exclude_docs: |
   **/code/README.md
 
+# Retired pinball course: hidden from the nav tree but still built and
+# reachable via the "Archive" link on the autumn-2026 overview page.
+not_in_nav: |
+  autumn-2026/archive/**
+
+# Registers the reusable ```makecode fenced block (see the file for usage).
+hooks:
+  - scripts/makecode_hooks.py
+
 plugins:
   - search:
       lang:
@@ -72,6 +81,9 @@ markdown_extensions:
       permalink: false
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.magiclink
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -108,16 +120,4 @@ nav:
           - "Week 8 · Motion instrument": autumn-2026/microbit-pro/week-08-motion-instrument/README.md
           - "Week 9 · Capstone design": autumn-2026/microbit-pro/week-09-capstone-design/README.md
           - "Week 10 · Finish & showcase": autumn-2026/microbit-pro/week-10-showcase/README.md
-      - "Archive · Pinball (retired)":
-          - "Overview": autumn-2026/archive/pinball-hybrid-retired/README.md
-          - "Week 1 · Kickoff": autumn-2026/archive/pinball-hybrid-retired/week-01-kickoff/README.md
-          - "Week 2 · Scoring basics": autumn-2026/archive/pinball-hybrid-retired/week-02-scoring-basics/README.md
-          - "Week 3 · Launcher trigger": autumn-2026/archive/pinball-hybrid-retired/week-03-launcher-trigger/README.md
-          - "Week 4 · Multi-sensor": autumn-2026/archive/pinball-hybrid-retired/week-04-multi-sensor-scoring/README.md
-          - "Week 5 · Tinkercad first steps": autumn-2026/archive/pinball-hybrid-retired/week-05-tinkercad-basics/README.md
-          - "Week 6 · Bumper": autumn-2026/archive/pinball-hybrid-retired/week-06-tinkercad-playfield/README.md
-          - "Week 7 · Sensor mount": autumn-2026/archive/pinball-hybrid-retired/week-07-sensor-mount/README.md
-          - "Week 8 · Print prep": autumn-2026/archive/pinball-hybrid-retired/week-08-design-finish/README.md
-          - "Week 9 · Assembly": autumn-2026/archive/pinball-hybrid-retired/week-09-assembly-playtest/README.md
-          - "Week 10 · Showcase": autumn-2026/archive/pinball-hybrid-retired/week-10-showcase-tournament/README.md
   - Spring 2027: spring-2027/README.md

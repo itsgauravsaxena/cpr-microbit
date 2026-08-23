@@ -17,6 +17,15 @@ A dot you steer by tilting, plus a target to catch. Catch it and the score goes 
 
 ## Example code
 
+Run it right here, then click **Open & edit in MakeCode** to make your own version:
+
+<!-- Paste this week's MakeCode share id below (Share -> Publish gives a link
+     like https://makecode.microbit.org/_abc123 -- paste the id or the whole
+     link). Until an id is added, this shows a "coming soon" note. -->
+```makecode
+auto
+```
+
 <div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
 <svg viewBox="0 0 604 218" width="100%" style="max-width:604px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
 <rect x="30" y="20" width="262" height="32" rx="14" fill="#5c8aa8"/>

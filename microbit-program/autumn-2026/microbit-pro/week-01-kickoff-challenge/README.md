@@ -17,6 +17,18 @@ A **secret-number guessing game**: the micro:bit picks a number, you press A to 
 
 ## Example code
 
+Run it right here, then click **Open & edit in MakeCode** to make your own version:
+
+<!-- Paste this week's MakeCode share id below (Share -> Publish gives you a
+     link like https://makecode.microbit.org/_abc123 -- paste the id or the
+     whole link). Until then, this shows a "coming soon" note. -->
+```makecode
+auto
+```
+
+<details markdown="1">
+<summary>See the blocks &amp; code (reference)</summary>
+
 <div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
 <svg viewBox="0 0 604 268" width="100%" style="max-width:604px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
 <rect x="30" y="20" width="262" height="32" rx="14" fill="#5c8aa8"/>
@@ -69,6 +81,8 @@ input.onButtonPressed(Button.AB, function () {
     }
 })
 ```
+
+</details>
 
 !!! tip "▶️ Try it in MakeCode (30 seconds)"
     1. Open <https://makecode.microbit.org> → **New Project**

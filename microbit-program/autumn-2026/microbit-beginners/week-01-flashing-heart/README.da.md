@@ -51,7 +51,7 @@ Snacks og løbe rundt. Boards bliver på bordet.
 - 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
 
 !!! note "Til hjælpere — sådan virker stigen"
-    Alle laver den samme **kerne** færdig (et bankende hjerte på deres board). Derefter klatrer børnene op ad stigen i deres eget tempo: de sikre kodere kapløber mod boss-niveauet, mens andre tager trin ① og ② langsomt — ingen sidder og venter, og ingen keder sig. Trin ⑤–⑥ giver et lille smugkig på knapper, tilfældighed og variabler fra de kommende uger.
+    Alle laver den samme **kerne** færdig (et bankende hjerte på deres board). Derefter klatrer børnene op ad stigen i deres eget tempo: de sikre kodere kapløber mod boss-niveauet, mens andre tager trin ① og ② langsomt — ingen sidder og venter, og ingen keder sig. Trin ④–⑥ giver et lille smugkig på knapper, tilfældighed og variabler fra de kommende uger.
 
 ## Eksempelkode
 

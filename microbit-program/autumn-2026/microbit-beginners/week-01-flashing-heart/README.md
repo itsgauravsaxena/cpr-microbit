@@ -51,7 +51,7 @@ Snacks and running around. Boards stay on the table.
 - 5 min — 🎉 **Kahoot quiz** — whole group together
 
 !!! note "For helpers — how the ladder works"
-    Everyone finishes the same **core** (a beating heart on their board). After that, kids climb the ladder at their own pace: confident coders race to the boss level, while others take rungs ① and ② slowly — nobody is stuck waiting and nobody is bored. Rungs ⑤–⑥ quietly preview buttons, randomness and variables from the weeks ahead.
+    Everyone finishes the same **core** (a beating heart on their board). After that, kids climb the ladder at their own pace: confident coders race to the boss level, while others take rungs ① and ② slowly — nobody is stuck waiting and nobody is bored. Rungs ④–⑥ quietly preview buttons, randomness and variables from the weeks ahead.
 
 ## Example code
 

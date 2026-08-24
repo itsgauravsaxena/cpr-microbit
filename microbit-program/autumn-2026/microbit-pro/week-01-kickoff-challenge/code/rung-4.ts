@@ -1,4 +1,10 @@
-input.onGesture(Gesture.Shake, function () {
-    let answers = ["YES", "NO", "MAYBE", "SOON", "NO WAY"]
-    basic.showString(answers[randint(0, answers.length - 1)])
+input.onButtonPressed(Button.A, function () {
+    let ticks = randint(5, 12)
+    for (let i = 0; i < ticks; i++) {
+        basic.showIcon(IconNames.Heart)
+        basic.pause(300)
+        basic.clearScreen()
+        basic.pause(150)
+    }
+    basic.showIcon(IconNames.Skull)
 })

@@ -1,4 +1,7 @@
-basic.forever(function () {
-    let pitch = Math.map(input.lightLevel(), 0, 255, 200, 1200)
-    music.ringTone(pitch)
+input.onGesture(Gesture.Shake, function () {
+    if (randint(0, 1) == 0) {
+        basic.showString("H")
+    } else {
+        basic.showString("T")
+    }
 })

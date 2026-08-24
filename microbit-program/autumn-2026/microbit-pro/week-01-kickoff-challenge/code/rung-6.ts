@@ -1,6 +1,15 @@
-basic.forever(function () {
-    let pitch = Math.map(input.lightLevel(), 0, 255, 200, 1200)
-    let vol = Math.map(Math.abs(input.acceleration(Dimension.X)), 0, 1000, 0, 255)
-    music.setVolume(vol)
-    music.ringTone(pitch)
+radio.setGroup(2)
+let score = 0
+input.onButtonPressed(Button.A, function () {
+    score += 1
+    radio.sendNumber(score)
+    basic.showNumber(score)
+    if (score >= 10) {
+        basic.showIcon(IconNames.Yes)
+    }
+})
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber >= 10) {
+        basic.showIcon(IconNames.No)
+    }
 })

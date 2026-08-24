@@ -1,5 +1,3 @@
-input.onSound(DetectedSound.Loud, function () {
-    basic.showIcon(IconNames.Surprised)
-    basic.pause(500)
-    basic.clearScreen()
+input.onGesture(Gesture.Shake, function () {
+    basic.showNumber(randint(1, 6))
 })

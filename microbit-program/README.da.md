@@ -8,8 +8,6 @@ Vælg en sæson i fanerne øverst eller på listen nedenfor. Hver side findes p�
 
 | Sæson | Status | |
 |---|---|---|
-| [Efterår 2025](./autumn-2025/README.md) | Ikke tilgængelig | — |
-| [Forår 2026](./spring-2026/README.md) | Ikke tilgængelig | — |
 | [**Efterår 2026**](./autumn-2026/README.md) | ✅ Tilgængelig | Fuldt 10-ugers program (to grupper) |
 | [Forår 2027](./spring-2027/README.md) | 🕓 Kommer snart | Under planlægning |
 

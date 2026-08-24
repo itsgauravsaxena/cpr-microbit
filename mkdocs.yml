@@ -43,6 +43,9 @@ theme:
 # the exported .hex / link files in those folders are still copied through.
 exclude_docs: |
   **/code/README.md
+  # Old empty terms — hidden from the site (kept in the repo).
+  autumn-2025/
+  spring-2026/
   # Quiz is teacher-only: keep the questions/answers and import sheets out of
   # the public site. Source stays in the repo; the Kahoot hook reads
   # quiz/kahoots.txt from source, not the built site.
@@ -95,8 +98,6 @@ markdown_extensions:
 
 nav:
   - Home: README.md
-  - Autumn 2025: autumn-2025/README.md
-  - Spring 2026: spring-2026/README.md
   - Autumn 2026:
       - Overview: autumn-2026/README.md
       - "micro:bit Beginners":

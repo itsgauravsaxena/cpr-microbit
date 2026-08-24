@@ -8,8 +8,6 @@ Pick a term from the tabs at the top, or from the list below. Every page is avai
 
 | Term | Status | |
 |---|---|---|
-| [Autumn 2025](./autumn-2025/README.md) | Not available | — |
-| [Spring 2026](./spring-2026/README.md) | Not available | — |
 | [**Autumn 2026**](./autumn-2026/README.md) | ✅ Available | Full 10-week program (two groups) |
 | [Spring 2027](./spring-2027/README.md) | 🕓 Coming soon | Being planned |
 

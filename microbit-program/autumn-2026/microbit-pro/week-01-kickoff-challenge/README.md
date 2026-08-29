@@ -15,6 +15,53 @@ The **start** of our pinball scoreboard: touch a target and your **score** goes 
 
 *(The 3D-printed pinball body is the other group's job — we build the code.)*
 
+## 🎮 The parts of a pinball
+
+<div style="text-align:center;margin:1.25rem 0;" markdown="0">
+<svg viewBox="0 0 360 500" width="100%" style="max-width:340px;height:auto;display:block;margin:0 auto;" role="img" aria-label="Parts of a pinball machine" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif">
+<rect x="90" y="45" width="180" height="415" rx="16" fill="#20486e" stroke="#c8a24a" stroke-width="3"/>
+<path d="M96 110 Q180 55 264 110" fill="none" stroke="#3d6a95" stroke-width="4"/>
+<rect x="120" y="28" width="120" height="28" rx="5" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
+<text x="180" y="47" font-size="14" fill="#ffd23f" text-anchor="middle" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">SCORE 120</text>
+<line x1="238" y1="110" x2="238" y2="440" stroke="#3d6a95" stroke-width="3"/>
+<circle cx="250" cy="95" r="7" fill="#d7dbe1" stroke="#9aa0aa"/>
+<rect x="243" y="426" width="14" height="18" rx="3" fill="#c0c4cc" stroke="#8a8f98"/>
+<path d="M250 444 l-7 5 l14 5 l-14 5" fill="none" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="135" cy="150" r="20" fill="#e63946"/><circle cx="135" cy="150" r="8" fill="#fff"/>
+<circle cx="198" cy="124" r="20" fill="#e63946"/><circle cx="198" cy="124" r="8" fill="#fff"/>
+<circle cx="160" cy="205" r="18" fill="#e63946"/><circle cx="160" cy="205" r="7" fill="#fff"/>
+<rect x="114" y="262" width="18" height="10" rx="2" fill="#ffd23f" stroke="#c8a24a"/>
+<rect x="142" y="262" width="18" height="10" rx="2" fill="#ffd23f" stroke="#c8a24a"/>
+<rect x="170" y="262" width="18" height="10" rx="2" fill="#ffd23f" stroke="#c8a24a"/>
+<circle cx="150" cy="320" r="9" fill="#d7dbe1" stroke="#9aa0aa"/><circle cx="147" cy="317" r="2.5" fill="#fff"/>
+<rect x="132" y="406" width="50" height="16" rx="8" fill="#e6eaf0" stroke="#9aa0aa" transform="rotate(-22 137 414)"/>
+<rect x="140" y="406" width="50" height="16" rx="8" fill="#e6eaf0" stroke="#9aa0aa" transform="rotate(22 223 414)"/>
+<rect x="160" y="446" width="40" height="14" rx="3" fill="#0a1a2a"/>
+<path d="M180 428 l-7 12 l14 0 z" fill="#0a1a2a" opacity="0.6"/>
+<line x1="86" y1="150" x2="115" y2="150" stroke="#c8a24a" stroke-width="1.5"/>
+<text x="84" y="150" font-size="13" fill="var(--md-default-fg-color)" text-anchor="end" font-family="system-ui,Segoe UI,sans-serif">🔴 Bumpers</text>
+<line x1="86" y1="270" x2="112" y2="268" stroke="#c8a24a" stroke-width="1.5"/>
+<text x="84" y="270" font-size="13" fill="var(--md-default-fg-color)" text-anchor="end" font-family="system-ui,Segoe UI,sans-serif">🎯 Targets</text>
+<line x1="86" y1="420" x2="120" y2="414" stroke="#c8a24a" stroke-width="1.5"/>
+<text x="84" y="420" font-size="13" fill="var(--md-default-fg-color)" text-anchor="end" font-family="system-ui,Segoe UI,sans-serif">🕹️ Flippers</text>
+<line x1="262" y1="436" x2="276" y2="436" stroke="#c8a24a" stroke-width="1.5"/>
+<text x="278" y="436" font-size="13" fill="var(--md-default-fg-color)" text-anchor="start" font-family="system-ui,Segoe UI,sans-serif">🚀 Plunger</text>
+<line x1="240" y1="45" x2="274" y2="45" stroke="#c8a24a" stroke-width="1.5"/>
+<text x="276" y="45" font-size="13" fill="var(--md-default-fg-color)" text-anchor="start" font-family="system-ui,Segoe UI,sans-serif">🔢 Score</text>
+<text x="180" y="490" font-size="13" fill="var(--md-default-fg-color)" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif">🎱 Drain</text>
+<line x1="180" y1="462" x2="180" y2="480" stroke="#c8a24a" stroke-width="1.5"/>
+</svg>
+</div>
+
+- 🚀 **Plunger** — launches the ball onto the field.
+- 🔴 **Bumpers** — the ball bounces off them and scores.
+- 🎯 **Targets** — hit these to score (these are our metal **touch-pins**!).
+- 🕹️ **Flippers** — flick the ball back up so it doesn't fall.
+- 🎱 **Drain** — the gap at the bottom; if the ball falls in, you lose it.
+- 🔢 **Score** — how many points you've got.
+
+That's the machine — now let's see how the micro:bit runs each part 👇
+
 ## 🎛️ Pinball features → micro:bit
 
 Everything a pinball machine does, the micro:bit can do too:

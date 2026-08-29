@@ -1,6 +1,6 @@
 # Week 1 — Pinball scoreboard 🎯 (part 1)
 
-> This term the Pro crew builds the **brain of a pinball machine**. Job #1: **keep the score** — hit a metal target and your points jump up!
+> This term the Pro crew builds the **brain of a pinball machine** — a little each week. First class: a quick revision, then the very first piece — a **score that goes up when you hit a target**.
 
 <div style="text-align:center;margin:1.25rem 0;" markdown="0">
 <svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="the guessing game counting" xmlns="http://www.w3.org/2000/svg">
@@ -9,11 +9,11 @@
 </svg>
 </div>
 
-## 🎯 What we're making
+## 🎯 What we're making today
 
-A **scoreboard** for our pinball machine. Touch a metal target → your **score** goes up. Today we add a **reset**, a **new-game** button, and more targets worth **different points**.
+The **start** of our pinball scoreboard: touch a target and your **score** goes up — plus a **reset** and a **new game** button. Just the basics today; we'll add more targets, celebrations and TILT over the coming weeks.
 
-*(The 3D-printed pinball body is the other group's job — we build the code that runs it.)*
+*(The 3D-printed pinball body is the other group's job — we build the code.)*
 
 ## 🔁 Warm-up — quick revision
 
@@ -48,26 +48,22 @@ A 30-second refresher: a **click counter**. Press **A** and a number goes up. Th
         input.on_button_pressed(Button.A, on_button_pressed_a)
         ```
 
-## 🔌 Wire it up
+## 🔌 Wire it up (or just use the sim)
 
-We sit the micro:bit on its **Keyestudio sensor shield** and use the pins:
+For the real pinball we'll wire a **metal target** to pin **P0** (and **GND**) on the **Keyestudio sensor shield** — touch it and the pin fires. ⚡
 
-- Connect each **metal target** to a pin — **P0**, **P1**, **P2**.
-- Connect the ball / flipper path to **GND**.
-- Touch the metal and that pin *fires* — that's your trigger. ⚡
+!!! tip "Today the simulator is enough ▶️"
+    Just **click the P0 pin** on screen to score. We'll add real metal targets as the machine comes together.
 
-!!! tip "No board yet? Use the simulator ▶️"
-    In the on-screen simulator you can **click the P0 / P1 / P2 pins** to score — everything below works on the laptop too.
+## ▶️ Build it — score on touch
 
-## ▶️ Build it
-
-Make touching target **P0** add points and show the score.
+Make touching **P0** add points and show the score.
 
 1. Make a **variable** called `score` (starts at 0).
 2. From **Input**, use **`on pin P0 pressed`**.
 3. Inside it: **change `score` by 10**, then **show number `score`**.
 
-Touch **P0** (or click it in the sim) — watch the score climb! 🔢
+Click **P0** in the sim — watch it climb! 🔢
 
 ??? example "👀 Run it, or read the code"
 
@@ -98,9 +94,9 @@ Touch **P0** (or click it in the sim) — watch the score climb! 🔢
         input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
         ```
 
-## 🪜 Level it up
+## 🪜 Make it playable
 
-Add one feature at a time. Tap **👀 Peek** to run each finished step and read the code.
+Two small steps and you've got a real mini-game.
 
 **① Reset** ♻️ — press **A** to set the score back to 0.
 
@@ -194,309 +190,22 @@ Add one feature at a time. Tap **👀 Peek** to run each finished step and read 
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
-**③ Second target** 🎯 — wire a metal to **P1**, worth **50**.
+## 🔭 Where we're headed
 
-??? example "👀 Peek — run it, or read the code"
+Our pinball brain grows a step at a time over the term:
 
-    === "Blocks & simulator"
+- 🎯 More targets worth **different points** (P1, P2, …)
+- 🎉 A **celebration** when you hit a big score
+- 💥 **TILT!** — shake it too hard and you lose it
+- 🕹️ Then flippers, lights and sound as the machine comes together
 
-        ```makecode
-        auto:rung-3
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        let score = 0
-        input.onPinPressed(TouchPin.P0, function () {
-            score += 10
-            basic.showNumber(score)
-        })
-        input.onPinPressed(TouchPin.P1, function () {
-            score += 50
-            basic.showNumber(score)
-        })
-        input.onButtonPressed(Button.A, function () {
-            score = 0
-            basic.showNumber(0)
-        })
-        input.onButtonPressed(Button.B, function () {
-            score = 0
-            basic.showString("GO")
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        score = 0
-        def on_pin_pressed_p0():
-            global score
-            score += 10
-            basic.show_number(score)
-        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
-
-        def on_pin_pressed_p1():
-            global score
-            score += 50
-            basic.show_number(score)
-        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
-
-        def on_button_pressed_a():
-            global score
-            score = 0
-            basic.show_number(0)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-
-        def on_button_pressed_b():
-            global score
-            score = 0
-            basic.show_string("GO")
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        ```
-
-**④ Third target** 🎯 — wire a metal to **P2**, worth **100**.
-
-??? example "👀 Peek — run it, or read the code"
-
-    === "Blocks & simulator"
-
-        ```makecode
-        auto:rung-4
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        let score = 0
-        input.onPinPressed(TouchPin.P0, function () {
-            score += 10
-            basic.showNumber(score)
-        })
-        input.onPinPressed(TouchPin.P1, function () {
-            score += 50
-            basic.showNumber(score)
-        })
-        input.onPinPressed(TouchPin.P2, function () {
-            score += 100
-            basic.showNumber(score)
-        })
-        input.onButtonPressed(Button.A, function () {
-            score = 0
-            basic.showNumber(0)
-        })
-        input.onButtonPressed(Button.B, function () {
-            score = 0
-            basic.showString("GO")
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        score = 0
-        def on_pin_pressed_p0():
-            global score
-            score += 10
-            basic.show_number(score)
-        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
-
-        def on_pin_pressed_p1():
-            global score
-            score += 50
-            basic.show_number(score)
-        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
-
-        def on_pin_pressed_p2():
-            global score
-            score += 100
-            basic.show_number(score)
-        input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p2)
-
-        def on_button_pressed_a():
-            global score
-            score = 0
-            basic.show_number(0)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-
-        def on_button_pressed_b():
-            global score
-            score = 0
-            basic.show_string("GO")
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        ```
-
-**⑤ Celebrate + tidy up** 🎉 — pass **100** points and it shows ✓. We move the scoring into one neat **function**.
-
-??? example "👀 Peek — run it, or read the code"
-
-    === "Blocks & simulator"
-
-        ```makecode
-        auto:rung-5
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        let score = 0
-        function addPoints (points: number) {
-            score += points
-            basic.showNumber(score)
-            if (score >= 100) {
-                basic.showIcon(IconNames.Yes)
-            }
-        }
-        input.onPinPressed(TouchPin.P0, function () {
-            addPoints(10)
-        })
-        input.onPinPressed(TouchPin.P1, function () {
-            addPoints(50)
-        })
-        input.onPinPressed(TouchPin.P2, function () {
-            addPoints(100)
-        })
-        input.onButtonPressed(Button.A, function () {
-            score = 0
-            basic.showNumber(0)
-        })
-        input.onButtonPressed(Button.B, function () {
-            score = 0
-            basic.showString("GO")
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        score = 0
-        def add_points(points: number):
-            global score
-            score += points
-            basic.show_number(score)
-            if score >= 100:
-                basic.show_icon(IconNames.YES)
-
-        def on_pin_pressed_p0():
-            add_points(10)
-        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
-
-        def on_pin_pressed_p1():
-            add_points(50)
-        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
-
-        def on_pin_pressed_p2():
-            add_points(100)
-        input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p2)
-
-        def on_button_pressed_a():
-            global score
-            score = 0
-            basic.show_number(0)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-
-        def on_button_pressed_b():
-            global score
-            score = 0
-            basic.show_string("GO")
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        ```
-
-**⑥ 🏆 Boss — TILT!** — shake the machine too hard and you lose it all.
-
-??? example "👀 Peek — run it, or read the code"
-
-    === "Blocks & simulator"
-
-        ```makecode
-        auto:rung-6
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        let score = 0
-        function addPoints (points: number) {
-            score += points
-            basic.showNumber(score)
-            if (score >= 100) {
-                basic.showIcon(IconNames.Yes)
-            }
-        }
-        input.onPinPressed(TouchPin.P0, function () {
-            addPoints(10)
-        })
-        input.onPinPressed(TouchPin.P1, function () {
-            addPoints(50)
-        })
-        input.onPinPressed(TouchPin.P2, function () {
-            addPoints(100)
-        })
-        input.onButtonPressed(Button.A, function () {
-            score = 0
-            basic.showNumber(0)
-        })
-        input.onButtonPressed(Button.B, function () {
-            score = 0
-            basic.showString("GO")
-        })
-        input.onGesture(Gesture.Shake, function () {
-            basic.showString("TILT")
-            score = 0
-            basic.showNumber(0)
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        score = 0
-        def add_points(points: number):
-            global score
-            score += points
-            basic.show_number(score)
-            if score >= 100:
-                basic.show_icon(IconNames.YES)
-
-        def on_pin_pressed_p0():
-            add_points(10)
-        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
-
-        def on_pin_pressed_p1():
-            add_points(50)
-        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
-
-        def on_pin_pressed_p2():
-            add_points(100)
-        input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p2)
-
-        def on_button_pressed_a():
-            global score
-            score = 0
-            basic.show_number(0)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-
-        def on_button_pressed_b():
-            global score
-            score = 0
-            basic.show_string("GO")
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-
-        def on_gesture_shake():
-            global score
-            basic.show_string("TILT")
-            score = 0
-            basic.show_number(0)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
-
-**Nailed it?** Think up the next pinball feature — a bonus target, a countdown timer, a win animation — we'll build toward it over the term.
+**Finished early today?** Try adding a **second target**: copy the `on pin P0 pressed` block, change it to **P1**, and make it worth **50**.
 
 ## ✅ I did it when…
 
-- ☐ Touching **P0** makes the **score** go up on screen.
+- ☐ Clicking **P0** makes the **score** go up on screen.
 - ☐ **A** resets, and **B** starts a new game.
-- ☐ *(Legend!)* Three targets score different points — and **TILT** works.
+- ☐ I can explain what the `score` **variable** does.
 
 ## 🎉 Kahoot time!
 
@@ -510,21 +219,17 @@ week-1
 
 ??? note "👩‍🏫 For helpers — session plan, materials & notes"
 
-    **Goal:** kick off the term-long pinball project. Revise variables + buttons, then build a working **touch-to-score** prototype with reset, new game and multiple targets.
+    **Goal:** kick off the term-long pinball project — gently. Revise variables + buttons, then build the first working piece: **score-on-touch** with reset and new game. Don't rush the rest; it grows over the coming weeks.
 
     **Materials**
 
-    - micro:bit (V2 recommended — capacitive touch on P0/P1/P2) + USB
-    - **Keyestudio micro:bit sensor shield**
-    - crocodile-clip / jumper wires
-    - a few metal targets (foil, coins, screws)
-    - Laptop/Chromebook with makecode.microbit.org open
-    - *(V1 works too — the metal target must complete a circuit to **GND**.)*
+    - micro:bit + USB, and a laptop/Chromebook (the **simulator is enough today**)
+    - *Optional, to try a real target:* **Keyestudio micro:bit sensor shield**, crocodile-clip wires, a metal target (foil/coin) wired to **P0** and **GND**. (V2 = capacitive touch; V1 = complete a circuit to GND.)
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 project intro (we're building a pinball this term) → 10 revision click counter → 10 wire up + how pin-touch works → 25 build the core touch-to-score together → 10 rungs ①–② (reset, new game)
+    - **Block 1 (60):** 5 project intro (we're building a pinball this term, a bit each week) → 15 revision click counter → 10 explain pin-touch + the sim → 25 build score-on-touch (P0) together, test by clicking P0 → 5 checkpoint
     - **Break (20)**
-    - **Block 2 (30):** 20 rungs ③–⑥ (more targets, celebrate, TILT) → 5 showcase → 5 Kahoot
+    - **Block 2 (30):** 15 add reset (A) and new game (B) → 5 fast finishers try a 2nd target → 5 showcase → 5 Kahoot
 
-    **Notes:** test in the simulator by **clicking the pins**. `onPinPressed` needs the metal + **GND** in one circuit (V1) or capacitive touch (V2). The `addPoints` function in ⑤ is a gentle first look at functions (revisited Week 7). This is **part 1** of the pinball build — later weeks add flippers, lights, sound and multiball.
+    **Notes:** test in the sim by **clicking the pins** — no hardware needed today. Keep it light: the goal is confidence + the core idea that a **variable is the score**. The full machine (more targets, celebration, TILT, then flippers/lights/sound) is built across the term.

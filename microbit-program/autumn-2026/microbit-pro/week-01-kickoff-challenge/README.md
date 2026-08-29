@@ -50,7 +50,7 @@ A 30-second refresher: a **click counter**. Press **A** and a number goes up. Th
 
 ## 🔌 Wire it up (or just use the sim)
 
-For the real pinball we'll wire a **metal target** to pin **P0** (and **GND**) on the **Keyestudio sensor shield** — touch it and the pin fires. ⚡
+For the real pinball we'll wire a **metal target** to pin **P0** (and **GND**) on the **Keyestudio sensor shield** — touch it and the pin fires. ⚡ *(New to this? See [Meet the gear](../../gear/README.md).)*
 
 !!! tip "Today the simulator is enough ▶️"
     Just **click the P0 pin** on screen to score. We'll add real metal targets as the machine comes together.

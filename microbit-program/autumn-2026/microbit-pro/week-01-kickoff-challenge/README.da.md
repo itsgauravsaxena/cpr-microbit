@@ -50,7 +50,7 @@ En 30-sekunders genopfriskning: en **klik-tæller**. Tryk på **A**, og et tal s
 
 ## 🔌 Slut det til (eller brug bare simulatoren)
 
-Til den rigtige flipper forbinder vi et **metalmål** til pin **P0** (og **GND**) på **Keyestudio sensor-shieldet** — rør det, og pinnen udløses. ⚡
+Til den rigtige flipper forbinder vi et **metalmål** til pin **P0** (og **GND**) på **Keyestudio sensor-shieldet** — rør det, og pinnen udløses. ⚡ *(Ny til det? Se [Mød dit udstyr](../../gear/README.md).)*
 
 !!! tip "I dag er simulatoren nok ▶️"
     Klik bare på **P0-pinnen** på skærmen for at score. Vi tilføjer rigtige metalmål, efterhånden som maskinen tager form.

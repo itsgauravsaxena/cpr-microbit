@@ -100,6 +100,7 @@ nav:
   - Home: README.md
   - Autumn 2026:
       - Overview: autumn-2026/README.md
+      - "🔧 Meet the gear": autumn-2026/gear/README.md
       - "micro:bit Beginners":
           - Overview: autumn-2026/microbit-beginners/README.md
           - "Week 1 · Flashing Heart": autumn-2026/microbit-beginners/week-01-flashing-heart/README.md

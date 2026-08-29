@@ -1,6 +1,6 @@
-# Uge 1 — Flashing Heart (gør den til din egen)
+# Uge 1 — Flashing Heart 💛
 
-> **Mød din micro:bit!** 💛 Den er en lille computer med **25 små lys**. Lige nu sover den dybt … lad os vække den, lære den at vise et **bankende hjerte** — og så presse den så langt du kan!
+> Væk din micro:bit og lær den at vise et **bankende hjerte** — og gør den så til din egen!
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
 <svg width="230" height="230" viewBox="0 0 196 196" role="img" aria-label="En micro:bit der blinker et hjerte" xmlns="http://www.w3.org/2000/svg">
@@ -23,41 +23,21 @@
 </svg>
 </div>
 
-!!! tip "▶️ Se den blive levende"
-    Åbn [Flashing Heart-tutorialen](https://makecode.microbit.org/projects/flashing-heart) og tryk på **▶️ afspil** i simulatoren på skærmen — hjertet banker på skærmen, før du overhovedet rører en rigtig micro:bit. Lav så **dit** board om til at gøre det samme! ✨
+## 🎯 Hvad vi laver
 
-**Mål:** bliv fortrolig med MakeCode-editoren og arbejdsgangen med at downloade til boardet — og fortsæt så. Det bankende hjerte er *opvarmningen*; **udfordringsstigen** nedenfor er der, hvor det sjove (og hele de 90 minutter) foregår, så ingen løber tør for ting at lave.
+Et **bankende hjerte** på micro:bit'ens lys — stort hjerte, lille hjerte, igen og igen. 💓
 
-**Officiel tutorial:** https://makecode.microbit.org/projects/flashing-heart
+## ▶️ Byg det
 
-## Materialer
-- 1 micro:bit + USB-kabel pr. barn
-- Bærbar/Chromebook med makecode.microbit.org åben
+1. Åbn **[makecode.microbit.org](https://makecode.microbit.org)** → **New Project**.
+2. Fra **Basic** træk **`show icon`** ind i **`forever`** og vælg ❤️ **hjertet**.
+3. Tilføj endnu et **`show icon`** nedenunder og vælg det 💛 **lille hjerte**.
+4. Tryk på **▶️** for at se det banke på skærmen.
+5. 📥 **Læg det på din micro:bit:** klik **Download**, og træk filen over på **MICROBIT**-drevet.
 
-## Sessionsplan (60 min + 20 min pause + 30 min)
+Her er det færdige program — tryk på play, eller **Open full-screen in MakeCode** for at gøre det til dit eget:
 
-### Blok 1 — 60 min · Kerne + første trin
-- 10 min — hvad er en micro:bit, rundvisning i LED-gitteret, knapperne A/B
-- 25 min — byg det bankende hjerte sammen (følg med), tryk på ▶️ i simulatoren
-- 15 min — download `.hex`-filen, træk den over på MICROBIT-USB-drevet, se den blinke på det rigtige board
-- 10 min — **Gør den til din egen:** klatr op ad trin ① og ② på udfordringsstigen (ændr farten, tilføj flere ikoner)
-
-### ☕ Pause — 20 min
-Snacks og løbe rundt. Boards bliver på bordet.
-
-### Blok 2 — 30 min · Klatr op ad udfordringsstigen
-- 20 min — alle klatrer videre på **udfordringsstigen** nedenfor derfra hvor de er — vælg dit eget niveau, ingen skal nå toppen. Hjælpere går rundt.
-- 5 min — **gallerivandring:** vis din sidemand det fedeste trin, du nåede
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
-
-!!! note "Til hjælpere — sådan virker stigen"
-    Alle laver den samme **kerne** færdig (et bankende hjerte på deres board). Derefter klatrer børnene op ad stigen i deres eget tempo: de sikre kodere kapløber mod boss-niveauet, mens andre tager trin ① og ② langsomt — ingen sidder og venter, og ingen keder sig. Trin ④–⑥ giver et lille smugkig på knapper, tilfældighed og variabler fra de kommende uger.
-
-## Eksempelkode
-
-Programmet vi bygger sammen. Åbn boksen for at køre det, se det som blokke / JavaScript / Python, og klik på **Open full-screen in MakeCode** for at lave din egen version:
-
-??? example "👀 Programmet — kør, eller læs koden"
+??? example "👀 Programmet — kør det, eller læs koden"
 
     === "Blokke & simulator"
 
@@ -83,13 +63,13 @@ Programmet vi bygger sammen. Åbn boksen for at køre det, se det som blokke / J
         basic.forever(on_forever)
         ```
 
-## 🚀 Udfordringsstige — færdig tidligt? Bliv ved med at klatre!
+## 🪜 Gør det til din egen
 
-Start i toppen og kom så langt du kan. Hvert trin fortæller dig **hvad du skal prøve**, **hvilke blokke du skal finde**, og et ✅ **makker-tjek** — vis en ven, når du får det til at virke. Sidder du fast? Åbn **👀 Se koden** for at køre det færdige trin med det samme og se det som blokke, JavaScript eller Python.
+Færdig tidligt? Klatr så højt du kan — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve det og se koden.
 
-**① Hurtigere / langsommere hjerteslag** — læg en `pause (ms)`-blok mellem de to `show icon`-blokke. Prøv `100` og så `1000`. *Find den under:* **Basic → pause.** ✅ Vis en makker dit hurtigste *og* langsomste hjerteslag.
+**① Hurtigere eller langsommere** 🕒 — sæt en `pause` mellem de to hjerter. Prøv `100` og så `1000`.
 
-??? example "👀 Se koden — kør, eller læs koden"
+??? example "👀 Kig — kør det, eller læs koden"
 
     === "Blokke & simulator"
 
@@ -119,9 +99,9 @@ Start i toppen og kom så langt du kan. Hvert trin fortæller dig **hvad du skal
         basic.forever(on_forever)
         ```
 
-**② Lav en mini-film** — sæt 3–4 *forskellige* ikoner inde i `forever`, så LED'erne spiller en lille animationsløkke (hjerte → and → spøgelse → ja → …). *Find den under:* **Basic → show icon.** ✅ Giv din animation et navn.
+**② Lav en mini-film** 🎬 — tilføj 3–4 forskellige ikoner i `forever`.
 
-??? example "👀 Se koden — kør, eller læs koden"
+??? example "👀 Kig — kør det, eller læs koden"
 
     === "Blokke & simulator"
 
@@ -151,9 +131,9 @@ Start i toppen og kom så langt du kan. Hvert trin fortæller dig **hvad du skal
         basic.forever(on_forever)
         ```
 
-**③ Sig hej først** — brug `show string` med dit navn én gang i `on start`, og lad *derefter* animationen køre for evigt. *Find den under:* **Basic → show string / on start.** ✅ Dit board hilser på dig med navn.
+**③ Sig dit navn** 🙋 — brug `show string` i `on start`, og lad det så banke.
 
-??? example "👀 Se koden — kør, eller læs koden"
+??? example "👀 Kig — kør det, eller læs koden"
 
     === "Blokke & simulator"
 
@@ -181,9 +161,9 @@ Start i toppen og kom så langt du kan. Hvert trin fortæller dig **hvad du skal
         basic.forever(on_forever)
         ```
 
-**④ To humører, to knapper** — `on button A pressed` → glad ansigt; `on button B pressed` → surt ansigt. *Find den under:* **Input → on button pressed.** ✅ A = 😀, B = 🙁.
+**④ To knapper, to ansigter** 😀🙁 — knap **A** → glad, knap **B** → sur.
 
-??? example "👀 Se koden — kør, eller læs koden"
+??? example "👀 Kig — kør det, eller læs koden"
 
     === "Blokke & simulator"
 
@@ -214,9 +194,9 @@ Start i toppen og kom så langt du kan. Hvert trin fortæller dig **hvad du skal
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
-**⑤ Ryst for en overraskelse** *(smugkig på uge 3!)* — `on shake` → vis et **tilfældigt** ikon hver gang. *Find den under:* **Input → on shake** og **Math → pick random.** ✅ Hvert ryst er forskelligt.
+**⑤ Ryst for en overraskelse** 🎲 — `on shake` viser et tilfældigt ikon. *(Et smugkig på uge 3!)*
 
-??? example "👀 Se koden — kør, eller læs koden"
+??? example "👀 Kig — kør det, eller læs koden"
 
     === "Blokke & simulator"
 
@@ -257,9 +237,9 @@ Start i toppen og kom så langt du kan. Hvert trin fortæller dig **hvad du skal
         input.on_gesture(Gesture.SHAKE, on_gesture_shake)
         ```
 
-**⑥ 🏆 Boss-niveau — kæledyr med humør** — byg et lille kæledyr: ved start **sover** det (`Asleep`-ikon); tryk **A** for at *fodre* det (hjerte + glad ansigt); tryk **B** for at *lege* (en hurtig fnise-animation). *Find den under:* alt ovenfor + en **variabel** til at huske dets humør. ✅ Dit kæledyr reagerer på begge knapper.
+**⑥ 🏆 Boss — kæledyr med humør** — starter sovende 😴, **A** fodrer det 💗, **B** leger 😆.
 
-??? example "👀 Se koden — kør, eller læs koden"
+??? example "👀 Kig — kør det, eller læs koden"
 
     === "Blokke & simulator"
 
@@ -309,23 +289,39 @@ Start i toppen og kom så langt du kan. Hvert trin fortæller dig **hvad du skal
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
-**Nået til toppen?** Find selv på trin ⑦ — noget helt nyt din micro:bit kan gøre — og lær det til en ven.
+**Nået til toppen?** Find på dit eget trick og lær det til en ven! ✨
 
-## ✅ Færdig når
-- **Kerne (alle):** hjertet bliver ved med at banke (stort ↔ lille) på det rigtige board, for evigt.
-- **Strakte sig:** du nåede mindst til trin ③ og kan forklare én blok, du brugte.
-- **Legende:** du ramte boss-niveauet (⑥) eller fandt på dit eget trin.
+## ✅ Jeg er færdig når…
 
-## Noter
-_(plads til sessionsnoter, hvad virkede, hvilke trin børnene nåede, justeringer af tidsforbrug)_
+- ☐ Mit hjerte banker på den **rigtige** micro:bit.
+- ☐ Jeg nåede mindst til trin ③.
+- ☐ *(Legende!)* Jeg byggede kæledyret — eller mit eget trick.
 
-## Reference
-- MakeCodes Tutorials-tilstand (fanen Tutorials på MakeCodes startside) giver trinvise billeder + simulatoranimation — brug den i stedet for et slidedeck
+## 🎉 Kahoot-tid!
 
-## 🎉 Kahoot-quiz
-
-Afslut sessionen med denne uges quiz — **begge grupper spiller sammen**. Klik nedenfor for at åbne den, tryk på **Host**, og del spil-PIN'en med børnene. (Vil du hellere læse dem op, eller mangler du import-arket? Se den ugentlige quiz.)
+Lad os slutte af med en quiz — alle sammen!
 
 ```kahoot
 week-1
 ```
+
+---
+
+??? note "👩‍🏫 Til hjælpere — sessionsplan, materialer & noter"
+
+    **Mål:** bliv fortrolig med MakeCode-editoren og download-til-board. Hjertet er opvarmningen; stigen fylder sessionen, så ingen løber tør.
+
+    **Materialer**
+
+    - 1 micro:bit + USB-kabel pr. barn
+    - Bærbar/Chromebook med makecode.microbit.org åben
+
+    **Sessionsplan (60 + 20 pause + 30)**
+
+    - **Blok 1 (60):** 10 intro → 25 byg hjertet sammen → 15 download til board → 10 trin ①–② (fart, flere ikoner)
+    - **Pause (20)**
+    - **Blok 2 (30):** 20 klatr op ad stigen → 5 gallerivandring → 5 Kahoot
+
+    **Sådan virker stigen:** alle laver kerne-hjertet færdigt og klatrer så i deres eget tempo — hurtige kodere kapløber til bossen, andre tager ①–② langsomt. Trin ④–⑥ giver et smugkig på knapper, tilfældighed og variabler fra de kommende uger.
+
+    **Reference:** MakeCodes Tutorials-tilstand og [Flashing Heart-tutorialen](https://makecode.microbit.org/projects/flashing-heart). _Noter: hvad virkede, hvilke trin børnene nåede, tidsforbrug._

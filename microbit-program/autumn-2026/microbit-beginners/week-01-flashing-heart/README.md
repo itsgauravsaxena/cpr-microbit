@@ -1,6 +1,6 @@
-# Week 1 — Flashing Heart (and make it yours)
+# Week 1 — Flashing Heart 💛
 
-> **Meet your micro:bit!** 💛 It's a tiny computer with **25 little lights**. Right now it's fast asleep… let's wake it up, teach it to show a **beating heart** — and then push it as far as you can!
+> Wake up your micro:bit and teach it to show a **beating heart** — then make it your own!
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
 <svg width="230" height="230" viewBox="0 0 196 196" role="img" aria-label="A micro:bit blinking a heart" xmlns="http://www.w3.org/2000/svg">
@@ -23,39 +23,19 @@
 </svg>
 </div>
 
-!!! tip "▶️ See it come alive"
-    Open the [Flashing Heart tutorial](https://makecode.microbit.org/projects/flashing-heart) and press **▶️ play** in the on-screen simulator — the heart beats on the screen before you even touch a real micro:bit. Then make **your** board do it! ✨
+## 🎯 What we're making
 
-**Goal:** get comfortable with the MakeCode editor and the download-to-board workflow — then keep going. The beating heart is the *warm-up*; the **stretch ladder** below is where the real fun (and the whole 90 minutes) lives, so no one runs out of things to do.
+A **beating heart** on the micro:bit's lights — big heart, small heart, over and over. 💓
 
-**Official tutorial:** https://makecode.microbit.org/projects/flashing-heart
+## ▶️ Build it
 
-## Materials
-- 1 micro:bit + USB cable per kid
-- Laptop/Chromebook with makecode.microbit.org open
+1. Open **[makecode.microbit.org](https://makecode.microbit.org)** → **New Project**.
+2. From **Basic**, drag **`show icon`** into **`forever`** and pick the ❤️ **heart**.
+3. Add another **`show icon`** underneath and pick the 💛 **small heart**.
+4. Press **▶️** to watch it beat on screen.
+5. 📥 **Put it on your micro:bit:** click **Download**, then drag the file onto the **MICROBIT** drive.
 
-## Session plan (60 min + 20 min break + 30 min)
-
-### Block 1 — 60 min · Core + first rungs
-- 10 min — what's a micro:bit, tour of the LED grid, buttons A/B
-- 25 min — build the beating heart together (follow along), press ▶️ in the simulator
-- 15 min — download the `.hex`, drag it onto the MICROBIT USB drive, watch it flash on the real board
-- 10 min — **Make it yours:** climb rungs ① and ② of the stretch ladder (change the speed, add more icons)
-
-### ☕ Break — 20 min
-Snacks and running around. Boards stay on the table.
-
-### Block 2 — 30 min · Climb the stretch ladder
-- 20 min — everyone keeps climbing the **stretch ladder** below from wherever they are — pick your own level, no pressure to reach the top. Helpers roam.
-- 5 min — **gallery walk:** show the person next to you the coolest rung you reached
-- 5 min — 🎉 **Kahoot quiz** — whole group together
-
-!!! note "For helpers — how the ladder works"
-    Everyone finishes the same **core** (a beating heart on their board). After that, kids climb the ladder at their own pace: confident coders race to the boss level, while others take rungs ① and ② slowly — nobody is stuck waiting and nobody is bored. Rungs ④–⑥ quietly preview buttons, randomness and variables from the weeks ahead.
-
-## Example code
-
-The program we build together. Open the box to run it, read it as blocks / JavaScript / Python, and click **Open full-screen in MakeCode** to make your own version:
+Here's the finished program — press play, or **Open full-screen in MakeCode** to make it yours:
 
 ??? example "👀 The program — run it, or read the code"
 
@@ -83,11 +63,11 @@ The program we build together. Open the box to run it, read it as blocks / JavaS
         basic.forever(on_forever)
         ```
 
-## 🚀 Stretch ladder — finish early? Keep climbing!
+## 🪜 Make it yours
 
-Start at the top and go as far as you can. Each rung tells you **what to try**, the **blocks to look for**, and a ✅ **buddy check** — show a friend when you get it working. Stuck? Open **👀 Peek** to run the finished rung right there and read it as blocks, JavaScript or Python.
+Finished early? Climb as high as you can — each step is a new trick. Tap **👀 Peek** to try it and see the code.
 
-**① Faster / slower heartbeat** — add a `pause (ms)` block between the two `show icon` blocks. Try `100` then `1000`. *Look in:* **Basic → pause.** ✅ Show a buddy your fastest *and* slowest heartbeat.
+**① Faster or slower** 🕒 — put a `pause` between the two hearts. Try `100`, then `1000`.
 
 ??? example "👀 Peek — run it, or read the code"
 
@@ -119,7 +99,7 @@ Start at the top and go as far as you can. Each rung tells you **what to try**, 
         basic.forever(on_forever)
         ```
 
-**② Make a mini-movie** — put 3–4 *different* icons inside `forever` so the LEDs play a little animation loop (heart → duck → ghost → yes → …). *Look in:* **Basic → show icon.** ✅ Give your animation a name.
+**② Make a mini-movie** 🎬 — add 3–4 different icons inside `forever`.
 
 ??? example "👀 Peek — run it, or read the code"
 
@@ -151,7 +131,7 @@ Start at the top and go as far as you can. Each rung tells you **what to try**, 
         basic.forever(on_forever)
         ```
 
-**③ Say hello first** — in `on start`, use `show string` with your name once, *then* let the animation run forever. *Look in:* **Basic → show string / on start.** ✅ Your board greets you by name.
+**③ Say your name** 🙋 — use `show string` in `on start`, then let it beat.
 
 ??? example "👀 Peek — run it, or read the code"
 
@@ -181,7 +161,7 @@ Start at the top and go as far as you can. Each rung tells you **what to try**, 
         basic.forever(on_forever)
         ```
 
-**④ Two moods, two buttons** — `on button A pressed` → happy face; `on button B pressed` → sad face. *Look in:* **Input → on button pressed.** ✅ A = 😀, B = 🙁.
+**④ Two buttons, two faces** 😀🙁 — button **A** → happy, button **B** → sad.
 
 ??? example "👀 Peek — run it, or read the code"
 
@@ -214,7 +194,7 @@ Start at the top and go as far as you can. Each rung tells you **what to try**, 
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
-**⑤ Shake for a surprise** *(peek at Week 3!)* — `on shake` → show a **random** icon each time. *Look in:* **Input → on shake** and **Math → pick random.** ✅ Every shake is different.
+**⑤ Shake for a surprise** 🎲 — `on shake` shows a random icon. *(A peek at Week 3!)*
 
 ??? example "👀 Peek — run it, or read the code"
 
@@ -257,7 +237,7 @@ Start at the top and go as far as you can. Each rung tells you **what to try**, 
         input.on_gesture(Gesture.SHAKE, on_gesture_shake)
         ```
 
-**⑥ 🏆 Boss level — mood pet** — build a tiny pet: on start it's **asleep** (`Asleep` icon); press **A** to *feed* it (heart + happy face); press **B** to *play* (a quick giggle animation). *Look in:* everything above + a **variable** to remember its mood. ✅ Your pet reacts to both buttons.
+**⑥ 🏆 Boss — mood pet** — starts asleep 😴, **A** feeds it 💗, **B** plays 😆.
 
 ??? example "👀 Peek — run it, or read the code"
 
@@ -309,23 +289,39 @@ Start at the top and go as far as you can. Each rung tells you **what to try**, 
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
-**Made it to the top?** Invent rung ⑦ yourself — a brand-new thing your micro:bit does — and teach it to a friend.
+**Reached the top?** Invent your own trick and teach a friend! ✨
 
-## ✅ Done when
-- **Core (everyone):** the heart keeps beating (big ↔ small) on the real board, forever.
-- **Reached for more:** you climbed at least to rung ③, and you can explain one block you used.
-- **Legend:** you hit the boss level (⑥) or invented your own rung.
+## ✅ I did it when…
 
-## Notes
-_(space for session notes, what worked, which rungs kids reached, timing adjustments)_
+- ☐ My heart beats on the **real** micro:bit.
+- ☐ I climbed at least to step ③.
+- ☐ *(Legend!)* I built the mood pet — or my own trick.
 
-## Reference
-- MakeCode Tutorials mode (Tutorials tab on the MakeCode home page) gives step-by-step pictures + simulator animation — use it instead of a slide deck
+## 🎉 Kahoot time!
 
-## 🎉 Kahoot quiz
-
-Finish the session with this week's quiz — **both groups play together**. Click below to open it, press **Host**, and share the game PIN with the kids. (Prefer to read them out, or need the import sheet? See the weekly quiz.)
+Let's finish with a quiz — everyone together!
 
 ```kahoot
 week-1
 ```
+
+---
+
+??? note "👩‍🏫 For helpers — session plan, materials & notes"
+
+    **Goal:** get comfortable with the MakeCode editor and the download-to-board flow. The heart is the warm-up; the ladder fills the session so no one runs out.
+
+    **Materials**
+
+    - 1 micro:bit + USB cable per kid
+    - Laptop/Chromebook with makecode.microbit.org open
+
+    **Session plan (60 + 20 break + 30)**
+
+    - **Block 1 (60):** 10 intro → 25 build the heart together → 15 download to the board → 10 rungs ①–② (speed, more icons)
+    - **Break (20)**
+    - **Block 2 (30):** 20 climb the ladder → 5 gallery walk → 5 Kahoot
+
+    **How the ladder works:** everyone finishes the core heart, then climbs at their own pace — fast coders race to the boss, others take ①–② slowly. Rungs ④–⑥ preview buttons, randomness and variables from the weeks ahead.
+
+    **Reference:** MakeCode Tutorials mode, and the [Flashing Heart tutorial](https://makecode.microbit.org/projects/flashing-heart). _Notes: what worked, which rungs kids reached, timing._

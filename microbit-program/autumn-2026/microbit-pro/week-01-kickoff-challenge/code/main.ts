@@ -1,20 +1,5 @@
-let armed = false
-input.onGesture(Gesture.Shake, function () {
-    armed = false
-    basic.showIcon(IconNames.Asleep)
-    basic.pause(randint(1000, 5000))
-    basic.showIcon(IconNames.Target)
-    armed = true
-})
-input.onButtonPressed(Button.A, function () {
-    if (armed) {
-        armed = false
-        basic.showString("A")
-    }
-})
-input.onButtonPressed(Button.B, function () {
-    if (armed) {
-        armed = false
-        basic.showString("B")
-    }
+let score = 0
+input.onPinPressed(TouchPin.P0, function () {
+    score += 10
+    basic.showNumber(score)
 })

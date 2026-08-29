@@ -1,7 +1,13 @@
-input.onGesture(Gesture.Shake, function () {
-    if (randint(0, 1) == 0) {
-        basic.showString("H")
-    } else {
-        basic.showString("T")
-    }
+let score = 0
+input.onPinPressed(TouchPin.P0, function () {
+    score += 10
+    basic.showNumber(score)
+})
+input.onButtonPressed(Button.A, function () {
+    score = 0
+    basic.showNumber(0)
+})
+input.onButtonPressed(Button.B, function () {
+    score = 0
+    basic.showString("GO")
 })

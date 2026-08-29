@@ -1,9 +1,25 @@
-radio.setGroup(1)
-input.onButtonPressed(Button.A, function () {
-    radio.sendString("ping")
+let score = 0
+function addPoints (points: number) {
+    score += points
+    basic.showNumber(score)
+    if (score >= 100) {
+        basic.showIcon(IconNames.Yes)
+    }
+}
+input.onPinPressed(TouchPin.P0, function () {
+    addPoints(10)
 })
-radio.onReceivedString(function (receivedString) {
-    basic.showIcon(IconNames.Yes)
-    basic.pause(300)
-    basic.clearScreen()
+input.onPinPressed(TouchPin.P1, function () {
+    addPoints(50)
+})
+input.onPinPressed(TouchPin.P2, function () {
+    addPoints(100)
+})
+input.onButtonPressed(Button.A, function () {
+    score = 0
+    basic.showNumber(0)
+})
+input.onButtonPressed(Button.B, function () {
+    score = 0
+    basic.showString("GO")
 })

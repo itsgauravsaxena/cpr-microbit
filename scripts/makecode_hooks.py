@@ -60,22 +60,21 @@ def _formatter(source, language, css_class, options, md, **kwargs):
         )
     pub = share if share.startswith("_") else "_" + share
     pub = html.escape(pub, quote=True)
-    # Full editor embed: has native zoom (+/-) and pan on the blocks canvas,
-    # a running simulator, and lets kids edit inline. ?nosandbox is left off so
-    # the sim runs in its own frame. The ---codeembed view was dropped because
-    # it renders blocks at a fixed size with no zoom, cropping wide programs.
+    # Inline view uses ---codeembed: it always renders BLOCKS (in the viewer's
+    # language), so kids never land on the JavaScript view. It's static, so the
+    # "Open & run in MakeCode" button opens the full editor to run, zoom and edit.
+    blocks_src = f"{EMBED_BASE}/---codeembed#pub:{pub}"
     editor_src = f"{EMBED_BASE}/#pub:{pub}"
-    fullscreen_src = f"{EMBED_BASE}/#pub:{pub}"
     return (
         '<div class="makecode-embed" markdown="0">'
-        f'<iframe class="makecode-embed__frame" src="{editor_src}" '
-        'title="MakeCode editor: blocks, simulator and zoom controls" '
+        f'<iframe class="makecode-embed__frame" src="{blocks_src}" '
+        'title="MakeCode program (blocks)" '
         'allowfullscreen loading="lazy" '
         'sandbox="allow-popups allow-forms allow-scripts allow-same-origin">'
         "</iframe>"
         f'<a class="makecode-embed__edit md-button md-button--primary" '
-        f'href="{fullscreen_src}" target="_blank" rel="noopener">'
-        "Open full-screen in MakeCode ↗</a>"
+        f'href="{editor_src}" target="_blank" rel="noopener">'
+        "▶️ Open &amp; run in MakeCode ↗</a>"
         "</div>"
     )
 

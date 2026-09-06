@@ -1,6 +1,6 @@
 # Uge 2 — Knap-ansigter 😀
 
-> Få din micro:bit til at lave grimasser! Tryk på en knap, og den smiler, surmuler eller bliver overrasket.
+> Byg en ansigtsmaskine, ét trin ad gangen: knapper laver ansigter, et ryst giver en overraskelse, og den hilser på dig, når den vågner.
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
 <svg width="220" height="220" viewBox="0 0 216 216" role="img" aria-label="et ansigt der skifter glad, ked af det, overrasket" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif">
@@ -14,21 +14,50 @@
 
 ## 🎯 Hvad vi laver
 
-En ansigtsmaskine: **knap A = glad** 😀, **knap B = ked af det** 🙁. Så tilføjer vi flere ansigter, en ryste-overraskelse, dit navn og endda Sten-Saks-Papir!
+Her er det færdige program — du bygger op til det, ét lille trin ad gangen. Tryk på **▶️ Open & run** for at lege med det:
 
-## ▶️ Byg det
+```makecode
+auto
+```
 
-1. Åbn **[makecode.microbit.org](https://makecode.microbit.org)** → **New Project**.
-2. Fra **Input**, tag **`on button A pressed`**. Indeni: tilføj **`show icon`** → vælg 😀 **Happy**.
-3. Tilføj **`on button B pressed`** med **`show icon`** → vælg 🙁 **Sad**.
-4. Tryk på **A** og **B** i simulatoren — og 📥 **Download** til din micro:bit!
+## 🧱 Byg det — ét trin ad gangen
 
-??? example "👀 Programmet — kør det, eller læs koden"
+Åbn hvert trin, tilføj **kun de nye blokke**, og tjek så dine blokke mod billedet. Dit program vokser for hvert trin! 🌱
 
-    === "Blokke & simulator"
+??? example "① Glad ansigt på knap A"
+
+    Tilføj **`når der trykkes på knappen A`** → **`vis ikon`** og vælg 😀 **Happy**. Tryk på A!
+
+    === "Blokke"
 
         ```makecode
-        auto
+        auto:step-1
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        ```
+
+??? example "② Ked af det på knap B"
+
+    Tilføj endnu en **`når der trykkes på knappen B`** → **`vis ikon`** → 🙁 **Sad**.
+
+    === "Blokke"
+
+        ```makecode
+        auto:step-2
         ```
 
     === "JavaScript"
@@ -48,25 +77,19 @@ En ansigtsmaskine: **knap A = glad** 😀, **knap B = ked af det** 🙁. Så til
         def on_button_pressed_a():
             basic.show_icon(IconNames.HAPPY)
         input.on_button_pressed(Button.A, on_button_pressed_a)
-
         def on_button_pressed_b():
             basic.show_icon(IconNames.SAD)
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
+??? example "③ Hjerte når du trykker A+B"
 
-## 🪜 Gør det til din egen
+    Tilføj **`når der trykkes på knappen A+B`** → **`vis ikon`** → 💗 **Heart** (tryk begge samtidig).
 
-Byg videre — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve det og se koden.
-
-**① Tryk begge = kærlighed** 💗 — `on button A+B pressed` viser et hjerte.
-
-??? example "👀 Kig — kør det, eller læs koden"
-
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
-        auto:rung-1
+        auto:step-3
         ```
 
     === "JavaScript"
@@ -89,25 +112,22 @@ Byg videre — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve d
         def on_button_pressed_a():
             basic.show_icon(IconNames.HAPPY)
         input.on_button_pressed(Button.A, on_button_pressed_a)
-
         def on_button_pressed_b():
             basic.show_icon(IconNames.SAD)
         input.on_button_pressed(Button.B, on_button_pressed_b)
-
         def on_button_pressed_ab():
             basic.show_icon(IconNames.HEART)
         input.on_button_pressed(Button.AB, on_button_pressed_ab)
         ```
 
+??? example "④ Overraskelse når du ryster"
 
-**② Ryst for en overraskelse** 😲 — `on shake` viser et overrasket ansigt.
+    Tilføj **`på ryst`** → **`vis ikon`** → 😲 **Surprised**. Giv den et ryst!
 
-??? example "👀 Kig — kør det, eller læs koden"
-
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
-        auto:rung-2
+        auto:step-4
         ```
 
     === "JavaScript"
@@ -118,6 +138,9 @@ Byg videre — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve d
         })
         input.onButtonPressed(Button.B, function () {
             basic.showIcon(IconNames.Sad)
+        })
+        input.onButtonPressed(Button.AB, function () {
+            basic.showIcon(IconNames.Heart)
         })
         input.onGesture(Gesture.Shake, function () {
             basic.showIcon(IconNames.Surprised)
@@ -130,30 +153,39 @@ Byg videre — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve d
         def on_button_pressed_a():
             basic.show_icon(IconNames.HAPPY)
         input.on_button_pressed(Button.A, on_button_pressed_a)
-
         def on_button_pressed_b():
             basic.show_icon(IconNames.SAD)
         input.on_button_pressed(Button.B, on_button_pressed_b)
-
+        def on_button_pressed_ab():
+            basic.show_icon(IconNames.HEART)
+        input.on_button_pressed(Button.AB, on_button_pressed_ab)
         def on_gesture_shake():
             basic.show_icon(IconNames.SURPRISED)
         input.on_gesture(Gesture.SHAKE, on_gesture_shake)
         ```
 
+??? example "⑤ Tilfældigt ansigt ved ryst"
 
-**③ Tilfældigt ansigt** 🎲 — ryst og få et *forskelligt* ansigt hver gang.
+    Lav rystelsen om, så den vælger et **tilfældigt** ansigt — brug **vælg tilfældig** og **hvis / ellers**.
 
-??? example "👀 Kig — kør det, eller læs koden"
-
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
-        auto:rung-3
+        auto:step-5
         ```
 
     === "JavaScript"
 
         ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            basic.showIcon(IconNames.Sad)
+        })
+        input.onButtonPressed(Button.AB, function () {
+            basic.showIcon(IconNames.Heart)
+        })
         input.onGesture(Gesture.Shake, function () {
             let n = randint(0, 3)
             if (n == 0) {
@@ -171,6 +203,78 @@ Byg videre — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve d
     === "Python"
 
         ```python
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        def on_button_pressed_b():
+            basic.show_icon(IconNames.SAD)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        def on_button_pressed_ab():
+            basic.show_icon(IconNames.HEART)
+        input.on_button_pressed(Button.AB, on_button_pressed_ab)
+        def on_gesture_shake():
+            n = randint(0, 3)
+            if n == 0:
+                basic.show_icon(IconNames.HAPPY)
+            elif n == 1:
+                basic.show_icon(IconNames.SAD)
+            elif n == 2:
+                basic.show_icon(IconNames.SURPRISED)
+            else:
+                basic.show_icon(IconNames.SILLY)
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+??? example "⑥ Sig hej når den starter"
+
+    Øverst tilføj **`når programmet starter`** → **`vis streng`** med en hilsen (fx HEJ!).
+
+    === "Blokke"
+
+        ```makecode
+        auto:step-6
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.showString("HEJ!")
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            basic.showIcon(IconNames.Sad)
+        })
+        input.onButtonPressed(Button.AB, function () {
+            basic.showIcon(IconNames.Heart)
+        })
+        input.onGesture(Gesture.Shake, function () {
+            let n = randint(0, 3)
+            if (n == 0) {
+                basic.showIcon(IconNames.Happy)
+            } else if (n == 1) {
+                basic.showIcon(IconNames.Sad)
+            } else if (n == 2) {
+                basic.showIcon(IconNames.Surprised)
+            } else {
+                basic.showIcon(IconNames.Silly)
+            }
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        basic.show_string("HEJ!")
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        def on_button_pressed_b():
+            basic.show_icon(IconNames.SAD)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        def on_button_pressed_ab():
+            basic.show_icon(IconNames.HEART)
+        input.on_button_pressed(Button.AB, on_button_pressed_ab)
         def on_gesture_shake():
             n = randint(0, 3)
             if n == 0:
@@ -185,43 +289,16 @@ Byg videre — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve d
         ```
 
 
-**④ Navneskilt** 🙋 — vis dit navn, når den starter op. *(Skift MIA ud med dit navn!)*
+## 🌟 Ekstra udfordringer
 
-??? example "👀 Kig — kør det, eller læs koden"
+??? example "🎨 Tegn dit eget billede"
 
-    === "Blokke & simulator"
+    Få **knap A** til at tænde dine egne LED'er med **`vis LED'er`** — tegn hvad som helst!
 
-        ```makecode
-        auto:rung-4
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        basic.showString("HI MIA")
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        basic.show_string("HI MIA")
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        ```
-
-
-**⑤ Tegn dit eget billede** 🎨 — tænd dine egne LED'er med `show leds`.
-
-??? example "👀 Kig — kør det, eller læs koden"
-
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
-        auto:rung-5
+        auto:draw
         ```
 
     === "JavaScript"
@@ -252,15 +329,14 @@ Byg videre — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve d
         input.on_button_pressed(Button.A, on_button_pressed_a)
         ```
 
+??? example "✊✋✌️ Sten, Saks, Papir"
 
-**⑥ 🏆 Boss — Sten, Saks, Papir** ✊✋✌️ — ryst for at kaste, og dyst en ven!
+    Ryst for at kaste sten, saks eller papir — dyst så en ven, bedst af fem!
 
-??? example "👀 Kig — kør det, eller læs koden"
-
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
-        auto:rung-6
+        auto:rps
         ```
 
     === "JavaScript"
@@ -305,13 +381,12 @@ Byg videre — hvert trin er et nyt trick. Tryk på **👀 Kig** for at prøve d
         ```
 
 
-**Nået til toppen?** Find på dit eget ansigt eller knap-trick og lær det til en ven! ✨
-
 ## ✅ Jeg er færdig når…
 
-- ☐ Knap **A** viser et glad ansigt og **B** et ked-af-det-ansigt på det rigtige board.
-- ☐ Jeg tilføjede en **ryste**-overraskelse.
-- ☐ *(Legende!)* Jeg byggede Sten-Saks-Papir — eller mit eget trick.
+- ☐ Knap **A** viser 😀 og **B** viser 🙁 på det rigtige board.
+- ☐ Et **ryst** giver en overraskelse (eller et tilfældigt ansigt).
+- ☐ *(Legende!)* Jeg lavede alle 6 trin — eller byggede en ekstra udfordring.
+
 
 ## 🎉 Kahoot-tid!
 
@@ -321,21 +396,17 @@ Lad os slutte af med en quiz — alle sammen!
 week-2
 ```
 
+
 ---
 
-??? note "👩‍🏫 Til hjælpere — sessionsplan, materialer & noter"
+??? note "👩‍🏫 Til hjælpere — sessionsplan & noter"
 
-    **Mål:** byg videre på uge 1's `show icon` — tilføj **knapper** (A/B/A+B) og **ryste**-gesten, plus et første strejf af **tilfældighed**.
-
-    **Materialer**
-
-    - 1 micro:bit + USB-kabel pr. barn
-    - Bærbar/Chromebook med makecode.microbit.org åben
+    **Mål:** byg videre på uge 1's `vis ikon` — tilføj **knapper** (A/B/A+B), **ryste**-gesten og et første strejf af **tilfældighed**, som ét program bygget op trin for trin.
 
     **Sessionsplan (60 + 20 pause + 30)**
 
-    - **Blok 1 (60):** 5 repetition af uge 1 → 25 byg A=glad / B=ked af det sammen → 15 download til board → 15 trin ①–② (A+B hjerte, ryste-overraskelse)
+    - **Blok 1 (60):** 5 repetition af uge 1 → 40 arbejd gennem trin ①–⑥ sammen, tjek blokke hvert trin → 15 download til board
     - **Pause (20)**
-    - **Blok 2 (30):** 20 klatr op ad trin ③–⑥ (tilfældigt ansigt, navneskilt, tegn, SSP) → 5 fremvisning → 5 Kahoot
+    - **Blok 2 (30):** 20 ekstra udfordringer (tegn, Sten-Saks-Papir) i eget tempo → 5 fremvisning → 5 Kahoot
 
-    **Noter:** alle får A/B-ansigter til at virke først; stigen er selvkørende. Trin ③ er et blidt kig på **pick random**; trin ⑥ (SSP) er et sjovt par-spil.
+    **Noter:** hvert trins embed viser programmet *indtil videre*, så børnene bygger ét program i stedet for at kopiere færdig kode. Trin ⑤ er et blidt kig på **vælg tilfældig** + **hvis/ellers**.

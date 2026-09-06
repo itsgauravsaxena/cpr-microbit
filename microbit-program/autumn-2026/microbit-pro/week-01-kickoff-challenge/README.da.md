@@ -39,7 +39,7 @@ Her er det færdige program — tryk på play, eller **Open full-screen in MakeC
 
 ??? example "👀 Programmet — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto
@@ -71,7 +71,7 @@ Færdig tidligt? Klatr så højt du kan — hvert trin er et nyt trick. Tryk på
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-1
@@ -103,7 +103,7 @@ Færdig tidligt? Klatr så højt du kan — hvert trin er et nyt trick. Tryk på
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-2
@@ -135,7 +135,7 @@ Færdig tidligt? Klatr så højt du kan — hvert trin er et nyt trick. Tryk på
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-3
@@ -165,7 +165,7 @@ Færdig tidligt? Klatr så højt du kan — hvert trin er et nyt trick. Tryk på
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-4
@@ -198,7 +198,7 @@ Færdig tidligt? Klatr så højt du kan — hvert trin er et nyt trick. Tryk på
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-5
@@ -241,7 +241,7 @@ Færdig tidligt? Klatr så højt du kan — hvert trin er et nyt trick. Tryk på
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-6

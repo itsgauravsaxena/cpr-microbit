@@ -7,18 +7,17 @@
 .makecode-embed__frame {
   display: block;
   width: 100%;
-  /* The full editor needs room for toolbox + canvas + simulator. */
-  aspect-ratio: 4 / 3;
-  min-height: 560px;
+  /* Inline view is the static ---codeembed blocks render — compact. */
+  aspect-ratio: 16 / 10;
+  min-height: 300px;
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 0.3rem;
-  background: var(--md-code-bg-color);
+  background: #fff;
 }
 
 @media screen and (min-width: 76.25em) {
-  /* More vertical room on wide screens where the frame is also wider. */
   .makecode-embed__frame {
-    min-height: 640px;
+    min-height: 360px;
   }
 }
 

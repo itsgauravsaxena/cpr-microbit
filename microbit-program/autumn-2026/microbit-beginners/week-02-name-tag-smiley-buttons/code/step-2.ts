@@ -4,6 +4,3 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Sad)
 })
-input.onGesture(Gesture.Shake, function () {
-    basic.showIcon(IconNames.Surprised)
-})

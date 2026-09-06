@@ -24,7 +24,7 @@ En 30-sekunders genopfriskning: en **klik-tæller**. Tryk på **A**, og et tal s
 
 ??? example "👀 Kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:warmup
@@ -63,7 +63,7 @@ Klik på **P0** i simulatoren (eller rør den rigtige pin) — se den stige! �
 
 ??? example "👀 Kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto
@@ -98,7 +98,7 @@ To små trin, og du har et rigtigt mini-spil.
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-1
@@ -139,7 +139,7 @@ To små trin, og du har et rigtigt mini-spil.
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-2
@@ -194,7 +194,7 @@ Færdig med målet? Byg videre — hvert trin tilføjer en rigtig flipper-funkti
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-3
@@ -255,7 +255,7 @@ Færdig med målet? Byg videre — hvert trin tilføjer en rigtig flipper-funkti
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-4
@@ -321,7 +321,7 @@ Færdig med målet? Byg videre — hvert trin tilføjer en rigtig flipper-funkti
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-5
@@ -412,7 +412,7 @@ Færdig med målet? Byg videre — hvert trin tilføjer en rigtig flipper-funkti
 
 ??? example "👀 Kig — kør det, eller læs koden"
 
-    === "Blokke & simulator"
+    === "Blokke"
 
         ```makecode
         auto:rung-6

@@ -39,7 +39,7 @@ Here's the finished program — press play, or **Open full-screen in MakeCode** 
 
 ??? example "👀 The program — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto
@@ -71,7 +71,7 @@ Finished early? Climb as high as you can — each step is a new trick. Tap **�
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-1
@@ -103,7 +103,7 @@ Finished early? Climb as high as you can — each step is a new trick. Tap **�
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-2
@@ -135,7 +135,7 @@ Finished early? Climb as high as you can — each step is a new trick. Tap **�
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-3
@@ -165,7 +165,7 @@ Finished early? Climb as high as you can — each step is a new trick. Tap **�
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-4
@@ -198,7 +198,7 @@ Finished early? Climb as high as you can — each step is a new trick. Tap **�
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-5
@@ -241,7 +241,7 @@ Finished early? Climb as high as you can — each step is a new trick. Tap **�
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-6

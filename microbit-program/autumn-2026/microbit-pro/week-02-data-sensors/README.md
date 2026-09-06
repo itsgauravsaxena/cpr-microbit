@@ -24,7 +24,7 @@ A 30-second refresher: a **click counter**. Press **A** and a number goes up. Th
 
 ??? example "👀 Run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:warmup
@@ -63,7 +63,7 @@ Click **P0** in the sim (or touch the real pin) — watch it climb! 🔢
 
 ??? example "👀 Run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto
@@ -98,7 +98,7 @@ Two small steps and you've got a real mini-game.
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-1
@@ -139,7 +139,7 @@ Two small steps and you've got a real mini-game.
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-2
@@ -194,7 +194,7 @@ Finished the goal? Keep going — each step adds a real pinball feature. By the 
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-3
@@ -255,7 +255,7 @@ Finished the goal? Keep going — each step adds a real pinball feature. By the 
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-4
@@ -321,7 +321,7 @@ Finished the goal? Keep going — each step adds a real pinball feature. By the 
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-5
@@ -412,7 +412,7 @@ Finished the goal? Keep going — each step adds a real pinball feature. By the 
 
 ??? example "👀 Peek — run it, or read the code"
 
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
         auto:rung-6

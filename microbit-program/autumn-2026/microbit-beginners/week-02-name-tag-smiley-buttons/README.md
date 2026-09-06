@@ -1,6 +1,6 @@
 # Week 2 — Button Faces 😀
 
-> Make your micro:bit pull faces! Press a button and it smiles, frowns or gets a surprise.
+> Build a face machine, one step at a time: buttons make faces, a shake gives a surprise, and it greets you when it wakes up.
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
 <svg width="220" height="220" viewBox="0 0 216 216" role="img" aria-label="a face changing happy, sad, surprised" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif">
@@ -14,21 +14,50 @@
 
 ## 🎯 What we're making
 
-A face machine: **button A = happy** 😀, **button B = sad** 🙁. Then we add more faces, a shake surprise, your name and even Rock-Paper-Scissors!
+Here's the finished program — you'll build up to it, one small step at a time. Press **▶️ Open & run** to play with it:
 
-## ▶️ Build it
+```makecode
+auto
+```
 
-1. Open **[makecode.microbit.org](https://makecode.microbit.org)** → **New Project**.
-2. From **Input**, grab **`on button A pressed`**. Inside it, add **`show icon`** → pick 😀 **Happy**.
-3. Add **`on button B pressed`** with **`show icon`** → pick 🙁 **Sad**.
-4. Press **A** and **B** in the simulator — then 📥 **Download** to your micro:bit!
+## 🧱 Build it — one step at a time
 
-??? example "👀 The program — run it, or read the code"
+Open each step, add **only the new blocks**, then check your blocks against the picture. Your program grows every step! 🌱
 
-    === "Blocks & simulator"
+??? example "① Happy face on button A"
+
+    Add **`on button A pressed`** → **`show icon`** and pick 😀 **Happy**. Press A!
+
+    === "Blocks"
 
         ```makecode
-        auto
+        auto:step-1
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        ```
+
+??? example "② Sad face on button B"
+
+    Add another **`on button B pressed`** → **`show icon`** → 🙁 **Sad**.
+
+    === "Blocks"
+
+        ```makecode
+        auto:step-2
         ```
 
     === "JavaScript"
@@ -48,25 +77,19 @@ A face machine: **button A = happy** 😀, **button B = sad** 🙁. Then we add 
         def on_button_pressed_a():
             basic.show_icon(IconNames.HAPPY)
         input.on_button_pressed(Button.A, on_button_pressed_a)
-
         def on_button_pressed_b():
             basic.show_icon(IconNames.SAD)
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
+??? example "③ Heart when you press A+B"
 
-## 🪜 Make it yours
+    Add **`on button A+B pressed`** → **`show icon`** → 💗 **Heart** (press both together).
 
-Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see the code.
-
-**① Press both = love** 💗 — `on button A+B pressed` shows a heart.
-
-??? example "👀 Peek — run it, or read the code"
-
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
-        auto:rung-1
+        auto:step-3
         ```
 
     === "JavaScript"
@@ -89,25 +112,22 @@ Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see t
         def on_button_pressed_a():
             basic.show_icon(IconNames.HAPPY)
         input.on_button_pressed(Button.A, on_button_pressed_a)
-
         def on_button_pressed_b():
             basic.show_icon(IconNames.SAD)
         input.on_button_pressed(Button.B, on_button_pressed_b)
-
         def on_button_pressed_ab():
             basic.show_icon(IconNames.HEART)
         input.on_button_pressed(Button.AB, on_button_pressed_ab)
         ```
 
+??? example "④ Surprise when you shake"
 
-**② Shake for a surprise** 😲 — `on shake` shows a surprised face.
+    Add **`on shake`** → **`show icon`** → 😲 **Surprised**. Give it a wiggle!
 
-??? example "👀 Peek — run it, or read the code"
-
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
-        auto:rung-2
+        auto:step-4
         ```
 
     === "JavaScript"
@@ -118,6 +138,9 @@ Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see t
         })
         input.onButtonPressed(Button.B, function () {
             basic.showIcon(IconNames.Sad)
+        })
+        input.onButtonPressed(Button.AB, function () {
+            basic.showIcon(IconNames.Heart)
         })
         input.onGesture(Gesture.Shake, function () {
             basic.showIcon(IconNames.Surprised)
@@ -130,30 +153,39 @@ Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see t
         def on_button_pressed_a():
             basic.show_icon(IconNames.HAPPY)
         input.on_button_pressed(Button.A, on_button_pressed_a)
-
         def on_button_pressed_b():
             basic.show_icon(IconNames.SAD)
         input.on_button_pressed(Button.B, on_button_pressed_b)
-
+        def on_button_pressed_ab():
+            basic.show_icon(IconNames.HEART)
+        input.on_button_pressed(Button.AB, on_button_pressed_ab)
         def on_gesture_shake():
             basic.show_icon(IconNames.SURPRISED)
         input.on_gesture(Gesture.SHAKE, on_gesture_shake)
         ```
 
+??? example "⑤ Random face on shake"
 
-**③ Random face** 🎲 — shake and get a *different* face each time.
+    Change the shake so it picks a **random** face — use **pick random** and **if / else**.
 
-??? example "👀 Peek — run it, or read the code"
-
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
-        auto:rung-3
+        auto:step-5
         ```
 
     === "JavaScript"
 
         ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            basic.showIcon(IconNames.Sad)
+        })
+        input.onButtonPressed(Button.AB, function () {
+            basic.showIcon(IconNames.Heart)
+        })
         input.onGesture(Gesture.Shake, function () {
             let n = randint(0, 3)
             if (n == 0) {
@@ -171,6 +203,78 @@ Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see t
     === "Python"
 
         ```python
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        def on_button_pressed_b():
+            basic.show_icon(IconNames.SAD)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        def on_button_pressed_ab():
+            basic.show_icon(IconNames.HEART)
+        input.on_button_pressed(Button.AB, on_button_pressed_ab)
+        def on_gesture_shake():
+            n = randint(0, 3)
+            if n == 0:
+                basic.show_icon(IconNames.HAPPY)
+            elif n == 1:
+                basic.show_icon(IconNames.SAD)
+            elif n == 2:
+                basic.show_icon(IconNames.SURPRISED)
+            else:
+                basic.show_icon(IconNames.SILLY)
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+??? example "⑥ Say hi when it starts"
+
+    At the top add **`on start`** → **`show string`** with a greeting (e.g. HEJ!).
+
+    === "Blocks"
+
+        ```makecode
+        auto:step-6
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.showString("HEJ!")
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            basic.showIcon(IconNames.Sad)
+        })
+        input.onButtonPressed(Button.AB, function () {
+            basic.showIcon(IconNames.Heart)
+        })
+        input.onGesture(Gesture.Shake, function () {
+            let n = randint(0, 3)
+            if (n == 0) {
+                basic.showIcon(IconNames.Happy)
+            } else if (n == 1) {
+                basic.showIcon(IconNames.Sad)
+            } else if (n == 2) {
+                basic.showIcon(IconNames.Surprised)
+            } else {
+                basic.showIcon(IconNames.Silly)
+            }
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        basic.show_string("HEJ!")
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        def on_button_pressed_b():
+            basic.show_icon(IconNames.SAD)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        def on_button_pressed_ab():
+            basic.show_icon(IconNames.HEART)
+        input.on_button_pressed(Button.AB, on_button_pressed_ab)
         def on_gesture_shake():
             n = randint(0, 3)
             if n == 0:
@@ -185,43 +289,16 @@ Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see t
         ```
 
 
-**④ Name badge** 🙋 — show your name when it starts up. *(Change MIA to your name!)*
+## 🌟 Extra challenges
 
-??? example "👀 Peek — run it, or read the code"
+??? example "🎨 Draw your own picture"
 
-    === "Blocks & simulator"
+    Make **button A** light up your own LEDs with **`show leds`** — draw anything!
 
-        ```makecode
-        auto:rung-4
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        basic.showString("HI MIA")
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        basic.show_string("HI MIA")
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        ```
-
-
-**⑤ Draw your own picture** 🎨 — light up your own LEDs with `show leds`.
-
-??? example "👀 Peek — run it, or read the code"
-
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
-        auto:rung-5
+        auto:draw
         ```
 
     === "JavaScript"
@@ -252,15 +329,14 @@ Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see t
         input.on_button_pressed(Button.A, on_button_pressed_a)
         ```
 
+??? example "✊✋✌️ Rock, Paper, Scissors"
 
-**⑥ 🏆 Boss — Rock, Paper, Scissors** ✊✋✌️ — shake to throw, then duel a friend!
+    Shake to throw rock, paper or scissors — then duel a friend, best of five!
 
-??? example "👀 Peek — run it, or read the code"
-
-    === "Blocks & simulator"
+    === "Blocks"
 
         ```makecode
-        auto:rung-6
+        auto:rps
         ```
 
     === "JavaScript"
@@ -305,13 +381,12 @@ Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see t
         ```
 
 
-**Reached the top?** Invent your own face or button trick and teach a friend! ✨
-
 ## ✅ I did it when…
 
-- ☐ Button **A** shows a happy face and **B** a sad face on the real board.
-- ☐ I added a **shake** surprise.
-- ☐ *(Legend!)* I built Rock-Paper-Scissors — or my own trick.
+- ☐ Button **A** shows 😀 and **B** shows 🙁 on the real board.
+- ☐ A **shake** gives a surprise (or a random face).
+- ☐ *(Legend!)* I finished all 6 steps — or built an extra challenge.
+
 
 ## 🎉 Kahoot time!
 
@@ -321,21 +396,17 @@ Let's finish with a quiz — everyone together!
 week-2
 ```
 
+
 ---
 
-??? note "👩‍🏫 For helpers — session plan, materials & notes"
+??? note "👩‍🏫 For helpers — session plan & notes"
 
-    **Goal:** build on Week 1's `show icon` — add **buttons** (A/B/A+B) and the **shake** gesture, plus a first taste of **randomness**.
-
-    **Materials**
-
-    - 1 micro:bit + USB cable per kid
-    - Laptop/Chromebook with makecode.microbit.org open
+    **Goal:** build on Week 1's `show icon` — add **buttons** (A/B/A+B), the **shake** gesture, and a first taste of **randomness**, as one program built up step by step.
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 recap Week 1 → 25 build A=happy / B=sad together → 15 download to board → 15 rungs ①–② (A+B heart, shake surprise)
+    - **Block 1 (60):** 5 recap Week 1 → 40 work through Steps ①–⑥ together, checking blocks each step → 15 download to the board
     - **Break (20)**
-    - **Block 2 (30):** 20 climb rungs ③–⑥ (random face, name badge, draw, RPS) → 5 showcase → 5 Kahoot
+    - **Block 2 (30):** 20 extra challenges (draw, Rock-Paper-Scissors) at own pace → 5 showcase → 5 Kahoot
 
-    **Notes:** everyone gets A/B faces working first; the ladder is self-paced. Rung ③ is a gentle intro to **pick random**; rung ⑥ (RPS) is a fun pair game.
+    **Notes:** each step's embed shows the program *so far*, so kids build one program rather than copying finished code. Step ⑤ is a gentle intro to **pick random** + **if/else**.

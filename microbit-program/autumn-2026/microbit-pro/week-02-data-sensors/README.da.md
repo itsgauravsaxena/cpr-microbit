@@ -1,110 +1,550 @@
-# Uge 2 — Data & sensorer: live søjlediagram
+# Uge 2 — Flipper-scoreboard 🎯 (del 1)
 
-> 📊 Din micro:bit kan *mærke* rummet — lys, temperatur, lyd. I dag laver I tallene om til et **live søjlediagram** på LED'erne.
-
-**Mål:** aflæs rigtige sensorværdier og visualisér dem med `plot bar graph`.
+> Dette semester bygger Pro-holdet **hjernen i en flippermaskine** — lidt hver uge. Vi starter byggeriet: en hurtig repetition, og så den allerførste del — en **score, der stiger, når du rammer et mål**.
 
 <div style="text-align:center;margin:1.25rem 0;" markdown="0">
-<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="et live søjlediagram der stiger og falder" xmlns="http://www.w3.org/2000/svg">
+<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="gættespillet der tæller" xmlns="http://www.w3.org/2000/svg">
 <rect x="0" y="0" width="162" height="162" rx="20" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
-<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="1;0;0;0;0"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="0;1;0;0;0"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="0;0;1;0;0"/><rect x="14" y="70" width="22" height="22" rx="5"/><rect x="42" y="70" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="126" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="0;0;0;1;0"/><rect x="14" y="42" width="22" height="22" rx="5"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="70" y="42" width="22" height="22" rx="5"/><rect x="98" y="42" width="22" height="22" rx="5"/><rect x="126" y="42" width="22" height="22" rx="5"/><rect x="14" y="70" width="22" height="22" rx="5"/><rect x="42" y="70" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="126" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="0;0;0;0;1"/><rect x="14" y="70" width="22" height="22" rx="5"/><rect x="42" y="70" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="126" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g></g>
+<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="1;0;0"/><rect x="14" y="14" width="22" height="22" rx="5"/><rect x="42" y="14" width="22" height="22" rx="5"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="98" y="14" width="22" height="22" rx="5"/><rect x="126" y="14" width="22" height="22" rx="5"/><rect x="126" y="42" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="0;1;0"/><rect x="14" y="14" width="22" height="22" rx="5"/><rect x="42" y="14" width="22" height="22" rx="5"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="98" y="14" width="22" height="22" rx="5"/><rect x="126" y="42" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="0;0;1"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="70" y="42" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/></g></g>
 </svg>
 </div>
 
-## Hvad I bygger
+!!! info "🎯 Ny til flipperprojektet?"
+    Se **[Flipperprojektet](../../pinball/README.md)** for det store billede — flipperens dele, hvordan micro:bit'en styrer hver del, og hvor byggeriet er på vej hen.
 
-En lysmåler, der tegner et søjlediagram, plus en knap til at skifte til temperatur.
+## 🎯 Hvad vi laver i dag
 
-## Eksempelkode
+**Begyndelsen** på vores flipper-scoreboard: rør et mål, og din **score** stiger — plus en **nulstil**- og en **nyt spil**-knap. Det er målet for i dag. Færdig tidligt? Der er en valgfri **level-up**-stige, der gør det til en rigtig lille maskine.
 
-Kør det her, og klik på **Open & edit in MakeCode** for at lave din egen version:
+*(Den 3D-printede flipperkasse er den anden gruppes opgave — vi bygger koden.)*
 
-<!-- Indsæt ugens MakeCode-del-id nedenfor (Share -> Publish giver et link
-     som https://makecode.microbit.org/_abc123 -- indsæt id'et eller hele
-     linket). Indtil et id er tilføjet, vises en "kommer snart"-note. -->
-```makecode
-auto
+## 🔁 Opvarmning — hurtig repetition
+
+En 30-sekunders genopfriskning: en **klik-tæller**. Tryk på **A**, og et tal stiger. Det tal er en **variabel** — præcis sådan en score virker.
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:warmup
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let count = 0
+        input.onButtonPressed(Button.A, function () {
+            count += 1
+            basic.showNumber(count)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        count = 0
+        def on_button_pressed_a():
+            global count
+            count += 1
+            basic.show_number(count)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        ```
+
+## ▶️ Byg det — score ved berøring
+
+Få det til at give point at røre **P0** og vise scoren.
+
+1. Lav en **variabel** kaldet `score` (starter på 0).
+2. Fra **Input**, brug **`on pin P0 pressed`**.
+3. Indeni: **ændr `score` med 10**, og **vis tal `score`**.
+
+Klik på **P0** i simulatoren (eller rør den rigtige pin) — se den stige! 🔢
+
+??? example "👀 Kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        input.onPinPressed(TouchPin.P0, function () {
+            score += 10
+            basic.showNumber(score)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def on_pin_pressed_p0():
+            global score
+            score += 10
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+        ```
+
+## 🪜 Gør det spilbart (dagens mål)
+
+To små trin, og du har et rigtigt mini-spil.
+
+**① Nulstil** ♻️ — tryk på **A** for at sætte scoren tilbage til 0.
+
+??? example "👀 Kig — kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-1
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        input.onPinPressed(TouchPin.P0, function () {
+            score += 10
+            basic.showNumber(score)
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def on_pin_pressed_p0():
+            global score
+            score += 10
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        ```
+
+**② Nyt spil** 🆕 — tryk på **B** for at nulstille og blinke **GO**.
+
+??? example "👀 Kig — kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-2
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        input.onPinPressed(TouchPin.P0, function () {
+            score += 10
+            basic.showNumber(score)
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def on_pin_pressed_p0():
+            global score
+            score += 10
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score
+            score = 0
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+## 🕹️ Byg videre mod den rigtige maskine *(valgfrit)*
+
+Færdig med målet? Byg videre — hvert trin tilføjer en rigtig flipper-funktion. Til sidst har du en lille maskine, du faktisk kan spille.
+
+**③ Andet mål** 🎯 — forbind et metal til **P1**, værd **50**.
+
+??? example "👀 Kig — kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-3
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        input.onPinPressed(TouchPin.P0, function () {
+            score += 10
+            basic.showNumber(score)
+        })
+        input.onPinPressed(TouchPin.P1, function () {
+            score += 50
+            basic.showNumber(score)
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def on_pin_pressed_p0():
+            global score
+            score += 10
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_pin_pressed_p1():
+            global score
+            score += 50
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score
+            score = 0
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+**④ Ding ved ramt** 🔊 — spil et kort bip, hver gang du scorer. Vi rydder scoringen ind i én **funktion**, så lyden bor ét sted. *(Kræver micro:bit **V2**-højtaler eller en buzzer.)*
+
+??? example "👀 Kig — kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-4
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        function addPoints (points: number) {
+            score += points
+            music.playTone(988, 100)
+            basic.showNumber(score)
+        }
+        input.onPinPressed(TouchPin.P0, function () {
+            addPoints(10)
+        })
+        input.onPinPressed(TouchPin.P1, function () {
+            addPoints(50)
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def add_points(points: number):
+            global score
+            score += points
+            music.play_tone(988, 100)
+            basic.show_number(score)
+
+        def on_pin_pressed_p0():
+            add_points(10)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_pin_pressed_p1():
+            add_points(50)
+        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score
+            score = 0
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+**⑤ 3 kugler & game over** 🎱 — et **drain**-mål (**P2**) koster en kugle; ved **0** viser den **OVER** og din slutscore. **B** giver dig 3 friske kugler.
+
+??? example "👀 Kig — kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-5
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        let balls = 3
+        function addPoints (points: number) {
+            score += points
+            music.playTone(988, 100)
+            basic.showNumber(score)
+        }
+        input.onPinPressed(TouchPin.P0, function () {
+            addPoints(10)
+        })
+        input.onPinPressed(TouchPin.P1, function () {
+            addPoints(50)
+        })
+        input.onPinPressed(TouchPin.P2, function () {
+            balls += -1
+            if (balls <= 0) {
+                basic.showString("OVER")
+                basic.showNumber(score)
+            } else {
+                basic.showString("BALL")
+                basic.showNumber(balls)
+            }
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            balls = 3
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        balls = 3
+        def add_points(points: number):
+            global score
+            score += points
+            music.play_tone(988, 100)
+            basic.show_number(score)
+
+        def on_pin_pressed_p0():
+            add_points(10)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_pin_pressed_p1():
+            add_points(50)
+        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
+        def on_pin_pressed_p2():
+            global balls
+            balls += -1
+            if balls <= 0:
+                basic.show_string("OVER")
+                basic.show_number(score)
+            else:
+                basic.show_string("BALL")
+                basic.show_number(balls)
+        input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p2)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score, balls
+            score = 0
+            balls = 3
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+**⑥ 🏆 Boss — TILT!** — ryst for hårdt, og du **mister en kugle**. Nu er det en rigtig lille maskine: to mål, en ding, tre kugler, en drain, TILT, nulstil og nyt spil.
+
+??? example "👀 Kig — kør det, eller læs koden"
+
+    === "Blokke & simulator"
+
+        ```makecode
+        auto:rung-6
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        let balls = 3
+        function addPoints (points: number) {
+            score += points
+            music.playTone(988, 100)
+            basic.showNumber(score)
+        }
+        function loseBall () {
+            balls += -1
+            if (balls <= 0) {
+                basic.showString("OVER")
+                basic.showNumber(score)
+            } else {
+                basic.showString("BALL")
+                basic.showNumber(balls)
+            }
+        }
+        input.onPinPressed(TouchPin.P0, function () {
+            addPoints(10)
+        })
+        input.onPinPressed(TouchPin.P1, function () {
+            addPoints(50)
+        })
+        input.onPinPressed(TouchPin.P2, function () {
+            loseBall()
+        })
+        input.onGesture(Gesture.Shake, function () {
+            basic.showString("TILT")
+            loseBall()
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            balls = 3
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        balls = 3
+        def add_points(points: number):
+            global score
+            score += points
+            music.play_tone(988, 100)
+            basic.show_number(score)
+
+        def lose_ball():
+            global balls
+            balls += -1
+            if balls <= 0:
+                basic.show_string("OVER")
+                basic.show_number(score)
+            else:
+                basic.show_string("BALL")
+                basic.show_number(balls)
+
+        def on_pin_pressed_p0():
+            add_points(10)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_pin_pressed_p1():
+            add_points(50)
+        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
+        def on_pin_pressed_p2():
+            lose_ball()
+        input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p2)
+
+        def on_gesture_shake():
+            basic.show_string("TILT")
+            lose_ball()
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score, balls
+            score = 0
+            balls = 3
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+## ✅ Jeg er færdig når…
+
+- ☐ At røre **P0** får **scoren** til at stige på skærmen.
+- ☐ **A** nulstiller, og **B** starter et nyt spil.
+- ☐ *(Level up!)* Et andet mål, en **ding**, **3 kugler** og **TILT** virker alle.
+
+## 🎉 Kahoot-tid!
+
+Slut af med denne uges quiz — **begge grupper spiller sammen**.
+
+```kahoot
+week-2
 ```
 
-<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
-<svg viewBox="0 0 604 148" width="100%" style="max-width:604px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
-<rect x="30" y="20" width="262" height="32" rx="14" fill="#14a3a3"/>
-<rect x="40" y="15" width="34" height="12" rx="6" fill="#14a3a3"/>
-<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">forever</text>
-<rect x="30" y="55" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">plot bar graph of (light level) up to 255</text>
-<rect x="322" y="20" width="262" height="32" rx="14" fill="#9857c9"/>
-<rect x="332" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="336" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button A pressed</text>
-<rect x="322" y="55" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="336" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show number (temperature)</text>
-<rect x="322" y="90" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="336" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">pause 1000 ms</text>
-</svg>
-</div>
+---
 
-```javascript
-basic.forever(function () {
-    led.plotBarGraph(input.lightLevel(), 255)
-})
-input.onButtonPressed(Button.A, function () {
-    basic.showNumber(input.temperature())
-    basic.pause(1000)
-})
-```
+??? note "👩‍🏫 Til hjælpere — sessionsplan, materialer & noter"
 
-!!! tip "▶️ Prøv den i MakeCode (30 sekunder)"
-    1. Åbn <https://makecode.microbit.org> → **New Project**
-    2. Klik på **`{ } JavaScript`**-knappen øverst
-    3. Markér alt i editoren og **slet det**, indsæt derefter **koden ovenfor**
-    4. Klik på **Blocks** for at skifte tilbage — de rigtige blokke dukker op, klar til at udforske
-    5. **Download** for at lægge den på et board, eller tryk ▶️ for at køre den i simulatoren
+    **Mål (i dag):** repetér variabler + knapper, og byg så **score-ved-berøring** med nulstil og nyt spil. Det er klassens mål. Trin ③–⑥ er valgfri stretch for hurtige og et smugkig på de kommende uger — I behøver ikke nå dem i dag.
 
-    Børnene kan gøre præcis det samme for at komme i gang og derefter ændre tingene, så det bliver deres eget.
+    **Materialer**
 
+    - micro:bit (**V2** anbefales — kapacitiv touch på P0/P1/P2 **og** den indbyggede højtaler til ding'en) + USB
+    - **Keyestudio micro:bit sensor-shield**, krokodillenæb / jumper-ledninger, et par metalmål (folie, mønter)
+    - Bærbar/Chromebook — **simulatoren er nok** til at bygge & teste (klik på pinsene)
+    - *(V1 virker til scoring — metallet skal slutte et kredsløb til **GND**; ding'en kræver en buzzer.)*
 
-## Sessionsplan (60 min + 20 min pause + 30 min)
+    **Sessionsplan (60 + 20 pause + 30)**
 
-### Blok 1 — 60 min
-- 5 min — opsummering: hvilke sensorer har en micro:bit?
-- 20 min — byg lys-søjlediagrammet, hold hånden over boardet og se det falde
-- 20 min — tilføj temperatur-knappen; prøv at varme boardet med fingrene
-- 15 min — eksperiment: hvis søjlediagram reagerer hurtigst? hvorfor?
+    - **Blok 1 (60):** 5 projekt-intro + funktionskortet → 15 repetition klik-tæller → 10 slut til / hvordan pin-touch virker → 25 byg score-ved-berøring (P0) sammen → 5 tjek-ind
+    - **Pause (20)**
+    - **Blok 2 (30):** 15 nulstil (A) + nyt spil (B) → 5 hurtige starter level-up-stigen → 5 fremvisning → 5 Kahoot
 
-### ☕ Pause — 20 min
-Snacks og løbe rundt. Boards bliver på bordet.
-
-### Blok 2 — 30 min · Byg en mørke-alarm
-- 15 min — lav grafen om til en **alarm**: lyd + blink, når lyset falder under en grænse
-- 5 min — test den som en rigtig enhed — læg den i et skab eller en taske og åbn døren
-- 5 min — sammenlign grænseværdier: hvis alarm er mest pålidelig? hvorfor?
-- 5 min — 🎉 **Kahoot-quiz** — hele holdet sammen
-
-## ✅ Færdig når
-- Søjlediagrammet går op og ned, når lyset ændrer sig.
-- Knap **A** viser temperaturen i °C.
-
-## Sådan virker det
-
-`plot bar graph` tager en **værdi** og et **maksimum** og tegner forholdet hen over alle 25 LED'er. Lysniveau er 0–255, derfor er maksimum 255. Ændrer du maksimum, bliver grafen mere eller mindre følsom.
-
-## Ekstra udfordringer
-- Gem det højeste lysniveau, du har set, og vis det på knap B.
-- Lav en **mørke-alarm**: spil en lyd, når lyset falder under 50.
-- Tegn lydniveauet i stedet (V2-boards).
-
-## Hvis det ikke virker
-- Grafen altid fuld? Dit maksimum er for lavt — prøv 255.
-- Temperaturen ser for høj ud? Chippen varmer op; den måler boardet, ikke rummet.
-
-## Links & referencer
-- Officielle MakeCode-projekter: <https://makecode.microbit.org/projects>
-- micro:bit Foundations lektioner & videoer: <https://microbit.org/projects/make-it-code-it/>
-- Blok-reference (slå enhver blok op): <https://makecode.microbit.org/reference>
-
-!!! note "Tilføj dit eget link"
-    Fundet en god video eller et MakeCode-projekt til denne uge? Indsæt linket her
-    (og læg `.hex`-filen eller delelinket i ugens `code/`-mappe).
-
-## Noter
-_(plads til sessionsnoter)_
+    **Noter:** kun **P0/P1/P2** er touch-pads, så P2 fungerer også som "drain". Test i simulatoren ved at **klikke på pinsene**. `addPoints`/`loseBall` (④–⑥) er et blidt kig på **funktioner** (repeteres uge 7). Dette er **del 1** — flippere (servoer), lys (NeoPixels), plunger, highscore og multibold kommer senere.

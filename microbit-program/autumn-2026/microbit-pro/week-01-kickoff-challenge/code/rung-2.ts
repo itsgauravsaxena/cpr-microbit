@@ -1,13 +1,6 @@
-let score = 0
-input.onPinPressed(TouchPin.P0, function () {
-    score += 10
-    basic.showNumber(score)
-})
-input.onButtonPressed(Button.A, function () {
-    score = 0
-    basic.showNumber(0)
-})
-input.onButtonPressed(Button.B, function () {
-    score = 0
-    basic.showString("GO")
+basic.forever(function () {
+    basic.showIcon(IconNames.Heart)
+    basic.showIcon(IconNames.Duck)
+    basic.showIcon(IconNames.Ghost)
+    basic.showIcon(IconNames.Yes)
 })

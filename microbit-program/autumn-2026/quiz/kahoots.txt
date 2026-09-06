@@ -18,6 +18,7 @@
 # Until a line has a real https URL, that week's page shows "Kahoot coming soon".
 
 week-1  https://create.kahoot.it/my-library/kahoots/f2969aa8-1aa1-426a-98e6-779c4fe69659
+# week-2: import kahoot-import/week-02-da.xlsx (Danish; add images per week-02-da-images.md), then paste its link here:
 # week-2  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
 # week-3  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
 # week-4  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE

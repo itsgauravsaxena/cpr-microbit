@@ -1,5 +1,4 @@
-let score = 0
-input.onPinPressed(TouchPin.P0, function () {
-    score += 10
-    basic.showNumber(score)
+basic.forever(function () {
+    basic.showIcon(IconNames.Heart)
+    basic.showIcon(IconNames.SmallHeart)
 })

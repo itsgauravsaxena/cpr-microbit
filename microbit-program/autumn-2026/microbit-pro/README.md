@@ -2,7 +2,7 @@
 
 Ages 8-10 who already know MakeCode basics and want a bigger challenge. 1-hour sessions, physical micro:bits, **no 3D design — pure micro:bit coding**.
 
-Ten stand-alone advanced projects: real sensors and data, motion-controlled games, sound, multiplayer radio games, a pet with a memory, a musical instrument — and finally two weeks to invent and build your own gadget.
+This term's big build is a **pinball machine**: the Pro crew codes its brain (scoring, sensors, sound, lights) while another group 3D-prints the body. Week 1 is a shared refresh with the Beginners; the pinball build starts in Week 2. **Weeks 1–2 are ready now** — the rest are published as we get there.
 
 !!! info "Board versions"
     Week 4 (sound) uses the **micro:bit V2** microphone and speaker. On a V1 board, use a buzzer/headphone on pin 0 and skip the microphone part — everything else works on both.
@@ -29,16 +29,9 @@ Ten stand-alone advanced projects: real sensors and data, motion-controlled game
 
 | Week | Focus |
 |---|---|
-| [1](./week-01-kickoff-challenge/README.md) | Kickoff & code challenge |
-| [2](./week-02-data-sensors/README.md) | Data & sensors: live bar graph |
-| [3](./week-03-tilt-maze/README.md) | Motion: tilt maze |
-| [4](./week-04-sound-lab/README.md) | Sound lab (V2 mic & speaker) |
-| [5](./week-05-radio-duel/README.md) | Radio duel: 2-player reaction game |
-| [6](./week-06-radio-multiplayer/README.md) | Radio multiplayer: rock, paper, scissors |
-| [7](./week-07-digital-pet/README.md) | Digital pet (state & functions) |
-| [8](./week-08-motion-instrument/README.md) | Motion instrument (map a sensor) |
-| [9](./week-09-capstone-design/README.md) | Capstone: design your own gadget |
-| [10](./week-10-showcase/README.md) | Finish & showcase |
+| [1](./week-01-kickoff-challenge/README.md) | Flashing Heart (refresh — same as Beginners) |
+| [2](./week-02-data-sensors/README.md) | Pinball scoreboard (part 1) |
+| 3–10 | 🕓 Coming soon |
 
 ## Materials checklist
 - Micro:bits (**2 per pair** for the radio weeks 5-6) + USB cables or battery packs

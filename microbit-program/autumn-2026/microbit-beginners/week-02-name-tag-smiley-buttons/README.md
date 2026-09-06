@@ -1,98 +1,341 @@
-# Week 2 — Name Tag + Smiley Buttons
+# Week 2 — Button Faces 😀
 
-Press a button, change the mood! 😀 Button **A** shows a happy face, button **B** a sad one. Your micro:bit has feelings — and *you* are in charge of them.
+> Make your micro:bit pull faces! Press a button and it smiles, frowns or gets a surprise.
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
-<svg width="230" height="230" viewBox="0 0 196 196" role="img" aria-label="a micro:bit face switching happy and sad" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="196" height="196" rx="22" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
-<g fill="#2b3038"><rect x="17" y="17" width="26" height="26" rx="6"/><rect x="51" y="17" width="26" height="26" rx="6"/><rect x="85" y="17" width="26" height="26" rx="6"/><rect x="119" y="17" width="26" height="26" rx="6"/><rect x="153" y="17" width="26" height="26" rx="6"/><rect x="17" y="51" width="26" height="26" rx="6"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="85" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/><rect x="153" y="51" width="26" height="26" rx="6"/><rect x="17" y="85" width="26" height="26" rx="6"/><rect x="51" y="85" width="26" height="26" rx="6"/><rect x="85" y="85" width="26" height="26" rx="6"/><rect x="119" y="85" width="26" height="26" rx="6"/><rect x="153" y="85" width="26" height="26" rx="6"/><rect x="17" y="119" width="26" height="26" rx="6"/><rect x="51" y="119" width="26" height="26" rx="6"/><rect x="85" y="119" width="26" height="26" rx="6"/><rect x="119" y="119" width="26" height="26" rx="6"/><rect x="153" y="119" width="26" height="26" rx="6"/><rect x="17" y="153" width="26" height="26" rx="6"/><rect x="51" y="153" width="26" height="26" rx="6"/><rect x="85" y="153" width="26" height="26" rx="6"/><rect x="119" y="153" width="26" height="26" rx="6"/><rect x="153" y="153" width="26" height="26" rx="6"/></g>
-<g fill="#ff4d4d"><g><animate attributeName="opacity" calcMode="discrete" dur="1.0s" repeatCount="indefinite" keyTimes="0.0000;0.5000" values="1;0"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/><rect x="17" y="119" width="26" height="26" rx="6"/><rect x="153" y="119" width="26" height="26" rx="6"/><rect x="51" y="153" width="26" height="26" rx="6"/><rect x="85" y="153" width="26" height="26" rx="6"/><rect x="119" y="153" width="26" height="26" rx="6"/></g><g><animate attributeName="opacity" calcMode="discrete" dur="1.0s" repeatCount="indefinite" keyTimes="0.0000;0.5000" values="0;1"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/><rect x="51" y="119" width="26" height="26" rx="6"/><rect x="85" y="119" width="26" height="26" rx="6"/><rect x="119" y="119" width="26" height="26" rx="6"/><rect x="17" y="153" width="26" height="26" rx="6"/><rect x="153" y="153" width="26" height="26" rx="6"/></g></g>
+<svg width="220" height="220" viewBox="0 0 216 216" role="img" aria-label="a face changing happy, sad, surprised" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif">
+<rect x="0" y="0" width="216" height="216" rx="24" fill="#0f1419" stroke="#c8a24a" stroke-width="3"/>
+<rect x="17" y="17" width="30" height="30" rx="6" fill="#2b3038"/><rect x="53" y="17" width="30" height="30" rx="6" fill="#2b3038"/><rect x="89" y="17" width="30" height="30" rx="6" fill="#2b3038"/><rect x="125" y="17" width="30" height="30" rx="6" fill="#2b3038"/><rect x="161" y="17" width="30" height="30" rx="6" fill="#2b3038"/><rect x="17" y="53" width="30" height="30" rx="6" fill="#2b3038"/><rect x="53" y="53" width="30" height="30" rx="6" fill="#2b3038"/><rect x="89" y="53" width="30" height="30" rx="6" fill="#2b3038"/><rect x="125" y="53" width="30" height="30" rx="6" fill="#2b3038"/><rect x="161" y="53" width="30" height="30" rx="6" fill="#2b3038"/><rect x="17" y="89" width="30" height="30" rx="6" fill="#2b3038"/><rect x="53" y="89" width="30" height="30" rx="6" fill="#2b3038"/><rect x="89" y="89" width="30" height="30" rx="6" fill="#2b3038"/><rect x="125" y="89" width="30" height="30" rx="6" fill="#2b3038"/><rect x="161" y="89" width="30" height="30" rx="6" fill="#2b3038"/><rect x="17" y="125" width="30" height="30" rx="6" fill="#2b3038"/><rect x="53" y="125" width="30" height="30" rx="6" fill="#2b3038"/><rect x="89" y="125" width="30" height="30" rx="6" fill="#2b3038"/><rect x="125" y="125" width="30" height="30" rx="6" fill="#2b3038"/><rect x="161" y="125" width="30" height="30" rx="6" fill="#2b3038"/><rect x="17" y="161" width="30" height="30" rx="6" fill="#2b3038"/><rect x="53" y="161" width="30" height="30" rx="6" fill="#2b3038"/><rect x="89" y="161" width="30" height="30" rx="6" fill="#2b3038"/><rect x="125" y="161" width="30" height="30" rx="6" fill="#2b3038"/><rect x="161" y="161" width="30" height="30" rx="6" fill="#2b3038"/>
+<g fill="#ffd23f" opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="2.1s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="1;0;0"/><rect x="17" y="125" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="53" y="53" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="53" y="161" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="89" y="161" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="125" y="53" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="125" y="161" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="161" y="125" width="30" height="30" rx="6" fill="#ffd23f"/></g>
+<g fill="#ffd23f" opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="2.1s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="0;1;0"/><rect x="17" y="161" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="53" y="53" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="53" y="125" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="89" y="125" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="125" y="53" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="125" y="125" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="161" y="161" width="30" height="30" rx="6" fill="#ffd23f"/></g>
+<g fill="#ffd23f" opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="2.1s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="0;0;1"/><rect x="53" y="53" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="53" y="125" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="53" y="161" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="89" y="125" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="89" y="161" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="125" y="53" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="125" y="125" width="30" height="30" rx="6" fill="#ffd23f"/><rect x="125" y="161" width="30" height="30" rx="6" fill="#ffd23f"/></g>
 </svg>
 </div>
 
-**Goal:** buttons and display basics, two quick tutorials back to back.
+## 🎯 What we're making
 
-**Official tutorials:**
-- https://makecode.microbit.org/projects/name-tag
-- https://makecode.microbit.org/projects/smiley-buttons
+A face machine: **button A = happy** 😀, **button B = sad** 🙁. Then we add more faces, a shake surprise, your name and even Rock-Paper-Scissors!
 
-## Session plan (60 min + 20 min break + 30 min)
+## ▶️ Build it
 
-### Block 1 — 60 min
-- 5 min recap of week 1
-- 25 min — Name Tag tutorial
-- 25 min — Smiley Buttons tutorial
-- 5 min — share/test
+1. Open **[makecode.microbit.org](https://makecode.microbit.org)** → **New Project**.
+2. From **Input**, grab **`on button A pressed`**. Inside it, add **`show icon`** → pick 😀 **Happy**.
+3. Add **`on button B pressed`** with **`show icon`** → pick 🙁 **Sad**.
+4. Press **A** and **B** in the simulator — then 📥 **Download** to your micro:bit!
 
-### ☕ Break — 20 min
-Snacks and running around. Boards stay on the table.
+??? example "👀 The program — run it, or read the code"
 
-### Block 2 — 30 min · Mash the two together
-- 10 min — put both programs on one board: your name scrolls, **A** = happy, **B** = sad
-- 10 min — add a third face on **A+B** (both buttons at once) — pick a silly one
-- 5 min — swap boards with a partner and try each other's faces
-- 5 min — 🎉 **Kahoot quiz** — whole group together
+    === "Blocks & simulator"
 
-## Example code
+        ```makecode
+        auto
+        ```
 
-Run it right here, then click **Open & edit in MakeCode** to make your own version:
+    === "JavaScript"
 
-<!-- Paste this week's MakeCode share id below (Share -> Publish gives a link
-     like https://makecode.microbit.org/_abc123 -- paste the id or the whole
-     link). Until an id is added, this shows a "coming soon" note. -->
-```makecode
-auto
+        ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            basic.showIcon(IconNames.Sad)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            basic.show_icon(IconNames.SAD)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+
+## 🪜 Make it yours
+
+Keep going — each step adds a new trick. Tap **👀 Peek** to try it and see the code.
+
+**① Press both = love** 💗 — `on button A+B pressed` shows a heart.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-1
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            basic.showIcon(IconNames.Sad)
+        })
+        input.onButtonPressed(Button.AB, function () {
+            basic.showIcon(IconNames.Heart)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            basic.show_icon(IconNames.SAD)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+
+        def on_button_pressed_ab():
+            basic.show_icon(IconNames.HEART)
+        input.on_button_pressed(Button.AB, on_button_pressed_ab)
+        ```
+
+
+**② Shake for a surprise** 😲 — `on shake` shows a surprised face.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-2
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        input.onButtonPressed(Button.B, function () {
+            basic.showIcon(IconNames.Sad)
+        })
+        input.onGesture(Gesture.Shake, function () {
+            basic.showIcon(IconNames.Surprised)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            basic.show_icon(IconNames.SAD)
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+
+        def on_gesture_shake():
+            basic.show_icon(IconNames.SURPRISED)
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+
+**③ Random face** 🎲 — shake and get a *different* face each time.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-3
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onGesture(Gesture.Shake, function () {
+            let n = randint(0, 3)
+            if (n == 0) {
+                basic.showIcon(IconNames.Happy)
+            } else if (n == 1) {
+                basic.showIcon(IconNames.Sad)
+            } else if (n == 2) {
+                basic.showIcon(IconNames.Surprised)
+            } else {
+                basic.showIcon(IconNames.Silly)
+            }
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_gesture_shake():
+            n = randint(0, 3)
+            if n == 0:
+                basic.show_icon(IconNames.HAPPY)
+            elif n == 1:
+                basic.show_icon(IconNames.SAD)
+            elif n == 2:
+                basic.show_icon(IconNames.SURPRISED)
+            else:
+                basic.show_icon(IconNames.SILLY)
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+
+**④ Name badge** 🙋 — show your name when it starts up. *(Change MIA to your name!)*
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-4
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        basic.showString("HI MIA")
+        input.onButtonPressed(Button.A, function () {
+            basic.showIcon(IconNames.Happy)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        basic.show_string("HI MIA")
+        def on_button_pressed_a():
+            basic.show_icon(IconNames.HAPPY)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        ```
+
+
+**⑤ Draw your own picture** 🎨 — light up your own LEDs with `show leds`.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-5
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onButtonPressed(Button.A, function () {
+            basic.showLeds(`
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                `)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_button_pressed_a():
+            basic.show_leds("""
+                # . . . #
+                . # . # .
+                . . # . .
+                . # . # .
+                # . . . #
+                """)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        ```
+
+
+**⑥ 🏆 Boss — Rock, Paper, Scissors** ✊✋✌️ — shake to throw, then duel a friend!
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-6
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        input.onGesture(Gesture.Shake, function () {
+            let pick = randint(0, 2)
+            if (pick == 0) {
+                basic.showIcon(IconNames.Square)
+            } else if (pick == 1) {
+                basic.showLeds(`
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    `)
+            } else {
+                basic.showIcon(IconNames.Scissors)
+            }
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        def on_gesture_shake():
+            pick = randint(0, 2)
+            if pick == 0:
+                basic.show_icon(IconNames.SQUARE)
+            elif pick == 1:
+                basic.show_leds("""
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    # # # # #
+                    """)
+            else:
+                basic.show_icon(IconNames.SCISSORS)
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+        ```
+
+
+**Reached the top?** Invent your own face or button trick and teach a friend! ✨
+
+## ✅ I did it when…
+
+- ☐ Button **A** shows a happy face and **B** a sad face on the real board.
+- ☐ I added a **shake** surprise.
+- ☐ *(Legend!)* I built Rock-Paper-Scissors — or my own trick.
+
+## 🎉 Kahoot time!
+
+Let's finish with a quiz — everyone together!
+
+```kahoot
+week-2
 ```
 
-<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
-<svg viewBox="0 0 580 113" width="100%" style="max-width:580px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
-<rect x="30" y="20" width="250" height="32" rx="14" fill="#9857c9"/>
-<rect x="40" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button A pressed</text>
-<rect x="30" y="55" width="250" height="32" rx="7" fill="#2a7fff"/>
-<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show icon (happy)</text>
-<rect x="310" y="20" width="250" height="32" rx="14" fill="#9857c9"/>
-<rect x="320" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="324" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button B pressed</text>
-<rect x="310" y="55" width="250" height="32" rx="7" fill="#2a7fff"/>
-<text x="324" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show icon (sad)</text>
-</svg>
-</div>
+---
 
-```javascript
-input.onButtonPressed(Button.A, function () {
-    basic.showIcon(IconNames.Happy)
-})
-input.onButtonPressed(Button.B, function () {
-    basic.showIcon(IconNames.Sad)
-})
-```
+??? note "👩‍🏫 For helpers — session plan, materials & notes"
 
-**Name Tag** (scrolls your name):
+    **Goal:** build on Week 1's `show icon` — add **buttons** (A/B/A+B) and the **shake** gesture, plus a first taste of **randomness**.
 
-```javascript
-basic.forever(function () {
-    basic.showString("ALEX")
-})
-```
+    **Materials**
 
-!!! tip "▶️ Try it in MakeCode (30 seconds)"
-    1. Open <https://makecode.microbit.org> → **New Project**
-    2. Click the **`{ } JavaScript`** button at the top
-    3. Select everything in the editor and **delete it**, then **paste the code above**
-    4. Click **Blocks** to switch back — the real blocks appear, ready to explore
-    5. **Download** to put it on a board, or press ▶️ to run it in the simulator
+    - 1 micro:bit + USB cable per kid
+    - Laptop/Chromebook with makecode.microbit.org open
 
-    Kids can do exactly the same to get started, then change things and make it theirs.
+    **Session plan (60 + 20 break + 30)**
 
+    - **Block 1 (60):** 5 recap Week 1 → 25 build A=happy / B=sad together → 15 download to board → 15 rungs ①–② (A+B heart, shake surprise)
+    - **Break (20)**
+    - **Block 2 (30):** 20 climb rungs ③–⑥ (random face, name badge, draw, RPS) → 5 showcase → 5 Kahoot
 
-## ✅ Done when
-- Button **A** shows a happy face, **B** shows a sad face.
-- The Name Tag program scrolls your name across the LEDs.
-
-## Notes
-_(space for session notes)_
-
-## Reference
-- Both tutorials live under makecode.microbit.org/projects — same tutorial UI as week 1
-
+    **Notes:** everyone gets A/B faces working first; the ladder is self-paced. Rung ③ is a gentle intro to **pick random**; rung ⑥ (RPS) is a fun pair game.

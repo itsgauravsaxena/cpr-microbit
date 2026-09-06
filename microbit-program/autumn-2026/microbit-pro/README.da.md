@@ -1,8 +1,8 @@
 # micro:bit Pro
 
-8-10-årige, der allerede kan det grundlæggende i MakeCode og vil have en større udfordring. Sessioner på 1 time, fysiske micro:bits, **intet 3D-design — ren micro:bit-kodning**.
+8-10-årige, der allerede kan det grundlæggende i MakeCode og vil have en større udfordring. Sessioner på 1 time, fysiske micro:bits, **vi koder hjernen; en anden gruppe 3D-printer kroppen**.
 
-Ti selvstændige avancerede projekter: rigtige sensorer og data, bevægelsesstyrede spil, lyd, multiplayer-radiospil, et kæledyr med hukommelse, et musikinstrument — og til sidst to uger til selv at opfinde og bygge en gadget.
+Semesterets store byg er en **flippermaskine**: Pro-holdet koder dens hjerne (score, sensorer, lyd, lys), mens en anden gruppe 3D-printer kroppen. Uge 1 er en fælles genopfriskning med begynderne; flipperbyggeriet starter i uge 2. **Uge 1–2 er klar nu** — resten kommer, efterhånden som vi når dertil.
 
 !!! info "Board-versioner"
     Uge 4 (lyd) bruger **micro:bit V2**-mikrofonen og -højttaleren. På et V1-board bruges en buzzer/hovedtelefon på pin 0, og mikrofon-delen springes over — alt andet virker på begge.
@@ -29,16 +29,9 @@ Ti selvstændige avancerede projekter: rigtige sensorer og data, bevægelsesstyr
 
 | Uge | Fokus |
 |---|---|
-| [1](./week-01-kickoff-challenge/README.md) | Kickoff & kodeudfordring |
-| [2](./week-02-data-sensors/README.md) | Data & sensorer: live søjlediagram |
-| [3](./week-03-tilt-maze/README.md) | Bevægelse: vippelabyrint |
-| [4](./week-04-sound-lab/README.md) | Lydlab (V2 mikrofon & højttaler) |
-| [5](./week-05-radio-duel/README.md) | Radioduel: reaktionsspil for 2 |
-| [6](./week-06-radio-multiplayer/README.md) | Radio-multiplayer: sten, saks, papir |
-| [7](./week-07-digital-pet/README.md) | Digitalt kæledyr (tilstand & funktioner) |
-| [8](./week-08-motion-instrument/README.md) | Bevægelsesinstrument (map en sensor) |
-| [9](./week-09-capstone-design/README.md) | Afgangsprojekt: design din egen gadget |
-| [10](./week-10-showcase/README.md) | Færdiggør & fremvisning |
+| [1](./week-01-kickoff-challenge/README.md) | Flashing Heart (genopfriskning — samme som begynderne) |
+| [2](./week-02-data-sensors/README.md) | Flipper-scoreboard (del 1) |
+| 3–10 | 🕓 Kommer snart |
 
 ## Tjekliste over materialer
 - Micro:bits (**2 pr. par** i radiougerne 5-6) + USB-kabler eller batteripakker

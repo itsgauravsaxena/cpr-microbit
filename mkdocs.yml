@@ -50,6 +50,11 @@ exclude_docs: |
   # the public site. Source stays in the repo; the Kahoot hook reads
   # quiz/kahoots.txt from source, not the built site.
   autumn-2026/quiz/
+  # Only Weeks 1–2 are live for now — hide Weeks 3–10 until we get there.
+  autumn-2026/microbit-beginners/week-0[3-9]*/
+  autumn-2026/microbit-beginners/week-10*/
+  autumn-2026/microbit-pro/week-0[3-9]*/
+  autumn-2026/microbit-pro/week-10*/
 
 # Retired pinball course: hidden from the nav tree but still built and
 # reachable via the "Archive" link on the autumn-2026 overview page.
@@ -104,25 +109,10 @@ nav:
       - "micro:bit Beginners":
           - Overview: autumn-2026/microbit-beginners/README.md
           - "Week 1 · Flashing Heart": autumn-2026/microbit-beginners/week-01-flashing-heart/README.md
-          - "Week 2 · Name Tag + Smiley Buttons": autumn-2026/microbit-beginners/week-02-name-tag-smiley-buttons/README.md
-          - "Week 3 · Dice + Love Meter": autumn-2026/microbit-beginners/week-03-dice-love-meter/README.md
-          - "Week 4 · Guess! + Reaction Time": autumn-2026/microbit-beginners/week-04-guess-reaction-time/README.md
-          - "Week 5 · Ticklebot build & wire": autumn-2026/microbit-beginners/week-05-ticklebot-build-wire/README.md
-          - "Week 6 · Ticklebot finish & personalize": autumn-2026/microbit-beginners/week-06-ticklebot-finish-personalize/README.md
-          - "Week 7 · Micro Chat": autumn-2026/microbit-beginners/week-07-micro-chat/README.md
-          - "Week 8 · Heartbeat Beacon": autumn-2026/microbit-beginners/week-08-heartbeat-beacon/README.md
-          - "Week 9 · Step Counter + Coin Toss": autumn-2026/microbit-beginners/week-09-step-counter-coin-toss/README.md
-          - "Week 10 · Showcase": autumn-2026/microbit-beginners/week-10-showcase/README.md
+          - "Week 2 · Button Faces": autumn-2026/microbit-beginners/week-02-name-tag-smiley-buttons/README.md
       - "micro:bit Pro":
           - Overview: autumn-2026/microbit-pro/README.md
-          - "Week 1 · Pinball scoreboard": autumn-2026/microbit-pro/week-01-kickoff-challenge/README.md
-          - "Week 2 · Data & sensors": autumn-2026/microbit-pro/week-02-data-sensors/README.md
-          - "Week 3 · Tilt maze": autumn-2026/microbit-pro/week-03-tilt-maze/README.md
-          - "Week 4 · Sound lab": autumn-2026/microbit-pro/week-04-sound-lab/README.md
-          - "Week 5 · Radio duel": autumn-2026/microbit-pro/week-05-radio-duel/README.md
-          - "Week 6 · Radio multiplayer": autumn-2026/microbit-pro/week-06-radio-multiplayer/README.md
-          - "Week 7 · Digital pet": autumn-2026/microbit-pro/week-07-digital-pet/README.md
-          - "Week 8 · Motion instrument": autumn-2026/microbit-pro/week-08-motion-instrument/README.md
-          - "Week 9 · Capstone design": autumn-2026/microbit-pro/week-09-capstone-design/README.md
-          - "Week 10 · Finish & showcase": autumn-2026/microbit-pro/week-10-showcase/README.md
+          - "🎯 The pinball project": autumn-2026/pinball/README.md
+          - "Week 1 · Flashing Heart": autumn-2026/microbit-pro/week-01-kickoff-challenge/README.md
+          - "Week 2 · Pinball scoreboard": autumn-2026/microbit-pro/week-02-data-sensors/README.md
   - Spring 2027: spring-2027/README.md

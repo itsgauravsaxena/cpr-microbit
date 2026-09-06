@@ -1,110 +1,550 @@
-# Week 2 — Data & sensors: live bar graph
+# Week 2 — Pinball scoreboard 🎯 (part 1)
 
-> 📊 Your micro:bit can *feel* the room — light, temperature, sound. Today you turn those numbers into a **live graph** on the LEDs.
-
-**Goal:** read real sensor values and visualise them with `plot bar graph`.
+> This term the Pro crew builds the **brain of a pinball machine** — a little each week. We kick off the build: a quick revision, then the very first piece — a **score that goes up when you hit a target**.
 
 <div style="text-align:center;margin:1.25rem 0;" markdown="0">
-<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="a live bar graph rising and falling" xmlns="http://www.w3.org/2000/svg">
+<svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="the guessing game counting" xmlns="http://www.w3.org/2000/svg">
 <rect x="0" y="0" width="162" height="162" rx="20" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
-<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="1;0;0;0;0"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="0;1;0;0;0"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="0;0;1;0;0"/><rect x="14" y="70" width="22" height="22" rx="5"/><rect x="42" y="70" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="126" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="0;0;0;1;0"/><rect x="14" y="42" width="22" height="22" rx="5"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="70" y="42" width="22" height="22" rx="5"/><rect x="98" y="42" width="22" height="22" rx="5"/><rect x="126" y="42" width="22" height="22" rx="5"/><rect x="14" y="70" width="22" height="22" rx="5"/><rect x="42" y="70" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="126" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.6s" repeatCount="indefinite" keyTimes="0.0000;0.2000;0.4000;0.6000;0.8000" values="0;0;0;0;1"/><rect x="14" y="70" width="22" height="22" rx="5"/><rect x="42" y="70" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="126" y="70" width="22" height="22" rx="5"/><rect x="14" y="98" width="22" height="22" rx="5"/><rect x="42" y="98" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="98" y="98" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/><rect x="126" y="126" width="22" height="22" rx="5"/></g></g>
+<rect x="14" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="14" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="42" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="70" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="98" width="22" height="22" rx="5" fill="#2b3038"/><rect x="14" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="42" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="70" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="98" y="126" width="22" height="22" rx="5" fill="#2b3038"/><rect x="126" y="126" width="22" height="22" rx="5" fill="#2b3038"/><g fill="#ff4d4d"><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="1;0;0"/><rect x="14" y="14" width="22" height="22" rx="5"/><rect x="42" y="14" width="22" height="22" rx="5"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="98" y="14" width="22" height="22" rx="5"/><rect x="126" y="14" width="22" height="22" rx="5"/><rect x="126" y="42" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="0;1;0"/><rect x="14" y="14" width="22" height="22" rx="5"/><rect x="42" y="14" width="22" height="22" rx="5"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="98" y="14" width="22" height="22" rx="5"/><rect x="126" y="42" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="98" y="70" width="22" height="22" rx="5"/><rect x="126" y="98" width="22" height="22" rx="5"/><rect x="14" y="126" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/></g><g opacity="0"><animate attributeName="opacity" calcMode="discrete" dur="1.8s" repeatCount="indefinite" keyTimes="0.0000;0.3333;0.6667" values="0;0;1"/><rect x="70" y="14" width="22" height="22" rx="5"/><rect x="42" y="42" width="22" height="22" rx="5"/><rect x="70" y="42" width="22" height="22" rx="5"/><rect x="70" y="70" width="22" height="22" rx="5"/><rect x="70" y="98" width="22" height="22" rx="5"/><rect x="42" y="126" width="22" height="22" rx="5"/><rect x="70" y="126" width="22" height="22" rx="5"/><rect x="98" y="126" width="22" height="22" rx="5"/></g></g>
 </svg>
 </div>
 
-## What you’ll build
+!!! info "🎯 New to the pinball project?"
+    See **[The pinball project](../../pinball/README.md)** for the big picture — the parts of a pinball, how the micro:bit runs each one, and where the build is headed.
 
-A light meter that draws a bar graph, plus a button to switch to temperature.
+## 🎯 What we're making today
 
-## Example code
+The **start** of our pinball scoreboard: touch a target and your **score** goes up — plus a **reset** and a **new game** button. That's the goal for today. Finished early? There's an optional **level-up** ladder that turns it into a real little machine.
 
-Run it right here, then click **Open & edit in MakeCode** to make your own version:
+*(The 3D-printed pinball body is the other group's job — we build the code.)*
 
-<!-- Paste this week's MakeCode share id below (Share -> Publish gives a link
-     like https://makecode.microbit.org/_abc123 -- paste the id or the whole
-     link). Until an id is added, this shows a "coming soon" note. -->
-```makecode
-auto
+## 🔁 Warm-up — quick revision
+
+A 30-second refresher: a **click counter**. Press **A** and a number goes up. That number is a **variable** — exactly how a score works.
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:warmup
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let count = 0
+        input.onButtonPressed(Button.A, function () {
+            count += 1
+            basic.showNumber(count)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        count = 0
+        def on_button_pressed_a():
+            global count
+            count += 1
+            basic.show_number(count)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        ```
+
+## ▶️ Build it — score on touch
+
+Make touching **P0** add points and show the score.
+
+1. Make a **variable** called `score` (starts at 0).
+2. From **Input**, use **`on pin P0 pressed`**.
+3. Inside it: **change `score` by 10**, then **show number `score`**.
+
+Click **P0** in the sim (or touch the real pin) — watch it climb! 🔢
+
+??? example "👀 Run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        input.onPinPressed(TouchPin.P0, function () {
+            score += 10
+            basic.showNumber(score)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def on_pin_pressed_p0():
+            global score
+            score += 10
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+        ```
+
+## 🪜 Make it playable (today's goal)
+
+Two small steps and you've got a real mini-game.
+
+**① Reset** ♻️ — press **A** to set the score back to 0.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-1
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        input.onPinPressed(TouchPin.P0, function () {
+            score += 10
+            basic.showNumber(score)
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def on_pin_pressed_p0():
+            global score
+            score += 10
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+        ```
+
+**② New game** 🆕 — press **B** to reset and flash **GO**.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-2
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        input.onPinPressed(TouchPin.P0, function () {
+            score += 10
+            basic.showNumber(score)
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def on_pin_pressed_p0():
+            global score
+            score += 10
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score
+            score = 0
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+## 🕹️ Level up toward the real machine *(optional)*
+
+Finished the goal? Keep going — each step adds a real pinball feature. By the end you have a little machine you can actually play.
+
+**③ Second target** 🎯 — wire a metal to **P1**, worth **50**.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-3
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        input.onPinPressed(TouchPin.P0, function () {
+            score += 10
+            basic.showNumber(score)
+        })
+        input.onPinPressed(TouchPin.P1, function () {
+            score += 50
+            basic.showNumber(score)
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def on_pin_pressed_p0():
+            global score
+            score += 10
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_pin_pressed_p1():
+            global score
+            score += 50
+            basic.show_number(score)
+        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score
+            score = 0
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+**④ Ding on a hit** 🔊 — play a short beep each time you score. We tidy the scoring into one **function** so the sound lives in a single place. *(Needs a micro:bit **V2** speaker, or a buzzer.)*
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-4
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        function addPoints (points: number) {
+            score += points
+            music.playTone(988, 100)
+            basic.showNumber(score)
+        }
+        input.onPinPressed(TouchPin.P0, function () {
+            addPoints(10)
+        })
+        input.onPinPressed(TouchPin.P1, function () {
+            addPoints(50)
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        def add_points(points: number):
+            global score
+            score += points
+            music.play_tone(988, 100)
+            basic.show_number(score)
+
+        def on_pin_pressed_p0():
+            add_points(10)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_pin_pressed_p1():
+            add_points(50)
+        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score
+            score = 0
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+**⑤ 3 balls & game over** 🎱 — a **drain** target (**P2**) costs you a ball; at **0** it shows **OVER** and your final score. **B** gives you 3 fresh balls.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-5
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        let balls = 3
+        function addPoints (points: number) {
+            score += points
+            music.playTone(988, 100)
+            basic.showNumber(score)
+        }
+        input.onPinPressed(TouchPin.P0, function () {
+            addPoints(10)
+        })
+        input.onPinPressed(TouchPin.P1, function () {
+            addPoints(50)
+        })
+        input.onPinPressed(TouchPin.P2, function () {
+            balls += -1
+            if (balls <= 0) {
+                basic.showString("OVER")
+                basic.showNumber(score)
+            } else {
+                basic.showString("BALL")
+                basic.showNumber(balls)
+            }
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            balls = 3
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        balls = 3
+        def add_points(points: number):
+            global score
+            score += points
+            music.play_tone(988, 100)
+            basic.show_number(score)
+
+        def on_pin_pressed_p0():
+            add_points(10)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_pin_pressed_p1():
+            add_points(50)
+        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
+        def on_pin_pressed_p2():
+            global balls
+            balls += -1
+            if balls <= 0:
+                basic.show_string("OVER")
+                basic.show_number(score)
+            else:
+                basic.show_string("BALL")
+                basic.show_number(balls)
+        input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p2)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score, balls
+            score = 0
+            balls = 3
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+**⑥ 🏆 Boss — TILT!** — shake it too hard and you **lose a ball**. Now it's a real little machine: two targets, a ding, three balls, a drain, TILT, reset and new game.
+
+??? example "👀 Peek — run it, or read the code"
+
+    === "Blocks & simulator"
+
+        ```makecode
+        auto:rung-6
+        ```
+
+    === "JavaScript"
+
+        ```javascript
+        let score = 0
+        let balls = 3
+        function addPoints (points: number) {
+            score += points
+            music.playTone(988, 100)
+            basic.showNumber(score)
+        }
+        function loseBall () {
+            balls += -1
+            if (balls <= 0) {
+                basic.showString("OVER")
+                basic.showNumber(score)
+            } else {
+                basic.showString("BALL")
+                basic.showNumber(balls)
+            }
+        }
+        input.onPinPressed(TouchPin.P0, function () {
+            addPoints(10)
+        })
+        input.onPinPressed(TouchPin.P1, function () {
+            addPoints(50)
+        })
+        input.onPinPressed(TouchPin.P2, function () {
+            loseBall()
+        })
+        input.onGesture(Gesture.Shake, function () {
+            basic.showString("TILT")
+            loseBall()
+        })
+        input.onButtonPressed(Button.A, function () {
+            score = 0
+            basic.showNumber(0)
+        })
+        input.onButtonPressed(Button.B, function () {
+            score = 0
+            balls = 3
+            basic.showString("GO")
+        })
+        ```
+
+    === "Python"
+
+        ```python
+        score = 0
+        balls = 3
+        def add_points(points: number):
+            global score
+            score += points
+            music.play_tone(988, 100)
+            basic.show_number(score)
+
+        def lose_ball():
+            global balls
+            balls += -1
+            if balls <= 0:
+                basic.show_string("OVER")
+                basic.show_number(score)
+            else:
+                basic.show_string("BALL")
+                basic.show_number(balls)
+
+        def on_pin_pressed_p0():
+            add_points(10)
+        input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+        def on_pin_pressed_p1():
+            add_points(50)
+        input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
+
+        def on_pin_pressed_p2():
+            lose_ball()
+        input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p2)
+
+        def on_gesture_shake():
+            basic.show_string("TILT")
+            lose_ball()
+        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
+
+        def on_button_pressed_a():
+            global score
+            score = 0
+            basic.show_number(0)
+        input.on_button_pressed(Button.A, on_button_pressed_a)
+
+        def on_button_pressed_b():
+            global score, balls
+            score = 0
+            balls = 3
+            basic.show_string("GO")
+        input.on_button_pressed(Button.B, on_button_pressed_b)
+        ```
+
+## ✅ I did it when…
+
+- ☐ Touching **P0** makes the **score** go up on screen.
+- ☐ **A** resets, and **B** starts a new game.
+- ☐ *(Level up!)* A second target, a **ding**, **3 balls** and **TILT** all work.
+
+## 🎉 Kahoot time!
+
+Finish with this week's quiz — **both groups play together**.
+
+```kahoot
+week-2
 ```
 
-<div style="text-align:center;overflow-x:auto;margin:1rem 0;" markdown="0">
-<svg viewBox="0 0 604 148" width="100%" style="max-width:604px;height:auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MakeCode blocks">
-<rect x="30" y="20" width="262" height="32" rx="14" fill="#14a3a3"/>
-<rect x="40" y="15" width="34" height="12" rx="6" fill="#14a3a3"/>
-<text x="44" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">forever</text>
-<rect x="30" y="55" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="44" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">plot bar graph of (light level) up to 255</text>
-<rect x="322" y="20" width="262" height="32" rx="14" fill="#9857c9"/>
-<rect x="332" y="15" width="34" height="12" rx="6" fill="#9857c9"/>
-<text x="336" y="40.0" font-size="13" fill="#fff" font-weight="700" font-family="system-ui,Segoe UI,sans-serif">on button A pressed</text>
-<rect x="322" y="55" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="336" y="75.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">show number (temperature)</text>
-<rect x="322" y="90" width="262" height="32" rx="7" fill="#2a7fff"/>
-<text x="336" y="110.0" font-size="13" fill="#fff"  font-family="system-ui,Segoe UI,sans-serif">pause 1000 ms</text>
-</svg>
-</div>
+---
 
-```javascript
-basic.forever(function () {
-    led.plotBarGraph(input.lightLevel(), 255)
-})
-input.onButtonPressed(Button.A, function () {
-    basic.showNumber(input.temperature())
-    basic.pause(1000)
-})
-```
+??? note "👩‍🏫 For helpers — session plan, materials & notes"
 
-!!! tip "▶️ Try it in MakeCode (30 seconds)"
-    1. Open <https://makecode.microbit.org> → **New Project**
-    2. Click the **`{ } JavaScript`** button at the top
-    3. Select everything in the editor and **delete it**, then **paste the code above**
-    4. Click **Blocks** to switch back — the real blocks appear, ready to explore
-    5. **Download** to put it on a board, or press ▶️ to run it in the simulator
+    **Goal (today):** revise variables + buttons, then build **score-on-touch** with reset and new game. That's the class target. Rungs ③–⑥ are optional stretch for fast finishers and a preview of the coming weeks — don't feel you must reach them today.
 
-    Kids can do exactly the same to get started, then change things and make it theirs.
+    **Materials**
 
+    - micro:bit (**V2** recommended — capacitive touch on P0/P1/P2 **and** the built-in speaker for the ding) + USB
+    - **Keyestudio micro:bit sensor shield**, crocodile-clip / jumper wires, a few metal targets (foil, coins)
+    - Laptop/Chromebook — the **simulator is enough** to build & test (click the pins)
+    - *(V1 works for scoring — the metal must complete a circuit to **GND**; the ding needs a buzzer.)*
 
-## Session plan (60 min + 20 min break + 30 min)
+    **Session plan (60 + 20 break + 30)**
 
-### Block 1 — 60 min
-- 5 min — recap: what sensors does a micro:bit have?
-- 20 min — build the light bar graph, cover the board with your hand and watch it drop
-- 20 min — add the temperature button; try warming the board with your fingers
-- 15 min — experiment: whose bar graph reacts fastest? why?
+    - **Block 1 (60):** 5 project intro + the feature map → 15 revision click counter → 10 wire up / how pin-touch works → 25 build score-on-touch (P0) together → 5 checkpoint
+    - **Break (20)**
+    - **Block 2 (30):** 15 reset (A) + new game (B) → 5 fast finishers start the level-up ladder → 5 showcase → 5 Kahoot
 
-### ☕ Break — 20 min
-Snacks and running around. Boards stay on the table.
-
-### Block 2 — 30 min · Build a darkness alarm
-- 15 min — turn the graph into an **alarm**: sound + flashing when the light drops below a threshold
-- 5 min — test it as a real device — put it in a cupboard or a bag and open the door
-- 5 min — compare thresholds: whose alarm is the most reliable? why?
-- 5 min — 🎉 **Kahoot quiz** — whole group together
-
-## ✅ Done when
-- The bar graph goes up and down as the light changes.
-- Button **A** shows the temperature in °C.
-
-## How it works
-
-`plot bar graph` takes a **value** and a **maximum** and draws the ratio across all 25 LEDs. Light level is 0–255, which is why the maximum is 255. Change the maximum and the graph gets more or less sensitive.
-
-## Extra challenges
-- Log the highest light level you've seen and show it on button B.
-- Make a **darkness alarm**: play a sound when the light drops below 50.
-- Graph the sound level instead (V2 boards).
-
-## If it doesn’t work
-- Graph always full? Your maximum is too low — try 255.
-- Temperature looks too high? The chip warms up; it reads the board, not the room.
-
-## Links & references
-- Official MakeCode projects: <https://makecode.microbit.org/projects>
-- micro:bit Foundation lessons & videos: <https://microbit.org/projects/make-it-code-it/>
-- Block reference (look up any block): <https://makecode.microbit.org/reference>
-
-!!! note "Add your own link"
-    Found a good video or a MakeCode project for this week? Paste the link here
-    (and drop the `.hex` or share link into this week's `code/` folder).
-
-## Notes
-_(space for session notes)_
+    **Notes:** only **P0/P1/P2** are touch pads, so P2 doubles as the "drain". Test in the sim by **clicking the pins**. `addPoints`/`loseBall` (④–⑥) are a gentle intro to **functions** (revisited Week 7). This is **part 1** — flippers (servos), lights (NeoPixels), plunger, high score and multiball come later.

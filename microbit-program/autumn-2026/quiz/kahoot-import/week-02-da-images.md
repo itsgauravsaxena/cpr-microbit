@@ -1,26 +1,25 @@
-# Uge 2 Kahoot — billed-huskeseddel (dansk)
+# Uge 2 Kahoot — huskeseddel (dansk)
 
 Kahoot-import kan **ikke** indeholde billeder — importér `week-02-da.xlsx` for teksten,
 og tilføj så et billede pr. spørgsmål i Kahoot-editoren (brug Kahoots indbyggede billedsøgning).
-**Vigtigt:** det rigtige svar er altid **Svar 1** i arket — husk at **bland/shuffle** svarene i Kahoot.
+Det rigtige svar står i **forskellige positioner** (ikke altid A), og ingen spørgsmål gentager uge 1.
 
 | # | Spørgsmål | ✅ Rigtigt svar | Billede-idé |
 |---|---|---|---|
-| 1 | Hvor mange lys (LED) er der på micro:bit'ens forside? | 25 | Foto af en micro:bit forfra (LED-gitteret) |
-| 2 | Hvad hedder de to knapper på micro:bit'en? | A og B | Nærbillede af knap A og B |
-| 3 | Hvilken blok gentager koden HELE tiden, igen og igen? | forever | Skærmklip af 'forever'-blokken (blå/grøn løkke) |
-| 4 | Hvilken blok bruger du til at vise et hjerte? | show icon | 'show icon'-blokken med et hjerte |
-| 5 | Hvad gør blokken 'pause (ms)'? | Venter et lille øjeblik | Timeglas eller stopur ⏳ |
-| 6 | Hvor koder man til micro:bit'en? | makecode.microbit.org | Skærmklip af MakeCode-editoren |
-| 7 | Hvordan får du dit program over på det rigtige board? | Download .hex og træk til MICROBIT | micro:bit i USB / MICROBIT-drevet på skærmen |
-| 8 | Hvilken blok viser bogstaver og ord? | show string | 'show string'-blok der viser et navn |
-| 9 | Hjertet skal banke HURTIGERE. Hvad gør du? | Gør pausen kortere | To hjerter + en fart-pil ⚡ |
-| 10 | Hvilket ikon er det MINDSTE hjerte? | Small heart | Lille hjerte ved siden af stort hjerte |
-| 11 | 🎮 Hvilket spil handler om at bygge med firkantede klodser? | Minecraft | Minecraft-klodser (søg 'Minecraft' i Kahoot) |
-| 12 | 🎉 Hvad råber alle efter 'six...'? | seven! | Tekst '6 7' stort på skærmen |
-| 13 | 🕹️ Hvor laver man 'obbys' og sine egne mini-spil? | Roblox | Roblox-figur (søg 'Roblox') |
-| 14 | 😹 Hvad er en 'meme'? | Et sjovt billede/video man deler | En sjov emoji/meme-collage 😂 |
-| 15 | 📱 'Skibidi' blev kæmpestort på hvilke apps? | YouTube og TikTok | YouTube + TikTok logoer |
+| 1 | Hvilken blok gentager koden igen og igen for evigt? | forever | Skærmklip af 'forever'-løkken |
+| 2 | Hvilken blok viser et lille billede som et hjerte eller et ansigt? | show icon | 'show icon'-blok med et hjerte |
+| 3 | Hvad gør blokken 'pause (ms)'? | Får programmet til at vente lidt | Timeglas ⏳ |
+| 4 | Hvilken blok viser bogstaver og ord? | show string | 'show string'-blok med et navn |
+| 5 | Hvad hedder det gratis website, hvor vi bygger koden? | MakeCode | MakeCode-editorens forside |
+| 6 | Hvad sker der, når du trykker på ▶️-knappen i MakeCode? | Programmet kører i simulatoren | ▶️ play + simulatoren |
+| 7 | Hvilken blok kører, når du trykker på knap A? | on button A pressed | Nærbillede af knap A |
+| 8 | Hvad gør blokken 'show leds'? | Tænder præcis de lys, du vælger | LED-tegning (fx en smiley) |
+| 9 | Hvordan laver man et hjerte, der 'banker'? | Skift mellem stort og lille hjerte | Stort + lille hjerte |
+| 10 | Hvilken bevægelse kan micro:bit'en mærke helt af sig selv? | Rystelse (shake) | Hånd der ryster en micro:bit |
+| 11 | 🎮 I hvilket spil bygger man næsten alt med firkantede klodser? | Minecraft | Minecraft-klodser |
+| 12 | 🎉 Hvilket tal kommer efter 'six...' i den kendte trend? | seven | Stort '6 7' på skærmen |
+| 13 | 🕹️ Hvor laver folk deres egne spil og 'obbys'? | Roblox | Roblox-figur |
+| 14 | 😹 Hvad kalder man et sjovt billede eller klip, der spredes på nettet? | En meme | Sjov meme-collage 😂 |
+| 15 | 📱 'Skibidi' blev mega-populært især på hvilke apps? | YouTube og TikTok | YouTube + TikTok logoer |
 
-**Blanding:** ~10 micro:bit-spørgsmål (uge 1) + 5 sjove trend-spørgsmål (spil/memes/6 7).
-Tilpas gerne trend-spørgsmålene til det, børnene taler om lige nu.
+**Blanding:** 10 micro:bit-spørgsmål (uge 1-emner, nye vinkler) + 5 sjove trend-spørgsmål.

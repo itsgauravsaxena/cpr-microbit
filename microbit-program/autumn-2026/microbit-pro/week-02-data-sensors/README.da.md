@@ -71,6 +71,9 @@ Få det til at give point at røre **P0** og vise scoren.
 
 Klik på **P0** i simulatoren (eller rør den rigtige pin) — se den stige! 🔢
 
+!!! tip "🔌 På det rigtige board — brug shieldet"
+    Sæt din micro:bit i **Keyestudio sensor-shieldet**, så hver pin bliver et nemt stik, og klips en ledning fra metalmålet til **P0** og en til **GND**. *(Uden shieldet kan I kun nå de store **P0/P1/P2**-pads.)* Hele guiden: **[Mød udstyret](../../gear/README.md#at-forbinde-et-berringsmal-til-vores-flipper)**.
+
 ??? example "👀 Kør det, eller læs koden"
 
     === "Blokke"
@@ -537,7 +540,7 @@ Byg det op **ét lille trin ad gangen** — hvert trin tilføjer kun lidt. 🌱
 *🎓 Begreb: **digitalt input** + **løkker** (`for altid`) + **tilstand**.*
 
 !!! tip "Hvilken pin? P0 nu, ledige pins senere"
-    Vi øver på **P0**, fordi I kan **trykke på den i simulatoren**. På det rigtige bord bliver jeres touch-mål på P0–P2, og hver *ekstra* kontakt kommer på en ledig pin (**P8, P9, …**) — læst med **præcis de samme klodser**, bare et andet pin-nummer.
+    Vi øver på **P0**, fordi I kan **trykke på den i simulatoren**. På det rigtige bord bliver jeres touch-mål på P0–P2, og hver *ekstra* kontakt kommer på en ledig pin (**P8, P9, …**) — læst med **præcis de samme klodser**, bare et andet pin-nummer. **Keyestudio-shieldet** giver hver pin sit eget stik — sådan når I **P8/P9** (en bar micro:bit kan kun klipse på P0/P1/P2).
 
 **① Læs en kontakt** 🔌 — hele idéen i tre klodser: **`sæt pull pin P0 op`**, og så en **`for altid`**-løkke, der viser et ✓, mens kontakten er sluttet (**`digital læs pin P0` = 0**), og rydder skærmen ellers. Tryk på **P0** i simulatoren — ✓ til, ✓ fra.
 

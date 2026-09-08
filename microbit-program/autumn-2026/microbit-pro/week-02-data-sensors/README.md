@@ -71,6 +71,9 @@ Make touching **P0** add points and show the score.
 
 Click **P0** in the sim (or touch the real pin) — watch it climb! 🔢
 
+!!! tip "🔌 On the real board — use the shield"
+    Slot your micro:bit into the **Keyestudio sensor shield** so every pin becomes an easy socket, then clip a wire from the metal target to **P0** and one to **GND**. *(Without the shield you can only reach the big **P0/P1/P2** pads.)* Full how-to: **[Meet the gear](../../gear/README.md#wiring-a-touch-target-for-our-pinball)**.
+
 ??? example "👀 Run it, or read the code"
 
     === "Blocks"
@@ -537,7 +540,7 @@ Build it up **one small step at a time** — each step adds just a little. 🌱
 *🎓 Concept: **digital input** + **loops** (`forever`) + **state**.*
 
 !!! tip "Which pin? P0 now, spare pins later"
-    We practise on **P0** because you can **press it in the simulator**. On the real table your touch targets stay on P0–P2 and each *extra* switch goes on a spare pin (**P8, P9, …**) — read with the **exact same blocks**, just a different pin number.
+    We practise on **P0** because you can **press it in the simulator**. On the real table your touch targets stay on P0–P2 and each *extra* switch goes on a spare pin (**P8, P9, …**) — read with the **exact same blocks**, just a different pin number. The **Keyestudio shield** gives every pin its own socket — that's how you reach **P8/P9** (a bare micro:bit only clips onto P0/P1/P2).
 
 **① Read a switch** 🔌 — the whole idea in three blocks: **`set pull pin P0 up`**, then a **`forever`** loop that shows a ✓ while the switch is closed (**`digital read pin P0` = 0**) and clears it otherwise. Press **P0** in the sim — ✓ on, ✓ off.
 

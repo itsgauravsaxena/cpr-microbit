@@ -1,5 +1,7 @@
 # Uge 2 — Flipper-scoreboard 🎯 (del 1)
 
+**🔗 Åbn siden på en computer:** gå til **[tinyurl.com/mbprow2](https://tinyurl.com/mbprow2)**
+
 > Dette semester bygger Pro-holdet **hjernen i en flippermaskine** — lidt hver uge. Vi starter byggeriet: en hurtig repetition, og så den allerførste del — en **score, der stiger, når du rammer et mål**.
 
 !!! abstract "🎓 Hvad I lærer i dag"

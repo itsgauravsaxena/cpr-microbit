@@ -1,5 +1,7 @@
 # Uge 2 — Spil-lab 🎮
 
+**🔗 Åbn siden på en computer:** gå til **[tinyurl.com/beginw2](https://tinyurl.com/beginw2)**
+
 > Varm op med en ansigtsmaskine, og byg så **rigtige spil**: terning 🎲, musik 🎵, hemmelige radiobeskeder 📻 og en spåkugle 🔮.
 
 !!! abstract "🎓 Hvad I lærer i dag"

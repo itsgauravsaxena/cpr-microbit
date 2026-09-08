@@ -1,5 +1,7 @@
 # Week 2 — Pinball scoreboard 🎯 (part 1)
 
+**🔗 Open this page on a computer:** go to **[tinyurl.com/mbprow2](https://tinyurl.com/mbprow2)**
+
 > This term the Pro crew builds the **brain of a pinball machine** — a little each week. We kick off the build: a quick revision, then the very first piece — a **score that goes up when you hit a target**.
 
 !!! abstract "🎓 What you'll learn today"

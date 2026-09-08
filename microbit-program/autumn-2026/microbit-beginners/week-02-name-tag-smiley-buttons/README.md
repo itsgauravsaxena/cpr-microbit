@@ -1,5 +1,7 @@
 # Week 2 — Game Lab 🎮
 
+**🔗 Open this page on a computer:** go to **[tinyurl.com/beginw2](https://tinyurl.com/beginw2)**
+
 > Warm up with a face machine, then build **real games**: dice 🎲, music 🎵, secret radio messages 📻, and a fortune teller 🔮.
 
 !!! abstract "🎓 What you'll learn today"

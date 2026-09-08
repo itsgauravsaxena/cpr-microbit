@@ -1,6 +1,13 @@
-# Uge 2 — Knap-ansigter 😀
+# Uge 2 — Spil-lab 🎮
 
-> Byg en ansigtsmaskine, ét trin ad gangen: knapper laver ansigter, et ryst giver en overraskelse, og den hilser på dig, når den vågner.
+> Varm op med en ansigtsmaskine, og byg så **rigtige spil**: terning 🎲, musik 🎵, hemmelige radiobeskeder 📻 og en spåkugle 🔮.
+
+!!! abstract "🎓 Hvad I lærer i dag"
+    - **hændelser** — kør kode ved en knap eller et ryst
+    - **`hvis / ellers`** (betingelser) — få micro:bit'en til at *vælge*
+    - **tilfældig** — overraskelsestal
+    - **radio** — to micro:bits der taler sammen
+    - **Musik**-klodserne — melodier & noder
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
 <svg width="220" height="220" viewBox="0 0 216 216" role="img" aria-label="et ansigt der skifter glad, ked af det, overrasket" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif">
@@ -12,401 +19,248 @@
 </svg>
 </div>
 
-## 🎯 Hvad vi laver
+## 🔥 Opvarmning: Knap-ansigter
 
-Her er det færdige program — du bygger op til det, ét lille trin ad gangen. Tryk på **▶️ Open & run** for at lege med det:
+Knapper laver ansigter, et ryst giver en overraskelse. Tryk på **▶️ Open & run** for at lege:
 
-```makecode
-auto
-```
+*🎓 Begreb: **hændelser** — kør kode ved knap eller ryst.*
 
-## 🧱 Byg det — ét trin ad gangen
+??? example "👀 Se de færdige klodser"
 
-Åbn hvert trin, tilføj **kun de nye blokke**, og tjek så dine blokke mod billedet. Dit program vokser for hvert trin! 🌱
+    ```makecode
+    auto
+    ```
 
-??? example "① Glad ansigt på knap A"
+??? example "🔨 Byg det — ét trin ad gangen"
 
-    Tilføj **`når der trykkes på knappen A`** → **`vis ikon`** og vælg 😀 **Happy**. Tryk på A!
+    Åbn hvert trin, tilføj **kun de nye klodser**, og tjek mod billedet. 🌱
 
-    === "Blokke"
+    **① Glad ansigt på knap A**
 
-        ```makecode
-        auto:step-1
-        ```
+    ```makecode
+    auto:step-1
+    ```
 
-    === "JavaScript"
+    **② Ked-af-det ansigt på knap B**
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        ```
+    ```makecode
+    auto:step-2
+    ```
 
-    === "Python"
+    **③ Hjerte på A + B (tryk begge!)**
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        ```
+    ```makecode
+    auto:step-3
+    ```
 
-??? example "② Ked af det på knap B"
+    **④ Overraskelse når du ryster**
 
-    Tilføj endnu en **`når der trykkes på knappen B`** → **`vis ikon`** → 🙁 **Sad**.
+    ```makecode
+    auto:step-4
+    ```
 
-    === "Blokke"
+    **⑤ Et *tilfældigt* ansigt når du ryster**
 
-        ```makecode
-        auto:step-2
-        ```
+    ```makecode
+    auto:step-5
+    ```
 
-    === "JavaScript"
+    **⑥ Sig hej når den starter**
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        ```
+    ```makecode
+    auto:step-6
+    ```
 
-    === "Python"
+---
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        ```
+## 🎮 Byg nu et spil!
 
-??? example "③ Hjerte når du trykker A+B"
+Vælg et spil, byg klodserne, spil det. Start nemt — arbejd dig op. Hvert spil har en **🔨 Byg det** med en nem start og derefter det fulde spil. 🌱
 
-    Tilføj **`når der trykkes på knappen A+B`** → **`vis ikon`** → 💗 **Heart** (tryk begge samtidig).
+### 🎲 Terning
 
-    === "Blokke"
+Ryst for et tilfældigt **1–6**. 🎲
 
-        ```makecode
-        auto:step-3
-        ```
+*🎓 Begreb: **tilfældig** + **`hvis / ellers`** (betingelser).*
 
-    === "JavaScript"
+??? example "👀 Se det færdige spil"
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        input.onButtonPressed(Button.AB, function () {
-            basic.showIcon(IconNames.Heart)
-        })
-        ```
+    ```makecode
+    auto:dice
+    ```
 
-    === "Python"
+??? example "🔨 Byg det — 3 små trin"
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        def on_button_pressed_ab():
-            basic.show_icon(IconNames.HEART)
-        input.on_button_pressed(Button.AB, on_button_pressed_ab)
-        ```
+    **① Rul et tal** — ryst → et tilfældigt **1–6**:
 
-??? example "④ Overraskelse når du ryster"
+    ```makecode
+    auto:dice-1
+    ```
 
-    Tilføj **`på ryst`** → **`vis ikon`** → 😲 **Surprised**. Giv den et ryst!
+    **② Gør 6 speciel** — dit første `hvis / ellers`: et **6-tal** viser et ✓, alt andet viser tallet:
 
-    === "Blokke"
+    ```makecode
+    auto:dice-2
+    ```
 
-        ```makecode
-        auto:step-4
-        ```
+    **③ Rigtig terning** — byt tallet ud med **prikker** (et større `hvis / ellers`):
 
-    === "JavaScript"
+    ```makecode
+    auto:dice
+    ```
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        input.onButtonPressed(Button.AB, function () {
-            basic.showIcon(IconNames.Heart)
-        })
-        input.onGesture(Gesture.Shake, function () {
-            basic.showIcon(IconNames.Surprised)
-        })
-        ```
+### 🎵 Musik-maskine
 
-    === "Python"
+Knapper laver musik. Ryst for en overraskelses-melodi! 🎵 *(skru op for lyden 🔊)*
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        def on_button_pressed_ab():
-            basic.show_icon(IconNames.HEART)
-        input.on_button_pressed(Button.AB, on_button_pressed_ab)
-        def on_gesture_shake():
-            basic.show_icon(IconNames.SURPRISED)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
+*🎓 Begreb: **Musik**-klodserne — melodier & noder.*
 
-??? example "⑤ Tilfældigt ansigt ved ryst"
+??? example "👀 Se det færdige spil"
 
-    Lav rystelsen om, så den vælger et **tilfældigt** ansigt — brug **vælg tilfældig** og **hvis / ellers**.
+    ```makecode
+    auto:music
+    ```
 
-    === "Blokke"
+??? example "🔨 Byg det — 3 små trin"
 
-        ```makecode
-        auto:step-5
-        ```
+    **① Tryk på A** — én knap, én lyd:
 
-    === "JavaScript"
+    ```makecode
+    auto:music-1
+    ```
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        input.onButtonPressed(Button.AB, function () {
-            basic.showIcon(IconNames.Heart)
-        })
-        input.onGesture(Gesture.Shake, function () {
-            let n = randint(0, 3)
-            if (n == 0) {
-                basic.showIcon(IconNames.Happy)
-            } else if (n == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (n == 2) {
-                basic.showIcon(IconNames.Surprised)
-            } else {
-                basic.showIcon(IconNames.Silly)
-            }
-        })
-        ```
+    **② Tilføj B** — en knap mere med en anden melodi:
 
-    === "Python"
+    ```makecode
+    auto:music-2
+    ```
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        def on_button_pressed_ab():
-            basic.show_icon(IconNames.HEART)
-        input.on_button_pressed(Button.AB, on_button_pressed_ab)
-        def on_gesture_shake():
-            n = randint(0, 3)
-            if n == 0:
-                basic.show_icon(IconNames.HAPPY)
-            elif n == 1:
-                basic.show_icon(IconNames.SAD)
-            elif n == 2:
-                basic.show_icon(IconNames.SURPRISED)
-            else:
-                basic.show_icon(IconNames.SILLY)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
+    **③ Ryste-overraskelse** — tilføj **ryst** → en node 🎵 og en overraskelses-sang:
 
-??? example "⑥ Sig hej når den starter"
+    ```makecode
+    auto:music
+    ```
 
-    Øverst tilføj **`når programmet starter`** → **`vis streng`** med en hilsen (fx HEJ!).
+### 📻 Hemmelige beskeder
 
-    === "Blokke"
+Send hjerter 💗 og smileys 😀 til en vens micro:bit — gennem luften! 📻
 
-        ```makecode
-        auto:step-6
-        ```
+*🎓 Begreb: **radio** — send & modtag mellem micro:bits.*
 
-    === "JavaScript"
+!!! tip "I skal bruge **to** micro:bits"
+    Du og din makker bruger begge det **samme gruppenummer** (skift `1`-tallet i *sæt gruppe*). Vælg jeres eget, så I ikke blander jer med det næste par!
 
-        ```javascript
-        basic.showString("HEJ!")
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        input.onButtonPressed(Button.AB, function () {
-            basic.showIcon(IconNames.Heart)
-        })
-        input.onGesture(Gesture.Shake, function () {
-            let n = randint(0, 3)
-            if (n == 0) {
-                basic.showIcon(IconNames.Happy)
-            } else if (n == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (n == 2) {
-                basic.showIcon(IconNames.Surprised)
-            } else {
-                basic.showIcon(IconNames.Silly)
-            }
-        })
-        ```
+??? example "👀 Se det færdige spil"
 
-    === "Python"
+    ```makecode
+    auto:radio
+    ```
 
-        ```python
-        basic.show_string("HEJ!")
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        def on_button_pressed_ab():
-            basic.show_icon(IconNames.HEART)
-        input.on_button_pressed(Button.AB, on_button_pressed_ab)
-        def on_gesture_shake():
-            n = randint(0, 3)
-            if n == 0:
-                basic.show_icon(IconNames.HAPPY)
-            elif n == 1:
-                basic.show_icon(IconNames.SAD)
-            elif n == 2:
-                basic.show_icon(IconNames.SURPRISED)
-            else:
-                basic.show_icon(IconNames.SILLY)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
+??? example "🔨 Byg det — 3 små trin"
 
+    **① Send + vis** — sæt din **gruppe**, tryk på **A** for at sende, vis et 💗 når en besked kommer:
 
-## 🌟 Ekstra udfordringer
+    ```makecode
+    auto:radio-1
+    ```
+
+    **② Knap nummer to** — tilføj **B**, så du kan sende to forskellige beskeder:
+
+    ```makecode
+    auto:radio-2
+    ```
+
+    **③ To billeder** — brug `hvis / ellers`, så **A** viser et hjerte 💗 og **B** en smiley 😀:
+
+    ```makecode
+    auto:radio
+    ```
+
+### 🔮 Spåkugle
+
+Stil et ja/nej-spørgsmål, giv den et ryst, og se hvad den siger! 🔮
+
+*🎓 Begreb: **`hvis / ellers hvis`** — vælg mellem svar.*
+
+??? example "👀 Se det færdige spil"
+
+    ```makecode
+    auto:fortune
+    ```
+
+??? example "🔨 Byg det — 3 små trin"
+
+    **① Ja eller nej** — ryst → ✓ eller ✗ (dit første `hvis / ellers`):
+
+    ```makecode
+    auto:fortune-1
+    ```
+
+    **② Tilføj Måske** — et tredje svar 🤔 med `ellers hvis`:
+
+    ```makecode
+    auto:fortune-2
+    ```
+
+    **③ Lad den tænke** — den "tænker" først 😴 og giver så et af **fire** svar:
+
+    ```makecode
+    auto:fortune
+    ```
+
+---
+
+## 🌟 Bonus
 
 ??? example "🎨 Tegn dit eget billede"
 
-    Få **knap A** til at tænde dine egne LED'er med **`vis LED'er`** — tegn hvad som helst!
+    Få **knap A** til at tænde dine egne LED'er med **`vis lys`** — tegn hvad som helst!
 
-    === "Blokke"
-
-        ```makecode
-        auto:draw
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showLeds(`
-                # . . . #
-                . # . # .
-                . . # . .
-                . # . # .
-                # . . . #
-                `)
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        def on_button_pressed_a():
-            basic.show_leds("""
-                # . . . #
-                . # . # .
-                . . # . .
-                . # . # .
-                # . . . #
-                """)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        ```
+    ```makecode
+    auto:draw
+    ```
 
 ??? example "✊✋✌️ Sten, Saks, Papir"
 
-    Ryst for at kaste sten, saks eller papir — dyst så en ven, bedst af fem!
+    Ryst for at kaste sten, saks eller papir — dyst så mod en ven, bedst af fem!
 
-    === "Blokke"
-
-        ```makecode
-        auto:rps
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        input.onGesture(Gesture.Shake, function () {
-            let pick = randint(0, 2)
-            if (pick == 0) {
-                basic.showIcon(IconNames.Square)
-            } else if (pick == 1) {
-                basic.showLeds(`
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    `)
-            } else {
-                basic.showIcon(IconNames.Scissors)
-            }
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        def on_gesture_shake():
-            pick = randint(0, 2)
-            if pick == 0:
-                basic.show_icon(IconNames.SQUARE)
-            elif pick == 1:
-                basic.show_leds("""
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    """)
-            else:
-                basic.show_icon(IconNames.SCISSORS)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
-
+    ```makecode
+    auto:rps
+    ```
 
 ## ✅ Jeg er færdig når…
 
-- ☐ Knap **A** viser 😀 og **B** viser 🙁 på det rigtige board.
-- ☐ Et **ryst** giver en overraskelse (eller et tilfældigt ansigt).
-- ☐ *(Legende!)* Jeg lavede alle 6 trin — eller byggede en ekstra udfordring.
-
+- ☐ Mine **Knap-ansigter** virker på det rigtige board (A 😀, B 🙁).
+- ☐ Jeg byggede **mindst ét spil** og spillede det.
+- ☐ *(Legende!)* Jeg byggede **to eller flere** spil — eller narrede spåkuglen. 🔮
 
 ## 🎉 Kahoot-tid!
 
-Lad os slutte af med en quiz — alle sammen!
+Lad os slutte med en quiz — alle sammen!
 
 ```kahoot
 week-2
 ```
 
-
 ---
 
 ??? note "👩‍🏫 Til hjælpere — sessionsplan & noter"
 
-    **Mål:** byg videre på uge 1's `vis ikon` — tilføj **knapper** (A/B/A+B), **ryste**-gesten og et første strejf af **tilfældighed**, som ét program bygget op trin for trin.
+    **Mål:** byg videre på Uge 1's `vis ikon`. Varm op med **Knap-ansigter** (knapper A/B/A+B, ryst, en første smagsprøve på **tilfældig**), og lad så børnene vælge fra en menu af små **spil**, så de hurtige altid har mere at strække sig efter. Der er med vilje **mere her end der kan nås på én session** — det er meningen. 🎯
+
+    **Spillene (nemt → svært):**
+
+    - **🎲 Terning** — `vælg tilfældig` + `hvis/ellers`. Alle kan nå denne.
+    - **🎵 Musik-maskine** — Musik-klodserne. Højt og sjovt (høretelefoner hjælper i et fyldt lokale).
+    - **📻 Hemmelige beskeder** — første smagsprøve på **radio**; kræver **2 boards pr. par**, begge på **samme gruppe**. Magisk for børn.
+    - **🔮 Spåkugle** — mere `hvis / ellers`-træning, kun ikoner (ingen langsom tekst). Skør og social — børn elsker at stille den spørgsmål.
+
+    *(Et større **🚀 Stjernefanger**-spil — variabel + løkke + LED-tegning — er parkeret i `archive/week-02-star-catcher/`, hvis du vil have et sværere Uge 3-stræk. Sådan henter du det tilbage står i den mappes README.)*
 
     **Sessionsplan (60 + 20 pause + 30)**
 
-    - **Blok 1 (60):** 5 repetition af uge 1 → 40 arbejd gennem trin ①–⑥ sammen, tjek blokke hvert trin → 15 download til board
+    - **Blok 1 (60):** 5 genopfrisk Uge 1 → 30 byg **Knap-ansigter** sammen (trin ①–⑥) → 10 overfør til boardet → 15 start **Terning**.
     - **Pause (20)**
-    - **Blok 2 (30):** 20 ekstra udfordringer (tegn, Sten-Saks-Papir) i eget tempo → 5 fremvisning → 5 Kahoot
+    - **Blok 2 (30):** 20 frit valg fra spil-menuen (Terning → Musik → Radio → Spåkugle) i eget tempo → 5 fremvisning → 5 Kahoot.
 
-    **Noter:** hvert trins embed viser programmet *indtil videre*, så børnene bygger ét program i stedet for at kopiere færdig kode. Trin ⑤ er et blidt kig på **vælg tilfældig** + **hvis/ellers**.
+    **Noter:** hver indlejring åbner direkte i **Blokke**. Hver *Byg det* viser en nem **start** først og derefter det **fulde** program, så børnene vokser ét program frem i stedet for at kopiere færdig kode. De øvrige spil er perfekte at tage med til **Uge 3** — bedre at have for meget end for lidt.

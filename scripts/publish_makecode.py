@@ -94,7 +94,24 @@ def _deps_for(code_dir: pathlib.Path) -> dict:
     return deps
 
 
+def _blocks_for(code_dir: pathlib.Path, program: str) -> str:
+    """Return the decompiled Blockly XML for a program, or "" if none.
+
+    ``<program>.blocks`` is generated from ``<program>.ts`` by
+    scripts/decompile_blocks.js (which runs MakeCode's pxt decompiler locally).
+    Shipping the real block XML — instead of an empty placeholder — is what
+    makes the shared editor open on the *Blocks* tab rather than JavaScript.
+    """
+    blocks = code_dir / f"{program}.blocks"
+    return blocks.read_text(encoding="utf-8") if blocks.is_file() else ""
+
+
 def _fingerprint(main_ts: str, deps: dict) -> str:
+    # Fingerprints the *inputs* (main.ts + deps + target). The derived
+    # <program>.blocks is deliberately NOT hashed: MakeCode stamps random block
+    # ids on every decompile, so hashing it would flag phantom changes. Editing
+    # main.ts already re-fingerprints; re-run decompile_blocks.js afterwards so
+    # the shipped blocks match before publishing.
     h = hashlib.sha256()
     h.update(main_ts.encode("utf-8"))
     h.update(json.dumps(deps, sort_keys=True).encode("utf-8"))
@@ -145,28 +162,36 @@ def _project_name(week_dir: pathlib.Path, program: str) -> str:
 
 
 def _publish(week_dir: pathlib.Path, program: str, main_ts: str, deps: dict) -> str:
-    name = _project_name(week_dir, program)
+    blocks = _blocks_for(week_dir / "code", program)
+    # A blank name keeps the editor's project card clean — no long
+    # "cpr-…-step-1" label plastered over the embedded program.
+    name = ""
     pxt = {
         "name": name,
         "description": "",
         "dependencies": deps,
-        # An empty main.blocks marks this a blocks project, so the editor shows
-        # a Blocks tab and decompiles main.ts into blocks on open.
-        "files": ["main.blocks", "main.ts", "README.md"],
+        # Real block XML in main.blocks (from <program>.blocks) makes the shared
+        # editor OPEN on the Blocks tab. An empty string only gives a Blocks tab
+        # you must click; it still lands on JavaScript. See _blocks_for().
+        #
+        # Deliberately NO README.md: MakeCode auto-opens a project's README in a
+        # side "docs" panel ("Gå tilbage"/Go-back drawer). With no meaningful
+        # readme that panel is just empty chrome covering the blocks, so we omit
+        # the file entirely rather than ship a blank one.
+        "files": ["main.blocks", "main.ts"],
         "preferredEditor": "blocksprj",
     }
     payload = {
         "name": name,
         "target": TARGET,
         "targetVersion": TARGET_VERSIONS["target"],
-        "description": "Coding Pirates Rødovre — micro:bit lesson program.",
+        "description": "",
         "editor": "blocksprj",
         "meta": {"versions": TARGET_VERSIONS},
         "text": {
             "pxt.json": json.dumps(pxt, indent=4),
-            "main.blocks": "",
+            "main.blocks": blocks,
             "main.ts": main_ts,
-            "README.md": f"# {name}\n",
         },
     }
     resp = _post(API_URL, json.dumps(payload).encode("utf-8"))

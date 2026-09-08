@@ -25,6 +25,19 @@
   margin-top: 0.6rem;
 }
 
+/* Pre-rendered, language-pinned block image (guaranteed Danish). Shown at its
+   natural size, scaling down on narrow screens; white plate so it reads on both
+   light and dark themes, matching the live-embed frame. */
+.makecode-embed__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  background: #fff;
+  padding: 0.6rem;
+}
+
 /* Per-week "Start Kahoot" call-to-action button. */
 .kahoot-cta {
   margin: 1.5rem 0;
@@ -55,4 +68,13 @@
 
 .makecode-embed--pending p {
   margin: 0;
+}
+
+/* Bolder section headings — the Material default is quite light, which made
+   the week/section/game titles read faintly. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-weight: 700;
 }

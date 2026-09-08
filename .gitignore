@@ -3,3 +3,6 @@ site/
 __pycache__/
 *.pyc
 .cache/
+# Derived from each program's .ts by scripts/decompile_blocks.js (random block
+# ids each run — the .ts is the source of truth; regenerate before publishing).
+*.blocks

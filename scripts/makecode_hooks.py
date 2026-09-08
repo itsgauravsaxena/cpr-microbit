@@ -27,6 +27,23 @@ import re
 EMBED_BASE = "https://makecode.microbit.org"
 _PLACEHOLDERS = {"", "_", "todo", "tbd", "xxx", "pending", "auto"}
 
+# Language for the "Open & run" editor link, set per page in on_page_markdown
+# (mkdocs builds pages sequentially, so a module global is safe). The inline
+# ---codeembed blocks follow the viewer's own browser language and can't be
+# pinned, but the full editor honours ?lang — so a Danish page opens MakeCode
+# in Danish and an English page in English. See the makecode-embed language note.
+_PAGE_LANG = "en"
+
+# Page source path, so _formatter can find the sibling code/ folder (for
+# pre-rendered Danish block images and share ids). Set per page.
+_PAGE_SRC = None
+
+# Pages that ship PRE-RENDERED, language-pinned block images. The codeembed
+# view can't be pinned to Danish (it follows the viewer's browser), so for these
+# pages we swap in a harvested PNG (scripts/harvest_blocks.py) whenever one
+# exists as code/<name>.<lang>.png — otherwise we fall back to the live embed.
+_PIN_IMG_PATHS = ("week-02-name-tag-smiley-buttons",)
+
 # A ```makecode fence with a single-line body: a share id, ``auto`` (the
 # week's main program) or ``auto:<name>`` (a named program, e.g. a ladder rung).
 # The closing fence may be indented when the block is nested in a tab/admonition.
@@ -48,7 +65,39 @@ def _normalise(source: str) -> str:
     return first.strip()
 
 
+def _img_embed(name: str) -> str:
+    """Embed a pre-rendered, language-pinned block image (guaranteed Danish).
+
+    Reads code/<name>.<lang>.png next to the page and inlines it as a data URI
+    (so it works identically on the English/Danish trees and inside collapsed
+    admonitions, with no extra network calls). The "Open & run" button still
+    opens the live editor in the page language via the sibling shares.txt.
+    """
+    import base64
+    code_dir = pathlib.Path(_PAGE_SRC).parent / "code"
+    png = code_dir / f"{name}.{_PAGE_LANG}.png"
+    data = base64.b64encode(png.read_bytes()).decode("ascii")
+    share = _shares_for(_PAGE_SRC).get(name, "")
+    pub = (share if share.startswith("_") else "_" + share) if share else ""
+    editor = (f'<a class="makecode-embed__edit md-button md-button--primary" '
+              f'href="{EMBED_BASE}/?lang={_PAGE_LANG}#pub:{html.escape(pub, quote=True)}" '
+              f'target="_blank" rel="noopener">'
+              f'{"▶️ Åbn &amp; kør i MakeCode ↗" if _PAGE_LANG == "da" else "▶️ Open &amp; run in MakeCode ↗"}'
+              "</a>") if pub else ""
+    return (
+        '<div class="makecode-embed makecode-embed--img" markdown="0">'
+        f'<img class="makecode-embed__img" alt="MakeCode blokke" '
+        f'loading="lazy" src="data:image/png;base64,{data}">'
+        f"{editor}"
+        "</div>"
+    )
+
+
 def _formatter(source, language, css_class, options, md, **kwargs):
+    first = next((ln.strip() for ln in (source or "").splitlines()
+                  if ln.strip()), "")
+    if first.startswith("img:"):
+        return _img_embed(first.split(":", 1)[1].strip() or "main")
     share = _normalise(source)
     if share.lower() in _PLACEHOLDERS:
         return (
@@ -64,7 +113,11 @@ def _formatter(source, language, css_class, options, md, **kwargs):
     # language), so kids never land on the JavaScript view. It's static, so the
     # "Open & run in MakeCode" button opens the full editor to run, zoom and edit.
     blocks_src = f"{EMBED_BASE}/---codeembed#pub:{pub}"
-    editor_src = f"{EMBED_BASE}/#pub:{pub}"
+    # ?lang pins the full editor's UI language (Blokke/Hent…) to the page's
+    # language, so kids opening from the Danish page get a Danish editor.
+    editor_src = f"{EMBED_BASE}/?lang={_PAGE_LANG}#pub:{pub}"
+    label = ("▶️ Åbn &amp; kør i MakeCode ↗" if _PAGE_LANG == "da"
+             else "▶️ Open &amp; run in MakeCode ↗")
     return (
         '<div class="makecode-embed" markdown="0">'
         f'<iframe class="makecode-embed__frame" src="{blocks_src}" '
@@ -74,7 +127,7 @@ def _formatter(source, language, css_class, options, md, **kwargs):
         "</iframe>"
         f'<a class="makecode-embed__edit md-button md-button--primary" '
         f'href="{editor_src}" target="_blank" rel="noopener">'
-        "▶️ Open &amp; run in MakeCode ↗</a>"
+        f"{label}</a>"
         "</div>"
     )
 
@@ -171,8 +224,17 @@ def on_page_markdown(markdown, page, config, **kwargs):
         return markdown
     src = getattr(getattr(page, "file", None), "abs_src_path", None)
 
+    global _PAGE_LANG, _PAGE_SRC
+    _PAGE_LANG = "da" if (src and src.endswith(".da.md")) else "en"
+    _PAGE_SRC = src
+
     if "```makecode" in markdown:
         shares = _shares_for(src)
+        # On a pinned page, prefer a pre-rendered code/<name>.<lang>.png if it
+        # has been harvested; programs without one keep the live codeembed, so
+        # the image rollout can be incremental.
+        code_dir = pathlib.Path(src).parent / "code" if src else None
+        pin = bool(src) and any(frag in src for frag in _PIN_IMG_PATHS)
 
         def repl(m):
             body = m.group(2)
@@ -181,7 +243,11 @@ def on_page_markdown(markdown, page, config, **kwargs):
             if low == "auto" or low.startswith("auto:"):
                 name = token.split(":", 1)[1].strip() if ":" in token else "main"
                 indent = body[: len(body) - len(body.lstrip())]
-                return m.group(1) + indent + (shares.get(name) or "_") + m.group(3)
+                if pin and code_dir and (code_dir / f"{name}.{_PAGE_LANG}.png").is_file():
+                    filled = f"img:{name}"
+                else:
+                    filled = shares.get(name) or "_"
+                return m.group(1) + indent + filled + m.group(3)
             return m.group(0)
 
         markdown = _FENCE.sub(repl, markdown)

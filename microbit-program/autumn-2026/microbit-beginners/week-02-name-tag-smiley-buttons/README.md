@@ -1,6 +1,13 @@
-# Week 2 — Button Faces 😀
+# Week 2 — Game Lab 🎮
 
-> Build a face machine, one step at a time: buttons make faces, a shake gives a surprise, and it greets you when it wakes up.
+> Warm up with a face machine, then build **real games**: dice 🎲, music 🎵, secret radio messages 📻, and a fortune teller 🔮.
+
+!!! abstract "🎓 What you'll learn today"
+    - **events** — run code on a button or a shake
+    - **`if / else`** (conditionals) — make the micro:bit *choose*
+    - **random** — surprise numbers
+    - **radio** — two micro:bits talking to each other
+    - the **Music** blocks — melodies & notes
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
 <svg width="220" height="220" viewBox="0 0 216 216" role="img" aria-label="a face changing happy, sad, surprised" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif">
@@ -12,381 +19,220 @@
 </svg>
 </div>
 
-## 🎯 What we're making
+## 🔥 Warm-up: Button Faces
 
-Here's the finished program — you'll build up to it, one small step at a time. Press **▶️ Open & run** to play with it:
+Buttons make faces, a shake gives a surprise. Press **▶️ Open & run** to play:
 
-```makecode
-auto
-```
+*🎓 Concept: **events** — run code on a button or shake.*
 
-## 🧱 Build it — one step at a time
+??? example "👀 See the finished blocks"
 
-Open each step, add **only the new blocks**, then check your blocks against the picture. Your program grows every step! 🌱
+    ```makecode
+    auto
+    ```
 
-??? example "① Happy face on button A"
+??? example "🔨 Build it — one step at a time"
 
-    Add **`on button A pressed`** → **`show icon`** and pick 😀 **Happy**. Press A!
+    Open each step, add **only the new blocks**, then check against the picture. 🌱
 
-    === "Blocks"
+    **① Happy face on button A**
 
-        ```makecode
-        auto:step-1
-        ```
+    ```makecode
+    auto:step-1
+    ```
 
-    === "JavaScript"
+    **② Sad face on button B**
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        ```
+    ```makecode
+    auto:step-2
+    ```
 
-    === "Python"
+    **③ Heart on A + B (press both!)**
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        ```
+    ```makecode
+    auto:step-3
+    ```
 
-??? example "② Sad face on button B"
+    **④ Surprise when you shake**
 
-    Add another **`on button B pressed`** → **`show icon`** → 🙁 **Sad**.
+    ```makecode
+    auto:step-4
+    ```
 
-    === "Blocks"
+    **⑤ A *random* face on shake**
 
-        ```makecode
-        auto:step-2
-        ```
+    ```makecode
+    auto:step-5
+    ```
 
-    === "JavaScript"
+    **⑥ Say hi when it starts**
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        ```
+    ```makecode
+    auto:step-6
+    ```
 
-    === "Python"
+---
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        ```
+## 🎮 Now build a game!
 
-??? example "③ Heart when you press A+B"
+Pick a game, build the blocks, play it. Start easy — work your way up. Each one has a **🔨 Build it** with a simple starter, then the full game. 🌱
 
-    Add **`on button A+B pressed`** → **`show icon`** → 💗 **Heart** (press both together).
+### 🎲 Dice
 
-    === "Blocks"
+Shake for a random **1–6**. 🎲
 
-        ```makecode
-        auto:step-3
-        ```
+*🎓 Concept: **random** + **`if / else`** (conditionals).*
 
-    === "JavaScript"
+??? example "👀 See the finished game"
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        input.onButtonPressed(Button.AB, function () {
-            basic.showIcon(IconNames.Heart)
-        })
-        ```
+    ```makecode
+    auto:dice
+    ```
 
-    === "Python"
+??? example "🔨 Build it — 3 small steps"
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        def on_button_pressed_ab():
-            basic.show_icon(IconNames.HEART)
-        input.on_button_pressed(Button.AB, on_button_pressed_ab)
-        ```
+    **① Roll a number** — shake → a random **1–6**:
 
-??? example "④ Surprise when you shake"
+    ```makecode
+    auto:dice-1
+    ```
 
-    Add **`on shake`** → **`show icon`** → 😲 **Surprised**. Give it a wiggle!
+    **② Make 6 special** — your first `if / else`: a **6** shows a ✓, everything else the number:
 
-    === "Blocks"
+    ```makecode
+    auto:dice-2
+    ```
 
-        ```makecode
-        auto:step-4
-        ```
+    **③ Real dice** — swap the number for **dots** (a bigger `if / else`):
 
-    === "JavaScript"
+    ```makecode
+    auto:dice
+    ```
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        input.onButtonPressed(Button.AB, function () {
-            basic.showIcon(IconNames.Heart)
-        })
-        input.onGesture(Gesture.Shake, function () {
-            basic.showIcon(IconNames.Surprised)
-        })
-        ```
+### 🎵 Music Maker
 
-    === "Python"
+Buttons make music. Shake for a surprise tune! 🎵 *(turn the sound up 🔊)*
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        def on_button_pressed_ab():
-            basic.show_icon(IconNames.HEART)
-        input.on_button_pressed(Button.AB, on_button_pressed_ab)
-        def on_gesture_shake():
-            basic.show_icon(IconNames.SURPRISED)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
+*🎓 Concept: the **Music** blocks — melodies & notes.*
 
-??? example "⑤ Random face on shake"
+??? example "👀 See the finished game"
 
-    Change the shake so it picks a **random** face — use **pick random** and **if / else**.
+    ```makecode
+    auto:music
+    ```
 
-    === "Blocks"
+??? example "🔨 Build it — 3 small steps"
 
-        ```makecode
-        auto:step-5
-        ```
+    **① Press A** — one button, one sound:
 
-    === "JavaScript"
+    ```makecode
+    auto:music-1
+    ```
 
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        input.onButtonPressed(Button.AB, function () {
-            basic.showIcon(IconNames.Heart)
-        })
-        input.onGesture(Gesture.Shake, function () {
-            let n = randint(0, 3)
-            if (n == 0) {
-                basic.showIcon(IconNames.Happy)
-            } else if (n == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (n == 2) {
-                basic.showIcon(IconNames.Surprised)
-            } else {
-                basic.showIcon(IconNames.Silly)
-            }
-        })
-        ```
+    **② Add B** — a second button with a different tune:
 
-    === "Python"
+    ```makecode
+    auto:music-2
+    ```
 
-        ```python
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        def on_button_pressed_ab():
-            basic.show_icon(IconNames.HEART)
-        input.on_button_pressed(Button.AB, on_button_pressed_ab)
-        def on_gesture_shake():
-            n = randint(0, 3)
-            if n == 0:
-                basic.show_icon(IconNames.HAPPY)
-            elif n == 1:
-                basic.show_icon(IconNames.SAD)
-            elif n == 2:
-                basic.show_icon(IconNames.SURPRISED)
-            else:
-                basic.show_icon(IconNames.SILLY)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
+    **③ Shake surprise** — add a **shake** → a music note 🎵 and a surprise song:
 
-??? example "⑥ Say hi when it starts"
+    ```makecode
+    auto:music
+    ```
 
-    At the top add **`on start`** → **`show string`** with a greeting (e.g. HEJ!).
+### 📻 Secret Messages
 
-    === "Blocks"
+Send hearts 💗 and smileys 😀 to a friend's micro:bit — over the air! 📻
 
-        ```makecode
-        auto:step-6
-        ```
+*🎓 Concept: **radio** — send & receive between micro:bits.*
 
-    === "JavaScript"
+!!! tip "You need **two** micro:bits"
+    You and your partner both use the **same group number** (change the `1` in *set group*). Pick your own so you don't cross wires with the next pair!
 
-        ```javascript
-        basic.showString("HEJ!")
-        input.onButtonPressed(Button.A, function () {
-            basic.showIcon(IconNames.Happy)
-        })
-        input.onButtonPressed(Button.B, function () {
-            basic.showIcon(IconNames.Sad)
-        })
-        input.onButtonPressed(Button.AB, function () {
-            basic.showIcon(IconNames.Heart)
-        })
-        input.onGesture(Gesture.Shake, function () {
-            let n = randint(0, 3)
-            if (n == 0) {
-                basic.showIcon(IconNames.Happy)
-            } else if (n == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (n == 2) {
-                basic.showIcon(IconNames.Surprised)
-            } else {
-                basic.showIcon(IconNames.Silly)
-            }
-        })
-        ```
+??? example "👀 See the finished game"
 
-    === "Python"
+    ```makecode
+    auto:radio
+    ```
 
-        ```python
-        basic.show_string("HEJ!")
-        def on_button_pressed_a():
-            basic.show_icon(IconNames.HAPPY)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        def on_button_pressed_b():
-            basic.show_icon(IconNames.SAD)
-        input.on_button_pressed(Button.B, on_button_pressed_b)
-        def on_button_pressed_ab():
-            basic.show_icon(IconNames.HEART)
-        input.on_button_pressed(Button.AB, on_button_pressed_ab)
-        def on_gesture_shake():
-            n = randint(0, 3)
-            if n == 0:
-                basic.show_icon(IconNames.HAPPY)
-            elif n == 1:
-                basic.show_icon(IconNames.SAD)
-            elif n == 2:
-                basic.show_icon(IconNames.SURPRISED)
-            else:
-                basic.show_icon(IconNames.SILLY)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
+??? example "🔨 Build it — 3 small steps"
 
+    **① Send + show** — set your **group**, press **A** to send, show a 💗 when a message arrives:
 
-## 🌟 Extra challenges
+    ```makecode
+    auto:radio-1
+    ```
+
+    **② Second button** — add **B** so you can send two different messages:
+
+    ```makecode
+    auto:radio-2
+    ```
+
+    **③ Two pictures** — use `if / else` so **A** shows a heart 💗 and **B** a smiley 😀:
+
+    ```makecode
+    auto:radio
+    ```
+
+### 🔮 Fortune Teller
+
+Ask a yes/no question, give it a shake, and see what it says! 🔮
+
+*🎓 Concept: **`if / else if`** — choosing between answers.*
+
+??? example "👀 See the finished game"
+
+    ```makecode
+    auto:fortune
+    ```
+
+??? example "🔨 Build it — 3 small steps"
+
+    **① Yes or No** — shake → ✓ or ✗ (your first `if / else`):
+
+    ```makecode
+    auto:fortune-1
+    ```
+
+    **② Add Maybe** — a third answer 🤔 with `else if`:
+
+    ```makecode
+    auto:fortune-2
+    ```
+
+    **③ Let it think** — it "thinks" first 😴, then gives one of **four** answers:
+
+    ```makecode
+    auto:fortune
+    ```
+
+---
+
+## 🌟 Bonus
 
 ??? example "🎨 Draw your own picture"
 
     Make **button A** light up your own LEDs with **`show leds`** — draw anything!
 
-    === "Blocks"
-
-        ```makecode
-        auto:draw
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        input.onButtonPressed(Button.A, function () {
-            basic.showLeds(`
-                # . . . #
-                . # . # .
-                . . # . .
-                . # . # .
-                # . . . #
-                `)
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        def on_button_pressed_a():
-            basic.show_leds("""
-                # . . . #
-                . # . # .
-                . . # . .
-                . # . # .
-                # . . . #
-                """)
-        input.on_button_pressed(Button.A, on_button_pressed_a)
-        ```
+    ```makecode
+    auto:draw
+    ```
 
 ??? example "✊✋✌️ Rock, Paper, Scissors"
 
     Shake to throw rock, paper or scissors — then duel a friend, best of five!
 
-    === "Blocks"
-
-        ```makecode
-        auto:rps
-        ```
-
-    === "JavaScript"
-
-        ```javascript
-        input.onGesture(Gesture.Shake, function () {
-            let pick = randint(0, 2)
-            if (pick == 0) {
-                basic.showIcon(IconNames.Square)
-            } else if (pick == 1) {
-                basic.showLeds(`
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    `)
-            } else {
-                basic.showIcon(IconNames.Scissors)
-            }
-        })
-        ```
-
-    === "Python"
-
-        ```python
-        def on_gesture_shake():
-            pick = randint(0, 2)
-            if pick == 0:
-                basic.show_icon(IconNames.SQUARE)
-            elif pick == 1:
-                basic.show_leds("""
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    # # # # #
-                    """)
-            else:
-                basic.show_icon(IconNames.SCISSORS)
-        input.on_gesture(Gesture.SHAKE, on_gesture_shake)
-        ```
-
+    ```makecode
+    auto:rps
+    ```
 
 ## ✅ I did it when…
 
-- ☐ Button **A** shows 😀 and **B** shows 🙁 on the real board.
-- ☐ A **shake** gives a surprise (or a random face).
-- ☐ *(Legend!)* I finished all 6 steps — or built an extra challenge.
-
+- ☐ My **Button Faces** works on the real board (A 😀, B 🙁).
+- ☐ I built **at least one game** and played it.
+- ☐ *(Legend!)* I built **two or more** games — or stumped the Fortune Teller. 🔮
 
 ## 🎉 Kahoot time!
 
@@ -396,17 +242,25 @@ Let's finish with a quiz — everyone together!
 week-2
 ```
 
-
 ---
 
 ??? note "👩‍🏫 For helpers — session plan & notes"
 
-    **Goal:** build on Week 1's `show icon` — add **buttons** (A/B/A+B), the **shake** gesture, and a first taste of **randomness**, as one program built up step by step.
+    **Goal:** build on Week 1's `show icon`. Warm up with **Button Faces** (buttons A/B/A+B, shake, a first taste of **random**), then let kids pick from a menu of small **games** so fast finishers always have more to reach for. There is deliberately **more here than fits one session** — that's on purpose. 🎯
+
+    **The games (easy → hard):**
+
+    - **🎲 Dice** — `pick random` + `if/else`. Everyone can finish this.
+    - **🎵 Music Maker** — the Music blocks. Loud and fun (headphones help a full room).
+    - **📻 Secret Messages** — first taste of **radio**; needs **2 boards per pair**, both on the **same group**. Magical for kids.
+    - **🔮 Fortune Teller** — more `if / else` practice, all icons (no slow scrolling text). Silly and social — kids love asking it questions.
+
+    *(A bigger **🚀 Star Catcher** game — variable + loop + LED plotting — is parked in `archive/week-02-star-catcher/` if you want a harder Week 3 stretch. Pull-back steps are in that folder's README.)*
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 recap Week 1 → 40 work through Steps ①–⑥ together, checking blocks each step → 15 download to the board
+    - **Block 1 (60):** 5 recap Week 1 → 30 build **Button Faces** together (steps ①–⑥) → 10 download to the board → 15 start **Dice**.
     - **Break (20)**
-    - **Block 2 (30):** 20 extra challenges (draw, Rock-Paper-Scissors) at own pace → 5 showcase → 5 Kahoot
+    - **Block 2 (30):** 20 free choice from the game menu (Dice → Music → Radio → Fortune Teller) at own pace → 5 showcase → 5 Kahoot.
 
-    **Notes:** each step's embed shows the program *so far*, so kids build one program rather than copying finished code. Step ⑤ is a gentle intro to **pick random** + **if/else**.
+    **Notes:** every embed opens straight into **Blocks**. Each *Build it* shows a simple **starter** first, then the **full** program, so kids grow one program rather than copy finished code. Leftover games are perfect **Week 3** carry-over — better to have too much than too little.

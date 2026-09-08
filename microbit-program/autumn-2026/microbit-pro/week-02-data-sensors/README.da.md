@@ -2,6 +2,12 @@
 
 > Dette semester bygger Pro-holdet **hjernen i en flippermaskine** — lidt hver uge. Vi starter byggeriet: en hurtig repetition, og så den allerførste del — en **score, der stiger, når du rammer et mål**.
 
+!!! abstract "🎓 Hvad I lærer i dag"
+    - **variabler** — et tal, I kan ændre (scoren)
+    - **hændelser** — kør kode ved knapper & touch-pins
+    - **funktioner** *(Level up)* — navngiv en opgave, genbrug den
+    - **digitalt input** *(Level 2)* — læs en rigtig kontakt
+
 <div style="text-align:center;margin:1.25rem 0;" markdown="0">
 <svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="gættespillet der tæller" xmlns="http://www.w3.org/2000/svg">
 <rect x="0" y="0" width="162" height="162" rx="20" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
@@ -21,6 +27,8 @@
 ## 🔁 Opvarmning — hurtig repetition
 
 En 30-sekunders genopfriskning: en **klik-tæller**. Tryk på **A**, og et tal stiger. Det tal er en **variabel** — præcis sådan en score virker.
+
+*🎓 Begreb: **variabler** — et tal, I kan ændre.*
 
 ??? example "👀 Kør det, eller læs koden"
 
@@ -54,6 +62,8 @@ En 30-sekunders genopfriskning: en **klik-tæller**. Tryk på **A**, og et tal s
 ## ▶️ Byg det — score ved berøring
 
 Få det til at give point at røre **P0** og vise scoren.
+
+*🎓 Begreb: **hændelser** + **input** — en touch-pin ændrer en variabel.*
 
 1. Lav en **variabel** kaldet `score` (starter på 0).
 2. Fra **Input**, brug **`on pin P0 pressed`**.
@@ -93,6 +103,8 @@ Klik på **P0** i simulatoren (eller rør den rigtige pin) — se den stige! �
 ## 🪜 Gør det spilbart (dagens mål)
 
 To små trin, og du har et rigtigt mini-spil.
+
+*🎓 Begreb: **hændelser** — knap A/B styrer spillet.*
 
 **① Nulstil** ♻️ — tryk på **A** for at sætte scoren tilbage til 0.
 
@@ -189,6 +201,8 @@ To små trin, og du har et rigtigt mini-spil.
 ## 🕹️ Byg videre mod den rigtige maskine *(valgfrit)*
 
 Færdig med målet? Byg videre — hvert trin tilføjer en rigtig flipper-funktion. Til sidst har du en lille maskine, du faktisk kan spille.
+
+*🎓 Begreb: **funktioner** — navngiv en opgave, genbrug den.*
 
 **③ Andet mål** 🎯 — forbind et metal til **P1**, værd **50**.
 
@@ -514,11 +528,78 @@ Færdig med målet? Byg videre — hvert trin tilføjer en rigtig flipper-funkti
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
+## ⚡ Level 2 — sæt flere mål til *(valgfrit)*
+
+**Hvorfor?** Indtil nu er jeres mål de **3 touch-pins** (P0/P1/P2). En rigtig flipper har *masser* af mål, bumpere og baner — og hver eneste er bare en lille **kontakt, som kuglen slutter**. Level 2 er, hvordan I **slutter og læser jeres egne kontakter**, så maskinen kan vokse, så stor I vil. Det er den rigtige elektronik, som lys og flippere kobles på senere. 🔌
+
+Byg det op **ét lille trin ad gangen** — hvert trin tilføjer kun lidt. 🌱
+
+*🎓 Begreb: **digitalt input** + **løkker** (`for altid`) + **tilstand**.*
+
+!!! tip "Hvilken pin? P0 nu, ledige pins senere"
+    Vi øver på **P0**, fordi I kan **trykke på den i simulatoren**. På det rigtige bord bliver jeres touch-mål på P0–P2, og hver *ekstra* kontakt kommer på en ledig pin (**P8, P9, …**) — læst med **præcis de samme klodser**, bare et andet pin-nummer.
+
+**① Læs en kontakt** 🔌 — hele idéen i tre klodser: **`sæt pull pin P0 op`**, og så en **`for altid`**-løkke, der viser et ✓, mens kontakten er sluttet (**`digital læs pin P0` = 0**), og rydder skærmen ellers. Tryk på **P0** i simulatoren — ✓ til, ✓ fra.
+
+??? example "👀 Se klodserne"
+
+    ```makecode
+    auto:adv-1
+    ```
+
+**② Få den til at score** 🔢 — læg point til, når den slutter. Tryk på P0 og se… scoren **stiger vildt hurtigt**, mens du holder! Det er et rigtigt problem — `for altid`-løkken tæller *hver* gang. Det retter vi nu.
+
+??? example "👀 Se klodserne"
+
+    ```makecode
+    auto:adv-2
+    ```
+
+**③ Ét hit = ét point** 🎯 — tilføj et **`wasClosed`**-flag, så et hit kun scorer **én gang** — når kontakten *først* slutter. Det "kun ved ændringen"-trick er sådan enhver rigtig knap og bumper virker.
+
+??? example "👀 Se klodserne"
+
+    ```makecode
+    auto:adv-3
+    ```
+
+**④ Et mål mere** ➕ — kopiér samme idé over på **P1** som endnu en kontakt, der giver flere point. To mål! På det rigtige board er det bare endnu en ledning til endnu en pin.
+
+??? example "👀 Se klodserne"
+
+    ```makecode
+    auto:adv-4
+    ```
+
+**⑤ Rollover-baner** 🛣️ — en rigtig flipper-combo: ram den **venstre bane (P0)** for at *lade den op*, og derefter den **højre bane (P1)** for en stor **BONUS**. Forkert rækkefølge = ingen bonus. Nu husker maskinen, hvad I gjorde — det er **tilstand**.
+
+??? example "👀 Se klodserne"
+
+    ```makecode
+    auto:adv-5
+    ```
+
+**⑥ Sæt det ind i din maskine** 🕹️ — læg jeres nye kontakter ind i hele spillet: touch-mål på **P0/P1/P2** *og* to kablede kontakter på **P8/P9** (en **100**-bumper og en **500**-jackpot), alle med ét-hit-ét-point-tricket. Et rigtigt bord med rigtige kontakter.
+
+??? example "👀 Se klodserne — kør eller redigér"
+
+    ```makecode
+    auto:adv-6
+    ```
+
+### 🔭 Næste gang — lys & flippere
+
+Nu hvor maskinen *læser* mange kontakter, er den klar til de dele, der får den til at bevæge sig og lyse (kommende uger):
+
+- 🌈 **Spilleplade-lys** — en **NeoPixel**-strip der blinker ved hvert kontakt-hit.
+- 🕹️ **Flippere** — **servoer** på knap **A/B** der slår kuglen op ad bordet igen.
+
 ## ✅ Jeg er færdig når…
 
 - ☐ At røre **P0** får **scoren** til at stige på skærmen.
 - ☐ **A** nulstiller, og **B** starter et nyt spil.
 - ☐ *(Level up!)* Et andet mål, en **ding**, **3 kugler** og **TILT** virker alle.
+- ☐ *(Level 2!)* Jeg **læste min egen kontakt**, rettede den til **ét hit = ét point** og tilføjede et **mål mere** (bonus: rollover-baner).
 
 ## 🎉 Kahoot-tid!
 
@@ -532,12 +613,13 @@ week-2
 
 ??? note "👩‍🏫 Til hjælpere — sessionsplan, materialer & noter"
 
-    **Mål (i dag):** repetér variabler + knapper, og byg så **score-ved-berøring** med nulstil og nyt spil. Det er klassens mål. Trin ③–⑥ er valgfri stretch for hurtige og et smugkig på de kommende uger — I behøver ikke nå dem i dag.
+    **Mål (i dag):** repetér variabler + knapper, og byg så **score-ved-berøring** med nulstil og nyt spil. Det er klassens mål. Trin ③–⑥ er valgfri stretch for hurtige og et smugkig på de kommende uger — I behøver ikke nå dem i dag. **⚡ Level 2** (under tjeklisten) er en dybere, **elektronik-først** stretch — at læse jeres egne **kontakter**, ét lille trin ad gangen; stadig **ingen nye dele**, kun ledninger og shieldet.
 
     **Materialer**
 
     - micro:bit (**V2** anbefales — kapacitiv touch på P0/P1/P2 **og** den indbyggede højtaler til ding'en) + USB
     - **Keyestudio micro:bit sensor-shield**, krokodillenæb / jumper-ledninger, et par metalmål (folie, mønter)
+    - *(Level 2)* et par ekstra ledninger (og folie/en knap) til at lave **kontakt-mål** — øv på P0/P1, og sæt så rigtige kontakter på **P8/P9**
     - Bærbar/Chromebook — **simulatoren er nok** til at bygge & teste (klik på pinsene)
     - *(V1 virker til scoring — metallet skal slutte et kredsløb til **GND**; ding'en kræver en buzzer.)*
 
@@ -548,3 +630,5 @@ week-2
     - **Blok 2 (30):** 15 nulstil (A) + nyt spil (B) → 5 hurtige starter level-up-stigen → 5 fremvisning → 5 Kahoot
 
     **Noter:** kun **P0/P1/P2** er touch-pads, så P2 fungerer også som "drain". Test i simulatoren ved at **klikke på pinsene**. `addPoints`/`loseBall` (④–⑥) er et blidt kig på **funktioner** (repeteres uge 7). Dette er **del 1** — flippere (servoer), lys (NeoPixels), plunger, highscore og multibold kommer senere.
+
+    **⚡ Level 2-noter:** en **elektronik-først**-stige — *at læse en kontakt*, bygget op ét lille trin ad gangen (hver indlejring tilføjer kun det nye, så børnene ser den vokse). Idéen: en kontakt er to ledninger, kuglen slutter; `sæt pull pin … op` gør, at pinnen læser **1** åben / **0** sluttet, og en `for altid`-løkke holder øje. Det store aha er **② → ③**: uden et kant-flag stiger scoren, mens man holder; **`wasClosed`**-flaget ("kun ved ændringen") retter det — samme trick bag enhver knap og bumper. Trin ①–⑤ øver på **P0/P1**, så børnene kan **trykke på pads i simulatoren**; ⑥ flytter de ekstra kontakter til ledige pins **P8/P9** præcis som på det rigtige board (samme klodser, andet pin-nummer — simulatoren kan ikke klikke dem, så test ⑥ på hardware eller ved midlertidigt at læse P0/P1). ⑤ (rollover-baner) tilføjer **ordnet tilstand** til en combo. Klodserne vises; **JavaScript/Python** er ét klik væk via **Åbn & kør**. Det er input-halvdelen af pinball-elektronikken — og lægger op til hardware-ugerne: 🌈 NeoPixels og 🕹️ servoer.

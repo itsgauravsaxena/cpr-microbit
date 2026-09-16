@@ -8,7 +8,6 @@
     - **variables** — a number you can change (the score)
     - **events** — run code on buttons & touch pins
     - **functions** *(Level up)* — name a job, reuse it
-    - **digital input** *(Level 2)* — read a real switch
 
 <div style="text-align:center;margin:1.25rem 0;" markdown="0">
 <svg width="200" height="200" viewBox="0 0 162 162" role="img" aria-label="the guessing game counting" xmlns="http://www.w3.org/2000/svg">
@@ -31,6 +30,14 @@ The **start** of our pinball scoreboard: touch a target and your **score** goes 
 A 30-second refresher: a **click counter**. Press **A** and a number goes up. That number is a **variable** — exactly how a score works.
 
 *🎓 Concept: **variables** — a number you can change.*
+
+??? note "How it works"
+
+    **Purpose.** A 30-second refresher that proves a **variable** is just a number the board *remembers* — which is exactly how a score works.
+
+    **Think of it like a clicker counter:** a doorman's tally clicker adds one on each press and remembers the running total — a pinball score is the same idea.
+
+    **How the code works:** `count` starts at `0`. `on button A pressed` runs `change count by 1` then `show number count`. The key idea: `count` keeps its value between presses, so each press builds on the last. Swap "count" for "score" and you already have the pinball scoreboard.
 
 ??? example "👀 Run it, or read the code"
 
@@ -66,6 +73,20 @@ A 30-second refresher: a **click counter**. Press **A** and a number goes up. Th
 Make touching **P0** add points and show the score.
 
 *🎓 Concept: **events** + **input** — a touch pin changes a variable.*
+
+??? note "How it works"
+
+    **Purpose.** The heart of the whole term's build: a hit on a target makes the **score** climb. Everything later (more targets, balls, TILT, wired switches) hangs off this one idea.
+
+    **In the pinball:** this *is* a **bumper** — the ball touches the target and the points ring up. The pin "touch" is the ball closing a contact.
+
+    **How the code works:**
+
+    - `score` is a variable starting at `0`.
+    - `on pin P0 pressed` is an **event** fired when the metal target completes a circuit (P0 → your hand/ball → **GND**). Inside: `change score by 10`, then `show number score`.
+    - **Reset (A)** sets `score` back to 0; **New game (B)** resets it and flashes `GO` — two more button events.
+
+    **Watch for:** in the simulator, *click* the P0 pin to fake a touch. On hardware, the touch must reach **GND** — a **V2** senses this capacitively on P0/P1/P2; a **V1** needs the metal to actually close a circuit to a GND pin.
 
 1. Make a **variable** called `score` (starts at 0).
 2. From **Input**, use **`on pin P0 pressed`**.
@@ -208,6 +229,20 @@ Two small steps and you've got a real mini-game.
 Finished the goal? Keep going — each step adds a real pinball feature. By the end you have a little machine you can actually play.
 
 *🎓 Concept: **functions** — name a job, reuse it.*
+
+??? note "How it works"
+
+    **Purpose.** Once there are several targets and rules, copy-pasting the same lines everywhere gets fragile. A **function** lets you name a job once and reuse it — the first real "software design" idea of the course.
+
+    **Think of it like a rubber stamp:** carve the stamp once (the function), then every bumper stamps its points the same way — re-cut the stamp and all of them change at once.
+
+    **How the code works:**
+
+    - `addPoints(points)` is a function holding the three lines every target needs: `change score`, play the **ding**, `show number`. Each target just calls `addPoints(10)` or `addPoints(50)` instead of repeating them.
+    - `loseBall()` is a second function: it subtracts a ball, and with an `if / else` shows **OVER** + the final score when balls reach 0, otherwise how many are left. Both the **drain (P2)** and **TILT (shake)** call `loseBall()`, so "lose a ball" behaves identically wherever it's triggered.
+    - `score` and `balls` are variables the functions read and update.
+
+    **Watch for:** the payoff is *change one place, fixed everywhere* — e.g. edit the ding inside `addPoints` and every target updates. Rungs ③–⑥ are optional stretch; functions come back properly in Week 7.
 
 **③ Second target** 🎯 — wire a metal to **P1**, worth **50**.
 
@@ -533,78 +568,15 @@ Finished the goal? Keep going — each step adds a real pinball feature. By the 
         input.on_button_pressed(Button.B, on_button_pressed_b)
         ```
 
-## ⚡ Level 2 — wire up more targets *(optional)*
+## ⚡ Next week — wire up your own switches
 
-**Why?** So far your targets are the **3 touch pins** (P0/P1/P2). A real pinball has *loads* of targets, bumpers and lanes — and every one is just a tiny **switch the ball closes**. Level 2 is how you **wire and read your own switches**, so your machine can grow as big as you want. This is the real electronics the lights and flippers plug into later. 🔌
-
-Build it up **one small step at a time** — each step adds just a little. 🌱
-
-*🎓 Concept: **digital input** + **loops** (`forever`) + **state**.*
-
-!!! tip "Which pin? P0 now, spare pins later"
-    We practise on **P0** because you can **press it in the simulator**. On the real table your touch targets stay on P0–P2 and each *extra* switch goes on a spare pin (**P8, P9, …**) — read with the **exact same blocks**, just a different pin number. The **Keyestudio shield** gives every pin its own socket — that's how you reach **P8/P9** (a bare micro:bit only clips onto P0/P1/P2).
-
-**① Read a switch** 🔌 — the whole idea in three blocks: **`set pull pin P0 up`**, then a **`forever`** loop that shows a ✓ while the switch is closed (**`digital read pin P0` = 0**) and clears it otherwise. Press **P0** in the sim — ✓ on, ✓ off.
-
-??? example "👀 See the blocks"
-
-    ```makecode
-    auto:adv-1
-    ```
-
-**② Make it score** 🔢 — now add points when it closes. Press P0 and watch… the score races up **crazy fast** while you hold it! That's a real problem — the `forever` loop counts *every* pass. We fix it next.
-
-??? example "👀 See the blocks"
-
-    ```makecode
-    auto:adv-2
-    ```
-
-**③ One hit = one point** 🎯 — add a **`wasClosed`** flag so a hit only scores **once**, when the switch *first* closes. This "only on the change" trick is how every real button and bumper works.
-
-??? example "👀 See the blocks"
-
-    ```makecode
-    auto:adv-3
-    ```
-
-**④ A second target** ➕ — copy the same idea onto **P1** for a second switch, worth more points. Two targets! On the real board this is just another wire to another pin.
-
-??? example "👀 See the blocks"
-
-    ```makecode
-    auto:adv-4
-    ```
-
-**⑤ Rollover lanes** 🛣️ — a proper pinball combo: hit the **left lane (P0)** to *arm* it, then the **right lane (P1)** for a big **BONUS**. Miss the order and no bonus. Now the machine remembers what you did — that's **state**.
-
-??? example "👀 See the blocks"
-
-    ```makecode
-    auto:adv-5
-    ```
-
-**⑥ Put it in your machine** 🕹️ — drop your new switches into the full game: touch targets on **P0/P1/P2** *and* two wired switches on **P8/P9** (a **100** bumper and a **500** jackpot), all with the one-hit-one-point trick. A real table with real switches.
-
-??? example "👀 See the blocks — run or edit"
-
-    ```makecode
-    auto:adv-6
-    ```
-
-### 🔭 Coming next — lights & flippers
-
-Now the machine *reads* lots of switches, it's ready for the parts that make it move and glow (coming weeks):
-
-- 🌈 **Playfield lights** — a **NeoPixel** strip that flashes on every switch hit.
-- 🕹️ **Flippers** — **servos** on buttons **A/B** that flick the ball back up the table.
+**[Week 3 — Pinball switches](../week-03-pinball-switches/README.md)** picks the build straight back up. So far your targets are the **3 touch pins** (P0/P1/P2); a real pinball has *loads* of targets, bumpers and lanes — and every one is just a tiny **switch the ball closes**. Next week is the **electronics-first** ladder: wire and read your own switches so your machine can grow as big as you want. Finished today's goal and the level-up ladder? Take a peek. 🔌
 
 ## ✅ I did it when…
 
 - ☐ Touching **P0** makes the **score** go up on screen.
 - ☐ **A** resets, and **B** starts a new game.
 - ☐ *(Level up!)* A second target, a **ding**, **3 balls** and **TILT** all work.
-- ☐ *(Level 2!)* I **read my own switch**, fixed it to **one hit = one point**, and added a **second target** (bonus: rollover lanes).
 
 ## 🎉 Kahoot time!
 
@@ -618,13 +590,12 @@ week-2
 
 ??? note "👩‍🏫 For helpers — session plan, materials & notes"
 
-    **Goal (today):** revise variables + buttons, then build **score-on-touch** with reset and new game. That's the class target. Rungs ③–⑥ are optional stretch for fast finishers and a preview of the coming weeks — don't feel you must reach them today. **⚡ Level 2** (below the checklist) is a deeper, **electronics-first** stretch — reading your own **switches**, one small step at a time; still **no new parts**, just wires and the shield.
+    **Goal (today):** revise variables + buttons, then build **score-on-touch** with reset and new game. That's the class target. Rungs ③–⑥ are optional stretch for fast finishers and a preview of the coming weeks — don't feel you must reach them today. The deeper, **electronics-first** stretch — reading your own **switches** — has moved to **[Week 3 — Pinball switches](../week-03-pinball-switches/README.md)**, so today stays focused on getting everyone scoring.
 
     **Materials**
 
     - micro:bit (**V2** recommended — capacitive touch on P0/P1/P2 **and** the built-in speaker for the ding) + USB
     - **Keyestudio micro:bit sensor shield**, crocodile-clip / jumper wires, a few metal targets (foil, coins)
-    - *(Level 2)* a couple of extra wires (and foil/a button) to make **switch targets** — practise on P0/P1, then real switches on **P8/P9**
     - Laptop/Chromebook — the **simulator is enough** to build & test (click the pins)
     - *(V1 works for scoring — the metal must complete a circuit to **GND**; the ding needs a buzzer.)*
 
@@ -634,6 +605,4 @@ week-2
     - **Break (20)**
     - **Block 2 (30):** 15 reset (A) + new game (B) → 5 fast finishers start the level-up ladder → 5 showcase → 5 Kahoot
 
-    **Notes:** only **P0/P1/P2** are touch pads, so P2 doubles as the "drain". Test in the sim by **clicking the pins**. `addPoints`/`loseBall` (④–⑥) are a gentle intro to **functions** (revisited Week 7). This is **part 1** — flippers (servos), lights (NeoPixels), plunger, high score and multiball come later.
-
-    **⚡ Level 2 notes:** an **electronics-first** ladder — *reading a switch*, built up one small step at a time (each embed adds only the new bit, so kids see it grow). The concept: a switch is two wires the ball closes; `set pull pin … up` makes the pin read **1** open / **0** closed, and a `forever` loop watches it. The big teaching moment is **② → ③**: without an edge flag the score races while held; the **`wasClosed`** flag ("only on the change") fixes it — the same trick behind every button and bumper. Steps ①–⑤ practise on **P0/P1** so kids can **press the pads in the simulator**; ⑥ moves the extra switches to spare pins **P8/P9** exactly as on the real board (same blocks, different pin — the sim can't click those, so test ⑥ on hardware or by temporarily reading P0/P1). ⑤ (rollover lanes) adds **ordered state** for a combo. Blocks are shown; **JavaScript/Python** are one click away via **Open & run**. This is the input half of the pinball electronics — it sets up the hardware weeks: 🌈 NeoPixels and 🕹️ servos.
+    **Notes:** only **P0/P1/P2** are touch pads, so P2 doubles as the "drain". Test in the sim by **clicking the pins**. `addPoints`/`loseBall` (④–⑥) are a gentle intro to **functions** (revisited Week 7). This is **part 1** — the **switch-reading** ladder is now **[Week 3](../week-03-pinball-switches/README.md)**; flippers (servos), lights (NeoPixels), plunger, high score and multiball come later.

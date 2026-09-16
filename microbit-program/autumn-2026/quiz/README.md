@@ -2,7 +2,7 @@
 
 _[← Autumn 2026](../README.md)_
 
-A short, fun quiz to finish every session — **both groups play together**. Each week has six questions: four about what we've been building, and two just for fun 🎉.
+A short, fun quiz to finish every session — **both groups play together**. Most weeks have six questions: four about what we've been building, and two just for fun 🎉. *(Week 3 is a bigger **18-question** round.)*
 
 !!! tip "How to run it"
     1. Create a free quiz at <https://kahoot.com> (or use any quiz app / just read the questions aloud).
@@ -109,49 +109,135 @@ A short, fun quiz to finish every session — **both groups play together**. Eac
 - Bear
 - Horse
 
-## Week 3 — Random & sensors {#week-3}
+## Week 3 — Game Lab 2 & Pinball switches {#week-3}
 
-**1. Which block gives you a surprise number?**
+_A bigger **18-question** round: the end of the Beginners' Game Lab (music, radio, fortune teller) and the Pro pinball-switch build — plus six just for fun 🎉. The ✅ correct answers are already spread across A–D (import the sheet as-is). Mixed teams of one Beginner + one Pro work great._
 
-- ✅ pick random
-- show number
+**1. Which block plays a built-in tune like "Ba Ding"?**
+
+- ✅ start melody
+- show icon
+- pick random
+- radio send number
+
+**2. Two micro:bits can only hear each other over radio if they share the same…**
+
+- colour
+- battery
+- ✅ group number
+- button
+
+**3. Which block sends a message through the air to another micro:bit?**
+
+- show string
+- ✅ radio send number
 - pause
-- clear screen
+- show leds
 
-**2. Which sensor notices when you SHAKE the micro:bit?**
+**4. Which block runs when a message ARRIVES from another micro:bit?**
 
-- ✅ Accelerometer
-- Thermometer
-- Light sensor
-- Radio
+- on start
+- on button A
+- on shake
+- ✅ on radio received
 
-**3. A dice should show numbers…**
+**5. The Fortune Teller picks its answer with pick random and…**
 
-- ✅ 1 to 6
-- 0 to 9
-- 1 to 10
-- 0 to 5
+- play tone
+- ✅ if / else
+- radio
+- show number
 
-**4. What do you touch to use the Love Meter?**
+**6. In the Love Meter, you complete a circuit by holding…**
 
-- ✅ Pin 0 and GND
-- The USB port
-- The buttons
-- The LEDs
+- the USB port
+- button A and B
+- two LEDs
+- ✅ pin 0 and GND
 
-**5. 🎉 How many sides does a normal dice have?**
+**7. A switch the ball closes is read with which block?**
 
-- ✅ 6
-- 4
-- 8
-- 12
+- ✅ digital read pin
+- play tone
+- show icon
+- set volume
 
-**6. 🎉 What is the fastest land animal?**
+**8. `set pull pin P0 up` makes the pin read 1 when open — what when closed?**
 
-- ✅ Cheetah
-- Lion
-- Horse
-- Ostrich
+- 100
+- still 1
+- ✅ 0
+- -1
+
+**9. How often does a `forever` loop check the switch?**
+
+- once at the start
+- only when you press A
+- never
+- ✅ all the time, over and over
+
+**10. Adding points inside a forever loop while you HOLD a switch makes the score…**
+
+- stay at 0
+- ✅ shoot up way too fast
+- count down
+- freeze
+
+**11. The `wasClosed` flag makes sure one hit scores…**
+
+- a hundred times
+- never
+- ✅ only once
+- forever
+
+**12. A machine that remembers "left lane first, then right = BONUS" is using…**
+
+- ✅ state (it remembers)
+- radio
+- a melody
+- a random number
+
+**13. 🎮 In games, what does "noob" mean?**
+
+- A boss
+- A prize
+- ✅ A new player
+- A map
+
+**14. 🐛 A "glitch" or bug in a game is…**
+
+- ✅ a mistake in the code
+- a new level
+- a controller
+- a snack
+
+**15. 🎉 What does "GG" mean at the end of a match?**
+
+- Get Going
+- Great Goal
+- Go Green
+- ✅ Good Game
+
+**16. 🏁 A "speedrun" means finishing a game…**
+
+- with your eyes closed
+- ✅ as fast as you can
+- backwards
+- on paper
+
+**17. 🐌 When an online game gets slow and jumpy, players call it…**
+
+- ✅ lag
+- loot
+- a combo
+- a skin
+
+**18. 🚀 Which planet is nicknamed the "Red Planet"?**
+
+- Venus
+- Jupiter
+- Saturn
+- ✅ Mars
 
 ## Week 4 — Logic & timing {#week-4}
 

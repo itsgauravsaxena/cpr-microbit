@@ -2,7 +2,7 @@
 
 _[← Efterår 2026](../README.md)_
 
-En kort, sjov quiz til at afslutte hver session — **begge hold spiller sammen**. Hver uge har seks spørgsmål: fire om det, vi har bygget, og to bare for sjov 🎉.
+En kort, sjov quiz til at afslutte hver session — **begge hold spiller sammen**. De fleste uger har seks spørgsmål: fire om det, vi har bygget, og to bare for sjov 🎉. *(Uge 3 er en større **18-spørgsmåls**-runde.)*
 
 !!! tip "Sådan afvikler du den"
     1. Lav en gratis quiz på <https://kahoot.com> (eller brug en anden quiz-app / læs bare spørgsmålene højt).
@@ -109,49 +109,135 @@ En kort, sjov quiz til at afslutte hver session — **begge hold spiller sammen*
 - Bjørn
 - Hest
 
-## Uge 3 — Tilfældighed & sensorer {#uge-3}
+## Uge 3 — Spil-lab 2 & Pinball-kontakter {#uge-3}
 
-**1. Hvilken blok giver dig et overraskelsestal?**
+_En større **18-spørgsmåls**-runde: slutningen på begyndernes Spil-lab (musik, radio, spåkugle) og Pro'ernes pinball-kontakt-byg — plus seks bare for sjov 🎉. De ✅ rigtige svar er allerede spredt ud over A–D (importér arket som det er). Blandede hold med én Beginner + én Pro fungerer godt._
 
-- ✅ pick random
-- show number
+**1. Hvilken blok spiller en indbygget melodi som "Ba Ding"?**
+
+- ✅ start melodi
+- vis ikon
+- vælg tilfældig
+- radio send nummer
+
+**2. To micro:bits kan kun høre hinanden over radio, hvis de er på samme…**
+
+- farve
+- batteri
+- ✅ gruppenummer
+- knap
+
+**3. Hvilken blok sender en besked gennem luften til en anden micro:bit?**
+
+- vis streng
+- ✅ radio send nummer
 - pause
-- clear screen
+- vis LED'er
 
-**2. Hvilken sensor mærker, at du RYSTER micro:bitten?**
+**4. Hvilken blok kører, når der ANKOMMER en besked fra en anden micro:bit?**
 
-- ✅ Accelerometer
-- Termometer
-- Lyssensor
-- Radio
+- når programmet starter
+- når der trykkes på A
+- på ryst
+- ✅ når radio modtager
 
-**3. En terning skal vise tal fra …**
+**5. Spåkuglen vælger sit svar med "vælg tilfældig" og…**
 
-- ✅ 1 til 6
-- 0 til 9
-- 1 til 10
-- 0 til 5
+- spil tone
+- ✅ hvis / ellers
+- radio
+- vis nummer
 
-**4. Hvad rører du for at bruge kærlighedsmåleren?**
+**6. I kærlighedsmåleren slutter du et kredsløb ved at holde…**
 
-- ✅ Pin 0 og GND
 - USB-porten
-- Knapperne
-- LED'erne
+- knap A og B
+- to LED'er
+- ✅ pin 0 og GND
 
-**5. 🎉 Hvor mange sider har en normal terning?**
+**7. En kontakt, som kuglen slutter, læses med hvilken blok?**
 
-- ✅ 6
-- 4
-- 8
-- 12
+- ✅ digital læs pin
+- spil tone
+- vis ikon
+- sæt lydstyrke
 
-**6. 🎉 Hvad er det hurtigste landdyr?**
+**8. "sæt pull pin P0 op" gør, at pinnen læser 1 når åben — og hvad når sluttet?**
 
-- ✅ Gepard
-- Løve
-- Hest
-- Struds
+- 100
+- stadig 1
+- ✅ 0
+- -1
+
+**9. Hvor tit tjekker en "for altid"-løkke kontakten?**
+
+- én gang ved starten
+- kun når du trykker på A
+- aldrig
+- ✅ hele tiden, igen og igen
+
+**10. At lægge point til i en "for altid"-løkke, mens du HOLDER kontakten, får scoren til at…**
+
+- blive på 0
+- ✅ stige alt for hurtigt
+- tælle ned
+- fryse
+
+**11. "wasClosed"-flaget sikrer, at ét hit kun scorer…**
+
+- hundrede gange
+- aldrig
+- ✅ én gang
+- for evigt
+
+**12. En maskine, der husker "venstre bane først, så højre = BONUS", bruger…**
+
+- ✅ tilstand (den husker)
+- radio
+- en melodi
+- et tilfældigt tal
+
+**13. 🎮 Hvad betyder "noob" i spil?**
+
+- En boss
+- En præmie
+- ✅ En ny spiller
+- Et kort
+
+**14. 🐛 En "glitch" eller bug i et spil er…**
+
+- ✅ en fejl i koden
+- et nyt niveau
+- en controller
+- en snack
+
+**15. 🎉 Hvad betyder "GG" til sidst i en kamp?**
+
+- Get Going
+- Great Goal
+- Go Green
+- ✅ Good Game
+
+**16. 🏁 En "speedrun" betyder at gennemføre et spil…**
+
+- med lukkede øjne
+- ✅ så hurtigt som muligt
+- baglæns
+- på papir
+
+**17. 🐌 Når et onlinespil bliver langsomt og hakker, kalder spillere det…**
+
+- ✅ lag
+- loot
+- en combo
+- en skin
+
+**18. 🚀 Hvilken planet kaldes den "røde planet"?**
+
+- Venus
+- Jupiter
+- Saturn
+- ✅ Mars
 
 ## Uge 4 — Logik & timing {#uge-4}
 

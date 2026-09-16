@@ -42,7 +42,7 @@ _PAGE_SRC = None
 # view can't be pinned to Danish (it follows the viewer's browser), so for these
 # pages we swap in a harvested PNG (scripts/harvest_blocks.py) whenever one
 # exists as code/<name>.<lang>.png — otherwise we fall back to the live embed.
-_PIN_IMG_PATHS = ("week-02-name-tag-smiley-buttons",)
+_PIN_IMG_PATHS = ("week-02-name-tag-smiley-buttons", "week-03-game-lab-2")
 
 # A ```makecode fence with a single-line body: a share id, ``auto`` (the
 # week's main program) or ``auto:<name>`` (a named program, e.g. a ladder rung).

@@ -2,14 +2,12 @@
 
 **🔗 Open this page on a computer:** go to **[tinyurl.com/beginw2](https://tinyurl.com/beginw2)**
 
-> Warm up with a face machine, then build **real games**: dice 🎲, music 🎵, secret radio messages 📻, and a fortune teller 🔮.
+> Warm up with a face machine, then build your first **real game**: a shake-to-roll **dice** 🎲. (More games — music 🎵, secret radio messages 📻 and a fortune teller 🔮 — come in Week 3.)
 
 !!! abstract "🎓 What you'll learn today"
     - **events** — run code on a button or a shake
-    - **`if / else`** (conditionals) — make the micro:bit *choose*
     - **random** — surprise numbers
-    - **radio** — two micro:bits talking to each other
-    - the **Music** blocks — melodies & notes
+    - **`if / else`** (conditionals) — make the micro:bit *choose*
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
 <svg width="220" height="220" viewBox="0 0 216 216" role="img" aria-label="a face changing happy, sad, surprised" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,Segoe UI,sans-serif">
@@ -26,6 +24,21 @@
 Buttons make faces, a shake gives a surprise. Press **▶️ Open & run** to play:
 
 *🎓 Concept: **events** — run code on a button or shake.*
+
+??? note "How it works"
+
+    **Purpose.** A gentle warm-up that turns Week 1's `show icon` into something *interactive* — the first taste of **events** (code that waits for something to happen) and **random**.
+
+    **Think of it like a doorbell:** the code sits quietly until its button is pressed, then does its one job — and there's a separate bell for A, B, both-at-once, and a shake.
+
+    **How the code works:**
+
+    - `on start` runs once when the board powers on — here it shows `HEJ!`.
+    - `on button A pressed` and `on button B pressed` are two separate **events**. Each is its own little program that sits and waits for its button, then shows a Happy / Sad face.
+    - `on button A+B pressed` is a *third* event that fires only when both buttons are pressed together.
+    - `on shake` picks a random number **0–3** (`pick random`) into a variable, then an `if / else if` chain shows a different face for each value — the first look at *choosing* based on a number.
+
+    **Watch for:** A+B is its own event — press both at once (in the simulator, click the small **A+B** button). Events don't run in order top-to-bottom; each just waits for its own trigger.
 
 ??? example "👀 See the finished blocks"
 
@@ -77,13 +90,28 @@ Buttons make faces, a shake gives a surprise. Press **▶️ Open & run** to pla
 
 ## 🎮 Now build a game!
 
-Pick a game, build the blocks, play it. Start easy — work your way up. Each one has a **🔨 Build it** with a simple starter, then the full game. 🌱
+Build the **dice** game one small piece at a time. The **🔨 Build it** starts with a simple version, then grows into the full game. 🌱
 
 ### 🎲 Dice
 
 Shake for a random **1–6**. 🎲
 
 *🎓 Concept: **random** + **`if / else`** (conditionals).*
+
+??? note "How it works"
+
+    **Purpose.** The game everyone can finish. It turns "shake → a random number" into a *real* dice that shows dot patterns, so kids see a number drive what's drawn on screen.
+
+    **Think of it like a board-game dice:** shake and you get a 1–6 — and the `if / else` is the rule sheet ("if you rolled 3, light up three dots").
+
+    **How the code works:**
+
+    - `on shake` is the **event** — it fires once each time the board is shaken.
+    - `pick random 1 to 6` produces a fresh number and stores it in a variable (`roll`).
+    - An `if / else if` ladder checks `roll` and draws the matching face with `show leds` (each branch is a 5×5 dot pattern). The final `else` handles the 6, so you only need five checks for six outcomes.
+    - The build grows in three steps: ① just `show number`, ② make **6** special with one `if / else`, ③ swap every number for real **dots**.
+
+    **Watch for:** kids add the `if` branches one at a time — resist pasting the finished ladder. In the simulator, use the **shake** button to test.
 
 ??? example "👀 See the finished game"
 
@@ -111,130 +139,17 @@ Shake for a random **1–6**. 🎲
     auto:dice
     ```
 
-### 🎵 Music Maker
+### ➡️ More games — next week
 
-Buttons make music. Shake for a surprise tune! 🎵 *(turn the sound up 🔊)*
-
-*🎓 Concept: the **Music** blocks — melodies & notes.*
-
-??? example "👀 See the finished game"
-
-    ```makecode
-    auto:music
-    ```
-
-??? example "🔨 Build it — 3 small steps"
-
-    **① Press A** — one button, one sound:
-
-    ```makecode
-    auto:music-1
-    ```
-
-    **② Add B** — a second button with a different tune:
-
-    ```makecode
-    auto:music-2
-    ```
-
-    **③ Shake surprise** — add a **shake** → a music note 🎵 and a surprise song:
-
-    ```makecode
-    auto:music
-    ```
-
-### 📻 Secret Messages
-
-Send hearts 💗 and smileys 😀 to a friend's micro:bit — over the air! 📻
-
-*🎓 Concept: **radio** — send & receive between micro:bits.*
-
-!!! tip "You need **two** micro:bits"
-    You and your partner both use the **same group number** (change the `1` in *set group*). Pick your own so you don't cross wires with the next pair!
-
-??? example "👀 See the finished game"
-
-    ```makecode
-    auto:radio
-    ```
-
-??? example "🔨 Build it — 3 small steps"
-
-    **① Send + show** — set your **group**, press **A** to send, show a 💗 when a message arrives:
-
-    ```makecode
-    auto:radio-1
-    ```
-
-    **② Second button** — add **B** so you can send two different messages:
-
-    ```makecode
-    auto:radio-2
-    ```
-
-    **③ Two pictures** — use `if / else` so **A** shows a heart 💗 and **B** a smiley 😀:
-
-    ```makecode
-    auto:radio
-    ```
-
-### 🔮 Fortune Teller
-
-Ask a yes/no question, give it a shake, and see what it says! 🔮
-
-*🎓 Concept: **`if / else if`** — choosing between answers.*
-
-??? example "👀 See the finished game"
-
-    ```makecode
-    auto:fortune
-    ```
-
-??? example "🔨 Build it — 3 small steps"
-
-    **① Yes or No** — shake → ✓ or ✗ (your first `if / else`):
-
-    ```makecode
-    auto:fortune-1
-    ```
-
-    **② Add Maybe** — a third answer 🤔 with `else if`:
-
-    ```makecode
-    auto:fortune-2
-    ```
-
-    **③ Let it think** — it "thinks" first 😴, then gives one of **four** answers:
-
-    ```makecode
-    auto:fortune
-    ```
+Music 🎵, secret radio messages 📻 and a fortune teller 🔮 are waiting in **[Week 3 — Game Lab 2](../week-03-game-lab-2/README.md)**. Finished the dice with time to spare? Sneak a peek! 👀
 
 ---
-
-## 🌟 Bonus
-
-??? example "🎨 Draw your own picture"
-
-    Make **button A** light up your own LEDs with **`show leds`** — draw anything!
-
-    ```makecode
-    auto:draw
-    ```
-
-??? example "✊✋✌️ Rock, Paper, Scissors"
-
-    Shake to throw rock, paper or scissors — then duel a friend, best of five!
-
-    ```makecode
-    auto:rps
-    ```
 
 ## ✅ I did it when…
 
 - ☐ My **Button Faces** works on the real board (A 😀, B 🙁).
-- ☐ I built **at least one game** and played it.
-- ☐ *(Legend!)* I built **two or more** games — or stumped the Fortune Teller. 🔮
+- ☐ I built the **Dice** game and rolled it.
+- ☐ *(Legend!)* My dice shows real **dots**, not just a number. 🎲
 
 ## 🎉 Kahoot time!
 
@@ -248,21 +163,16 @@ week-2
 
 ??? note "👩‍🏫 For helpers — session plan & notes"
 
-    **Goal:** build on Week 1's `show icon`. Warm up with **Button Faces** (buttons A/B/A+B, shake, a first taste of **random**), then let kids pick from a menu of small **games** so fast finishers always have more to reach for. There is deliberately **more here than fits one session** — that's on purpose. 🎯
+    **Goal:** build on Week 1's `show icon`. Warm up with **Button Faces** (buttons A/B/A+B, shake, a first taste of **random**), then everyone builds the **🎲 Dice** game — `pick random` + a growing `if / else`, finishing with real **dots**. That's the whole session; the rest of the game menu (music, radio, fortune teller) now lives in **[Week 3 — Game Lab 2](../week-03-game-lab-2/README.md)**, so Week 2 stays calm and everyone lands the same win. 🎯
 
-    **The games (easy → hard):**
+    **Fast finishers:** point them straight at **Week 3** for the next games, or at the **🌟 Bonus** there (draw-your-own, rock-paper-scissors).
 
-    - **🎲 Dice** — `pick random` + `if/else`. Everyone can finish this.
-    - **🎵 Music Maker** — the Music blocks. Loud and fun (headphones help a full room).
-    - **📻 Secret Messages** — first taste of **radio**; needs **2 boards per pair**, both on the **same group**. Magical for kids.
-    - **🔮 Fortune Teller** — more `if / else` practice, all icons (no slow scrolling text). Silly and social — kids love asking it questions.
-
-    *(A bigger **🚀 Star Catcher** game — variable + loop + LED plotting — is parked in `archive/week-02-star-catcher/` if you want a harder Week 3 stretch. Pull-back steps are in that folder's README.)*
+    *(A bigger **🚀 Star Catcher** game — variable + loop + LED plotting — is parked in `archive/week-02-star-catcher/` if you want an extra stretch. Pull-back steps are in that folder's README.)*
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 recap Week 1 → 30 build **Button Faces** together (steps ①–⑥) → 10 download to the board → 15 start **Dice**.
+    - **Block 1 (60):** 5 recap Week 1 → 30 build **Button Faces** together (steps ①–⑥) → 10 download to the board → 15 start **Dice** (① roll a number).
     - **Break (20)**
-    - **Block 2 (30):** 20 free choice from the game menu (Dice → Music → Radio → Fortune Teller) at own pace → 5 showcase → 5 Kahoot.
+    - **Block 2 (30):** 20 finish **Dice** (② make 6 special → ③ real dots) at own pace → 5 showcase → 5 Kahoot.
 
-    **Notes:** every embed opens straight into **Blocks**. Each *Build it* shows a simple **starter** first, then the **full** program, so kids grow one program rather than copy finished code. Leftover games are perfect **Week 3** carry-over — better to have too much than too little.
+    **Notes:** every embed opens straight into **Blocks**. Each *Build it* shows a simple **starter** first, then the **full** program, so kids grow one program rather than copy finished code.

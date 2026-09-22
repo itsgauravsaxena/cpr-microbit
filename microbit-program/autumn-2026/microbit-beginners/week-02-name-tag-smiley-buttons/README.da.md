@@ -2,7 +2,7 @@
 
 **🔗 Åbn siden på en computer:** gå til **[tinyurl.com/beginw2](https://tinyurl.com/beginw2)**
 
-> Varm op med en ansigtsmaskine, og byg så dit første **rigtige spil**: en ryste-og-rul **terning** 🎲. (Flere spil — musik 🎵, hemmelige radiobeskeder 📻 og en spåkugle 🔮 — kommer i Uge 3.)
+> Varm op med en ansigtsmaskine, og byg så dit første **rigtige spil**: en ryste-og-rul **terning** 🎲. (Flere spil — musik 🎵 og en spåkugle 🔮 — kommer i Uge 3, og radiospil 📻 i Uge 4.)
 
 !!! abstract "🎓 Hvad I lærer i dag"
     - **hændelser** — kør kode ved en knap eller et ryst
@@ -141,7 +141,7 @@ Ryst for et tilfældigt **1–6**. 🎲
 
 ### ➡️ Flere spil — næste uge
 
-Musik 🎵, hemmelige radiobeskeder 📻 og en spåkugle 🔮 venter i **[Uge 3 — Spil-lab 2](../week-03-game-lab-2/README.md)**. Er du færdig med terningen og har tid til overs? Tag et smugkig! 👀
+Musik 🎵 og en spåkugle 🔮 venter i **[Uge 3 — Spil-lab 2](../week-03-game-lab-2/README.md)**, og radio- & holdspil 📻 i **[Uge 4](../../week-04-game-lab/README.md)**. Er du færdig med terningen og har tid til overs? Tag et smugkig! 👀
 
 ---
 
@@ -163,9 +163,9 @@ week-2
 
 ??? note "👩‍🏫 Til hjælpere — sessionsplan & noter"
 
-    **Mål:** byg videre på Uge 1's `vis ikon`. Varm op med **Knap-ansigter** (knapper A/B/A+B, ryst, en første smagsprøve på **tilfældig**), og byg så alle sammen **🎲 Terning**-spillet — `vælg tilfældig` + et voksende `hvis / ellers`, der slutter med rigtige **prikker**. Det er hele sessionen; resten af spil-menuen (musik, radio, spåkugle) bor nu i **[Uge 3 — Spil-lab 2](../week-03-game-lab-2/README.md)**, så Uge 2 er rolig, og alle lander den samme sejr. 🎯
+    **Mål:** byg videre på Uge 1's `vis ikon`. Varm op med **Knap-ansigter** (knapper A/B/A+B, ryst, en første smagsprøve på **tilfældig**), og byg så alle sammen **🎲 Terning**-spillet — `vælg tilfældig` + et voksende `hvis / ellers`, der slutter med rigtige **prikker**. Det er hele sessionen; resten af spil-menuen (musik & spåkugle i **[Uge 3](../week-03-game-lab-2/README.md)**, radio- & holdspil i **[Uge 4](../../week-04-game-lab/README.md)**) kommer senere, så Uge 2 er rolig, og alle lander den samme sejr. 🎯
 
-    **Hurtige elever:** send dem direkte videre til **Uge 3** efter de næste spil eller til **🌟 Bonus** der (tegn-dit-eget, sten-saks-papir).
+    **Hurtige elever:** send dem direkte videre til **Uge 3** efter de næste spil eller til **🌟 Bonus** der (tegn-dit-eget, Kærlighedsmåler).
 
     *(Et større **🚀 Stjernefanger**-spil — variabel + løkke + LED-tegning — er parkeret i `archive/week-02-star-catcher/`, hvis du vil have et ekstra stræk. Sådan henter du det tilbage står i den mappes README.)*
 

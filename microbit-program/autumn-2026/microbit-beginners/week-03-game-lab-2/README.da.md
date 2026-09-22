@@ -1,17 +1,17 @@
 # Uge 3 — Spil-lab 2 🎮
 
-> Tilbage til Spil-labben! Sidste uge byggede du terningen 🎲 — nu skal du lave **musik** 🎵, sende **hemmelige radiobeskeder** 📻 og bygge en **spåkugle** 🔮.
+> Tilbage til Spil-labben! Lav **musik** 🎵, byg en **spåkugle** 🔮 og tegn dine egne billeder 🎨. *(Radio- & holdspil har deres egen session — se [Uge 4](../../week-04-game-lab/README.md).)*
 
 !!! abstract "🎓 Hvad I lærer i dag"
-    - **radio** — to micro:bits der taler sammen
     - **Musik**-klodserne — melodier & noder
-    - mere **`hvis / ellers`** — vælg mellem svar
+    - mere **`hvis / ellers hvis`** — vælg mellem svar
+    - **`vis lys`** — tegn dine egne billeder
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
-<svg width="230" height="230" viewBox="0 0 196 196" role="img" aria-label="et hjerte der banker på LED-skærmen" xmlns="http://www.w3.org/2000/svg">
+<svg width="230" height="230" viewBox="0 0 196 196" role="img" aria-label="et smiley-ansigt der blinker på LED-skærmen" xmlns="http://www.w3.org/2000/svg">
 <rect x="0" y="0" width="196" height="196" rx="22" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
 <g fill="#2b3038"><rect x="17" y="17" width="26" height="26" rx="6"/><rect x="51" y="17" width="26" height="26" rx="6"/><rect x="85" y="17" width="26" height="26" rx="6"/><rect x="119" y="17" width="26" height="26" rx="6"/><rect x="153" y="17" width="26" height="26" rx="6"/><rect x="17" y="51" width="26" height="26" rx="6"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="85" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/><rect x="153" y="51" width="26" height="26" rx="6"/><rect x="17" y="85" width="26" height="26" rx="6"/><rect x="51" y="85" width="26" height="26" rx="6"/><rect x="85" y="85" width="26" height="26" rx="6"/><rect x="119" y="85" width="26" height="26" rx="6"/><rect x="153" y="85" width="26" height="26" rx="6"/><rect x="17" y="119" width="26" height="26" rx="6"/><rect x="51" y="119" width="26" height="26" rx="6"/><rect x="85" y="119" width="26" height="26" rx="6"/><rect x="119" y="119" width="26" height="26" rx="6"/><rect x="153" y="119" width="26" height="26" rx="6"/><rect x="17" y="153" width="26" height="26" rx="6"/><rect x="51" y="153" width="26" height="26" rx="6"/><rect x="85" y="153" width="26" height="26" rx="6"/><rect x="119" y="153" width="26" height="26" rx="6"/><rect x="153" y="153" width="26" height="26" rx="6"/></g>
-<g fill="#ff4d4d"><animate attributeName="opacity" dur="1.4s" repeatCount="indefinite" values="1;0.3;1" keyTimes="0;0.5;1"/><rect x="51" y="17" width="26" height="26" rx="6"/><rect x="119" y="17" width="26" height="26" rx="6"/><rect x="17" y="51" width="26" height="26" rx="6"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="85" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/><rect x="153" y="51" width="26" height="26" rx="6"/><rect x="17" y="85" width="26" height="26" rx="6"/><rect x="51" y="85" width="26" height="26" rx="6"/><rect x="85" y="85" width="26" height="26" rx="6"/><rect x="119" y="85" width="26" height="26" rx="6"/><rect x="153" y="85" width="26" height="26" rx="6"/><rect x="51" y="119" width="26" height="26" rx="6"/><rect x="85" y="119" width="26" height="26" rx="6"/><rect x="119" y="119" width="26" height="26" rx="6"/><rect x="85" y="153" width="26" height="26" rx="6"/></g>
+<g fill="#ffd23f"><rect x="17" y="119" width="26" height="26" rx="6"/><rect x="153" y="119" width="26" height="26" rx="6"/><rect x="51" y="153" width="26" height="26" rx="6"/><rect x="85" y="153" width="26" height="26" rx="6"/><rect x="119" y="153" width="26" height="26" rx="6"/><g><animate attributeName="opacity" dur="3s" repeatCount="indefinite" keyTimes="0;0.9;0.95;1" values="1;1;0;1"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/></g></g>
 </svg>
 </div>
 
@@ -63,56 +63,6 @@ Knapper laver musik. Ryst for en overraskelses-melodi! 🎵 *(skru op for lyden 
 
     ```makecode
     auto:music
-    ```
-
-### 📻 Hemmelige beskeder
-
-Send hjerter 💗 og smileys 😀 til en vens micro:bit — gennem luften! 📻
-
-*🎓 Begreb: **radio** — send & modtag mellem micro:bits.*
-
-!!! tip "I skal bruge **to** micro:bits"
-    Du og din makker bruger begge det **samme gruppenummer** (skift `1`-tallet i *sæt gruppe*). Vælg jeres eget, så I ikke blander jer med det næste par!
-
-??? note "Sådan virker det"
-
-    **Formål.** Semesterets magiske øjeblik — to boards taler *trådløst*. Det lærer **send**, **modtag** og idéen om en fælles **gruppe** (kanal).
-
-    **Tænk på det som walkie-talkies:** I hører kun hinanden, hvis I begge er på samme kanal — det er det, gruppenummeret gør.
-
-    **Sådan virker koden:**
-
-    - `radio sæt gruppe 1` i starten sætter boardet på en kanal. Kun boards på **samme gruppenummer** kan høre hinanden.
-    - `ved tryk på knap A` → `send tal 1`; `ved tryk på knap B` → `send tal 2`. At sende udsender bare et tal ud i luften.
-    - `ved radio modtaget (receivedNumber)` er en **ny slags hændelse** — den kører på det *andet* board, når et tal ankommer. Et `hvis / ellers` viser et 💗 ved `1` og et 😀 ved `2`.
-    - Begge makkere flasher **samme** program, så hvert board både kan sende og modtage.
-
-    **Vær opmærksom på:** I skal bruge **2 boards pr. par**, begge på samme gruppe. Beslut gruppenumre samlet i klassen (par 1 → gruppe 1, par 2 → gruppe 2 …), så signalerne ikke krydser. Radio kan ikke testes med én simulator — denne kræver rigtige boards.
-
-??? example "👀 Se det færdige spil"
-
-    ```makecode
-    auto:radio
-    ```
-
-??? example "🔨 Byg det — 3 små trin"
-
-    **① Send + vis** — sæt din **gruppe**, tryk på **A** for at sende, vis et 💗 når en besked kommer:
-
-    ```makecode
-    auto:radio-1
-    ```
-
-    **② Knap nummer to** — tilføj **B**, så du kan sende to forskellige beskeder:
-
-    ```makecode
-    auto:radio-2
-    ```
-
-    **③ To billeder** — brug `hvis / ellers`, så **A** viser et hjerte 💗 og **B** en smiley 😀:
-
-    ```makecode
-    auto:radio
     ```
 
 ### 🔮 Spåkugle
@@ -170,7 +120,6 @@ Stil et ja/nej-spørgsmål, giv den et ryst, og se hvad den siger! 🔮
     **Formål.** Hurtige udvidelser til de hurtige — ingen nye begreber, bare remix af det, de kan.
 
     - **🎨 Tegn dit eget** — `ved tryk på knap A` → `vis lys` med et hånd-tændt 5×5-mønster. Ren kreativitet — som pixelkunst på en Etch A Sketch.
-    - **✊✋✌️ Sten, Saks, Papir** — `ved ryst` → `vælg tilfældig 0 til 2` → et `hvis / ellers hvis` viser firkant / fyldt gitter / saks. Samme tilfældig-og-vælg-mønster som terningen, nu til en dyst i skolegården.
     - **💗 Kærlighedsmåler** — `ved tryk på pin P0` → `vis tal (vælg tilfældig 0 til 100)`. "Sensoren" er din krop: at holde **P0** og **GND** slutter et kredsløb, som tæller som et tryk — præcis som "kærlighedstester"-maskinerne i et tivoli. (V2 mærker berøring på P0 direkte.)
 
 ??? example "🎨 Tegn dit eget billede"
@@ -179,14 +128,6 @@ Stil et ja/nej-spørgsmål, giv den et ryst, og se hvad den siger! 🔮
 
     ```makecode
     auto:draw
-    ```
-
-??? example "✊✋✌️ Sten, Saks, Papir"
-
-    Ryst for at kaste sten, saks eller papir — dyst så mod en ven, bedst af fem!
-
-    ```makecode
-    auto:rps
     ```
 
 ??? example "💗 Kærlighedsmåler"
@@ -203,9 +144,9 @@ Stil et ja/nej-spørgsmål, giv den et ryst, og se hvad den siger! 🔮
 
 ## ✅ Jeg er færdig når…
 
-- ☐ Jeg byggede **mindst ét spil** (musik, radio eller spåkugle) og spillede det.
-- ☐ Jeg sendte en **hemmelig radiobesked** til en makker. 📻
-- ☐ *(Legende!)* Jeg byggede **to eller flere** spil — eller narrede spåkuglen. 🔮
+- ☐ Jeg byggede **Musik-maskinen** og fik den til at spille en melodi. 🎵
+- ☐ Jeg narrede **Spåkuglen**. 🔮
+- ☐ *(Legende!)* Jeg tegnede mit eget billede eller prøvede **Kærlighedsmåleren**.
 
 ## 🎉 Kahoot-tid!
 
@@ -219,19 +160,18 @@ week-3
 
 ??? note "👩‍🏫 Til hjælpere — sessionsplan & noter"
 
-    **Mål:** dette er anden halvdel af Spil-labben — spillene, der ikke kunne nås i Uge 2. Børnene vælger fra en menu af små **spil** i eget tempo. **📻 Hemmelige beskeder** er højdepunktet: den kræver **2 boards pr. par**, begge på **samme gruppe**. Der er med vilje **mere her end der kan nås på én session** — bedre for meget end for lidt. 🎯
+    **Mål:** en afslappet spil-session — **🎵 Musik-maskine** og **🔮 Spåkugle**, begge ren on-board-sjov (ingen ekstra dele). Børnene bygger i eget tempo og remixer så med bonusspillene. De større **radio- & holdspil** har nu deres egen session i **[Uge 4 — Spil-lab](../../week-04-game-lab/README.md)**.
 
     **Spillene (nemt → svært):**
 
     - **🎵 Musik-maskine** — Musik-klodserne. Højt og sjovt (høretelefoner hjælper i et fyldt lokale).
-    - **📻 Hemmelige beskeder** — **radio**; kræver **2 boards pr. par**, begge på **samme gruppe**. Magisk for børn.
-    - **🔮 Spåkugle** — mere `hvis / ellers`-træning, kun ikoner (ingen langsom tekst). Skør og social — børn elsker at stille den spørgsmål.
-    - **🌟 Bonus** — tegn-dit-eget, sten-saks-papir og en **💗 Kærlighedsmåler** (touch pin P0).
+    - **🔮 Spåkugle** — mere `hvis / ellers`-træning, kun ikoner (ingen langsom tekst). Skør og social.
+    - **🌟 Bonus** — tegn-dit-eget og en **💗 Kærlighedsmåler** (touch pin P0 → en første smagsprøve på et "kredsløb").
 
     **Sessionsplan (60 + 20 pause + 30)**
 
-    - **Blok 1 (60):** 5 genopfrisk terningen → 15 byg **Musik-maskine** sammen → 10 overfør til boardet → 25 dan par til **Hemmelige beskeder** (sæt samme gruppe) → 5 tjek-ind.
+    - **Blok 1 (60):** 5 genopfrisk terningen → 25 byg **Musik-maskine** sammen (trin ①–③) → 10 overfør til boardet → 15 start **Spåkuglen** → 5 tjek-ind.
     - **Pause (20)**
-    - **Blok 2 (30):** 20 frit valg fra menuen (Spåkugle, bonusspil) i eget tempo → 5 fremvisning → 5 Kahoot.
+    - **Blok 2 (30):** 20 færdiggør Spåkuglen + frit valg af bonusspil i eget tempo → 5 fremvisning → 5 Kahoot.
 
-    **Noter:** hver indlejring åbner direkte i **Blokke**. Hver *Byg det* viser en nem **start** først og derefter det **fulde** program, så børnene vokser ét program frem i stedet for at kopiere færdig kode. Radio kræver ens **gruppenumre** — beslut dem samlet i klassen, så par ikke støder sammen. **🚀 Stjernefanger**-stækket er parkeret i `archive/week-02-star-catcher/`, hvis nogen vil have en større udfordring.
+    **Noter:** hver indlejring åbner direkte i **Blokke**. Hver *Byg det* viser en nem **start** først og derefter det **fulde** program, så børnene vokser ét program frem i stedet for at kopiere færdig kode. **🚀 Stjernefanger**-stækket er parkeret i `archive/week-02-star-catcher/`, hvis nogen vil have en større udfordring.

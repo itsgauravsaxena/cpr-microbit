@@ -2,7 +2,7 @@
 
 **🔗 Open this page on a computer:** go to **[tinyurl.com/beginw2](https://tinyurl.com/beginw2)**
 
-> Warm up with a face machine, then build your first **real game**: a shake-to-roll **dice** 🎲. (More games — music 🎵, secret radio messages 📻 and a fortune teller 🔮 — come in Week 3.)
+> Warm up with a face machine, then build your first **real game**: a shake-to-roll **dice** 🎲. (More games — music 🎵 and a fortune teller 🔮 — come in Week 3, and radio games 📻 in Week 4.)
 
 !!! abstract "🎓 What you'll learn today"
     - **events** — run code on a button or a shake
@@ -141,7 +141,7 @@ Shake for a random **1–6**. 🎲
 
 ### ➡️ More games — next week
 
-Music 🎵, secret radio messages 📻 and a fortune teller 🔮 are waiting in **[Week 3 — Game Lab 2](../week-03-game-lab-2/README.md)**. Finished the dice with time to spare? Sneak a peek! 👀
+Music 🎵 and a fortune teller 🔮 are waiting in **[Week 3 — Game Lab 2](../week-03-game-lab-2/README.md)**, and radio & team games 📻 in **[Week 4](../../week-04-game-lab/README.md)**. Finished the dice with time to spare? Sneak a peek! 👀
 
 ---
 
@@ -163,9 +163,9 @@ week-2
 
 ??? note "👩‍🏫 For helpers — session plan & notes"
 
-    **Goal:** build on Week 1's `show icon`. Warm up with **Button Faces** (buttons A/B/A+B, shake, a first taste of **random**), then everyone builds the **🎲 Dice** game — `pick random` + a growing `if / else`, finishing with real **dots**. That's the whole session; the rest of the game menu (music, radio, fortune teller) now lives in **[Week 3 — Game Lab 2](../week-03-game-lab-2/README.md)**, so Week 2 stays calm and everyone lands the same win. 🎯
+    **Goal:** build on Week 1's `show icon`. Warm up with **Button Faces** (buttons A/B/A+B, shake, a first taste of **random**), then everyone builds the **🎲 Dice** game — `pick random` + a growing `if / else`, finishing with real **dots**. That's the whole session; the rest of the game menu (music & fortune teller in **[Week 3](../week-03-game-lab-2/README.md)**, radio & team games in **[Week 4](../../week-04-game-lab/README.md)**) comes later, so Week 2 stays calm and everyone lands the same win. 🎯
 
-    **Fast finishers:** point them straight at **Week 3** for the next games, or at the **🌟 Bonus** there (draw-your-own, rock-paper-scissors).
+    **Fast finishers:** point them straight at **Week 3** for the next games, or at the **🌟 Bonus** there (draw-your-own, Love Meter).
 
     *(A bigger **🚀 Star Catcher** game — variable + loop + LED plotting — is parked in `archive/week-02-star-catcher/` if you want an extra stretch. Pull-back steps are in that folder's README.)*
 

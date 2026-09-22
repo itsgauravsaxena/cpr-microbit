@@ -122,4 +122,6 @@ nav:
           - "Week 1 · Flashing Heart": autumn-2026/microbit-pro/week-01-kickoff-challenge/README.md
           - "Week 2 · Pinball scoreboard": autumn-2026/microbit-pro/week-02-data-sensors/README.md
           - "Week 3 · Pinball switches": autumn-2026/microbit-pro/week-03-pinball-switches/README.md
+      - "🎮 Whole group":
+          - "Week 4 · Game Lab (radio & team games)": autumn-2026/week-04-game-lab/README.md
   - Spring 2027: spring-2027/README.md

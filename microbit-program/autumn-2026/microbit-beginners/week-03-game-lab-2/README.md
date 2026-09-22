@@ -1,17 +1,17 @@
 # Week 3 — Game Lab 2 🎮
 
-> Back to the Game Lab! Last week you built the dice 🎲 — now make **music** 🎵, send **secret radio messages** 📻, and build a **fortune teller** 🔮.
+> Back to the Game Lab! Make **music** 🎵, build a **fortune teller** 🔮, and draw your own pictures 🎨. *(Radio & team games are their own session — see [Week 4](../../week-04-game-lab/README.md).)*
 
 !!! abstract "🎓 What you'll learn today"
-    - **radio** — two micro:bits talking to each other
     - the **Music** blocks — melodies & notes
-    - more **`if / else`** — choosing between answers
+    - more **`if / else if`** — choosing between answers
+    - **`show leds`** — draw your own pictures
 
 <div style="text-align:center;margin:1.5rem 0;" markdown="0">
-<svg width="230" height="230" viewBox="0 0 196 196" role="img" aria-label="a heart beating on the LED screen" xmlns="http://www.w3.org/2000/svg">
+<svg width="230" height="230" viewBox="0 0 196 196" role="img" aria-label="a smiley face blinking on the LED screen" xmlns="http://www.w3.org/2000/svg">
 <rect x="0" y="0" width="196" height="196" rx="22" fill="#0f1419" stroke="#c8a24a" stroke-width="2"/>
 <g fill="#2b3038"><rect x="17" y="17" width="26" height="26" rx="6"/><rect x="51" y="17" width="26" height="26" rx="6"/><rect x="85" y="17" width="26" height="26" rx="6"/><rect x="119" y="17" width="26" height="26" rx="6"/><rect x="153" y="17" width="26" height="26" rx="6"/><rect x="17" y="51" width="26" height="26" rx="6"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="85" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/><rect x="153" y="51" width="26" height="26" rx="6"/><rect x="17" y="85" width="26" height="26" rx="6"/><rect x="51" y="85" width="26" height="26" rx="6"/><rect x="85" y="85" width="26" height="26" rx="6"/><rect x="119" y="85" width="26" height="26" rx="6"/><rect x="153" y="85" width="26" height="26" rx="6"/><rect x="17" y="119" width="26" height="26" rx="6"/><rect x="51" y="119" width="26" height="26" rx="6"/><rect x="85" y="119" width="26" height="26" rx="6"/><rect x="119" y="119" width="26" height="26" rx="6"/><rect x="153" y="119" width="26" height="26" rx="6"/><rect x="17" y="153" width="26" height="26" rx="6"/><rect x="51" y="153" width="26" height="26" rx="6"/><rect x="85" y="153" width="26" height="26" rx="6"/><rect x="119" y="153" width="26" height="26" rx="6"/><rect x="153" y="153" width="26" height="26" rx="6"/></g>
-<g fill="#ff4d4d"><animate attributeName="opacity" dur="1.4s" repeatCount="indefinite" values="1;0.3;1" keyTimes="0;0.5;1"/><rect x="51" y="17" width="26" height="26" rx="6"/><rect x="119" y="17" width="26" height="26" rx="6"/><rect x="17" y="51" width="26" height="26" rx="6"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="85" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/><rect x="153" y="51" width="26" height="26" rx="6"/><rect x="17" y="85" width="26" height="26" rx="6"/><rect x="51" y="85" width="26" height="26" rx="6"/><rect x="85" y="85" width="26" height="26" rx="6"/><rect x="119" y="85" width="26" height="26" rx="6"/><rect x="153" y="85" width="26" height="26" rx="6"/><rect x="51" y="119" width="26" height="26" rx="6"/><rect x="85" y="119" width="26" height="26" rx="6"/><rect x="119" y="119" width="26" height="26" rx="6"/><rect x="85" y="153" width="26" height="26" rx="6"/></g>
+<g fill="#ffd23f"><rect x="17" y="119" width="26" height="26" rx="6"/><rect x="153" y="119" width="26" height="26" rx="6"/><rect x="51" y="153" width="26" height="26" rx="6"/><rect x="85" y="153" width="26" height="26" rx="6"/><rect x="119" y="153" width="26" height="26" rx="6"/><g><animate attributeName="opacity" dur="3s" repeatCount="indefinite" keyTimes="0;0.9;0.95;1" values="1;1;0;1"/><rect x="51" y="51" width="26" height="26" rx="6"/><rect x="119" y="51" width="26" height="26" rx="6"/></g></g>
 </svg>
 </div>
 
@@ -63,56 +63,6 @@ Buttons make music. Shake for a surprise tune! 🎵 *(turn the sound up 🔊)*
 
     ```makecode
     auto:music
-    ```
-
-### 📻 Secret Messages
-
-Send hearts 💗 and smileys 😀 to a friend's micro:bit — over the air! 📻
-
-*🎓 Concept: **radio** — send & receive between micro:bits.*
-
-!!! tip "You need **two** micro:bits"
-    You and your partner both use the **same group number** (change the `1` in *set group*). Pick your own so you don't cross wires with the next pair!
-
-??? note "How it works"
-
-    **Purpose.** The magic moment of the term — two boards talk *wirelessly*. It teaches **send**, **receive**, and the idea of a shared **group** (channel).
-
-    **Think of it like walkie-talkies:** you only hear each other if you're both tuned to the same channel — that's what the group number does.
-
-    **How the code works:**
-
-    - `radio set group 1` at the start puts the board on a channel. Only boards on the **same group number** can hear each other.
-    - `on button A` → `send number 1`; `on button B` → `send number 2`. Sending just broadcasts a number into the air.
-    - `on radio received (receivedNumber)` is a **new kind of event** — it fires on the *other* board when a number arrives. An `if / else` shows a 💗 for `1` and a 😀 for `2`.
-    - Both partners flash the **same** program, so each board can both send and receive.
-
-    **Watch for:** you need **2 boards per pair**, both on the same group. Decide group numbers as a class (pair 1 → group 1, pair 2 → group 2 …) so signals don't cross. Radio can't be tested with a single simulator — this one needs real boards.
-
-??? example "👀 See the finished game"
-
-    ```makecode
-    auto:radio
-    ```
-
-??? example "🔨 Build it — 3 small steps"
-
-    **① Send + show** — set your **group**, press **A** to send, show a 💗 when a message arrives:
-
-    ```makecode
-    auto:radio-1
-    ```
-
-    **② Second button** — add **B** so you can send two different messages:
-
-    ```makecode
-    auto:radio-2
-    ```
-
-    **③ Two pictures** — use `if / else` so **A** shows a heart 💗 and **B** a smiley 😀:
-
-    ```makecode
-    auto:radio
     ```
 
 ### 🔮 Fortune Teller
@@ -170,21 +120,14 @@ Ask a yes/no question, give it a shake, and see what it says! 🔮
     **Purpose.** Quick extensions for fast finishers — no new concepts, just remixing what they know.
 
     - **🎨 Draw your own** — `on button A` → `show leds` with a hand-toggled 5×5 pattern. Pure creativity, like pixel-art on an Etch A Sketch.
-    - **✊✋✌️ Rock, Paper, Scissors** — `on shake` → `pick random 0 to 2` → an `if / else if` shows a square / full grid / scissors. Same random-plus-choose pattern as the dice, now for a playground duel.
     - **💗 Love Meter** — `on pin P0 pressed` → `show number (pick random 0 to 100)`. The "sensor" is your body: holding **P0** and **GND** completes a circuit — just like the "love tester" grip machines at a fair. (V2 senses touch on P0 directly.)
+
+??? example "🎨 Draw your own picture"
 
     Make **button A** light up your own LEDs with **`show leds`** — draw anything!
 
     ```makecode
     auto:draw
-    ```
-
-??? example "✊✋✌️ Rock, Paper, Scissors"
-
-    Shake to throw rock, paper or scissors — then duel a friend, best of five!
-
-    ```makecode
-    auto:rps
     ```
 
 ??? example "💗 Love Meter"
@@ -201,9 +144,9 @@ Ask a yes/no question, give it a shake, and see what it says! 🔮
 
 ## ✅ I did it when…
 
-- ☐ I built **at least one game** (music, radio or fortune teller) and played it.
-- ☐ I sent a **secret radio message** to a partner. 📻
-- ☐ *(Legend!)* I built **two or more** games — or stumped the Fortune Teller. 🔮
+- ☐ I built the **Music Maker** and made it play a tune. 🎵
+- ☐ I stumped the **Fortune Teller**. 🔮
+- ☐ *(Legend!)* I drew my own picture or tried the **Love Meter**.
 
 ## 🎉 Kahoot time!
 
@@ -217,19 +160,18 @@ week-3
 
 ??? note "👩‍🏫 For helpers — session plan & notes"
 
-    **Goal:** this is the second half of the Game Lab — the games that didn't fit Week 2. Kids pick from a menu of small **games** at their own pace. **📻 Secret Messages** is the highlight: it needs **2 boards per pair**, both on the **same group**. There's deliberately **more here than fits one session** — better too much than too little. 🎯
+    **Goal:** a relaxed games session — **🎵 Music Maker** and the **🔮 Fortune Teller**, both pure on-board fun (no extra parts). Kids build at their own pace, then remix with the bonus games. The bigger **radio & team games** now have their own session in **[Week 4 — Game Lab](../../week-04-game-lab/README.md)**.
 
     **The games (easy → hard):**
 
     - **🎵 Music Maker** — the Music blocks. Loud and fun (headphones help a full room).
-    - **📻 Secret Messages** — **radio**; needs **2 boards per pair**, both on the **same group**. Magical for kids.
-    - **🔮 Fortune Teller** — more `if / else` practice, all icons (no slow scrolling text). Silly and social — kids love asking it questions.
-    - **🌟 Bonus** — draw-your-own, rock-paper-scissors, and a **💗 Love Meter** (touch pin P0).
+    - **🔮 Fortune Teller** — more `if / else` practice, all icons (no slow scrolling text). Silly and social.
+    - **🌟 Bonus** — draw-your-own, and a **💗 Love Meter** (touch pin P0 → a first taste of a "circuit").
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 recap the dice → 15 build **Music Maker** together → 10 download to the board → 25 pair up for **Secret Messages** (set matching groups) → 5 checkpoint.
+    - **Block 1 (60):** 5 recap the dice → 25 build **Music Maker** together (steps ①–③) → 10 download to the board → 15 start the **Fortune Teller** → 5 checkpoint.
     - **Break (20)**
-    - **Block 2 (30):** 20 free choice from the menu (Fortune Teller, bonus games) at own pace → 5 showcase → 5 Kahoot.
+    - **Block 2 (30):** 20 finish Fortune Teller + free choice of bonus games at own pace → 5 showcase → 5 Kahoot.
 
-    **Notes:** every embed opens straight into **Blocks**. Each *Build it* shows a simple **starter** first, then the **full** program, so kids grow one program rather than copy finished code. Radio needs matching **group numbers** — decide them as a class so pairs don't clash. The **🚀 Star Catcher** stretch is parked in `archive/week-02-star-catcher/` if anyone wants a bigger challenge.
+    **Notes:** every embed opens straight into **Blocks**. Each *Build it* shows a simple **starter** first, then the **full** program, so kids grow one program rather than copy finished code. The **🚀 Star Catcher** stretch is parked in `archive/week-02-star-catcher/` if anyone wants a bigger challenge.

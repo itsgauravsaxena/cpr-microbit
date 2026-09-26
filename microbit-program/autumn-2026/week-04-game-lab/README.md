@@ -211,4 +211,4 @@ week-4
     - **Break (20)**
     - **Block 2 (30):** 20 whole-room games — **Hot or Cold**, **Red Light Green Light**, **RPS duel** → 5 showcase → 5 Kahoot.
 
-    **Notes:** every embed opens straight into **Blocks**. Radio games use **group numbers** — decide them as a class so pairs don't clash (the games here use groups 1–3). Games that read **signal strength** or need space (**Hot or Cold**, **Red Light**) really want **real boards**. Coming next: **LED & circuit** projects (Week 5) — lights you wire yourself, on the way to the Ticklebot and pinball electronics. 💡
+    **Notes:** every embed opens straight into **Blocks**. Radio games use **group numbers** — decide them as a class so pairs don't clash (the games here use groups 1–3). Games that read **signal strength** or need space (**Hot or Cold**, **Red Light**) really want **real boards**. Coming next: **[Week 5 — Hot or Cold](../week-05-hot-or-cold/README.md)** goes deeper on the treasure hunt (a smarter detector), then **LED & circuit** projects — lights you wire yourself, toward the Ticklebot and pinball electronics. 💡

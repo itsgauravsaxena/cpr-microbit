@@ -211,4 +211,4 @@ week-4
     - **Pause (20)**
     - **Blok 2 (30):** 20 spil i hele lokalet — **Varmt eller koldt**, **Rødt lys grønt lys**, **SSP-dyst** → 5 fremvisning → 5 Kahoot.
 
-    **Noter:** hver indlejring åbner direkte i **Blokke**. Radio-spil bruger **gruppenumre** — beslut dem samlet i klassen, så par ikke støder sammen (spillene her bruger gruppe 1–3). Spil, der læser **signalstyrke** eller kræver plads (**Varmt eller koldt**, **Rødt lys**), vil helst have **rigtige boards**. Næste gang: **LED- & kredsløbs**-projekter (Uge 5) — lys, I selv slutter til, på vej mod Ticklebot'en og pinball-elektronikken. 💡
+    **Noter:** hver indlejring åbner direkte i **Blokke**. Radio-spil bruger **gruppenumre** — beslut dem samlet i klassen, så par ikke støder sammen (spillene her bruger gruppe 1–3). Spil, der læser **signalstyrke** eller kræver plads (**Varmt eller koldt**, **Rødt lys**), vil helst have **rigtige boards**. Næste gang: **[Uge 5 — Varmt eller koldt](../week-05-hot-or-cold/README.md)** går i dybden med skattejagten (en klogere detektor), så **LED- & kredsløbs**-projekter — lys, I selv slutter til, på vej mod Ticklebot'en og pinball-elektronikken. 💡

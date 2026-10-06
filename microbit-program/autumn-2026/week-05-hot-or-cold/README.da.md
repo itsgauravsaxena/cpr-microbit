@@ -124,7 +124,7 @@ Behold **samme skat** (`BEACON`) — flash bare **detektoren** igen med hver ny 
 
 ??? example "⑨ Tænd en rigtig LED 💡"
 
-    Slut en rigtig **LED** til pin **P0** (langt ben) og **GND** (kort ben): den lyser **kraftigere**, jo tættere du kommer — en skattelampe, du selv har bygget! *(En første smagsprøve på Uge 6's kredsløb.)*
+    Slut en rigtig **LED** til pin **P0** (langt ben) og **GND** (kort ben): den lyser **kraftigere**, jo tættere du kommer — en skattelampe, du selv har bygget! *(En første smagsprøve på LED- & kredsløbs-ugerne, der kommer.)*
 
     ```makecode
     auto:detector-led
@@ -178,4 +178,4 @@ week-5
     - **Pause (20)**
     - **Blok 2 (30):** 20 **③ varmere/koldere** og **④ fandt-den!** for de hurtige, plus en klasse-turnering i skattejagt → 5 fremvisning → 5 Kahoot.
 
-    **Noter:** hver indlejring åbner i **Blokke**. `modtaget pakke signalstyrke` ligger ≈ `-42` (rører) til `-128` (langt væk); variationerne `omregner` (map) det til en bjælke, en bip-forsinkelse eller en pil. Næste gang: **LED'er & kredsløb** (Uge 6) — lys, I selv slutter til, på vej mod Ticklebot'en og pinball-elektronikken. 💡
+    **Noter:** hver indlejring åbner i **Blokke**. `modtaget pakke signalstyrke` ligger ≈ `-42` (rører) til `-128` (langt væk); variationerne `omregner` (map) det til en bjælke, en bip-forsinkelse eller en pil. Næste gang: **[Uge 6 — Holdspil](../week-06-team-games/README.md)** (Rødt lys, SSP), så **LED- & kredsløbs**-projekter — lys, I selv slutter til, på vej mod Ticklebot'en og pinball-elektronikken. 💡

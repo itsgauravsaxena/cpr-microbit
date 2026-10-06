@@ -1,0 +1,16 @@
+Question #,Question Text,Answer 1,Answer 2,Answer 3,Answer 4,Time Limit (sec),Correct Answer(s)
+1,Hvad er en micro:bit?,En slikpose,En lille computer 💻,En bog,En cykel,20,2
+2,Hvilken farve lyser lysene (LED'erne) på micro:bit'en?,Blå,Grønne,Lilla,Røde,20,4
+3,Hvad kan micro:bit'ens lys vise?,"Tal, bogstaver og billeder",Kun lugte,Rigtige film,Ingenting,20,1
+4,"Hvad gør blokken ""spil tone""?",Tegner et billede,Sender en besked,Laver en lyd 🎵,Slukker boardet,20,3
+5,"Hvad sker der, når du trykker på knap A?",Den ringer til mor,"Det, du selv har kodet",Den eksploderer,Ingenting nogensinde,20,2
+6,"Kan micro:bit'en mærke, om der er koldt eller varmt?","Ja, det kan den","Nej, aldrig",Kun i vand,Kun om sommeren,20,1
+7,Hvad bruger man til at give micro:bit'en strøm?,Benzin,Vand,Mælk,Et batteri eller USB 🔋,20,4
+8,Hvilken verdenskendt eventyrforfatter er fra Danmark?,Brødrene Grimm,Roald Dahl,H.C. Andersen,J.K. Rowling,20,3
+9,Hvad kalder danskerne det at slappe af med stearinlys og kakao?,Hygge,Fika,Siesta,Brunch,20,1
+10,"👾 I hvilket spil skal man finde forræderen ""the Impostor""?",Tetris,Pac-Man,Wordle,Among Us,20,4
+11,🏃 I hvilket mobilspil løber man hen ad togskinner?,Candy Crush,Subway Surfers,Solitaire,Wordle,20,2
+12,🍄 Hvilken figur i rød kasket hopper på svampe?,Sonic,Kirby,Mario,Donkey Kong,20,3
+13,⚡ Hvad hedder den mest berømte gule Pokémon?,Pikachu,Bulbasaur,Squirtle,Snorlax,20,1
+14,"🕺 Hvad kalder man en sjov dance-move, man låser op i spil?",En bug,En pixel,En patch,En emote,20,4
+15,"😎 Hvad betyder det, at en spiller er ""OP""?",Doven,Rigtig stærk (overpowered),Sulten,Langsom,20,2

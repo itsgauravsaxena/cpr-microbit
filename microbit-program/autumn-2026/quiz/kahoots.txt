@@ -22,7 +22,7 @@ week-2  https://create.kahoot.it/share/sjov-med-micro-bit-kode-og-memes-w2/60d5b
 # week-3  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
 week-4  https://create.kahoot.it/details/week-4/3391a821-8089-443d-b55c-68ff22b72afc
 # week-5  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
-# week-6  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+week-6  https://create.kahoot.it/share/micro-bit-og-u-hyggelig-efterarsjagt/79b9f15d-7a81-4b5f-b7dc-1a4eaea61daf
 # week-7  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
 # week-8  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
 # week-9  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE

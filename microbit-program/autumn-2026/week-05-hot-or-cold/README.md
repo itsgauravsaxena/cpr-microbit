@@ -124,7 +124,7 @@ Keep the **same treasure** (`BEACON`) — just re-flash the **detector** with ea
 
 ??? example "⑨ Light a real LED 💡"
 
-    Wire a real **LED** to pin **P0** (long leg) and **GND** (short leg): it glows **brighter** the closer you get — a treasure lamp you built yourself! *(A first taste of Week 6's circuits.)*
+    Wire a real **LED** to pin **P0** (long leg) and **GND** (short leg): it glows **brighter** the closer you get — a treasure lamp you built yourself! *(A first taste of the LED/circuit weeks ahead.)*
 
     ```makecode
     auto:detector-led
@@ -178,4 +178,4 @@ week-5
     - **Break (20)**
     - **Block 2 (30):** 20 **③ warmer/colder** and **④ found-it!** for fast finishers, plus a class treasure-hunt tournament → 5 showcase → 5 Kahoot.
 
-    **Notes:** every embed opens in **Blocks**. `received packet signal strength` ranges ≈ `-42` (touching) to `-128` (far); the variations `map` that to a bar, a beep delay, or an arrow. Coming next: **LEDs & circuits** (Week 6) — lights you wire yourself, toward the Ticklebot and pinball electronics. 💡
+    **Notes:** every embed opens in **Blocks**. `received packet signal strength` ranges ≈ `-42` (touching) to `-128` (far); the variations `map` that to a bar, a beep delay, or an arrow. Coming next: **[Week 6 — Team Games](../week-06-team-games/README.md)** (Red Light, RPS), then **LED & circuit** projects — lights you wire yourself, toward the Ticklebot and pinball electronics. 💡

@@ -1,6 +1,6 @@
 # Uge 4 — Spil-lab 📡
 
-> Nu **taler micro:bit'ene sammen**! Byg en fjernbetjening 🎮 og spil **Varmt eller koldt**, **Rødt lys grønt lys** og **Sten-Saks-Papir** — alt sammen gennem luften. 📡
+> Nu **taler micro:bit'ene sammen**! Byg en **fjernbetjening** 🎮 og en **Varmt eller koldt**-skattejagt 💎 — alt sammen gennem luften. 📡
 
 !!! abstract "🎓 Hvad I lærer i dag"
     - **radio** — send, modtag og del en **gruppe** (kanal)
@@ -86,98 +86,11 @@ Indtil nu laver begge boards det **samme** job. Giv dem nu **forskellige** job: 
 
     *Hvordan: senderen `sender` sin **acceleration (X)** i en `for altid`-løkke; modtageren **omregner** (map) tallet til en prik-position (0–4) og flytter en **sprite**. Live sensordata over radio!*
 
-### 🚦 Rødt lys, grønt lys
-
-Skolegårdens klassiker — på micro:bit'en! Det ene board er **kalderen** (trafiklyset); alle andre holder et **spiller**-board. Bevæg dig på grønt ✓, frys på rødt ✗ — bliver du fanget i at bevæge dig på rødt, er du **ude**! 🚦
-
-*🎓 Begreb: **sender & modtager** + **accelerometeret** (det mærker, at du bevæger dig).*
-
-!!! tip "Én kalder, mange spillere — samme gruppe"
-    Læg **`LIGHT`** (kalderen) på ét board og **`PLAYER`** på alle andres, alle på **samme gruppe**. Kalderen trykker **A = grøn**, **B = rød**.
-
-??? example "👀 Se de to programmer"
-
-    **🚦 Kalder (trafiklyset)** — tryk A for grøn, B for rød:
-
-    ```makecode
-    auto:rlgl-light
-    ```
-
-    **🏃 Spiller** — ✓ grøn = gå, ✗ rød = frys. Bevæg dig på rødt → 💀 ude!
-
-    ```makecode
-    auto:rlgl-player
-    ```
-
-??? note "Sådan virker det"
-
-    **Tænk på det som den rigtige leg — micro:bit'en er en dommer, der aldrig blinker.**
-
-    - **Kalderen** er en *sender*: **A** sender `1` (grøn ✓), **B** sender `2` (rød ✗).
-    - Hver **spiller** er en *modtager*: den husker lyset i en variabel. `på ryst` = "du bevægede dig" — er lyset **rødt** lige da, viser den et 💀 og kalder **game over**.
-
-    **Vær opmærksom på:** kræver **2+ boards på samme gruppe**. I simulatoren: ryst spilleren, mens lyset er rødt, for at se game over; på rigtige boards fanger *accelerometeret* rigtig bevægelse.
-
-??? example "🚀 Level op — automatisk kalder"
-
-    Ikke flere knaptryk — lyset skifter **rødt/grønt af sig selv** på tilfældige tidspunkter, så ingen kan forudse det. Snedigt! Spillerne beholder samme **`PLAYER`**-program.
-
-    **🚦 Auto-kalder** — tilfældigt grønt, så tilfældigt rødt, for altid:
-
-    ```makecode
-    auto:rlgl-auto
-    ```
-
-    *Hvordan: en `for altid`-løkke sender grønt, venter et **tilfældigt** `1–4 s`, sender rødt, venter tilfældigt `1–3 s`, og gentager — `vælg tilfældig` gør timingen umulig at gætte.*
-
-### ✊✋✌️ Sten, Saks, Papir
-
-Ryst for at kaste ✊✋✌️. Spil det **solo**, og **dyst så mod en ven gennem luften** — boardene dømmer vinderen for dig!
-
-*🎓 Begreb: **tilfældig** til at kaste, **radio** til at dyste.*
-
-??? example "👀 Solo — ét board"
-
-    Ryst for at kaste sten, saks eller papir:
-
-    ```makecode
-    auto:rps
-    ```
-
-??? example "🚀 Level op — dyst over radio"
-
-    To boards på **samme gruppe**. I ryster begge, og hver skærm viser 😀 vundet, 😢 tabt eller `=` uafgjort:
-
-    ```makecode
-    auto:rps-radio
-    ```
-
-??? note "Sådan virker det"
-
-    **Tænk på det som en dommer med en regelbog.**
-
-    - `vælg tilfældig 0 til 2` vælger sten (0), papir (1) eller saks (2), tegnet med `vis lys`.
-    - I dysten `sender` du dit kast; når din vens kast *ankommer*, sammenligner et `hvis / ellers hvis` dem (sten slår saks, papir slår sten, saks slår papir) og viser resultatet — samme kast er uafgjort `=`.
-
-    **Vær opmærksom på:** begge spillere **ryster nogenlunde samtidig** og kigger så. Dysten bruger sin **egen gruppe**, så den ikke krydser besked-spillene.
-
-??? example "🚀 Level op — hold point, først til 5"
-
-    Spil en rigtig kamp: dit board **husker dine sejre** og viser din score. Først til **5** vinder kampen! 🏆
-
-    **✊✋✌️ Point-dyst** — flash denne på begge boards, samme gruppe:
-
-    ```makecode
-    auto:rps-score
-    ```
-
-    *Hvordan: en `myScore`-**variabel** stiger med 1 for hver sejr (`ændr myScore med 1`); ved **5** blinker den `WIN!` og nulstiller. Det nye er at holde point på tværs af runder.*
-
 ## ✅ Jeg er færdig når…
 
 - ☐ Jeg byggede en **fjernbetjening** — en sender og en modtager. 🎮
 - ☐ Jeg spillede **Varmt eller koldt** og fandt den gemte skat. 💎
-- ☐ *(Legende!)* Jeg vandt **Rødt lys grønt lys** eller en **SSP**-dyst. 🏆
+- ☐ *(Legende!)* Jeg byggede den **fjernstyrede prik** — vip for at styre. 🎮
 
 ## 🎉 Kahoot-tid!
 
@@ -195,20 +108,20 @@ week-4
 
     **Spillene (nemt → svært):**
 
-    - **📡 Sender & modtager** — *roller*: ét board sender, ét lytter. Indeholder **🔥 Varmt eller koldt** (signalstyrke — skattejagten i lokalet).
-    - **🚦 Rødt lys, grønt lys** — én kalder udsender rødt/grønt; spillere fanges i at bevæge sig på rødt (accelerometer + `game over`).
-    - **✊✋✌️ Sten, Saks, Papir** — et hurtigt solo-kast og så en 2-spiller radio-dyst, der selv dømmer.
+    - **📡 Sender & modtager** — *roller*: ét board sender, ét lytter. Indeholder **🔥 Varmt eller koldt** (signalstyrke — skattejagten i lokalet) og en **fjernstyret prik** (vip for at styre).
+
+    (**🚦 Rødt lys, grønt lys** og **✊✋✌️ Sten-Saks-Papir** har nu deres egen session — se **[Uge 6 — Holdspil](../week-06-team-games/README.md)**.)
 
     **Materialer**
 
     - micro:bits — **mindst 2 pr. par/gruppe** + USB (radio kræver rigtige boards; én simulator kan ikke teste det)
     - **V2**-boards giver en indbygget højtaler til besked-"bippet"; V1 virker ellers
-    - plads til at bevæge sig til **Varmt eller koldt** og **Rødt lys, grønt lys**
+    - plads til at bevæge sig til **Varmt eller koldt**
 
     **Sessionsplan (60 + 20 pause + 30)**
 
     - **Blok 1 (60):** 10 hvordan radio & grupper virker → 25 byg **Sender & modtager**-fjernbetjeningen (samme gruppe) → 20 **Varmt eller koldt**-skattejagt → 5 tjek-ind.
     - **Pause (20)**
-    - **Blok 2 (30):** 20 spil i hele lokalet — **Varmt eller koldt**, **Rødt lys grønt lys**, **SSP-dyst** → 5 fremvisning → 5 Kahoot.
+    - **Blok 2 (30):** 20 **Varmt eller koldt**-skattejagt + **fjernstyret prik**-level op → 5 fremvisning → 5 Kahoot.
 
-    **Noter:** hver indlejring åbner direkte i **Blokke**. Radio-spil bruger **gruppenumre** — beslut dem samlet i klassen, så par ikke støder sammen (spillene her bruger gruppe 1–3). Spil, der læser **signalstyrke** eller kræver plads (**Varmt eller koldt**, **Rødt lys**), vil helst have **rigtige boards**. Næste gang: **[Uge 5 — Varmt eller koldt](../week-05-hot-or-cold/README.md)** går i dybden med skattejagten (en klogere detektor), så **LED- & kredsløbs**-projekter — lys, I selv slutter til, på vej mod Ticklebot'en og pinball-elektronikken. 💡
+    **Noter:** hver indlejring åbner direkte i **Blokke**. Radio-spil bruger **gruppenumre** — beslut dem samlet i klassen, så par ikke støder sammen (spillene her bruger gruppe 1–3). Spil, der læser **signalstyrke** eller kræver plads (**Varmt eller koldt**, **Rødt lys**), vil helst have **rigtige boards**. Næste gang: **[Uge 5 — Varmt eller koldt](../week-05-hot-or-cold/README.md)** går i dybden med skattejagten, så **[Uge 6 — Holdspil](../week-06-team-games/README.md)** (Rødt lys, SSP), og senere **LED- & kredsløbs**-projekter mod Ticklebot'en & pinball. 💡

@@ -105,38 +105,11 @@ Shake to throw ✊✋✌️. Play it **solo**, then **duel a friend over the rad
 
     *How: a `myScore` **variable** goes up by 1 on every win (`change myScore by 1`); at **5** it flashes `WIN!` and resets. Keeping score across rounds is the new idea.*
 
-## 🎃 Halloween 👻
-
-A spooky seasonal treat that teaches something **new** — the micro:bit's hidden **light sensor**! 🦇
-
-??? example "🌑 Ghost in the Dark 🔦 — *learn the light sensor!*"
-
-    **Something new:** the micro:bit can **feel how light or dark it is** — it has a hidden **light sensor**! Keep it in the light and it's calm 😀, but cover it or turn off the lights and a **ghost appears and wails** 👻. Spooky!
-
-    ```makecode
-    auto:ghost-in-dark
-    ```
-
-    *How: a `forever` loop checks **`light level`** (0–255 — the LEDs double as a light sensor). Below **50** (dark) → ghost + wail; otherwise calm. A brand-new **input** — the micro:bit's eyes! Drag the light slider in the simulator to test.*
-
-??? example "🕯️ Ghost in the Dark — with a real LED 💡"
-
-    Same idea, now with a **real LED** you wire up: in the dark, an external LED **flickers** like a haunted candle; in the light it's off. 🕯️👻
-
-    Wire an **LED** to pin **P0** (long leg) and **GND** (short leg).
-
-    ```makecode
-    auto:ghost-in-dark-led
-    ```
-
-    *How: when `light level` is low, `digital write pin P0` flips the LED **on/off at random** (a candle flicker); in the light it stays off. Now it reads a sensor **and** drives a real circuit — a taste of the LED weeks ahead. No LED? Watch the **P0** pin in the simulator.*
-
 ## ✅ I did it when…
 
 - ☐ I played **Red Light, Green Light** without getting caught on red. 🚦
 - ☐ I won a **Rock-Paper-Scissors** duel over radio. ✊✋✌️
 - ☐ *(Legend!)* I built the **auto-caller** or kept **score to 5**. 🏆
-- ☐ *(Scientist!)* I used the **light sensor** to make a ghost appear in the dark — on screen and with a **real LED**. 🌑💡
 
 ## 🎉 Kahoot time!
 
@@ -169,4 +142,4 @@ week-6
     - **Break (20)**
     - **Block 2 (30):** 20 class tournament — **RPS first-to-5** + **Red Light** rounds → 5 showcase → 5 Kahoot.
 
-    **Notes:** every embed opens in **Blocks**. The games here use groups **2–3**. Coming next: **LED & circuit** projects — lights you wire yourself, toward the Ticklebot and pinball electronics. 💡
+    **Notes:** every embed opens in **Blocks**. The games here use groups **2–3**. Coming next: **[Week 7 — Light It Up](../week-07-light-it-up/README.md)** — LEDs you wire yourself, plus the 🎃 Halloween **Ghost in the Dark** (light sensor). 💡

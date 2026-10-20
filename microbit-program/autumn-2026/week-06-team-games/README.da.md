@@ -105,38 +105,11 @@ Ryst for at kaste ✊✋✌️. Spil det **solo**, og **dyst så mod en ven genn
 
     *Hvordan: en `myScore`-**variabel** stiger med 1 for hver sejr (`ændr myScore med 1`); ved **5** blinker den `WIN!` og nulstiller. Det nye er at holde point på tværs af runder.*
 
-## 🎃 Halloween 👻
-
-En uhyggelig sæson-godbid, der lærer noget **nyt** — micro:bit'ens skjulte **lyssensor**! 🦇
-
-??? example "🌑 Spøgelse i mørket 🔦 — *lær lyssensoren!*"
-
-    **Noget nyt:** micro:bit'en kan **mærke, hvor lyst eller mørkt der er** — den har en skjult **lyssensor**! Hold den i lyset, og den er rolig 😀, men dæk den til eller sluk lyset, og et **spøgelse dukker op og hyler** 👻. Uhyggeligt!
-
-    ```makecode
-    auto:ghost-in-dark
-    ```
-
-    *Hvordan: en `for altid`-løkke tjekker **`lysniveau`** (0–255 — LED'erne virker også som en lyssensor). Under **50** (mørkt) → spøgelse + hyl; ellers rolig. Et helt nyt **input** — micro:bit'ens øjne! Træk i lys-skyderen i simulatoren for at teste.*
-
-??? example "🕯️ Spøgelse i mørket — med en rigtig LED 💡"
-
-    Samme idé, nu med en **rigtig LED**, du slutter til: i mørket **flimrer** en ekstern LED som et hjemsøgt stearinlys; i lyset er den slukket. 🕯️👻
-
-    Slut en **LED** til pin **P0** (langt ben) og **GND** (kort ben).
-
-    ```makecode
-    auto:ghost-in-dark-led
-    ```
-
-    *Hvordan: når `lysniveau` er lavt, tænder/slukker `digital skriv pin P0` LED'en **tilfældigt** (et stearinlys-flimmer); i lyset er den slukket. Nu læser den en sensor **og** styrer et rigtigt kredsløb — en forsmag på LED-ugerne. Ingen LED? Hold øje med **P0**-pinnen i simulatoren.*
-
 ## ✅ Jeg er færdig når…
 
 - ☐ Jeg spillede **Rødt lys, grønt lys** uden at blive fanget på rødt. 🚦
 - ☐ Jeg vandt en **Sten-Saks-Papir**-dyst over radio. ✊✋✌️
 - ☐ *(Legende!)* Jeg byggede **auto-kalderen** eller holdt **point til 5**. 🏆
-- ☐ *(Forsker!)* Jeg brugte **lyssensoren** til at få et spøgelse frem i mørket — på skærmen og med en **rigtig LED**. 🌑💡
 
 ## 🎉 Kahoot-tid!
 
@@ -169,4 +142,4 @@ week-6
     - **Pause (20)**
     - **Blok 2 (30):** 20 klasse-turnering — **SSP først-til-5** + **Rødt lys**-runder → 5 fremvisning → 5 Kahoot.
 
-    **Noter:** hver indlejring åbner i **Blokke**. Spillene her bruger gruppe **2–3**. Næste gang: **LED- & kredsløbs**-projekter — lys, I selv slutter til, på vej mod Ticklebot'en og pinball-elektronikken. 💡
+    **Noter:** hver indlejring åbner i **Blokke**. Spillene her bruger gruppe **2–3**. Næste gang: **[Uge 7 — Tænd lyset](../week-07-light-it-up/README.md)** — LED'er, I selv slutter til, plus 🎃 Halloween-**Spøgelse i mørket** (lyssensor). 💡

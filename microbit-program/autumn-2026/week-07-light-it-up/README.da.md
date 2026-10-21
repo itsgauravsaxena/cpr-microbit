@@ -23,7 +23,7 @@
     - ✅ **Løse LED'er** — røde, gule og grønne lyser kraftigst. Blå og hvide kan være svage (pinsene giver kun ca. 3 V). En **modstand på 100–220 Ω** i serie skåner pinnen.
     - ❌ **Pærer** (lommelygte-/glødepærer) — de skal bruge langt mere strøm, end en pin kan give. De lyser ikke og kan skade micro:bit'en.
 
-    Alle programmer mærket **💡 P0** tænder din rigtige LED. **🖥️ skærm**-programmer bruger de indbyggede lys og kræver ingen ledninger.
+    Alle programmer tænder en **rigtig LED** — **💡**-mærket viser hvilke(n) pin(s). De fleste skal kun bruge **én LED på P0**; superlevel bruger **tre** (spørg en hjælper efter flere).
 
 ## 💡 Del 1 — Din første LED
 
@@ -53,25 +53,11 @@ Ingen knapper denne gang — en `for altid`-løkke tænder LED'en, venter, slukk
 
 ## ✨ Del 2 — Kraftigt og svagt
 
-### 🖥️ Opvarmning: skærmen
-
-De 25 lys på forsiden er også LED'er — så start her, uden ledninger. `sæt lysstyrke` gør dem kraftigere eller svagere:
-
-??? example "💗 Fade — et hjerte, der trækker vejret · 🖥️ skærm"
-
-    `sæt lysstyrke` går fra **0** (slukket) til **255** (fuld). Når der skiftes mellem kraftigt og svagt, pulserer hjertet.
-
-    ```makecode
-    auto:fade
-    ```
-
-### 💡 Nu din rigtige LED
-
 `digital skriv` kan kun **tænde (1)** eller **slukke (0)**. `analog skriv pin` kan alt **midt imellem**: **0** = slukket, **1023** = fuld styrke. Nu kan din LED gløde blødt! 🌗
 
 ??? example "🌙 LED, der trækker vejret · 💡 P0"
 
-    Den rigtige LED **fader langsomt op** og **ned igen** — som om den trækker vejret.
+    LED'en **fader langsomt op** og **ned igen** — som om den trækker vejret.
 
     ```makecode
     auto:led-fade
@@ -88,18 +74,6 @@ De 25 lys på forsiden er også LED'er — så start her, uden ledninger. `sæt 
     ```
 
     *Hvordan: variablen `level` går fra 0 til 10, og `analog skriv pin P0` får `level × 100`. `min` / `maks` sørger for, at den ikke kommer over 10 eller under 0.*
-
-### ✨ Bonus: funkel
-
-Ét skærmtrick mere — **tilfældige** glimt (du møder `vælg tilfældig` igen i spøgelsets stearinlys-flimmer):
-
-??? example "✨ Funkel — tilfældige glimt · 🖥️ skærm"
-
-    `tegn` tænder én LED på et tilfældigt **x, y**-sted, `slet` slukker en anden — som en stjernehimmel.
-
-    ```makecode
-    auto:sparkle
-    ```
 
 ## 🧠 Del 3 — Et lys, der kan huske
 
@@ -121,19 +95,9 @@ Kun **én** knap denne gang: tryk **A** én gang → tændt, tryk igen → slukk
 
 En uhyggelig sæson-godbid, der lærer noget **nyt** — micro:bit'ens skjulte **lyssensor**! 🦇
 
-??? example "🌑 Spøgelse i mørket 🔦 — *lær lyssensoren!* · 🖥️ skærm"
+??? example "🕯️ Spøgelse i mørket · 💡 P0 — *lær lyssensoren!*"
 
-    **Noget nyt:** micro:bit'en kan **mærke, hvor lyst eller mørkt der er** — den har en skjult **lyssensor**! Hold den i lyset, og den er rolig 😀, men dæk den til eller sluk lyset, og et **spøgelse dukker op og hyler** 👻. Uhyggeligt!
-
-    ```makecode
-    auto:ghost-in-dark
-    ```
-
-    *Hvordan: en `for altid`-løkke tjekker **`lysniveau`** (0–255 — LED'erne virker også som en lyssensor). Under **50** (mørkt) → spøgelse + hyl; ellers rolig. Et helt nyt **input** — micro:bit'ens øjne! Træk i lys-skyderen i simulatoren for at teste.*
-
-??? example "🕯️ Spøgelse i mørket — med en rigtig LED · 💡 P0"
-
-    Samme idé, nu med **LED'en, du har sluttet til**: i mørket **flimrer** den som et hjemsøgt stearinlys; i lyset er den slukket. 🕯️👻
+    **Noget nyt:** micro:bit'en kan **mærke, hvor lyst eller mørkt der er** — skærmens LED'er virker også som en skjult **lyssensor**! I lyset er den rolig 😀, og din LED er slukket. Dæk den til eller sluk lyset, så **dukker et spøgelse op** 👻, mens din LED **flimrer** som et hjemsøgt stearinlys 🕯️. Uhyggeligt!
 
     Behold din LED på pin **P0** fra Del 1.
 
@@ -141,45 +105,47 @@ En uhyggelig sæson-godbid, der lærer noget **nyt** — micro:bit'ens skjulte *
     auto:ghost-in-dark-led
     ```
 
-    *Hvordan: når `lysniveau` er lavt, tænder/slukker `digital skriv pin P0` LED'en **tilfældigt** (et stearinlys-flimmer); i lyset er den slukket. Nu læser den en sensor **og** styrer et rigtigt kredsløb. Ingen LED? Hold øje med **P0**-pinnen i simulatoren.*
+    *Hvordan: en `for altid`-løkke tjekker **`lysniveau`** (0–255). Under **50** (mørkt) → spøgelse, og `digital skriv pin P0` tænder/slukker LED'en **tilfældigt** (stearinlys-flimmeret); ellers rolig og slukket. Den læser en sensor **og** styrer et rigtigt kredsløb! Træk i lys-skyderen i simulatoren for at teste.*
 
 ## 🚀 Level op — berøringskontakter
 
-Pins kan også være **input**! Når du rører en pin (mens du holder om **GND**), lukker du et kredsløb — en hjemmelavet **kontakt**. Sådan kommer **Ticklebot'en** og pinball-målene til at virke.
-
-??? example "👆 Berøringskontakt"
-
-    Rør **P1** (og hold om **GND** med den anden hånd) → ✓ og et bip.
-
-    ```makecode
-    auto:switch
-    ```
+Pins kan også være **input**! Når du rører en pin (mens du holder om **GND**), lukker du et kredsløb — en hjemmelavet **kontakt**. Sådan kommer **Ticklebot'en** og pinball-målene til at virke. Behold din LED på **P0** — rør ved **P1**.
 
 ??? example "🔔 Dørklokke-lys · 💡 P0"
 
-    Samme berøringskontakt, men nu blinker din **LED** også: rør **P1** → LED'en på **P0** lyser et halvt sekund + et ding. Input på én pin, output på en anden!
+    Rør **P1** (og hold om **GND** med den anden hånd) → din LED lyser et halvt sekund + et ding. Input på én pin, output på en anden!
 
     ```makecode
     auto:led-touch
     ```
 
-??? example "🤖 Kildetæller"
+??? example "🤖 Kildetæller · 💡 P0"
 
-    Hver berøring på **P1** giver et point, spiller en melodi og viser pointene — en første smagsprøve på Ticklebot'en! 😆
+    Hver berøring på **P1** giver et point: LED'en blinker, en melodi spiller, og pointene vises — en første smagsprøve på Ticklebot'en! 😆
 
     ```makecode
     auto:tickle
     ```
 
-    *Hvordan: en `score`-**variabel** stiger med 1 ved hvert `når pin P1 trykkes`. Prøv at forbinde sølvpapir eller et krokodillenæb til P1 for at lave en større "kildeplade".*
+    *Hvordan: en `score`-**variabel** stiger med 1 ved hvert `når pin P1 trykkes`, og LED'en lyser, mens pointene vises. Prøv at forbinde sølvpapir eller et krokodillenæb til P1 for at lave en større "kildeplade".*
 
-## 🚦 Superlevel — lyskryds
+## 🌈 Superlevel — flere LED'er
 
-Har du **tre LED'er**? Byg et rigtigt dansk lyskryds! **Rød → P0**, **gul → P1**, **grøn → P2** (lange ben til S, korte ben til G).
+Hent **to LED'er mere** (spørg en hjælper!): **P0**, **P1** og **P2** — lange ben til S, korte ben til G. *(P1 er nu en LED, så tag en eventuel berøringsledning af.)*
+
+??? example "✨ Funkel · 💡 P0 + P1 + P2"
+
+    Tre LED'er tænder og slukker **tilfældigt** — som en lyskæde. ✨
+
+    ```makecode
+    auto:led-twinkle
+    ```
+
+    *Hvordan: `vælg tilfældig 0 til 1` giver hver pin enten **0** (slukket) eller **1** (tændt) hvert 150. ms. Skift pausen for roligere eller vildere funkel.*
 
 ??? example "🚦 Lyskryds · 💡 P0 + P1 + P2"
 
-    Rød → rød + gul → grøn → gul → rød igen… præcis som ved vejkrydset.
+    Brug **rød → P0**, **gul → P1**, **grøn → P2** til et rigtigt dansk lyskryds: rød → rød + gul → grøn → gul → rød igen… præcis som ved vejkrydset.
 
     ```makecode
     auto:traffic-light
@@ -193,9 +159,9 @@ Har du **tre LED'er**? Byg et rigtigt dansk lyskryds! **Rød → P0**, **gul →
 - ☐ Jeg fik min LED til at **blinke** og ændrede farten. 🔁
 - ☐ Jeg fik min LED til at **gløde blødt** med `analog skriv` (vejrtrækning eller lysdæmper). 🌙
 - ☐ Jeg byggede en **lommelygte med én knap**, der husker, om den er tændt. 🔦
-- ☐ *(Forsker!)* Jeg brugte **lyssensoren** til at få et spøgelse frem i mørket — på skærmen og med min **rigtige LED**. 🌑👻
-- ☐ *(Legende!)* Jeg byggede en **berøringskontakt**, **dørklokke-lyset** eller **kildetælleren**. 🤖
-- ☐ *(Superlegende!)* Jeg forbandt **tre LED'er** til et **lyskryds**. 🚦
+- ☐ *(Forsker!)* Jeg brugte **lyssensoren** til at få min LED til at flimre i mørket. 🌑👻
+- ☐ *(Legende!)* Jeg byggede **dørklokke-lyset** eller **kildetælleren**. 🤖
+- ☐ *(Superlegende!)* Jeg forbandt **tre LED'er** til **funkel** eller **lyskrydset**. 🚦
 
 ## 🎉 Kahoot-tid!
 
@@ -215,15 +181,15 @@ week-7
 
     - micro:bits + USB + **sensor-shields** — **1 pr. barn** (denne uge virker solo)
     - **LED'er** (1–2 hver, plus nogle ekstra; LED-moduler er nemmest) + ledninger / krokodillenæb
-    - til lyskrydset: **røde, gule og grønne** LED'er (3 pr. barn, der når så langt)
+    - til superlevel: **2 ekstra LED'er** pr. barn, der når så langt — helst **rød, gul og grøn** til lyskrydset
     - **ingen pærer** — lommelygte-/glødepærer trækker for meget strøm til en micro:bit-pin
     - en måde at **mørklægge lokalet** på (eller hænder/papir til at dække boardet) til spøgelset
     - **V2** til den indbyggede højtaler; V1 virker ellers
 
     **Sessionsplan (60 + 20 pause + 30)**
 
-    - **Blok 1 (60):** 5 mød LED'en (langt ben +, kort ben −) → 15 **forbind + tænd/sluk** → 10 **blink** → 10 **skærm-fade → vejrtræknings-LED → lysdæmper** (funkel som bonus) → 5 🔦 **lommelygte** (variabel + `hvis / ellers`, opvarmning til spøgelset) → 10 🌑 **Spøgelse i mørket** (skærm) → 5 tjek-ind.
+    - **Blok 1 (60):** 5 mød LED'en (langt ben +, kort ben −) → 15 **forbind + tænd/sluk** → 10 **blink** → 10 **vejrtræknings-LED → lysdæmper** → 5 🔦 **lommelygte** (variabel + `hvis / ellers`, opvarmning til spøgelset) → 10 🕯️ **Spøgelse i mørket** → 5 tjek-ind.
     - **Pause (20)**
-    - **Blok 2 (30):** 10 🕯️ **spøgelse med den rigtige LED** → spøgelsesjagt med slukket lys 👻 → 10 level op **berøringskontakt / dørklokke-lys / kildetæller** (🚦 lyskryds til de hurtige) → 5 fremvisning → 5 Kahoot.
+    - **Blok 2 (30):** 5 spøgelsesjagt med slukket lys 👻 → 15 level op **dørklokke-lys → kildetæller** (🌈 funkel / 🚦 lyskryds til de hurtige, med ekstra LED'er) → 5 fremvisning → 5 Kahoot.
 
-    **Noter:** hver indlejring åbner i **Blokke**. De fleste "min LED virker ikke"-problemer skyldes en LED, der sidder **omvendt** eller på den **forkerte pin** — tjek P0 og vend den. En svag blå/hvid LED er ikke i stykker — byt den til en rød. `analog skriv` tager **0–1023** (ikke 0–255 som skærmens lysstyrke). Dørklokke-lyset bruger **P1** til berøring, så lyskrydset (som skal bruge P1 til gul) er et separat program. Den allerførste `lysniveau`-måling kan være skæv, mens sensoren vågner — giv den et sekund. Berøringspins kræver, at barnet også rører **GND** for at lukke kredsløbet. Spøgelsesprogrammerne er flyttet hertil fra Uge 6, så de lander i **Halloween-ugen**. 🎃
+    **Noter:** hver indlejring åbner i **Blokke**. De fleste "min LED virker ikke"-problemer skyldes en LED, der sidder **omvendt** eller på den **forkerte pin** — tjek P0 og vend den. En svag blå/hvid LED er ikke i stykker — byt den til en rød. `analog skriv` tager **0–1023** (ikke 0–255 som skærmens lysstyrke). Berøringsprogrammerne bruger **P1** som input, men superlevel bruger P1 som LED — mind børnene om at tage berøringsledningen af først. Den allerførste `lysniveau`-måling kan være skæv, mens sensoren vågner — giv den et sekund. Berøringspins kræver, at barnet også rører **GND** for at lukke kredsløbet. Spøgelsesprogrammet er flyttet hertil fra Uge 6, så det lander i **Halloween-ugen**. 🎃

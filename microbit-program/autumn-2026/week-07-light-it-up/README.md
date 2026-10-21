@@ -23,7 +23,7 @@
     - ✅ **Loose LEDs** — red, yellow and green are brightest. Blue and white may be dim (the pins only give ~3 V). A **100–220 Ω resistor** in series is kindest to the pin.
     - ❌ **Bulbs** (torch / filament bulbs) — they need far more power than a pin gives. They won't light and can damage the micro:bit.
 
-    Every program marked **💡 P0** lights your real LED. **🖥️ screen** programs use the built-in lights and need no wiring.
+    Every program lights a **real LED** — the **💡** tag shows which pin(s). Most need just **one LED on P0**; the super level uses **three** (ask a helper for more).
 
 ## 💡 Part 1 — Your first LED
 
@@ -53,25 +53,11 @@ No buttons this time — a `forever` loop flips the LED on, waits, flips it off,
 
 ## ✨ Part 2 — Bright and dim
 
-### 🖥️ Warm-up: the screen
-
-The 25 lights on the front are LEDs too — so start here, no wiring needed. `set brightness` makes them stronger or weaker:
-
-??? example "💗 Fade — a breathing heart · 🖥️ screen"
-
-    `set brightness` goes from **0** (off) to **255** (full). Switching between bright and dim makes the heart pulse.
-
-    ```makecode
-    auto:fade
-    ```
-
-### 💡 Now your real LED
-
 `digital write` can only do **on (1)** or **off (0)**. `analog write pin` can do everything **in between**: **0** = off, **1023** = full brightness. Now your LED can glow softly! 🌗
 
 ??? example "🌙 Breathing LED · 💡 P0"
 
-    The real LED slowly **fades up** and **down again** — like it's breathing.
+    The LED slowly **fades up** and **down again** — like it's breathing.
 
     ```makecode
     auto:led-fade
@@ -88,18 +74,6 @@ The 25 lights on the front are LEDs too — so start here, no wiring needed. `se
     ```
 
     *How: the variable `level` goes from 0 to 10, and `analog write pin P0` gets `level × 100`. `min` / `max` stop it from going past 10 or below 0.*
-
-### ✨ Bonus: sparkle
-
-One more screen trick — **random** twinkles (you'll see `random` again in the ghost's candle flicker):
-
-??? example "✨ Sparkle — random twinkles · 🖥️ screen"
-
-    `plot` turns on one LED at a random **x, y** spot, `unplot` turns another off — like a starry sky.
-
-    ```makecode
-    auto:sparkle
-    ```
 
 ## 🧠 Part 3 — A light that remembers
 
@@ -121,19 +95,9 @@ Just **one** button this time: press **A** once → on, press again → off. The
 
 A spooky seasonal treat that teaches something **new** — the micro:bit's hidden **light sensor**! 🦇
 
-??? example "🌑 Ghost in the Dark 🔦 — *learn the light sensor!* · 🖥️ screen"
+??? example "🕯️ Ghost in the Dark · 💡 P0 — *learn the light sensor!*"
 
-    **Something new:** the micro:bit can **feel how light or dark it is** — it has a hidden **light sensor**! Keep it in the light and it's calm 😀, but cover it or turn off the lights and a **ghost appears and wails** 👻. Spooky!
-
-    ```makecode
-    auto:ghost-in-dark
-    ```
-
-    *How: a `forever` loop checks **`light level`** (0–255 — the LEDs double as a light sensor). Below **50** (dark) → ghost + wail; otherwise calm. A brand-new **input** — the micro:bit's eyes! Drag the light slider in the simulator to test.*
-
-??? example "🕯️ Ghost in the Dark — with a real LED · 💡 P0"
-
-    Same idea, now with the **LED you wired up**: in the dark, it **flickers** like a haunted candle; in the light it's off. 🕯️👻
+    **Something new:** the micro:bit can **feel how light or dark it is** — the screen's LEDs double as a hidden **light sensor**! In the light it's calm 😀 and your LED is off. Cover it or turn off the lights and a **ghost appears** 👻 while your LED **flickers** like a haunted candle 🕯️. Spooky!
 
     Keep your LED on pin **P0** from Part 1.
 
@@ -141,45 +105,47 @@ A spooky seasonal treat that teaches something **new** — the micro:bit's hidde
     auto:ghost-in-dark-led
     ```
 
-    *How: when `light level` is low, `digital write pin P0` flips the LED **on/off at random** (a candle flicker); in the light it stays off. Now it reads a sensor **and** drives a real circuit. No LED? Watch the **P0** pin in the simulator.*
+    *How: a `forever` loop checks **`light level`** (0–255). Below **50** (dark) → ghost, and `digital write pin P0` flips the LED **on/off at random** (the candle flicker); otherwise calm and off. It reads a sensor **and** drives a real circuit! Drag the light slider in the simulator to test.*
 
 ## 🚀 Level up — touch switches
 
-Pins can be **inputs** too! Touching a pin (while you hold **GND**) closes a circuit — a homemade **switch**. This is how the **Ticklebot** and the pinball targets will work.
-
-??? example "👆 Touch switch"
-
-    Touch **P1** (and hold **GND** with your other hand) → ✓ and a beep.
-
-    ```makecode
-    auto:switch
-    ```
+Pins can be **inputs** too! Touching a pin (while you hold **GND**) closes a circuit — a homemade **switch**. This is how the **Ticklebot** and the pinball targets will work. Keep your LED on **P0** — touch **P1**.
 
 ??? example "🔔 Doorbell light · 💡 P0"
 
-    Same touch switch, but now your **LED** flashes too: touch **P1** → the LED on **P0** lights for half a second + a ding. Input on one pin, output on another!
+    Touch **P1** (and hold **GND** with your other hand) → your LED lights for half a second + a ding. Input on one pin, output on another!
 
     ```makecode
     auto:led-touch
     ```
 
-??? example "🤖 Tickle counter"
+??? example "🤖 Tickle counter · 💡 P0"
 
-    Every touch on **P1** adds a point, plays a jingle and shows the score — a first taste of the Ticklebot! 😆
+    Every touch on **P1** adds a point: the LED flashes, a jingle plays and the score shows — a first taste of the Ticklebot! 😆
 
     ```makecode
     auto:tickle
     ```
 
-    *How: a `score` **variable** goes up by 1 on each `on pin P1 pressed`. Try wiring foil or a crocodile clip to P1 to make a bigger "tickle pad".*
+    *How: a `score` **variable** goes up by 1 on each `on pin P1 pressed`, and the LED stays on while the score shows. Try wiring foil or a crocodile clip to P1 to make a bigger "tickle pad".*
 
-## 🚦 Super level — traffic light
+## 🌈 Super level — more LEDs
 
-Got **three LEDs**? Build a real Danish traffic light! **Red → P0**, **yellow → P1**, **green → P2** (long legs to S, short legs to G).
+Grab **two more LEDs** (ask a helper!): **P0**, **P1** and **P2** — long legs to S, short legs to G. *(P1 is now an LED, so unplug any touch wire from it.)*
+
+??? example "✨ Twinkle · 💡 P0 + P1 + P2"
+
+    Three LEDs flick on and off **at random** — like fairy lights. ✨
+
+    ```makecode
+    auto:led-twinkle
+    ```
+
+    *How: `pick random 0 to 1` gives each pin either **0** (off) or **1** (on) every 150 ms. Change the pause for calmer or crazier twinkling.*
 
 ??? example "🚦 Traffic light · 💡 P0 + P1 + P2"
 
-    Red → red + yellow → green → yellow → red again… just like at the crossroads.
+    Use **red → P0**, **yellow → P1**, **green → P2** for a real Danish traffic light: red → red + yellow → green → yellow → red again… just like at the crossroads.
 
     ```makecode
     auto:traffic-light
@@ -193,9 +159,9 @@ Got **three LEDs**? Build a real Danish traffic light! **Red → P0**, **yellow 
 - ☐ I made my LED **blink** and changed its speed. 🔁
 - ☐ I made my LED **glow softly** with `analog write` (breathing LED or dimmer). 🌙
 - ☐ I built a **one-button torch** that remembers if it's on. 🔦
-- ☐ *(Scientist!)* I used the **light sensor** to make a ghost appear in the dark — on screen and with my **real LED**. 🌑👻
-- ☐ *(Legend!)* I built a **touch switch**, the **doorbell light** or the **tickle counter**. 🤖
-- ☐ *(Super legend!)* I wired **three LEDs** into a **traffic light**. 🚦
+- ☐ *(Scientist!)* I used the **light sensor** to make my LED flicker when it's dark. 🌑👻
+- ☐ *(Legend!)* I built the **doorbell light** or the **tickle counter**. 🤖
+- ☐ *(Super legend!)* I wired **three LEDs** for the **twinkle** or the **traffic light**. 🚦
 
 ## 🎉 Kahoot time!
 
@@ -215,15 +181,15 @@ week-7
 
     - micro:bits + USB + **sensor shields** — **1 per kid** (this week works solo)
     - **LEDs** (1–2 each, a few spares; LED modules are easiest) + jumper wires / crocodile clips
-    - for the traffic light: **red, yellow and green** LEDs (3 per kid who gets there)
+    - for the super level: **2 extra LEDs** per kid who gets there — ideally **red, yellow and green** for the traffic light
     - **no bulbs** — torch/filament bulbs draw too much current for a micro:bit pin
     - a way to **dim the room** (or hands/paper to cover the board) for the ghost
     - **V2** for the built-in speaker; V1 works otherwise
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 meet the LED (long leg +, short leg −) → 15 **wire + on/off** → 10 **blink** → 10 **screen fade → breathing LED → dimmer** (sparkle as a bonus) → 5 🔦 **torch** (variable + `if / else`, the warm-up for the ghost) → 10 🌑 **Ghost in the Dark** (screen) → 5 checkpoint.
+    - **Block 1 (60):** 5 meet the LED (long leg +, short leg −) → 15 **wire + on/off** → 10 **blink** → 10 **breathing LED → dimmer** → 5 🔦 **torch** (variable + `if / else`, the warm-up for the ghost) → 10 🕯️ **Ghost in the Dark** → 5 checkpoint.
     - **Break (20)**
-    - **Block 2 (30):** 10 🕯️ **ghost with the real LED** → lights-off ghost hunt 👻 → 10 level-up **touch switch / doorbell light / tickle counter** (🚦 traffic light for fast finishers) → 5 showcase → 5 Kahoot.
+    - **Block 2 (30):** 5 lights-off ghost hunt 👻 → 15 level-up **doorbell light → tickle counter** (🌈 twinkle / 🚦 traffic light for fast finishers, with extra LEDs) → 5 showcase → 5 Kahoot.
 
-    **Notes:** every embed opens in **Blocks**. Most "my LED doesn't work" problems are an LED **in backwards** or on the **wrong pin** — check P0 and flip it. A dim blue/white LED isn't broken — swap it for red. `analog write` takes **0–1023** (not 0–255 like screen brightness). The doorbell light uses **P1** for touch, so the traffic light (which needs P1 for yellow) is a separate program. The very first `light level` reading can be off while the sensor wakes up — give it a second. Touch pins need the kid to also touch **GND** to close the circuit. The ghost programs moved here from Week 6 so they land on **Halloween week**. 🎃
+    **Notes:** every embed opens in **Blocks**. Most "my LED doesn't work" problems are an LED **in backwards** or on the **wrong pin** — check P0 and flip it. A dim blue/white LED isn't broken — swap it for red. `analog write` takes **0–1023** (not 0–255 like screen brightness). The touch programs use **P1** as an input, but the super level uses P1 as an LED — remind kids to unplug the touch wire first. The very first `light level` reading can be off while the sensor wakes up — give it a second. Touch pins need the kid to also touch **GND** to close the circuit. The ghost program moved here from Week 6 so it lands on **Halloween week**. 🎃

@@ -188,6 +188,9 @@ A spooky seasonal treat that teaches something **new** — the micro:bit's hidde
 
     *How: a `forever` loop checks **`light level`** (0–255). Below **50** (dark) → ghost, and `digital write pin P0` flips the LED **on/off at random** (the candle flicker); otherwise calm and off. It reads a sensor **and** drives a real circuit! Drag the light slider in the simulator to test.*
 
+    **🔦 Test it:** the light sensor **is the screen** on the front. **Cover the screen with your hand** (or put the micro:bit under the table) → ghost + flicker. Take your hand away → 😀 and the LED is off.
+    *Blinking even in the light? Your room is darker than **50** — change `50` to **20**. Still no ghost when you cover it? Cover the screen completely, or try **80**.*
+
 ## 🚀 Level up — touch switches
 
 Pins can be **inputs** too! Touching a pin (while you hold **GND**) closes a circuit — a homemade **switch**. This is how the **Ticklebot** and the pinball targets will work. Keep your LED on **P0** — touch **P1** *(unplug any LED from P1 first)*.

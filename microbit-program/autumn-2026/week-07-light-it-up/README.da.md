@@ -188,6 +188,9 @@ En uhyggelig sæson-godbid, der lærer noget **nyt** — micro:bit'ens skjulte *
 
     *Hvordan: en `for altid`-løkke tjekker **`lysniveau`** (0–255). Under **50** (mørkt) → spøgelse, og `digital skriv pin P0` tænder/slukker LED'en **tilfældigt** (stearinlys-flimmeret); ellers rolig og slukket. Den læser en sensor **og** styrer et rigtigt kredsløb! Træk i lys-skyderen i simulatoren for at teste.*
 
+    **🔦 Test det:** lyssensoren **er skærmen** på forsiden. **Dæk skærmen med hånden** (eller læg micro:bit'en under bordet) → spøgelse + flimmer. Tag hånden væk → 😀, og LED'en er slukket.
+    *Blinker den, selvom der er lyst? Så er lokalet mørkere end **50** — skift `50` til **20**. Intet spøgelse, når du dækker den? Dæk hele skærmen, eller prøv **80**.*
+
 ## 🚀 Level op — berøringskontakter
 
 Pins kan også være **input**! Når du rører en pin (mens du holder om **GND**), lukker du et kredsløb — en hjemmelavet **kontakt**. Sådan kommer **Ticklebot'en** og pinball-målene til at virke. Behold din LED på **P0** — rør ved **P1** *(tag først en eventuel LED af P1)*.

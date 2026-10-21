@@ -51,19 +51,21 @@ Ingen knapper denne gang — en `for altid`-løkke tænder LED'en, venter, slukk
 
     *Prøv: skift `500` til `100` for et hurtigt blink eller `1000` for et langsomt. Kan du lave et **SOS** (kort-kort-kort, lang-lang-lang)?*
 
-### 🔦 Lommelygte med én knap · 💡 P0
+## ✨ Del 2 — Kraftigt og svagt
 
-Kun **én** knap denne gang: tryk **A** én gang → tændt, tryk igen → slukket. micro:bit'en skal **huske**, om lyset er tændt.
+### 🖥️ Opvarmning: skærmen
 
-??? example "👀 Se programmet"
+De 25 lys på forsiden er også LED'er — så start her, uden ledninger. `sæt lysstyrke` gør dem kraftigere eller svagere:
+
+??? example "💗 Fade — et hjerte, der trækker vejret · 🖥️ skærm"
+
+    `sæt lysstyrke` går fra **0** (slukket) til **255** (fuld). Når der skiftes mellem kraftigt og svagt, pulserer hjertet.
 
     ```makecode
-    auto:led-toggle
+    auto:fade
     ```
 
-    *Hvordan: variablen `on` er **sand** eller **falsk**. `sæt on til ikke on` vender den ved hvert tryk, og `hvis` vælger tændt eller slukket. En lyskontakt, der kan huske!*
-
-## ✨ Del 2 — Kraftigt og svagt
+### 💡 Nu din rigtige LED
 
 `digital skriv` kan kun **tænde (1)** eller **slukke (0)**. `analog skriv pin` kan alt **midt imellem**: **0** = slukket, **1023** = fuld styrke. Nu kan din LED gløde blødt! 🌗
 
@@ -87,17 +89,9 @@ Kun **én** knap denne gang: tryk **A** én gang → tændt, tryk igen → slukk
 
     *Hvordan: variablen `level` går fra 0 til 10, og `analog skriv pin P0` får `level × 100`. `min` / `maks` sørger for, at den ikke kommer over 10 eller under 0.*
 
-### 🖥️ På skærmen
+### ✨ Bonus: funkel
 
-De 25 lys på forsiden er også LED'er! To tricks til den indbyggede skærm — ingen ledninger:
-
-??? example "💗 Fade — et hjerte, der trækker vejret · 🖥️ skærm"
-
-    `sæt lysstyrke` går fra **0** (slukket) til **255** (fuld). Når der skiftes mellem kraftigt og svagt, pulserer hjertet.
-
-    ```makecode
-    auto:fade
-    ```
+Ét skærmtrick mere — **tilfældige** glimt (du møder `vælg tilfældig` igen i spøgelsets stearinlys-flimmer):
 
 ??? example "✨ Funkel — tilfældige glimt · 🖥️ skærm"
 
@@ -106,6 +100,22 @@ De 25 lys på forsiden er også LED'er! To tricks til den indbyggede skærm — 
     ```makecode
     auto:sparkle
     ```
+
+## 🧠 Del 3 — Et lys, der kan huske
+
+Indtil nu glemmer micro:bit'en alt mellem hvert tryk. Nu skal den **huske** — og vælge med `hvis / ellers`, præcis som spøgelset gør bagefter.
+
+### 🔦 Lommelygte med én knap · 💡 P0
+
+Kun **én** knap denne gang: tryk **A** én gang → tændt, tryk igen → slukket. micro:bit'en skal **huske**, om lyset er tændt.
+
+??? example "👀 Se programmet"
+
+    ```makecode
+    auto:led-toggle
+    ```
+
+    *Hvordan: variablen `on` er **sand** eller **falsk**. `sæt on til ikke on` vender den ved hvert tryk, og `hvis` vælger tændt eller slukket. En lyskontakt, der kan huske!*
 
 ## 🎃 Halloween 👻
 
@@ -182,6 +192,7 @@ Har du **tre LED'er**? Byg et rigtigt dansk lyskryds! **Rød → P0**, **gul →
 - ☐ Jeg sluttede en **LED** til og **tændte og slukkede** den med knapper. 💡
 - ☐ Jeg fik min LED til at **blinke** og ændrede farten. 🔁
 - ☐ Jeg fik min LED til at **gløde blødt** med `analog skriv` (vejrtrækning eller lysdæmper). 🌙
+- ☐ Jeg byggede en **lommelygte med én knap**, der husker, om den er tændt. 🔦
 - ☐ *(Forsker!)* Jeg brugte **lyssensoren** til at få et spøgelse frem i mørket — på skærmen og med min **rigtige LED**. 🌑👻
 - ☐ *(Legende!)* Jeg byggede en **berøringskontakt**, **dørklokke-lyset** eller **kildetælleren**. 🤖
 - ☐ *(Superlegende!)* Jeg forbandt **tre LED'er** til et **lyskryds**. 🚦
@@ -211,7 +222,7 @@ week-7
 
     **Sessionsplan (60 + 20 pause + 30)**
 
-    - **Blok 1 (60):** 5 mød LED'en (langt ben +, kort ben −) → 15 **forbind + tænd/sluk** → 10 **blink / lommelygte** → 10 **vejrtræknings-LED / lysdæmper** (skærm-fade / funkel til dem uden LED) → 15 🌑 **Spøgelse i mørket** (skærm) → 5 tjek-ind.
+    - **Blok 1 (60):** 5 mød LED'en (langt ben +, kort ben −) → 15 **forbind + tænd/sluk** → 10 **blink** → 10 **skærm-fade → vejrtræknings-LED → lysdæmper** (funkel som bonus) → 5 🔦 **lommelygte** (variabel + `hvis / ellers`, opvarmning til spøgelset) → 10 🌑 **Spøgelse i mørket** (skærm) → 5 tjek-ind.
     - **Pause (20)**
     - **Blok 2 (30):** 10 🕯️ **spøgelse med den rigtige LED** → spøgelsesjagt med slukket lys 👻 → 10 level op **berøringskontakt / dørklokke-lys / kildetæller** (🚦 lyskryds til de hurtige) → 5 fremvisning → 5 Kahoot.
 

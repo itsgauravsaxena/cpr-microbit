@@ -51,19 +51,21 @@ No buttons this time — a `forever` loop flips the LED on, waits, flips it off,
 
     *Try it: change `500` to `100` for a fast blink, or `1000` for a slow one. Can you make an **SOS** (short-short-short, long-long-long)?*
 
-### 🔦 One-button torch · 💡 P0
+## ✨ Part 2 — Bright and dim
 
-Just **one** button this time: press **A** once → on, press again → off. The micro:bit has to **remember** whether the light is on.
+### 🖥️ Warm-up: the screen
 
-??? example "👀 See the program"
+The 25 lights on the front are LEDs too — so start here, no wiring needed. `set brightness` makes them stronger or weaker:
+
+??? example "💗 Fade — a breathing heart · 🖥️ screen"
+
+    `set brightness` goes from **0** (off) to **255** (full). Switching between bright and dim makes the heart pulse.
 
     ```makecode
-    auto:led-toggle
+    auto:fade
     ```
 
-    *How: the variable `on` is **true** or **false**. `set on to not on` flips it on every press, and `if` picks on or off. A light switch that remembers!*
-
-## ✨ Part 2 — Bright and dim
+### 💡 Now your real LED
 
 `digital write` can only do **on (1)** or **off (0)**. `analog write pin` can do everything **in between**: **0** = off, **1023** = full brightness. Now your LED can glow softly! 🌗
 
@@ -87,17 +89,9 @@ Just **one** button this time: press **A** once → on, press again → off. The
 
     *How: the variable `level` goes from 0 to 10, and `analog write pin P0` gets `level × 100`. `min` / `max` stop it from going past 10 or below 0.*
 
-### 🖥️ On the screen
+### ✨ Bonus: sparkle
 
-The 25 lights on the front are LEDs too! Two tricks for the built-in screen — no wiring needed:
-
-??? example "💗 Fade — a breathing heart · 🖥️ screen"
-
-    `set brightness` goes from **0** (off) to **255** (full). Switching between bright and dim makes the heart pulse.
-
-    ```makecode
-    auto:fade
-    ```
+One more screen trick — **random** twinkles (you'll see `random` again in the ghost's candle flicker):
 
 ??? example "✨ Sparkle — random twinkles · 🖥️ screen"
 
@@ -106,6 +100,22 @@ The 25 lights on the front are LEDs too! Two tricks for the built-in screen — 
     ```makecode
     auto:sparkle
     ```
+
+## 🧠 Part 3 — A light that remembers
+
+So far the micro:bit forgets everything between presses. Now it will **remember** — and make a choice with `if / else`, just like the ghost will next.
+
+### 🔦 One-button torch · 💡 P0
+
+Just **one** button this time: press **A** once → on, press again → off. The micro:bit has to **remember** whether the light is on.
+
+??? example "👀 See the program"
+
+    ```makecode
+    auto:led-toggle
+    ```
+
+    *How: the variable `on` is **true** or **false**. `set on to not on` flips it on every press, and `if` picks on or off. A light switch that remembers!*
 
 ## 🎃 Halloween 👻
 
@@ -182,6 +192,7 @@ Got **three LEDs**? Build a real Danish traffic light! **Red → P0**, **yellow 
 - ☐ I wired an **LED** and switched it **on and off** with buttons. 💡
 - ☐ I made my LED **blink** and changed its speed. 🔁
 - ☐ I made my LED **glow softly** with `analog write` (breathing LED or dimmer). 🌙
+- ☐ I built a **one-button torch** that remembers if it's on. 🔦
 - ☐ *(Scientist!)* I used the **light sensor** to make a ghost appear in the dark — on screen and with my **real LED**. 🌑👻
 - ☐ *(Legend!)* I built a **touch switch**, the **doorbell light** or the **tickle counter**. 🤖
 - ☐ *(Super legend!)* I wired **three LEDs** into a **traffic light**. 🚦
@@ -211,7 +222,7 @@ week-7
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 meet the LED (long leg +, short leg −) → 15 **wire + on/off** → 10 **blink / torch** → 10 **breathing LED / dimmer** (screen fade / sparkle for anyone without an LED) → 15 🌑 **Ghost in the Dark** (screen) → 5 checkpoint.
+    - **Block 1 (60):** 5 meet the LED (long leg +, short leg −) → 15 **wire + on/off** → 10 **blink** → 10 **screen fade → breathing LED → dimmer** (sparkle as a bonus) → 5 🔦 **torch** (variable + `if / else`, the warm-up for the ghost) → 10 🌑 **Ghost in the Dark** (screen) → 5 checkpoint.
     - **Break (20)**
     - **Block 2 (30):** 10 🕯️ **ghost with the real LED** → lights-off ghost hunt 👻 → 10 level-up **touch switch / doorbell light / tickle counter** (🚦 traffic light for fast finishers) → 5 showcase → 5 Kahoot.
 

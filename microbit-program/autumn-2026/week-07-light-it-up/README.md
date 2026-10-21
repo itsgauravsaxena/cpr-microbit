@@ -23,7 +23,7 @@
     - ✅ **Loose LEDs** — red, yellow and green are brightest. Blue and white may be dim (the pins only give ~3 V). A **100–220 Ω resistor** in series is kindest to the pin.
     - ❌ **Bulbs** (torch / filament bulbs) — they need far more power than a pin gives. They won't light and can damage the micro:bit.
 
-    Every program lights a **real LED** — the **💡** tag shows which pin(s). Most need just **one LED on P0**; the super level uses **three** (ask a helper for more).
+    Every program lights a **real LED** — the **💡** tag shows which pin(s). Most need just **one LED on P0**; Part 2 uses **two or three** (ask a helper for more).
 
 ## 💡 Part 1 — Your first LED
 
@@ -51,7 +51,71 @@ No buttons this time — a `forever` loop flips the LED on, waits, flips it off,
 
     *Try it: change `500` to `100` for a fast blink, or `1000` for a slow one. Can you make an **SOS** (short-short-short, long-long-long)?*
 
-## ✨ Part 2 — Bright and dim
+## 🌈 Part 2 — More LEDs
+
+Grab **one or two more LEDs** (ask a helper!) and plug them into **P1** and **P2** — long legs to S, short legs to G, just like P0. Same blocks as Part 1 — `digital write` and `pause` — but now you control a whole light show! 🎆
+
+??? example "🚓 Police lights · 💡 P0 + P1"
+
+    **Two LEDs** take turns: one on, the other off, swap — *wee-woo!* Blue and red LEDs look best.
+
+    ```makecode
+    auto:police
+    ```
+
+    *Try it: make it faster with `pause 100`, or flash each LED **twice** before swapping.*
+
+??? example "🙋 Quiz buzzer · 💡 P0 + P1"
+
+    Two players! **A** lights the **P0** LED and shows **A**, **B** lights the **P1** LED and shows **B** — who presses first? ⏱️
+
+    ```makecode
+    auto:buzzer
+    ```
+
+    *Try it: play a different sound for each player, or keep the winner's light on longer.*
+
+??? example "🏃 Running light · 💡 P0 + P1 + P2"
+
+    Three LEDs light up **one after another**: P0 → P1 → P2 → again… like a light racing along a line.
+
+    ```makecode
+    auto:chaser
+    ```
+
+    *Try it: can you make it run **back** too (P2 → P1 → P0)? Or light up two at a time?*
+
+??? example "🚦 Traffic light · 💡 P0 + P1 + P2"
+
+    Use **red → P0**, **yellow → P1**, **green → P2** for a real Danish traffic light: red → red + yellow → green → yellow → red again… just like at the crossroads.
+
+    ```makecode
+    auto:traffic-light
+    ```
+
+    *How: it's just `digital write` and `pause` in the right order. Try adding a **pedestrian button**: press A to switch to red early!*
+
+??? example "✨ Twinkle · 💡 P0 + P1 + P2"
+
+    Three LEDs flick on and off **at random** — like fairy lights. ✨
+
+    ```makecode
+    auto:led-twinkle
+    ```
+
+    *How: `pick random 0 to 1` gives each pin either **0** (off) or **1** (on) every 150 ms. Change the pause for calmer or crazier twinkling.*
+
+??? example "🚀 Rocket launch · 💡 P0 + P1 + P2"
+
+    Press **A** for a countdown: **3** 💡 … **2** 💡💡 … **1** 💡💡💡 … **LIFT-OFF!** All the lights flash and the rocket blasts off with a sound. 🚀
+
+    ```makecode
+    auto:rocket
+    ```
+
+    *How: one LED turns on for each number, then a `repeat 4 times` loop flashes all three. Try a countdown from **5** — where would the extra LEDs go?*
+
+## ✨ Part 3 — Bright and dim
 
 `digital write` can only do **on (1)** or **off (0)**. `analog write pin` can do everything **in between**: **0** = off, **1023** = full brightness. Now your LED can glow softly! 🌗
 
@@ -75,7 +139,7 @@ No buttons this time — a `forever` loop flips the LED on, waits, flips it off,
 
     *How: the variable `level` goes from 0 to 10, and `analog write pin P0` gets `level × 100`. `min` / `max` stop it from going past 10 or below 0.*
 
-## 🧠 Part 3 — A light that remembers
+## 🧠 Part 4 — A light that remembers
 
 So far the micro:bit forgets everything between presses. Now it will **remember** — and make a choice with `if / else`, just like the ghost will next.
 
@@ -109,7 +173,7 @@ A spooky seasonal treat that teaches something **new** — the micro:bit's hidde
 
 ## 🚀 Level up — touch switches
 
-Pins can be **inputs** too! Touching a pin (while you hold **GND**) closes a circuit — a homemade **switch**. This is how the **Ticklebot** and the pinball targets will work. Keep your LED on **P0** — touch **P1**.
+Pins can be **inputs** too! Touching a pin (while you hold **GND**) closes a circuit — a homemade **switch**. This is how the **Ticklebot** and the pinball targets will work. Keep your LED on **P0** — touch **P1** *(unplug any LED from P1 first)*.
 
 ??? example "🔔 Doorbell light · 💡 P0"
 
@@ -129,39 +193,15 @@ Pins can be **inputs** too! Touching a pin (while you hold **GND**) closes a cir
 
     *How: a `score` **variable** goes up by 1 on each `on pin P1 pressed`, and the LED stays on while the score shows. Try wiring foil or a crocodile clip to P1 to make a bigger "tickle pad".*
 
-## 🌈 Super level — more LEDs
-
-Grab **two more LEDs** (ask a helper!): **P0**, **P1** and **P2** — long legs to S, short legs to G. *(P1 is now an LED, so unplug any touch wire from it.)*
-
-??? example "✨ Twinkle · 💡 P0 + P1 + P2"
-
-    Three LEDs flick on and off **at random** — like fairy lights. ✨
-
-    ```makecode
-    auto:led-twinkle
-    ```
-
-    *How: `pick random 0 to 1` gives each pin either **0** (off) or **1** (on) every 150 ms. Change the pause for calmer or crazier twinkling.*
-
-??? example "🚦 Traffic light · 💡 P0 + P1 + P2"
-
-    Use **red → P0**, **yellow → P1**, **green → P2** for a real Danish traffic light: red → red + yellow → green → yellow → red again… just like at the crossroads.
-
-    ```makecode
-    auto:traffic-light
-    ```
-
-    *How: it's just `digital write` and `pause` in the right order. Try adding a **pedestrian button**: press A to switch to red early!*
-
 ## ✅ I did it when…
 
 - ☐ I wired an **LED** and switched it **on and off** with buttons. 💡
 - ☐ I made my LED **blink** and changed its speed. 🔁
+- ☐ I wired **two or three LEDs** and made a light show (police lights, running light, traffic light or rocket). 🌈
 - ☐ I made my LED **glow softly** with `analog write` (breathing LED or dimmer). 🌙
 - ☐ I built a **one-button torch** that remembers if it's on. 🔦
 - ☐ *(Scientist!)* I used the **light sensor** to make my LED flicker when it's dark. 🌑👻
 - ☐ *(Legend!)* I built the **doorbell light** or the **tickle counter**. 🤖
-- ☐ *(Super legend!)* I wired **three LEDs** for the **twinkle** or the **traffic light**. 🚦
 
 ## 🎉 Kahoot time!
 
@@ -181,15 +221,15 @@ week-7
 
     - micro:bits + USB + **sensor shields** — **1 per kid** (this week works solo)
     - **LEDs** (1–2 each, a few spares; LED modules are easiest) + jumper wires / crocodile clips
-    - for the super level: **2 extra LEDs** per kid who gets there — ideally **red, yellow and green** for the traffic light
+    - for Part 2: **2 extra LEDs** per kid — ideally **red, yellow and green** (traffic light) and a **blue** one (police lights)
     - **no bulbs** — torch/filament bulbs draw too much current for a micro:bit pin
     - a way to **dim the room** (or hands/paper to cover the board) for the ghost
     - **V2** for the built-in speaker; V1 works otherwise
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 meet the LED (long leg +, short leg −) → 15 **wire + on/off** → 10 **blink** → 10 **breathing LED → dimmer** → 5 🔦 **torch** (variable + `if / else`, the warm-up for the ghost) → 10 🕯️ **Ghost in the Dark** → 5 checkpoint.
+    - **Block 1 (60):** 5 meet the LED (long leg +, short leg −) → 15 **wire + on/off** → 5 **blink** → 15 🌈 **more LEDs** (police → buzzer → running light → traffic light → twinkle → rocket; each kid picks 2–3) → 10 **breathing LED → dimmer** → 5 🔦 **torch** (variable + `if / else`, the warm-up for the ghost) → 5 checkpoint.
     - **Break (20)**
-    - **Block 2 (30):** 5 lights-off ghost hunt 👻 → 15 level-up **doorbell light → tickle counter** (🌈 twinkle / 🚦 traffic light for fast finishers, with extra LEDs) → 5 showcase → 5 Kahoot.
+    - **Block 2 (30):** 10 🕯️ **Ghost in the Dark** + lights-off ghost hunt 👻 → 10 level-up **doorbell light → tickle counter** → 5 showcase (🚀 rocket launches!) → 5 Kahoot.
 
-    **Notes:** every embed opens in **Blocks**. Most "my LED doesn't work" problems are an LED **in backwards** or on the **wrong pin** — check P0 and flip it. A dim blue/white LED isn't broken — swap it for red. `analog write` takes **0–1023** (not 0–255 like screen brightness). The touch programs use **P1** as an input, but the super level uses P1 as an LED — remind kids to unplug the touch wire first. The very first `light level` reading can be off while the sensor wakes up — give it a second. Touch pins need the kid to also touch **GND** to close the circuit. The ghost program moved here from Week 6 so it lands on **Halloween week**. 🎃
+    **Notes:** every embed opens in **Blocks**. Most "my LED doesn't work" problems are an LED **in backwards** or on the **wrong pin** — check P0 and flip it. A dim blue/white LED isn't broken — swap it for red. `analog write` takes **0–1023** (not 0–255 like screen brightness). Part 2 puts LEDs on **P1** and **P2**; the touch programs use **P1** as an input — remind kids to unplug the P1 LED first. The very first `light level` reading can be off while the sensor wakes up — give it a second. Touch pins need the kid to also touch **GND** to close the circuit. The ghost program moved here from Week 6 so it lands on **Halloween week**. 🎃

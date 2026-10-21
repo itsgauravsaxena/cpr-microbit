@@ -1,0 +1,16 @@
+input.onButtonPressed(Button.A, function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    basic.showString("A")
+    music.playTone(Note.C5, music.beat(BeatFraction.Quarter))
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    basic.clearScreen()
+})
+input.onButtonPressed(Button.B, function () {
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    basic.showString("B")
+    music.playTone(Note.G5, music.beat(BeatFraction.Quarter))
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    basic.clearScreen()
+})

@@ -178,18 +178,15 @@ En uhyggelig sæson-godbid, der lærer noget **nyt** — micro:bit'ens skjulte *
 
 ??? example "🕯️ Spøgelse i mørket · 💡 P0 — *lær lyssensoren!*"
 
-    **Noget nyt:** micro:bit'en kan **mærke, hvor lyst eller mørkt der er** — skærmens LED'er virker også som en skjult **lyssensor**! 👀 **Hvor sidder den?** Det *er* **skærmen med de 25 lys** på forsiden — så skærmen skal kunne se lokalet, og du dækker **skærmen** med hånden. I lyset er den rolig 😀, og din LED er slukket. Dæk skærmen til eller sluk lyset, så **dukker et spøgelse op** 👻, mens din LED **flimrer** som et hjemsøgt stearinlys 🕯️. Uhyggeligt!
+    **Noget nyt:** micro:bit'en kan **mærke, hvor lyst eller mørkt der er** — skærmens LED'er virker også som en skjult **lyssensor**! I lyset er den rolig 😀, og din LED er slukket. Dæk den til eller sluk lyset, så **dukker et spøgelse op** 👻, mens din LED **flimrer** som et hjemsøgt stearinlys 🕯️. Uhyggeligt!
 
-    Behold din LED på pin **P0** fra Del 1. **Start den i lokalets normale lys** — når den starter, måler den, hvor lyst der er.
-
-    - **Hold A** → se lystallet (0–255). Dæk skærmen, og se det falde!
-    - **Tryk B** → mål lokalet igen (✓), fx når nogen tænder eller slukker lyset.
+    Behold din LED på pin **P0** fra Del 1.
 
     ```makecode
     auto:ghost-in-dark-led
     ```
 
-    *Hvordan: ved start læser programmet `lysniveau` to gange (den første måling vækker bare sensoren) og sætter `dark` til **halvdelen** af lokalets lys — så det virker både i et mørkt klasselokale og et solrigt. En `for altid`-løkke tjekker så: `lysniveau` under `dark` → spøgelse, og `digital skriv pin P0` tænder/slukker LED'en **tilfældigt** (stearinlys-flimmeret); ellers rolig og slukket. Den læser en sensor **og** styrer et rigtigt kredsløb! Træk i lys-skyderen i simulatoren for at teste.*
+    *Hvordan: en `for altid`-løkke tjekker **`lysniveau`** (0–255). Under **50** (mørkt) → spøgelse, og `digital skriv pin P0` tænder/slukker LED'en **tilfældigt** (stearinlys-flimmeret); ellers rolig og slukket. Den læser en sensor **og** styrer et rigtigt kredsløb! Træk i lys-skyderen i simulatoren for at teste.*
 
 ## 🚀 Level op — berøringskontakter
 
@@ -252,4 +249,4 @@ week-7
     - **Pause (20)**
     - **Blok 2 (30):** 10 🕯️ **Spøgelse i mørket** + spøgelsesjagt med slukket lys 👻 → 10 level op **dørklokke-lys → kildetæller** → 5 fremvisning (🚀 raketopsendelser!) → 5 Kahoot.
 
-    **Noter:** hver indlejring åbner i **Blokke**. Ved "min LED virker ikke": gå **🔧-tjeklisten** øverst på siden igennem, og kør **pin-testeren** — de fleste tilfælde er en LED, der sidder **omvendt**, sidder i **V i stedet for G**, en micro:bit, der **ikke er trykket helt ned i shieldet** (præcis "nogle pins virker, andre ikke"), eller den **forkerte pin**. På en **V2** kommer lyden som standard også ud af **P0**, så en LED på P0 summer eller blinker på mærkelige tidspunkter — derfor starter programmerne med lyd (buzzer, raket, dørklokke, kildetæller) med blokken `set audio pin enabled false` (slår lyd-pinnen fra); lyden spiller stadig i den indbyggede højttaler (på en V1 er de lydløse). En svag blå/hvid LED er ikke i stykker — byt den til en rød. `analog skriv` tager **0–1023** (ikke 0–255 som skærmens lysstyrke). Del 2 sætter LED'er på **P1** og **P2**; berøringsprogrammerne bruger **P1** som input — mind børnene om at tage LED'en af P1 først. Blinker spøgelset hele tiden? **Skærmen** er lyssensoren, så den skal vende ud mod lokalet (ikke være dækket af shieldet eller en hånd). Lys i et klasselokale måler ofte kun **10–60**, så spøgelset måler lokalet ved start i stedet for at bruge et fast tal — sørg for, at børnene **starter det i normalt lys**, og tryk **B** for at måle igen, hvis lyset ændrer sig. Hold **A** for at se den faktiske måling. Berøringspins kræver, at barnet også rører **GND** for at lukke kredsløbet. Spøgelsesprogrammet er flyttet hertil fra Uge 6, så det lander i **Halloween-ugen**. 🎃
+    **Noter:** hver indlejring åbner i **Blokke**. Ved "min LED virker ikke": gå **🔧-tjeklisten** øverst på siden igennem, og kør **pin-testeren** — de fleste tilfælde er en LED, der sidder **omvendt**, sidder i **V i stedet for G**, en micro:bit, der **ikke er trykket helt ned i shieldet** (præcis "nogle pins virker, andre ikke"), eller den **forkerte pin**. På en **V2** kommer lyden som standard også ud af **P0**, så en LED på P0 summer eller blinker på mærkelige tidspunkter — derfor starter programmerne med lyd (buzzer, raket, dørklokke, kildetæller) med blokken `set audio pin enabled false` (slår lyd-pinnen fra); lyden spiller stadig i den indbyggede højttaler (på en V1 er de lydløse). En svag blå/hvid LED er ikke i stykker — byt den til en rød. `analog skriv` tager **0–1023** (ikke 0–255 som skærmens lysstyrke). Del 2 sætter LED'er på **P1** og **P2**; berøringsprogrammerne bruger **P1** som input — mind børnene om at tage LED'en af P1 først. Den allerførste `lysniveau`-måling kan være skæv, mens sensoren vågner — giv den et sekund. Berøringspins kræver, at barnet også rører **GND** for at lukke kredsløbet. Spøgelsesprogrammet er flyttet hertil fra Uge 6, så det lander i **Halloween-ugen**. 🎃

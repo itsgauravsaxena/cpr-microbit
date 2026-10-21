@@ -178,18 +178,15 @@ A spooky seasonal treat that teaches something **new** — the micro:bit's hidde
 
 ??? example "🕯️ Ghost in the Dark · 💡 P0 — *learn the light sensor!*"
 
-    **Something new:** the micro:bit can **feel how light or dark it is** — the screen's LEDs double as a hidden **light sensor**! 👀 **Where is it?** It *is* the **25-light screen** on the front — so the screen must see the room, and you cover the **screen** with your hand. In the light it's calm 😀 and your LED is off. Cover the screen or turn off the lights and a **ghost appears** 👻 while your LED **flickers** like a haunted candle 🕯️. Spooky!
+    **Something new:** the micro:bit can **feel how light or dark it is** — the screen's LEDs double as a hidden **light sensor**! In the light it's calm 😀 and your LED is off. Cover it or turn off the lights and a **ghost appears** 👻 while your LED **flickers** like a haunted candle 🕯️. Spooky!
 
-    Keep your LED on pin **P0** from Part 1. **Start it in the normal room light** — when it starts, it measures how bright your room is.
-
-    - **Hold A** → see the light number (0–255). Cover the screen and watch it drop!
-    - **Press B** → measure the room again (✓), e.g. after someone switches the lights.
+    Keep your LED on pin **P0** from Part 1.
 
     ```makecode
     auto:ghost-in-dark-led
     ```
 
-    *How: at the start the program reads `light level` twice (the first reading just wakes the sensor) and sets `dark` to **half** the room's light — so it works in a dim classroom and a sunny one. A `forever` loop then checks: `light level` below `dark` → ghost, and `digital write pin P0` flips the LED **on/off at random** (the candle flicker); otherwise calm and off. It reads a sensor **and** drives a real circuit! Drag the light slider in the simulator to test.*
+    *How: a `forever` loop checks **`light level`** (0–255). Below **50** (dark) → ghost, and `digital write pin P0` flips the LED **on/off at random** (the candle flicker); otherwise calm and off. It reads a sensor **and** drives a real circuit! Drag the light slider in the simulator to test.*
 
 ## 🚀 Level up — touch switches
 
@@ -252,4 +249,4 @@ week-7
     - **Break (20)**
     - **Block 2 (30):** 10 🕯️ **Ghost in the Dark** + lights-off ghost hunt 👻 → 10 level-up **doorbell light → tickle counter** → 5 showcase (🚀 rocket launches!) → 5 Kahoot.
 
-    **Notes:** every embed opens in **Blocks**. For "my LED doesn't work", go through the **🔧 checklist** at the top of the page and run the **pin tester** — most cases are an LED **in backwards**, plugged into **V instead of G**, a micro:bit **not pushed fully into the shield** (exactly the "some pins work, some don't" symptom), or the **wrong pin**. On a **V2**, sound also comes out of **P0** by default, which makes a P0 LED buzz or blink at odd moments — so the programs that play sound (buzzer, rocket, doorbell, tickle) start with `set audio pin enabled false`; sound still plays on the built-in speaker (on a V1 these are silent). A dim blue/white LED isn't broken — swap it for red. `analog write` takes **0–1023** (not 0–255 like screen brightness). Part 2 puts LEDs on **P1** and **P2**; the touch programs use **P1** as an input — remind kids to unplug the P1 LED first. Ghost always blinking? The **screen** is the light sensor, so it must face the room (not be covered by the shield or a hand). Classroom light often reads only **10–60**, so the ghost measures the room at start-up instead of using a fixed number — make sure kids **start it in normal light**, and press **B** to re-measure if the lights change. Hold **A** to see the actual reading. Touch pins need the kid to also touch **GND** to close the circuit. The ghost program moved here from Week 6 so it lands on **Halloween week**. 🎃
+    **Notes:** every embed opens in **Blocks**. For "my LED doesn't work", go through the **🔧 checklist** at the top of the page and run the **pin tester** — most cases are an LED **in backwards**, plugged into **V instead of G**, a micro:bit **not pushed fully into the shield** (exactly the "some pins work, some don't" symptom), or the **wrong pin**. On a **V2**, sound also comes out of **P0** by default, which makes a P0 LED buzz or blink at odd moments — so the programs that play sound (buzzer, rocket, doorbell, tickle) start with `set audio pin enabled false`; sound still plays on the built-in speaker (on a V1 these are silent). A dim blue/white LED isn't broken — swap it for red. `analog write` takes **0–1023** (not 0–255 like screen brightness). Part 2 puts LEDs on **P1** and **P2**; the touch programs use **P1** as an input — remind kids to unplug the P1 LED first. The very first `light level` reading can be off while the sensor wakes up — give it a second. Touch pins need the kid to also touch **GND** to close the circuit. The ghost program moved here from Week 6 so it lands on **Halloween week**. 🎃

@@ -25,6 +25,23 @@
 
     Every program lights a **real LED** — the **💡** tag shows which pin(s). Most need just **one LED on P0**; Part 2 uses **two or three** (ask a helper for more).
 
+!!! failure "🔧 My LED doesn't light — check these, in order"
+    1. **Turn the LED round.** The **long leg (+) → S**, the **short leg (−) → G**. Legs cut the same length? The **flat edge** on the LED's rim is the short (−) side. Backwards does no harm — it just stays dark.
+    2. **S and G — never V.** Read the little letters on the board: the three rows aren't always in the same order. A plain LED never needs **V**.
+    3. **Is the micro:bit pushed all the way in, straight?** If it's crooked or half in, **some pins work and others don't**. Pull it out and push it firmly back in.
+    4. **Same pin in the code and on the board?** LED in P1 but the code says P0 = dark. Stick to **P0, P1, P2** — some other pins are busy inside the micro:bit (**P3, P4, P6, P7, P10** run the screen, **P5 / P11** are buttons A / B).
+    5. **Wiggle the wire.** If the LED flickers, the connector is loose — swap the wire or bend the LED leg a tiny bit so it grips.
+    6. **Blue or white LED?** They can be too dim at 3 V — try a **red** one.
+    7. **Did you download** the newest program to the micro:bit?
+
+??? example "🔧 Pin tester — find the broken LED in seconds · 💡 P0 + P1 + P2"
+
+    Plug your LEDs into **P0, P1, P2** and run this. The screen shows **0**, **1**, **2** in turn and lights **that** pin's LED. The number shows but its LED stays dark? That's the one to fix — or move the LED to another pin to see whether it's the **LED** or the **socket**.
+
+    ```makecode
+    auto:pin-test
+    ```
+
 ## 💡 Part 1 — Your first LED
 
 ### Switch it on and off · 💡 P0
@@ -232,4 +249,4 @@ week-7
     - **Break (20)**
     - **Block 2 (30):** 10 🕯️ **Ghost in the Dark** + lights-off ghost hunt 👻 → 10 level-up **doorbell light → tickle counter** → 5 showcase (🚀 rocket launches!) → 5 Kahoot.
 
-    **Notes:** every embed opens in **Blocks**. Most "my LED doesn't work" problems are an LED **in backwards** or on the **wrong pin** — check P0 and flip it. A dim blue/white LED isn't broken — swap it for red. `analog write` takes **0–1023** (not 0–255 like screen brightness). Part 2 puts LEDs on **P1** and **P2**; the touch programs use **P1** as an input — remind kids to unplug the P1 LED first. The very first `light level` reading can be off while the sensor wakes up — give it a second. Touch pins need the kid to also touch **GND** to close the circuit. The ghost program moved here from Week 6 so it lands on **Halloween week**. 🎃
+    **Notes:** every embed opens in **Blocks**. For "my LED doesn't work", go through the **🔧 checklist** at the top of the page and run the **pin tester** — most cases are an LED **in backwards**, plugged into **V instead of G**, a micro:bit **not pushed fully into the shield** (exactly the "some pins work, some don't" symptom), or the **wrong pin**. On a **V2**, sound also comes out of **P0** by default, which makes a P0 LED buzz or blink at odd moments — so the programs that play sound (buzzer, rocket, doorbell, tickle) start with `set audio pin enabled false`; sound still plays on the built-in speaker (on a V1 these are silent). A dim blue/white LED isn't broken — swap it for red. `analog write` takes **0–1023** (not 0–255 like screen brightness). Part 2 puts LEDs on **P1** and **P2**; the touch programs use **P1** as an input — remind kids to unplug the P1 LED first. The very first `light level` reading can be off while the sensor wakes up — give it a second. Touch pins need the kid to also touch **GND** to close the circuit. The ghost program moved here from Week 6 so it lands on **Halloween week**. 🎃

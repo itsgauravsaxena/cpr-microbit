@@ -14,3 +14,4 @@ input.onButtonPressed(Button.B, function () {
     pins.digitalWritePin(DigitalPin.P1, 0)
     basic.clearScreen()
 })
+pins.setAudioPinEnabled(false)

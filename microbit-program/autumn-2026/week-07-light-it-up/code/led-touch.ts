@@ -4,3 +4,4 @@ input.onPinPressed(TouchPin.P1, function () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P0, 0)
 })
+pins.setAudioPinEnabled(false)

@@ -7,3 +7,4 @@ input.onPinPressed(TouchPin.P1, function () {
     basic.showNumber(score)
     pins.digitalWritePin(DigitalPin.P0, 0)
 })
+pins.setAudioPinEnabled(false)

@@ -25,6 +25,23 @@
 
     Alle programmer tænder en **rigtig LED** — **💡**-mærket viser hvilke(n) pin(s). De fleste skal kun bruge **én LED på P0**; Del 2 bruger **to eller tre** (spørg en hjælper efter flere).
 
+!!! failure "🔧 Min LED lyser ikke — tjek det her i rækkefølge"
+    1. **Vend LED'en om.** **Langt ben (+) → S**, **kort ben (−) → G**. Er benene klippet lige lange? Den **flade kant** på LED'ens rand er det korte (−) ben. Omvendt skader ikke — den forbliver bare mørk.
+    2. **S og G — aldrig V.** Læs de små bogstaver på boardet: de tre rækker sidder ikke altid i samme rækkefølge. En almindelig LED skal aldrig bruge **V**.
+    3. **Sidder micro:bit'en helt og lige i?** Sidder den skævt eller halvt, **virker nogle pins og andre ikke**. Tag den ud og tryk den godt i igen.
+    4. **Samme pin i koden og på boardet?** LED i P1, men koden siger P0 = mørk. Brug **P0, P1, P2** — nogle andre pins er optaget inde i micro:bit'en (**P3, P4, P6, P7, P10** styrer skærmen, **P5 / P11** er knap A / B).
+    5. **Rok ved ledningen.** Flimrer LED'en, sidder stikket løst — byt ledningen, eller bøj LED-benet en lille smule, så det sidder fast.
+    6. **Blå eller hvid LED?** De kan være for svage ved 3 V — prøv en **rød**.
+    7. **Har du downloadet** det nyeste program til micro:bit'en?
+
+??? example "🔧 Pin-tester — find den drillende LED på få sekunder · 💡 P0 + P1 + P2"
+
+    Sæt dine LED'er i **P0, P1, P2** og kør programmet. Skærmen viser **0**, **1**, **2** efter tur og tænder LED'en på **den** pin. Vises tallet, men LED'en er mørk? Så er det den, der skal fikses — flyt LED'en til en anden pin for at se, om det er **LED'en** eller **stikket**.
+
+    ```makecode
+    auto:pin-test
+    ```
+
 ## 💡 Del 1 — Din første LED
 
 ### Tænd og sluk · 💡 P0
@@ -232,4 +249,4 @@ week-7
     - **Pause (20)**
     - **Blok 2 (30):** 10 🕯️ **Spøgelse i mørket** + spøgelsesjagt med slukket lys 👻 → 10 level op **dørklokke-lys → kildetæller** → 5 fremvisning (🚀 raketopsendelser!) → 5 Kahoot.
 
-    **Noter:** hver indlejring åbner i **Blokke**. De fleste "min LED virker ikke"-problemer skyldes en LED, der sidder **omvendt** eller på den **forkerte pin** — tjek P0 og vend den. En svag blå/hvid LED er ikke i stykker — byt den til en rød. `analog skriv` tager **0–1023** (ikke 0–255 som skærmens lysstyrke). Del 2 sætter LED'er på **P1** og **P2**; berøringsprogrammerne bruger **P1** som input — mind børnene om at tage LED'en af P1 først. Den allerførste `lysniveau`-måling kan være skæv, mens sensoren vågner — giv den et sekund. Berøringspins kræver, at barnet også rører **GND** for at lukke kredsløbet. Spøgelsesprogrammet er flyttet hertil fra Uge 6, så det lander i **Halloween-ugen**. 🎃
+    **Noter:** hver indlejring åbner i **Blokke**. Ved "min LED virker ikke": gå **🔧-tjeklisten** øverst på siden igennem, og kør **pin-testeren** — de fleste tilfælde er en LED, der sidder **omvendt**, sidder i **V i stedet for G**, en micro:bit, der **ikke er trykket helt ned i shieldet** (præcis "nogle pins virker, andre ikke"), eller den **forkerte pin**. På en **V2** kommer lyden som standard også ud af **P0**, så en LED på P0 summer eller blinker på mærkelige tidspunkter — derfor starter programmerne med lyd (buzzer, raket, dørklokke, kildetæller) med blokken `set audio pin enabled false` (slår lyd-pinnen fra); lyden spiller stadig i den indbyggede højttaler (på en V1 er de lydløse). En svag blå/hvid LED er ikke i stykker — byt den til en rød. `analog skriv` tager **0–1023** (ikke 0–255 som skærmens lysstyrke). Del 2 sætter LED'er på **P1** og **P2**; berøringsprogrammerne bruger **P1** som input — mind børnene om at tage LED'en af P1 først. Den allerførste `lysniveau`-måling kan være skæv, mens sensoren vågner — giv den et sekund. Berøringspins kræver, at barnet også rører **GND** for at lukke kredsløbet. Spøgelsesprogrammet er flyttet hertil fra Uge 6, så det lander i **Halloween-ugen**. 🎃

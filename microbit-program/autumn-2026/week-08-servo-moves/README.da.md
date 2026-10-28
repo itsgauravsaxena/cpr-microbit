@@ -92,6 +92,42 @@ En `for altid`-løkke: 0°, vent, 180°, vent… som en vinduesvisker. 🚗
 
     *Prøv: skift `pause 1000` til `300`. Eller brug 45° og 135° til et mindre vink.*
 
+### 🛑 Tre stop · P1
+
+Ét stop mere i midten: 0° → 90° → 180° → 90° → igen… De samme `sæt vinkel`- og `pause`-blokke — bare flere af dem.
+
+??? example "👀 Se programmet"
+
+    ```makecode
+    auto:servo-stops
+    ```
+
+    *Prøv: tilføj et stop ved 45° og 135°. Kan du få armen til at besøge **fem** steder?*
+
+### 👆 Klik-klik · P1
+
+Hvert tryk på **A** flytter armen **30° videre**, **B** flytter den tilbage. Hvor mange klik skal der til, før den når enden? 🤔
+
+??? example "👀 Se programmet"
+
+    ```makecode
+    auto:servo-click
+    ```
+
+    *Hvordan: variablen `angle` husker, hvor armen er. **A** lægger 30 til, **B** trækker 30 fra, og `min` / `maks` stopper den ved 180° og 0° — præcis som lysdæmperen i Uge 7. Prøv trin på **10°** eller **45°**.*
+
+### 🕐 Urviser · P1
+
+Armen **tikker** hen over i trin på 45° — *tik, tik, tik* — hopper så tilbage og starter forfra. ⏰
+
+??? example "👀 Se programmet"
+
+    ```makecode
+    auto:servo-tick
+    ```
+
+    *Hvordan: en `for`-løkke tæller 0 → 4 og sætter vinklen til `index × 45` (0°, 45°, 90°, 135°, 180°). Nu gør vi trinene **bittesmå**, så bevægelsen bliver blød…*
+
 ### Langsomt og blødt · P1
 
 I stedet for at hoppe bevæger armen sig **5° ad gangen** — langsomt og blødt, som en robot i en film. 🎬
@@ -198,7 +234,8 @@ Gem din tegning — du skal bygge robotten i næste uge! 🛠️
 ## ✅ Jeg er færdig når…
 
 - ☐ Jeg forbandt en **servo** (brun → G, rød → V, orange → S) og bevægede den med **knapperne**. 🔌
-- ☐ Jeg fik den til at **svinge** — hurtigt *og* langsomt og blødt. 🔁
+- ☐ Jeg fik den til at **svinge** og flyttede den så **trin for trin** (tre stop, klik-klik eller urviseren). 🔁
+- ☐ Jeg fik den til at bevæge sig **langsomt og blødt**. 🎬
 - ☐ Jeg styrede den ved at **hælde** micro:bit'en. 🎡
 - ☐ Jeg gav min servo et **papirkostume** (hånd, blomst eller spinner). ✂️
 - ☐ *(Legende!)* Jeg lavede **kilderobotten**, **dansen** eller den **fjernstyrede arm**. 🤖
@@ -228,7 +265,7 @@ week-8
 
     **Sessionsplan (60 + 20 pause + 30)**
 
-    - **Blok 1 (60):** 5 afsløring af det afsluttende projekt + robotidéer → 10 **mød servoen + forbind** → 10 **knapper → sving** → 10 **langsomt og blødt → hældning** → 20 ✂️ **papirkostume** (hvert barn vælger vinke / solsikke / spinner) → 5 tjek-ind.
+    - **Blok 1 (60):** 5 afsløring af det afsluttende projekt + robotidéer → 10 **mød servoen + forbind** → 15 **knapper → sving → tre stop → klik-klik → urviser** → 10 **langsomt og blødt → hældning** → 15 ✂️ **papirkostume** (hvert barn vælger vinke / solsikke / spinner) → 5 tjek-ind.
     - **Pause (20)**
     - **Blok 2 (30):** 10 🤖 **kild / dans / fjernstyring** (de hurtige) → 15 ✏️ **design din robot** (gem arkene til næste uge!) → 5 Kahoot.
 

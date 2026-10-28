@@ -1,0 +1,10 @@
+basic.forever(function () {
+    servos.P1.setAngle(0)
+    basic.pause(700)
+    servos.P1.setAngle(90)
+    basic.pause(700)
+    servos.P1.setAngle(180)
+    basic.pause(700)
+    servos.P1.setAngle(90)
+    basic.pause(700)
+})

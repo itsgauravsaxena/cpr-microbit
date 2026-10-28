@@ -92,6 +92,42 @@ A `forever` loop: 0°, wait, 180°, wait… like a windscreen wiper. 🚗
 
     *Try it: change `pause 1000` to `300`. Or use 45° and 135° for a smaller wave.*
 
+### 🛑 Three stops · P1
+
+One more stop in the middle: 0° → 90° → 180° → 90° → again… Same `set angle` and `pause` blocks — just more of them.
+
+??? example "👀 See the program"
+
+    ```makecode
+    auto:servo-stops
+    ```
+
+    *Try it: add a stop at 45° and 135°. Can you make the arm visit **five** places?*
+
+### 👆 Click-click · P1
+
+Every press on **A** moves the arm **30° further**, **B** moves it back. Ten clicks… wait, how many until it reaches the end? 🤔
+
+??? example "👀 See the program"
+
+    ```makecode
+    auto:servo-click
+    ```
+
+    *How: the variable `angle` remembers where the arm is. **A** adds 30, **B** takes 30 away, and `min` / `max` stop it at 180° and 0° — just like the dimmer in Week 7. Try steps of **10°** or **45°**.*
+
+### 🕐 Clock hand · P1
+
+The arm **ticks** across in 45° steps — *tick, tick, tick* — then jumps back and starts again. ⏰
+
+??? example "👀 See the program"
+
+    ```makecode
+    auto:servo-tick
+    ```
+
+    *How: a `for` loop counts 0 → 4 and sets the angle to `index × 45` (0°, 45°, 90°, 135°, 180°). Next, we make the steps **tiny** so the move becomes smooth…*
+
 ### Slow and smooth · P1
 
 Instead of jumping, the arm moves **5° at a time** — slow and smooth, like a robot in a film. 🎬
@@ -198,7 +234,8 @@ Keep your drawing — you'll build it next week! 🛠️
 ## ✅ I did it when…
 
 - ☐ I wired a **servo** (brown → G, red → V, orange → S) and moved it with **buttons**. 🔌
-- ☐ I made it **sweep** — fast *and* slow & smooth. 🔁
+- ☐ I made it **sweep**, then moved it **step by step** (three stops, click-click or the clock hand). 🔁
+- ☐ I made it move **slow & smooth**. 🎬
 - ☐ I steered it by **tilting** the micro:bit. 🎡
 - ☐ I gave my servo a **paper costume** (hand, flower or spinner). ✂️
 - ☐ *(Legend!)* I made the **tickle** robot, the **dance** or the **remote-control arm**. 🤖
@@ -228,7 +265,7 @@ week-8
 
     **Session plan (60 + 20 break + 30)**
 
-    - **Block 1 (60):** 5 final-project reveal + robot ideas → 10 **meet the servo + wiring** → 10 **buttons → sweep** → 10 **slow & smooth → tilt** → 20 ✂️ **paper costume** (each kid picks wave / sunflower / spinner) → 5 checkpoint.
+    - **Block 1 (60):** 5 final-project reveal + robot ideas → 10 **meet the servo + wiring** → 15 **buttons → sweep → three stops → click-click → clock hand** → 10 **slow & smooth → tilt** → 15 ✂️ **paper costume** (each kid picks wave / sunflower / spinner) → 5 checkpoint.
     - **Break (20)**
     - **Block 2 (30):** 10 🤖 **tickle / dance / remote** (fast finishers) → 15 ✏️ **design your robot** (keep the sheets for next week!) → 5 Kahoot.
 

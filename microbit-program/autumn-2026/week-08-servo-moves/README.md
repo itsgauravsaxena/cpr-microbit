@@ -50,7 +50,7 @@ In the **last class** everyone shows a robot they built themselves. Here's the p
 
 ## 🔌 Meet the servo
 
-A **servo** is a little motor that doesn't spin round and round — it turns to an **angle** you choose, from **0°** to **180°**, and **stays there**. The white plastic arm on top is the **horn** — that's where your cardboard parts go.
+Our servo is the **micro servo 9g (SG90)** — a little blue motor that doesn't spin round and round — it turns to an **angle** you choose, from **0°** to **180°**, and **stays there**. The white plastic arm on top is the **horn** — that's where your cardboard parts go.
 
 !!! tip "Wiring a servo 🔌"
     Plug the servo's three-wire plug into the **[sensor shield](../gear/README.md)** at pin **P1**:
@@ -63,7 +63,7 @@ A **servo** is a little motor that doesn't spin round and round — it turns to 
 
 !!! warning "Before you start ⚠️"
     - **Don't twist the arm by hand** — it can break the gears inside. Let the code move it.
-    - **One servo** usually works on USB power. If the micro:bit **restarts** or the servo **shakes**, ask for a **battery pack**.
+    - The SG90 is made for about **5 V**, but the micro:bit gives about **3 V** — so on USB **one servo** works but can be a bit weak or slow. If the micro:bit **restarts** or the servo **shakes**, ask for a **battery pack**.
     - Building your own project in MakeCode? Add the servo blocks: **Extensions → search "servo"**. (The programs on this page already have them.)
 
 ## 🎛️ Part 1 — First moves
@@ -221,7 +221,7 @@ week-8
     **Materials**
 
     - micro:bits + USB + **sensor shields** — **1 per kid**
-    - **micro servos** (SG90-type, 0–180°) — **1 per kid**, a few extra for the two-servo dance; the little screws for the horns
+    - **micro servo 9g (SG90)**, 0–180° — **1 per kid**, a few extra for the two-servo dance; the little screws for the horns
     - **battery packs** (AA/AAA for the shield or micro:bit) — needed for two servos or if boards keep restarting
     - **cardboard, paper, card, masking tape, glue sticks, scissors, markers, string, paper clips, foil** — **no plastic**
     - **A4 paper + pencils** for the robot design

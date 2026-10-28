@@ -50,7 +50,7 @@ I den **sidste time** viser alle en robot, de selv har bygget. Her er planen:
 
 ## 🔌 Mød servoen
 
-En **servo** er en lille motor, der ikke drejer rundt og rundt — den drejer til en **vinkel**, du vælger, fra **0°** til **180°**, og **bliver der**. Den hvide plastikarm på toppen hedder **hornet** — det er der, dine papdele skal sidde.
+Vores servo er **mikroservoen 9g (SG90)** — en lille blå motor, der ikke drejer rundt og rundt — den drejer til en **vinkel**, du vælger, fra **0°** til **180°**, og **bliver der**. Den hvide plastikarm på toppen hedder **hornet** — det er der, dine papdele skal sidde.
 
 !!! tip "Sådan forbinder du en servo 🔌"
     Sæt servoens stik med tre ledninger i **[sensor-shieldet](../gear/README.md)** på pin **P1**:
@@ -63,7 +63,7 @@ En **servo** er en lille motor, der ikke drejer rundt og rundt — den drejer ti
 
 !!! warning "Før du starter ⚠️"
     - **Drej ikke armen med hånden** — det kan ødelægge tandhjulene indeni. Lad koden bevæge den.
-    - **Én servo** virker som regel med USB-strøm. Hvis micro:bit'en **genstarter**, eller servoen **ryster**, så spørg efter en **batteripakke**.
+    - SG90 er lavet til ca. **5 V**, men micro:bit'en giver ca. **3 V** — så med USB virker **én servo**, men den kan være lidt svag eller langsom. Hvis micro:bit'en **genstarter**, eller servoen **ryster**, så spørg efter en **batteripakke**.
     - Bygger du dit eget projekt i MakeCode? Tilføj servo-blokkene: **Udvidelser → søg "servo"**. (Programmerne på denne side har dem allerede.)
 
 ## 🎛️ Del 1 — De første bevægelser
@@ -221,7 +221,7 @@ week-8
     **Materialer**
 
     - micro:bits + USB + **sensor-shields** — **1 pr. barn**
-    - **mikroservoer** (SG90-typen, 0–180°) — **1 pr. barn**, nogle ekstra til dansen med to servoer; de små skruer til hornene
+    - **mikroservo 9g (SG90)**, 0–180° — **1 pr. barn**, nogle ekstra til dansen med to servoer; de små skruer til hornene
     - **batteripakker** (AA/AAA til shieldet eller micro:bit'en) — nødvendige til to servoer, eller hvis boards bliver ved med at genstarte
     - **pap, papir, karton, malertape, limstifter, sakse, tusser, snor, papirclips, sølvpapir** — **ingen plastik**
     - **A4-papir + blyanter** til robotdesignet

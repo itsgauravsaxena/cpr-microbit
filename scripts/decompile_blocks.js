@@ -22,8 +22,9 @@
  * explicit about which lessons to (re)bake). Re-run whenever a `main.ts`
  * changes, then run publish_makecode.py to mint fresh shares.
  *
- * All programs here use the default core/radio/microphone deps; if a lesson
- * adds a `deps.txt`, extend PXT_JSON below before baking it.
+ * Programs use the default core/radio/microphone deps, plus any extensions
+ * listed in that lesson's `deps.txt` (one per line, same file
+ * publish_makecode.py reads).
  */
 const fs = require("fs");
 const os = require("os");
@@ -48,6 +49,26 @@ function loadMkc() {
 const TARGET_WEBSITE = "https://makecode.microbit.org/";
 const DEPS = { core: "*", radio: "*", microphone: "*" };
 
+// Default deps + the lesson's deps.txt (mirrors publish_makecode._deps_for).
+function depsFor(dir) {
+  const deps = { ...DEPS };
+  const extra = path.join(dir, "deps.txt");
+  if (fs.existsSync(extra)) {
+    for (const line of fs.readFileSync(extra, "utf8").split(/\r?\n/)) {
+      const name = line.trim();
+      if (name && !name.startsWith("#")) deps[name] = "*";
+    }
+  }
+  return deps;
+}
+
+function writePxtJson(work, deps) {
+  fs.writeFileSync(path.join(work, "pxt.json"), JSON.stringify({
+    name: "decompile-work", dependencies: deps,
+    files: ["main.ts"], preferredEditor: "tsprj",
+  }, null, 4));
+}
+
 async function main() {
   const dirs = process.argv.slice(2);
   if (dirs.length === 0) {
@@ -63,10 +84,7 @@ async function main() {
   const work = fs.mkdtempSync(path.join(os.tmpdir(), "mkc-decompile-"));
   fs.writeFileSync(path.join(work, "mkc.json"),
     JSON.stringify({ targetWebsite: TARGET_WEBSITE, links: {} }, null, 2));
-  fs.writeFileSync(path.join(work, "pxt.json"), JSON.stringify({
-    name: "decompile-work", dependencies: DEPS,
-    files: ["main.ts"], preferredEditor: "tsprj",
-  }, null, 4));
+  writePxtJson(work, DEPS);
   fs.writeFileSync(path.join(work, "main.ts"), "");
   try {
     const resolved = path.dirname(require.resolve("makecode-core/built/mkc"));
@@ -78,6 +96,7 @@ async function main() {
 
   let ok = 0, fail = 0;
   for (const dir of dirs) {
+    writePxtJson(work, depsFor(dir));
     const tsFiles = fs.readdirSync(dir).filter((f) => f.endsWith(".ts")).sort();
     for (const ts of tsFiles) {
       const name = ts.replace(/\.ts$/, "");

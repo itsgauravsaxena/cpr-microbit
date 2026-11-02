@@ -25,5 +25,5 @@ week-4  https://create.kahoot.it/details/week-4/3391a821-8089-443d-b55c-68ff22b7
 week-6  https://create.kahoot.it/share/micro-bit-og-u-hyggelig-efterarsjagt/79b9f15d-7a81-4b5f-b7dc-1a4eaea61daf
 week-7  https://create.kahoot.it/share/micro-bit-popkultur-quiz/09d56dd7-91ba-4b6d-b52e-fcd52eb81f21
 # week-8  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
-# week-9  https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
+week-9  https://create.kahoot.it/share/den-store-brne-og-popkulturquiz/e2ac339e-f897-42c0-8ec2-5a372a3792f2
 # week-10 https://create.kahoot.it/my-library/kahoots/PASTE-ID-HERE
